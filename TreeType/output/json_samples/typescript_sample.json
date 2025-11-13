@@ -1,6 +1,6 @@
 {
   "language": "typescript",
-  "total_lines": 10,
+  "total_lines": 11,
   "lines": [
     {
       "line_number": 0,
@@ -423,6 +423,24 @@
     {
       "line_number": 6,
       "indent_level": 0,
+      "actual_line": "/**",
+      "display_tokens": [
+        {
+          "text": "/**\n * Fetch user data from API\n * @param id - User ID to fetch\n * @returns Promise resolving to User object\n */",
+          "type": "comment",
+          "typeable": false,
+          "start_col": 0,
+          "end_col": 3,
+          "seq_in_line": 0
+        }
+      ],
+      "typing_tokens": [],
+      "typing_sequence": "",
+      "char_map": {}
+    },
+    {
+      "line_number": 11,
+      "indent_level": 0,
       "actual_line": "async function fetchUser(id: number): Promise<User> {",
       "display_tokens": [
         {
@@ -765,7 +783,7 @@
       }
     },
     {
-      "line_number": 7,
+      "line_number": 12,
       "indent_level": 1,
       "actual_line": "    const response = await fetch(`/api/users/${id}`);",
       "display_tokens": [
@@ -1097,7 +1115,7 @@
       }
     },
     {
-      "line_number": 8,
+      "line_number": 13,
       "indent_level": 1,
       "actual_line": "    const data = await response.json();",
       "display_tokens": [
@@ -1333,7 +1351,7 @@
       }
     },
     {
-      "line_number": 9,
+      "line_number": 14,
       "indent_level": 1,
       "actual_line": "    return data as User;",
       "display_tokens": [
@@ -1481,7 +1499,7 @@
       }
     },
     {
-      "line_number": 10,
+      "line_number": 15,
       "indent_level": 0,
       "actual_line": "}",
       "display_tokens": [

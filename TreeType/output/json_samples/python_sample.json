@@ -1,6 +1,6 @@
 {
   "language": "python",
-  "total_lines": 12,
+  "total_lines": 13,
   "lines": [
     {
       "line_number": 0,
@@ -257,7 +257,7 @@
     {
       "line_number": 1,
       "indent_level": 1,
-      "actual_line": "    \"\"\"Calculate Fibonacci sequence up to n terms.\"\"\"",
+      "actual_line": "    \"\"\"",
       "display_tokens": [
         {
           "text": "\"\"\"",
@@ -268,33 +268,25 @@
           "seq_in_line": 0
         },
         {
-          "text": "Calculate Fibonacci sequence up to n terms.",
+          "text": "\n    Calculate Fibonacci sequence up to n terms.\n    \n    Args:\n        n: Number of terms to generate\n    \n    Returns:\n        List of Fibonacci numbers\n    ",
           "type": "string_content",
           "typeable": true,
           "start_col": 7,
-          "end_col": 50,
+          "end_col": 4,
           "seq_in_line": 1
-        },
-        {
-          "text": "\"\"\"",
-          "type": "string_end",
-          "typeable": false,
-          "start_col": 50,
-          "end_col": 53,
-          "seq_in_line": 2
         }
       ],
       "typing_tokens": [
         {
-          "text": "Calculate Fibonacci sequence up to n terms.",
+          "text": "\n    Calculate Fibonacci sequence up to n terms.\n    \n    Args:\n        n: Number of terms to generate\n    \n    Returns:\n        List of Fibonacci numbers\n    ",
           "type": "string_content",
           "typeable": true,
           "start_col": 7,
-          "end_col": 50,
+          "end_col": 4,
           "seq_in_line": 1
         }
       ],
-      "typing_sequence": "Calculate Fibonacci sequence up to n terms.",
+      "typing_sequence": "\n    Calculate Fibonacci sequence up to n terms.\n    \n    Args:\n        n: Number of terms to generate\n    \n    Returns:\n        List of Fibonacci numbers\n    ",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -467,11 +459,493 @@
         "42": {
           "token_idx": 0,
           "display_col": 7
+        },
+        "43": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "44": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "45": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "46": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "47": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "48": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "49": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "50": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "51": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "52": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "53": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "54": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "55": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "56": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "57": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "58": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "59": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "60": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "61": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "62": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "63": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "64": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "65": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "66": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "67": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "68": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "69": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "70": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "71": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "72": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "73": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "74": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "75": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "76": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "77": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "78": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "79": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "80": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "81": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "82": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "83": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "84": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "85": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "86": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "87": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "88": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "89": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "90": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "91": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "92": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "93": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "94": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "95": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "96": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "97": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "98": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "99": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "100": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "101": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "102": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "103": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "104": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "105": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "106": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "107": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "108": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "109": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "110": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "111": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "112": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "113": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "114": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "115": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "116": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "117": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "118": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "119": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "120": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "121": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "122": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "123": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "124": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "125": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "126": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "127": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "128": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "129": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "130": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "131": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "132": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "133": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "134": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "135": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "136": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "137": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "138": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "139": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "140": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "141": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "142": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "143": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "144": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "145": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "146": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "147": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "148": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "149": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "150": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "151": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "152": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "153": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "154": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "155": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "156": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "157": {
+          "token_idx": 0,
+          "display_col": 7
+        },
+        "158": {
+          "token_idx": 0,
+          "display_col": 7
         }
       }
     },
     {
-      "line_number": 2,
+      "line_number": 9,
+      "indent_level": 1,
+      "actual_line": "    \"\"\"",
+      "display_tokens": [
+        {
+          "text": "\"\"\"",
+          "type": "string_end",
+          "typeable": false,
+          "start_col": 4,
+          "end_col": 7,
+          "seq_in_line": 0
+        }
+      ],
+      "typing_tokens": [],
+      "typing_sequence": "",
+      "char_map": {}
+    },
+    {
+      "line_number": 10,
       "indent_level": 1,
       "actual_line": "    if n <= 0:",
       "display_tokens": [
@@ -579,7 +1053,7 @@
       }
     },
     {
-      "line_number": 3,
+      "line_number": 11,
       "indent_level": 2,
       "actual_line": "        return []",
       "display_tokens": [
@@ -647,7 +1121,7 @@
       }
     },
     {
-      "line_number": 4,
+      "line_number": 12,
       "indent_level": 1,
       "actual_line": "    elif n == 1:",
       "display_tokens": [
@@ -763,7 +1237,7 @@
       }
     },
     {
-      "line_number": 5,
+      "line_number": 13,
       "indent_level": 2,
       "actual_line": "        return [0]",
       "display_tokens": [
@@ -851,7 +1325,7 @@
       }
     },
     {
-      "line_number": 7,
+      "line_number": 15,
       "indent_level": 1,
       "actual_line": "    fib = [0, 1]",
       "display_tokens": [
@@ -963,7 +1437,7 @@
       }
     },
     {
-      "line_number": 8,
+      "line_number": 16,
       "indent_level": 1,
       "actual_line": "    for i in range(2, n):",
       "display_tokens": [
@@ -1155,7 +1629,7 @@
       }
     },
     {
-      "line_number": 9,
+      "line_number": 17,
       "indent_level": 2,
       "actual_line": "        fib.append(fib[i-1] + fib[i-2])",
       "display_tokens": [
@@ -1451,7 +1925,7 @@
       }
     },
     {
-      "line_number": 11,
+      "line_number": 19,
       "indent_level": 1,
       "actual_line": "    return fib",
       "display_tokens": [
@@ -1531,7 +2005,7 @@
       }
     },
     {
-      "line_number": 13,
+      "line_number": 21,
       "indent_level": 0,
       "actual_line": "result = calculate_fibonacci(10)",
       "display_tokens": [
@@ -1723,7 +2197,7 @@
       }
     },
     {
-      "line_number": 14,
+      "line_number": 22,
       "indent_level": 0,
       "actual_line": "print(result)",
       "display_tokens": [

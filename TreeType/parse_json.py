@@ -241,13 +241,23 @@ def export_code_to_json(source_code, language_name, output_path):
     
     return json_data
 
+
 # ============================================================================
-# SAMPLE CODE FOR TESTING
+# UPDATED SAMPLE CODE WITH MULTI-LINE CONTENT
+# Replace the samples section in parse_json.py (around line 240)
 # ============================================================================
 
-# Python sample: Fibonacci function
+# Python sample: Fibonacci function WITH DOCSTRING
 python_sample = '''def calculate_fibonacci(n: int) -> list:
-    """Calculate Fibonacci sequence up to n terms."""
+    """
+    Calculate Fibonacci sequence up to n terms.
+    
+    Args:
+        n: Number of terms to generate
+    
+    Returns:
+        List of Fibonacci numbers
+    """
     if n <= 0:
         return []
     elif n == 1:
@@ -263,13 +273,20 @@ result = calculate_fibonacci(10)
 print(result)
 '''
 
-# JavaScript sample: React component stub
+# JavaScript sample: React component WITH TEMPLATE LITERAL
 javascript_sample = '''function UserProfile({ user }) {
     const [isActive, setIsActive] = useState(false);
     
     const handleClick = () => {
         setIsActive(!isActive);
     };
+    
+    // Multi-line template literal
+    const description = `
+        User: ${user.name}
+        Status: ${isActive ? 'Active' : 'Inactive'}
+        Email: ${user.email}
+    `;
     
     return (
         <div className="profile">
@@ -282,13 +299,18 @@ javascript_sample = '''function UserProfile({ user }) {
 }
 '''
 
-# TypeScript sample: API client
+# TypeScript sample: API client WITH JSDOC COMMENT
 typescript_sample = '''interface User {
     id: number;
     name: string;
     email: string;
 }
 
+/**
+ * Fetch user data from API
+ * @param id - User ID to fetch
+ * @returns Promise resolving to User object
+ */
 async function fetchUser(id: number): Promise<User> {
     const response = await fetch(`/api/users/${id}`);
     const data = await response.json();
@@ -296,7 +318,7 @@ async function fetchUser(id: number): Promise<User> {
 }
 '''
 
-# TSX sample: Todo component
+# TSX sample: Todo component (already has multi-line JSX)
 tsx_sample = '''import React, { useState } from 'react';
 
 const TodoList: React.FC = () => {
@@ -317,6 +339,11 @@ const TodoList: React.FC = () => {
                 onChange={(e) => setInput(e.target.value)}
             />
             <button onClick={addTodo}>Add</button>
+            <ul>
+                {todos.map((todo, idx) => (
+                    <li key={idx}>{todo}</li>
+                ))}
+            </ul>
         </div>
     );
 };

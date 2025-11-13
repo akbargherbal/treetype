@@ -1,6 +1,6 @@
 {
   "language": "javascript",
-  "total_lines": 14,
+  "total_lines": 20,
   "lines": [
     {
       "line_number": 0,
@@ -819,6 +819,914 @@
     {
       "line_number": 7,
       "indent_level": 1,
+      "actual_line": "    // Multi-line template literal",
+      "display_tokens": [
+        {
+          "text": "// Multi-line template literal",
+          "type": "comment",
+          "typeable": false,
+          "start_col": 4,
+          "end_col": 34,
+          "seq_in_line": 0
+        }
+      ],
+      "typing_tokens": [],
+      "typing_sequence": "",
+      "char_map": {}
+    },
+    {
+      "line_number": 8,
+      "indent_level": 1,
+      "actual_line": "    const description = `",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 9,
+          "seq_in_line": 0
+        },
+        {
+          "text": "description",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 10,
+          "end_col": 21,
+          "seq_in_line": 1
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "typeable": false,
+          "start_col": 22,
+          "end_col": 23,
+          "seq_in_line": 2
+        },
+        {
+          "text": "`",
+          "type": "`",
+          "typeable": false,
+          "start_col": 24,
+          "end_col": 25,
+          "seq_in_line": 3
+        },
+        {
+          "text": "\n        User: ",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 25,
+          "end_col": 14,
+          "seq_in_line": 4
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 9,
+          "seq_in_line": 0
+        },
+        {
+          "text": "description",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 10,
+          "end_col": 21,
+          "seq_in_line": 1
+        },
+        {
+          "text": "\n        User: ",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 25,
+          "end_col": 14,
+          "seq_in_line": 4
+        }
+      ],
+      "typing_sequence": "constdescription\n        User: ",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "15": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "16": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "17": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "18": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "19": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "20": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "21": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "22": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "23": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "24": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "25": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "26": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "27": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "28": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "29": {
+          "token_idx": 2,
+          "display_col": 25
+        },
+        "30": {
+          "token_idx": 2,
+          "display_col": 25
+        }
+      }
+    },
+    {
+      "line_number": 9,
+      "indent_level": 3,
+      "actual_line": "        User: ${user.name}",
+      "display_tokens": [
+        {
+          "text": "${",
+          "type": "${",
+          "typeable": true,
+          "start_col": 14,
+          "end_col": 16,
+          "seq_in_line": 0
+        },
+        {
+          "text": "user",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 16,
+          "end_col": 20,
+          "seq_in_line": 1
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "typeable": false,
+          "start_col": 20,
+          "end_col": 21,
+          "seq_in_line": 2
+        },
+        {
+          "text": "name",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 21,
+          "end_col": 25,
+          "seq_in_line": 3
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "typeable": false,
+          "start_col": 25,
+          "end_col": 26,
+          "seq_in_line": 4
+        },
+        {
+          "text": "\n        Status: ",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 26,
+          "end_col": 16,
+          "seq_in_line": 5
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "${",
+          "type": "${",
+          "typeable": true,
+          "start_col": 14,
+          "end_col": 16,
+          "seq_in_line": 0
+        },
+        {
+          "text": "user",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 16,
+          "end_col": 20,
+          "seq_in_line": 1
+        },
+        {
+          "text": "name",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 21,
+          "end_col": 25,
+          "seq_in_line": 3
+        },
+        {
+          "text": "\n        Status: ",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 26,
+          "end_col": 16,
+          "seq_in_line": 5
+        }
+      ],
+      "typing_sequence": "${username\n        Status: ",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 14
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 14
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 16
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 16
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 16
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 16
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 21
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 21
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 21
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 21
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "13": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "14": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "15": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "16": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "17": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "18": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "19": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "20": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "21": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "22": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "23": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "24": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "25": {
+          "token_idx": 3,
+          "display_col": 26
+        },
+        "26": {
+          "token_idx": 3,
+          "display_col": 26
+        }
+      }
+    },
+    {
+      "line_number": 10,
+      "indent_level": 4,
+      "actual_line": "        Status: ${isActive ? 'Active' : 'Inactive'}",
+      "display_tokens": [
+        {
+          "text": "${",
+          "type": "${",
+          "typeable": true,
+          "start_col": 16,
+          "end_col": 18,
+          "seq_in_line": 0
+        },
+        {
+          "text": "isActive",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 18,
+          "end_col": 26,
+          "seq_in_line": 1
+        },
+        {
+          "text": "?",
+          "type": "?",
+          "typeable": false,
+          "start_col": 27,
+          "end_col": 28,
+          "seq_in_line": 2
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "typeable": false,
+          "start_col": 29,
+          "end_col": 30,
+          "seq_in_line": 3
+        },
+        {
+          "text": "Active",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 30,
+          "end_col": 36,
+          "seq_in_line": 4
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "typeable": false,
+          "start_col": 36,
+          "end_col": 37,
+          "seq_in_line": 5
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "typeable": false,
+          "start_col": 38,
+          "end_col": 39,
+          "seq_in_line": 6
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "typeable": false,
+          "start_col": 40,
+          "end_col": 41,
+          "seq_in_line": 7
+        },
+        {
+          "text": "Inactive",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 41,
+          "end_col": 49,
+          "seq_in_line": 8
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "typeable": false,
+          "start_col": 49,
+          "end_col": 50,
+          "seq_in_line": 9
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "typeable": false,
+          "start_col": 50,
+          "end_col": 51,
+          "seq_in_line": 10
+        },
+        {
+          "text": "\n        Email: ",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 51,
+          "end_col": 15,
+          "seq_in_line": 11
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "${",
+          "type": "${",
+          "typeable": true,
+          "start_col": 16,
+          "end_col": 18,
+          "seq_in_line": 0
+        },
+        {
+          "text": "isActive",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 18,
+          "end_col": 26,
+          "seq_in_line": 1
+        },
+        {
+          "text": "Active",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 30,
+          "end_col": 36,
+          "seq_in_line": 4
+        },
+        {
+          "text": "Inactive",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 41,
+          "end_col": 49,
+          "seq_in_line": 8
+        },
+        {
+          "text": "\n        Email: ",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 51,
+          "end_col": 15,
+          "seq_in_line": 11
+        }
+      ],
+      "typing_sequence": "${isActiveActiveInactive\n        Email: ",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 16
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 16
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 18
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 18
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 18
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 18
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 18
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 18
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 18
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 18
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 30
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 30
+        },
+        "12": {
+          "token_idx": 2,
+          "display_col": 30
+        },
+        "13": {
+          "token_idx": 2,
+          "display_col": 30
+        },
+        "14": {
+          "token_idx": 2,
+          "display_col": 30
+        },
+        "15": {
+          "token_idx": 2,
+          "display_col": 30
+        },
+        "16": {
+          "token_idx": 3,
+          "display_col": 41
+        },
+        "17": {
+          "token_idx": 3,
+          "display_col": 41
+        },
+        "18": {
+          "token_idx": 3,
+          "display_col": 41
+        },
+        "19": {
+          "token_idx": 3,
+          "display_col": 41
+        },
+        "20": {
+          "token_idx": 3,
+          "display_col": 41
+        },
+        "21": {
+          "token_idx": 3,
+          "display_col": 41
+        },
+        "22": {
+          "token_idx": 3,
+          "display_col": 41
+        },
+        "23": {
+          "token_idx": 3,
+          "display_col": 41
+        },
+        "24": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "25": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "26": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "27": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "28": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "29": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "30": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "31": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "32": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "33": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "34": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "35": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "36": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "37": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "38": {
+          "token_idx": 4,
+          "display_col": 51
+        },
+        "39": {
+          "token_idx": 4,
+          "display_col": 51
+        }
+      }
+    },
+    {
+      "line_number": 11,
+      "indent_level": 3,
+      "actual_line": "        Email: ${user.email}",
+      "display_tokens": [
+        {
+          "text": "${",
+          "type": "${",
+          "typeable": true,
+          "start_col": 15,
+          "end_col": 17,
+          "seq_in_line": 0
+        },
+        {
+          "text": "user",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 17,
+          "end_col": 21,
+          "seq_in_line": 1
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "typeable": false,
+          "start_col": 21,
+          "end_col": 22,
+          "seq_in_line": 2
+        },
+        {
+          "text": "email",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 22,
+          "end_col": 27,
+          "seq_in_line": 3
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "typeable": false,
+          "start_col": 27,
+          "end_col": 28,
+          "seq_in_line": 4
+        },
+        {
+          "text": "\n    ",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 28,
+          "end_col": 4,
+          "seq_in_line": 5
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "${",
+          "type": "${",
+          "typeable": true,
+          "start_col": 15,
+          "end_col": 17,
+          "seq_in_line": 0
+        },
+        {
+          "text": "user",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 17,
+          "end_col": 21,
+          "seq_in_line": 1
+        },
+        {
+          "text": "email",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 22,
+          "end_col": 27,
+          "seq_in_line": 3
+        },
+        {
+          "text": "\n    ",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 28,
+          "end_col": 4,
+          "seq_in_line": 5
+        }
+      ],
+      "typing_sequence": "${useremail\n    ",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 15
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 15
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 17
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 17
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 17
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 17
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 22
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 22
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 22
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 22
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 22
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 28
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 28
+        },
+        "13": {
+          "token_idx": 3,
+          "display_col": 28
+        },
+        "14": {
+          "token_idx": 3,
+          "display_col": 28
+        },
+        "15": {
+          "token_idx": 3,
+          "display_col": 28
+        }
+      }
+    },
+    {
+      "line_number": 12,
+      "indent_level": 1,
+      "actual_line": "    `;",
+      "display_tokens": [
+        {
+          "text": "`",
+          "type": "`",
+          "typeable": false,
+          "start_col": 4,
+          "end_col": 5,
+          "seq_in_line": 0
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "typeable": false,
+          "start_col": 5,
+          "end_col": 6,
+          "seq_in_line": 1
+        }
+      ],
+      "typing_tokens": [],
+      "typing_sequence": "",
+      "char_map": {}
+    },
+    {
+      "line_number": 14,
+      "indent_level": 1,
       "actual_line": "    return (",
       "display_tokens": [
         {
@@ -877,7 +1785,7 @@
       }
     },
     {
-      "line_number": 8,
+      "line_number": 15,
       "indent_level": 2,
       "actual_line": "        <div className=\"profile\">",
       "display_tokens": [
@@ -1053,7 +1961,7 @@
       }
     },
     {
-      "line_number": 9,
+      "line_number": 16,
       "indent_level": 3,
       "actual_line": "            <h2>{user.name}</h2>",
       "display_tokens": [
@@ -1233,7 +2141,7 @@
       }
     },
     {
-      "line_number": 10,
+      "line_number": 17,
       "indent_level": 3,
       "actual_line": "            <button onClick={handleClick}>",
       "display_tokens": [
@@ -1429,7 +2337,7 @@
       }
     },
     {
-      "line_number": 11,
+      "line_number": 18,
       "indent_level": 4,
       "actual_line": "                {isActive ? 'Active' : 'Inactive'}",
       "display_tokens": [
@@ -1641,7 +2549,7 @@
       }
     },
     {
-      "line_number": 12,
+      "line_number": 19,
       "indent_level": 3,
       "actual_line": "            </button>",
       "display_tokens": [
@@ -1709,7 +2617,7 @@
       }
     },
     {
-      "line_number": 13,
+      "line_number": 20,
       "indent_level": 2,
       "actual_line": "        </div>",
       "display_tokens": [
@@ -1765,7 +2673,7 @@
       }
     },
     {
-      "line_number": 14,
+      "line_number": 21,
       "indent_level": 1,
       "actual_line": "    );",
       "display_tokens": [
@@ -1791,7 +2699,7 @@
       "char_map": {}
     },
     {
-      "line_number": 15,
+      "line_number": 22,
       "indent_level": 0,
       "actual_line": "}",
       "display_tokens": [
