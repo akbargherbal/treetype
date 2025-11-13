@@ -1,0 +1,1502 @@
+{
+  "language": "typescript",
+  "total_lines": 10,
+  "lines": [
+    {
+      "line_number": 0,
+      "indent_level": 0,
+      "actual_line": "interface User {",
+      "display_tokens": [
+        {
+          "text": "interface",
+          "type": "interface",
+          "typeable": true,
+          "start_col": 0,
+          "end_col": 9,
+          "seq_in_line": 0
+        },
+        {
+          "text": "User",
+          "type": "type_identifier",
+          "typeable": true,
+          "start_col": 10,
+          "end_col": 14,
+          "seq_in_line": 1
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "typeable": false,
+          "start_col": 15,
+          "end_col": 16,
+          "seq_in_line": 2
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "interface",
+          "type": "interface",
+          "typeable": true,
+          "start_col": 0,
+          "end_col": 9,
+          "seq_in_line": 0
+        },
+        {
+          "text": "User",
+          "type": "type_identifier",
+          "typeable": true,
+          "start_col": 10,
+          "end_col": 14,
+          "seq_in_line": 1
+        }
+      ],
+      "typing_sequence": "interfaceUser",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 10
+        }
+      }
+    },
+    {
+      "line_number": 1,
+      "indent_level": 1,
+      "actual_line": "    id: number;",
+      "display_tokens": [
+        {
+          "text": "id",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 6,
+          "seq_in_line": 0
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "typeable": false,
+          "start_col": 6,
+          "end_col": 7,
+          "seq_in_line": 1
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "typeable": true,
+          "start_col": 8,
+          "end_col": 14,
+          "seq_in_line": 2
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "typeable": false,
+          "start_col": 14,
+          "end_col": 15,
+          "seq_in_line": 3
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "id",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 6,
+          "seq_in_line": 0
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "typeable": true,
+          "start_col": 8,
+          "end_col": 14,
+          "seq_in_line": 2
+        }
+      ],
+      "typing_sequence": "idnumber",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 8
+        }
+      }
+    },
+    {
+      "line_number": 2,
+      "indent_level": 1,
+      "actual_line": "    name: string;",
+      "display_tokens": [
+        {
+          "text": "name",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 8,
+          "seq_in_line": 0
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "typeable": false,
+          "start_col": 8,
+          "end_col": 9,
+          "seq_in_line": 1
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "typeable": true,
+          "start_col": 10,
+          "end_col": 16,
+          "seq_in_line": 2
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "typeable": false,
+          "start_col": 16,
+          "end_col": 17,
+          "seq_in_line": 3
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "name",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 8,
+          "seq_in_line": 0
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "typeable": true,
+          "start_col": 10,
+          "end_col": 16,
+          "seq_in_line": 2
+        }
+      ],
+      "typing_sequence": "namestring",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 10
+        }
+      }
+    },
+    {
+      "line_number": 3,
+      "indent_level": 1,
+      "actual_line": "    email: string;",
+      "display_tokens": [
+        {
+          "text": "email",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 9,
+          "seq_in_line": 0
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "typeable": false,
+          "start_col": 9,
+          "end_col": 10,
+          "seq_in_line": 1
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "typeable": true,
+          "start_col": 11,
+          "end_col": 17,
+          "seq_in_line": 2
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "typeable": false,
+          "start_col": 17,
+          "end_col": 18,
+          "seq_in_line": 3
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "email",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 9,
+          "seq_in_line": 0
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "typeable": true,
+          "start_col": 11,
+          "end_col": 17,
+          "seq_in_line": 2
+        }
+      ],
+      "typing_sequence": "emailstring",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 11
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 11
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 11
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 11
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 11
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 11
+        }
+      }
+    },
+    {
+      "line_number": 4,
+      "indent_level": 0,
+      "actual_line": "}",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "typeable": false,
+          "start_col": 0,
+          "end_col": 1,
+          "seq_in_line": 0
+        }
+      ],
+      "typing_tokens": [],
+      "typing_sequence": "",
+      "char_map": {}
+    },
+    {
+      "line_number": 6,
+      "indent_level": 0,
+      "actual_line": "async function fetchUser(id: number): Promise<User> {",
+      "display_tokens": [
+        {
+          "text": "async",
+          "type": "async",
+          "typeable": true,
+          "start_col": 0,
+          "end_col": 5,
+          "seq_in_line": 0
+        },
+        {
+          "text": "function",
+          "type": "function",
+          "typeable": true,
+          "start_col": 6,
+          "end_col": 14,
+          "seq_in_line": 1
+        },
+        {
+          "text": "fetchUser",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 15,
+          "end_col": 24,
+          "seq_in_line": 2
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "typeable": false,
+          "start_col": 24,
+          "end_col": 25,
+          "seq_in_line": 3
+        },
+        {
+          "text": "id",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 25,
+          "end_col": 27,
+          "seq_in_line": 4
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "typeable": false,
+          "start_col": 27,
+          "end_col": 28,
+          "seq_in_line": 5
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "typeable": true,
+          "start_col": 29,
+          "end_col": 35,
+          "seq_in_line": 6
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "typeable": false,
+          "start_col": 35,
+          "end_col": 36,
+          "seq_in_line": 7
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "typeable": false,
+          "start_col": 36,
+          "end_col": 37,
+          "seq_in_line": 8
+        },
+        {
+          "text": "Promise",
+          "type": "type_identifier",
+          "typeable": true,
+          "start_col": 38,
+          "end_col": 45,
+          "seq_in_line": 9
+        },
+        {
+          "text": "<",
+          "type": "<",
+          "typeable": false,
+          "start_col": 45,
+          "end_col": 46,
+          "seq_in_line": 10
+        },
+        {
+          "text": "User",
+          "type": "type_identifier",
+          "typeable": true,
+          "start_col": 46,
+          "end_col": 50,
+          "seq_in_line": 11
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "typeable": false,
+          "start_col": 50,
+          "end_col": 51,
+          "seq_in_line": 12
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "typeable": false,
+          "start_col": 52,
+          "end_col": 53,
+          "seq_in_line": 13
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "async",
+          "type": "async",
+          "typeable": true,
+          "start_col": 0,
+          "end_col": 5,
+          "seq_in_line": 0
+        },
+        {
+          "text": "function",
+          "type": "function",
+          "typeable": true,
+          "start_col": 6,
+          "end_col": 14,
+          "seq_in_line": 1
+        },
+        {
+          "text": "fetchUser",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 15,
+          "end_col": 24,
+          "seq_in_line": 2
+        },
+        {
+          "text": "id",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 25,
+          "end_col": 27,
+          "seq_in_line": 4
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "typeable": true,
+          "start_col": 29,
+          "end_col": 35,
+          "seq_in_line": 6
+        },
+        {
+          "text": "Promise",
+          "type": "type_identifier",
+          "typeable": true,
+          "start_col": 38,
+          "end_col": 45,
+          "seq_in_line": 9
+        },
+        {
+          "text": "User",
+          "type": "type_identifier",
+          "typeable": true,
+          "start_col": 46,
+          "end_col": 50,
+          "seq_in_line": 11
+        }
+      ],
+      "typing_sequence": "asyncfunctionfetchUseridnumberPromiseUser",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "13": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "14": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "15": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "16": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "17": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "18": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "19": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "20": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "21": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "22": {
+          "token_idx": 3,
+          "display_col": 25
+        },
+        "23": {
+          "token_idx": 3,
+          "display_col": 25
+        },
+        "24": {
+          "token_idx": 4,
+          "display_col": 29
+        },
+        "25": {
+          "token_idx": 4,
+          "display_col": 29
+        },
+        "26": {
+          "token_idx": 4,
+          "display_col": 29
+        },
+        "27": {
+          "token_idx": 4,
+          "display_col": 29
+        },
+        "28": {
+          "token_idx": 4,
+          "display_col": 29
+        },
+        "29": {
+          "token_idx": 4,
+          "display_col": 29
+        },
+        "30": {
+          "token_idx": 5,
+          "display_col": 38
+        },
+        "31": {
+          "token_idx": 5,
+          "display_col": 38
+        },
+        "32": {
+          "token_idx": 5,
+          "display_col": 38
+        },
+        "33": {
+          "token_idx": 5,
+          "display_col": 38
+        },
+        "34": {
+          "token_idx": 5,
+          "display_col": 38
+        },
+        "35": {
+          "token_idx": 5,
+          "display_col": 38
+        },
+        "36": {
+          "token_idx": 5,
+          "display_col": 38
+        },
+        "37": {
+          "token_idx": 6,
+          "display_col": 46
+        },
+        "38": {
+          "token_idx": 6,
+          "display_col": 46
+        },
+        "39": {
+          "token_idx": 6,
+          "display_col": 46
+        },
+        "40": {
+          "token_idx": 6,
+          "display_col": 46
+        }
+      }
+    },
+    {
+      "line_number": 7,
+      "indent_level": 1,
+      "actual_line": "    const response = await fetch(`/api/users/${id}`);",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 9,
+          "seq_in_line": 0
+        },
+        {
+          "text": "response",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 10,
+          "end_col": 18,
+          "seq_in_line": 1
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "typeable": false,
+          "start_col": 19,
+          "end_col": 20,
+          "seq_in_line": 2
+        },
+        {
+          "text": "await",
+          "type": "await",
+          "typeable": true,
+          "start_col": 21,
+          "end_col": 26,
+          "seq_in_line": 3
+        },
+        {
+          "text": "fetch",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 27,
+          "end_col": 32,
+          "seq_in_line": 4
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "typeable": false,
+          "start_col": 32,
+          "end_col": 33,
+          "seq_in_line": 5
+        },
+        {
+          "text": "`",
+          "type": "`",
+          "typeable": false,
+          "start_col": 33,
+          "end_col": 34,
+          "seq_in_line": 6
+        },
+        {
+          "text": "/api/users/",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 34,
+          "end_col": 45,
+          "seq_in_line": 7
+        },
+        {
+          "text": "${",
+          "type": "${",
+          "typeable": true,
+          "start_col": 45,
+          "end_col": 47,
+          "seq_in_line": 8
+        },
+        {
+          "text": "id",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 47,
+          "end_col": 49,
+          "seq_in_line": 9
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "typeable": false,
+          "start_col": 49,
+          "end_col": 50,
+          "seq_in_line": 10
+        },
+        {
+          "text": "`",
+          "type": "`",
+          "typeable": false,
+          "start_col": 50,
+          "end_col": 51,
+          "seq_in_line": 11
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "typeable": false,
+          "start_col": 51,
+          "end_col": 52,
+          "seq_in_line": 12
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "typeable": false,
+          "start_col": 52,
+          "end_col": 53,
+          "seq_in_line": 13
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 9,
+          "seq_in_line": 0
+        },
+        {
+          "text": "response",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 10,
+          "end_col": 18,
+          "seq_in_line": 1
+        },
+        {
+          "text": "await",
+          "type": "await",
+          "typeable": true,
+          "start_col": 21,
+          "end_col": 26,
+          "seq_in_line": 3
+        },
+        {
+          "text": "fetch",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 27,
+          "end_col": 32,
+          "seq_in_line": 4
+        },
+        {
+          "text": "/api/users/",
+          "type": "string_fragment",
+          "typeable": true,
+          "start_col": 34,
+          "end_col": 45,
+          "seq_in_line": 7
+        },
+        {
+          "text": "${",
+          "type": "${",
+          "typeable": true,
+          "start_col": 45,
+          "end_col": 47,
+          "seq_in_line": 8
+        },
+        {
+          "text": "id",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 47,
+          "end_col": 49,
+          "seq_in_line": 9
+        }
+      ],
+      "typing_sequence": "constresponseawaitfetch/api/users/${id",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "13": {
+          "token_idx": 2,
+          "display_col": 21
+        },
+        "14": {
+          "token_idx": 2,
+          "display_col": 21
+        },
+        "15": {
+          "token_idx": 2,
+          "display_col": 21
+        },
+        "16": {
+          "token_idx": 2,
+          "display_col": 21
+        },
+        "17": {
+          "token_idx": 2,
+          "display_col": 21
+        },
+        "18": {
+          "token_idx": 3,
+          "display_col": 27
+        },
+        "19": {
+          "token_idx": 3,
+          "display_col": 27
+        },
+        "20": {
+          "token_idx": 3,
+          "display_col": 27
+        },
+        "21": {
+          "token_idx": 3,
+          "display_col": 27
+        },
+        "22": {
+          "token_idx": 3,
+          "display_col": 27
+        },
+        "23": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "24": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "25": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "26": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "27": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "28": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "29": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "30": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "31": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "32": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "33": {
+          "token_idx": 4,
+          "display_col": 34
+        },
+        "34": {
+          "token_idx": 5,
+          "display_col": 45
+        },
+        "35": {
+          "token_idx": 5,
+          "display_col": 45
+        },
+        "36": {
+          "token_idx": 6,
+          "display_col": 47
+        },
+        "37": {
+          "token_idx": 6,
+          "display_col": 47
+        }
+      }
+    },
+    {
+      "line_number": 8,
+      "indent_level": 1,
+      "actual_line": "    const data = await response.json();",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 9,
+          "seq_in_line": 0
+        },
+        {
+          "text": "data",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 10,
+          "end_col": 14,
+          "seq_in_line": 1
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "typeable": false,
+          "start_col": 15,
+          "end_col": 16,
+          "seq_in_line": 2
+        },
+        {
+          "text": "await",
+          "type": "await",
+          "typeable": true,
+          "start_col": 17,
+          "end_col": 22,
+          "seq_in_line": 3
+        },
+        {
+          "text": "response",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 23,
+          "end_col": 31,
+          "seq_in_line": 4
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "typeable": false,
+          "start_col": 31,
+          "end_col": 32,
+          "seq_in_line": 5
+        },
+        {
+          "text": "json",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 32,
+          "end_col": 36,
+          "seq_in_line": 6
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "typeable": false,
+          "start_col": 36,
+          "end_col": 37,
+          "seq_in_line": 7
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "typeable": false,
+          "start_col": 37,
+          "end_col": 38,
+          "seq_in_line": 8
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "typeable": false,
+          "start_col": 38,
+          "end_col": 39,
+          "seq_in_line": 9
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 9,
+          "seq_in_line": 0
+        },
+        {
+          "text": "data",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 10,
+          "end_col": 14,
+          "seq_in_line": 1
+        },
+        {
+          "text": "await",
+          "type": "await",
+          "typeable": true,
+          "start_col": 17,
+          "end_col": 22,
+          "seq_in_line": 3
+        },
+        {
+          "text": "response",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 23,
+          "end_col": 31,
+          "seq_in_line": 4
+        },
+        {
+          "text": "json",
+          "type": "property_identifier",
+          "typeable": true,
+          "start_col": 32,
+          "end_col": 36,
+          "seq_in_line": 6
+        }
+      ],
+      "typing_sequence": "constdataawaitresponsejson",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "12": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "13": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "14": {
+          "token_idx": 3,
+          "display_col": 23
+        },
+        "15": {
+          "token_idx": 3,
+          "display_col": 23
+        },
+        "16": {
+          "token_idx": 3,
+          "display_col": 23
+        },
+        "17": {
+          "token_idx": 3,
+          "display_col": 23
+        },
+        "18": {
+          "token_idx": 3,
+          "display_col": 23
+        },
+        "19": {
+          "token_idx": 3,
+          "display_col": 23
+        },
+        "20": {
+          "token_idx": 3,
+          "display_col": 23
+        },
+        "21": {
+          "token_idx": 3,
+          "display_col": 23
+        },
+        "22": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "23": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "24": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "25": {
+          "token_idx": 4,
+          "display_col": 32
+        }
+      }
+    },
+    {
+      "line_number": 9,
+      "indent_level": 1,
+      "actual_line": "    return data as User;",
+      "display_tokens": [
+        {
+          "text": "return",
+          "type": "return",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 10,
+          "seq_in_line": 0
+        },
+        {
+          "text": "data",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 11,
+          "end_col": 15,
+          "seq_in_line": 1
+        },
+        {
+          "text": "as",
+          "type": "as",
+          "typeable": true,
+          "start_col": 16,
+          "end_col": 18,
+          "seq_in_line": 2
+        },
+        {
+          "text": "User",
+          "type": "type_identifier",
+          "typeable": true,
+          "start_col": 19,
+          "end_col": 23,
+          "seq_in_line": 3
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "typeable": false,
+          "start_col": 23,
+          "end_col": 24,
+          "seq_in_line": 4
+        }
+      ],
+      "typing_tokens": [
+        {
+          "text": "return",
+          "type": "return",
+          "typeable": true,
+          "start_col": 4,
+          "end_col": 10,
+          "seq_in_line": 0
+        },
+        {
+          "text": "data",
+          "type": "identifier",
+          "typeable": true,
+          "start_col": 11,
+          "end_col": 15,
+          "seq_in_line": 1
+        },
+        {
+          "text": "as",
+          "type": "as",
+          "typeable": true,
+          "start_col": 16,
+          "end_col": 18,
+          "seq_in_line": 2
+        },
+        {
+          "text": "User",
+          "type": "type_identifier",
+          "typeable": true,
+          "start_col": 19,
+          "end_col": 23,
+          "seq_in_line": 3
+        }
+      ],
+      "typing_sequence": "returndataasUser",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 11
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 11
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 11
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 11
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 16
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 16
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "13": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "14": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "15": {
+          "token_idx": 3,
+          "display_col": 19
+        }
+      }
+    },
+    {
+      "line_number": 10,
+      "indent_level": 0,
+      "actual_line": "}",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "typeable": false,
+          "start_col": 0,
+          "end_col": 1,
+          "seq_in_line": 0
+        }
+      ],
+      "typing_tokens": [],
+      "typing_sequence": "",
+      "char_map": {}
+    }
+  ]
+}

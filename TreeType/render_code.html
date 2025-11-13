@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree-Sitter Code Renderer - Phase 1.3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+        
+        .line {
+            line-height: 1.6;
+            padding: 2px 0;
+        }
+        
+        .line:hover {
+            background: #2a2a2a;
+        }
+        
+        .line-number {
+            user-select: none;
+            color: #858585;
+            text-align: right;
+            padding-right: 16px;
+            min-width: 40px;
+        }
+        
+        /* Syntax highlighting colors (VS Code Dark+ theme) */
+        .keyword { color: #569cd6; }           /* def, function, class, return, if, etc */
+        .identifier { color: #9cdcfe; }        /* variable names */
+        .type_identifier { color: #4ec9b0; }  /* User-defined types */
+        .property_identifier { color: #9cdcfe; }
+        .string_content { color: #ce9178; }   /* string text */
+        .string_start, .string_end { color: #ce9178; }
+        .number, .integer { color: #b5cea8; } /* numbers */
+        .comment { color: #6a9955; font-style: italic; }
+        .operator { color: #d4d4d4; }         /* =, +, -, etc */
+        .punctuation { color: #d4d4d4; }      /* :, ;, , */
+        .bracket { color: #ffd700; }          /* (, ), [, ], {, } */
+        
+        /* Token types that are keywords in different languages */
+        .def, .function, .class, .return, .if, .elif, .else, 
+        .for, .while, .import, .from, .as, .const, .let, .var,
+        .async, .await, .interface, .type, .export { 
+            color: #c586c0; 
+        }
+        
+        .non-typeable {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold mb-2">Tree-Sitter Code Renderer</h1>
+            <p class="text-gray-400">Phase 1.3: Static rendering with syntax highlighting and indentation</p>
+        </div>
+        
+        <!-- Language Selector -->
+        <div class="mb-6 flex gap-4 items-center">
+            <label class="text-gray-300">Select Language:</label>
+            <select id="languageSelect" class="bg-gray-800 text-white px-4 py-2 rounded border border-gray-600">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="typescript">TypeScript</option>
+                <option value="tsx">TSX/React</option>
+            </select>
+            
+            <button id="reloadBtn" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">
+                Reload
+            </button>
+        </div>
+        
+        <!-- Stats Display -->
+        <div id="stats" class="mb-6 p-4 bg-gray-800 rounded"></div>
+        
+        <!-- Code Display -->
+        <div class="bg-gray-900 rounded-lg p-6 overflow-x-auto">
+            <div id="codeDisplay" class="font-mono text-sm"></div>
+        </div>
+        
+        <!-- Legend -->
+        <div class="mt-6 p-4 bg-gray-800 rounded">
+            <h3 class="font-bold mb-2">Legend:</h3>
+            <div class="grid grid-cols-2 gap-2 text-sm">
+                <div><span class="keyword">Blue</span> = Keywords</div>
+                <div><span class="identifier">Cyan</span> = Identifiers</div>
+                <div><span class="type_identifier">Teal</span> = Types</div>
+                <div><span class="string_content">Orange</span> = Strings</div>
+                <div><span class="number">Green</span> = Numbers</div>
+                <div><span class="comment">Green Italic</span> = Comments</div>
+                <div><span class="bracket">Gold</span> = Brackets</div>
+                <div><span class="non-typeable">Dimmed</span> = Non-typeable</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentData = null;
+        
+        // Load JSON data
+        async function loadLanguage(language) {
+            try {
+                const response = await fetch(`output/json_samples/${language}_sample.json`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                currentData = await response.json();
+                renderCode();
+            } catch (error) {
+                console.error('Error loading file:', error);
+                document.getElementById('codeDisplay').innerHTML = `
+                    <div class="text-red-400">
+                        Error loading ${language}_sample.json<br>
+                        Make sure you're running this from the project root directory.<br>
+                        Error: ${error.message}
+                    </div>
+                `;
+            }
+        }
+        
+        // Render code from JSON
+        function renderCode() {
+            if (!currentData) return;
+            
+            const display = document.getElementById('codeDisplay');
+            display.innerHTML = '';
+            
+            // Update stats
+            const totalTokens = currentData.lines.reduce((sum, line) => 
+                sum + line.display_tokens.length, 0);
+            const typeableTokens = currentData.lines.reduce((sum, line) => 
+                sum + line.typing_tokens.length, 0);
+            const typeableChars = currentData.lines.reduce((sum, line) => 
+                sum + line.typing_sequence.length, 0);
+            
+            document.getElementById('stats').innerHTML = `
+                <div class="grid grid-cols-4 gap-4 text-sm">
+                    <div>
+                        <div class="text-gray-400">Language</div>
+                        <div class="font-bold">${currentData.language}</div>
+                    </div>
+                    <div>
+                        <div class="text-gray-400">Total Lines</div>
+                        <div class="font-bold">${currentData.total_lines}</div>
+                    </div>
+                    <div>
+                        <div class="text-gray-400">Total Tokens</div>
+                        <div class="font-bold">${totalTokens} (${typeableTokens} typeable)</div>
+                    </div>
+                    <div>
+                        <div class="text-gray-400">Characters to Type</div>
+                        <div class="font-bold">${typeableChars}</div>
+                    </div>
+                </div>
+            `;
+            
+            // Render each line
+            currentData.lines.forEach((lineData, idx) => {
+                const lineDiv = document.createElement('div');
+                lineDiv.className = 'line flex';
+                
+                // Line number
+                const lineNum = document.createElement('span');
+                lineNum.className = 'line-number';
+                lineNum.textContent = lineData.line_number + 1;
+                lineDiv.appendChild(lineNum);
+                
+                // Line content container with indentation
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'flex-1';
+                contentDiv.style.paddingLeft = `${lineData.indent_level * 16}px`;
+                
+                // Render tokens with proper spacing
+                let currentCol = 0;
+                lineData.display_tokens.forEach(token => {
+                    // Add spaces to reach token's start column
+                    if (token.start_col > currentCol) {
+                        const spaces = ' '.repeat(token.start_col - currentCol);
+                        contentDiv.appendChild(document.createTextNode(spaces));
+                    }
+                    
+                    const tokenSpan = document.createElement('span');
+                    tokenSpan.textContent = token.text;
+                    
+                    // Apply syntax highlighting class
+                    const cssClass = getCssClass(token.type, token.text);
+                    tokenSpan.className = cssClass;
+                    
+                    // Add non-typeable styling
+                    if (!token.typeable) {
+                        tokenSpan.className += ' non-typeable';
+                    }
+                    
+                    // Add tooltip
+                    tokenSpan.title = `Type: ${token.type} | Typeable: ${token.typeable}`;
+                    
+                    contentDiv.appendChild(tokenSpan);
+                    
+                    // Update current column position
+                    currentCol = token.end_col;
+                });
+                
+                lineDiv.appendChild(contentDiv);
+                display.appendChild(lineDiv);
+            });
+        }
+        
+        // Map token type to CSS class
+        function getCssClass(type, text) {
+            // Brackets
+            if (['(', ')', '[', ']', '{', '}', '<', '>'].includes(type)) {
+                return 'bracket';
+            }
+            
+            // Keywords (by type name)
+            const keywords = ['def', 'function', 'class', 'return', 'if', 'elif', 
+                            'else', 'for', 'while', 'import', 'from', 'as', 
+                            'const', 'let', 'var', 'async', 'await', 'interface', 
+                            'type', 'export', 'default'];
+            if (keywords.includes(type)) {
+                return type;
+            }
+            
+            // Comments
+            if (type.includes('comment')) {
+                return 'comment';
+            }
+            
+            // Strings
+            if (type.includes('string')) {
+                return type.replace(/_/g, '_');
+            }
+            
+            // Numbers
+            if (type === 'integer' || type === 'number' || type === 'float') {
+                return 'number';
+            }
+            
+            // Identifiers
+            if (type.includes('identifier')) {
+                return type;
+            }
+            
+            // Operators
+            if (['->', '=>', '=', '+', '-', '*', '/', '%', '++', '--'].includes(type)) {
+                return 'operator';
+            }
+            
+            // Punctuation
+            if ([':', ';', ',', '.'].includes(type)) {
+                return 'punctuation';
+            }
+            
+            // Default
+            return type.replace(/[^a-zA-Z0-9_]/g, '_');
+        }
+        
+        // Event listeners
+        document.getElementById('languageSelect').addEventListener('change', (e) => {
+            loadLanguage(e.target.value);
+        });
+        
+        document.getElementById('reloadBtn').addEventListener('click', () => {
+            const lang = document.getElementById('languageSelect').value;
+            loadLanguage(lang);
+        });
+        
+        // Initial load
+        loadLanguage('python');
+    </script>
+</body>
+</html>
