@@ -1,0 +1,3 @@
+1. There is no visual cue indicating that the typing test is finished. The test becomes stuck at the final character of the last line in the Python Fibonacci typing test—specifically the `t` in `print` within `print(result)`.
+2. The last character of each typed line has a different color from the rest of the line; for example, the entire line appears green, while the final character appears light blue. This behavior is also inconsistent. For instance, in the TypeScript test, on line 1, the `r` in `User` is displayed in green.
+3. Overall - Things are way better than the last couple of sessions.

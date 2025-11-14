@@ -222,7 +222,7 @@
         {
           "text": "string",
           "type": "string",
-          "typeable": true,
+          "typeable": false,
           "start_col": 10,
           "end_col": 16,
           "seq_in_line": 2
@@ -244,17 +244,9 @@
           "start_col": 4,
           "end_col": 8,
           "seq_in_line": 0
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "typeable": true,
-          "start_col": 10,
-          "end_col": 16,
-          "seq_in_line": 2
         }
       ],
-      "typing_sequence": "namestring",
+      "typing_sequence": "name",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -271,30 +263,6 @@
         "3": {
           "token_idx": 0,
           "display_col": 4
-        },
-        "4": {
-          "token_idx": 1,
-          "display_col": 10
-        },
-        "5": {
-          "token_idx": 1,
-          "display_col": 10
-        },
-        "6": {
-          "token_idx": 1,
-          "display_col": 10
-        },
-        "7": {
-          "token_idx": 1,
-          "display_col": 10
-        },
-        "8": {
-          "token_idx": 1,
-          "display_col": 10
-        },
-        "9": {
-          "token_idx": 1,
-          "display_col": 10
         }
       }
     },
@@ -322,7 +290,7 @@
         {
           "text": "string",
           "type": "string",
-          "typeable": true,
+          "typeable": false,
           "start_col": 11,
           "end_col": 17,
           "seq_in_line": 2
@@ -344,17 +312,9 @@
           "start_col": 4,
           "end_col": 9,
           "seq_in_line": 0
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "typeable": true,
-          "start_col": 11,
-          "end_col": 17,
-          "seq_in_line": 2
         }
       ],
-      "typing_sequence": "emailstring",
+      "typing_sequence": "email",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -375,30 +335,6 @@
         "4": {
           "token_idx": 0,
           "display_col": 4
-        },
-        "5": {
-          "token_idx": 1,
-          "display_col": 11
-        },
-        "6": {
-          "token_idx": 1,
-          "display_col": 11
-        },
-        "7": {
-          "token_idx": 1,
-          "display_col": 11
-        },
-        "8": {
-          "token_idx": 1,
-          "display_col": 11
-        },
-        "9": {
-          "token_idx": 1,
-          "display_col": 11
-        },
-        "10": {
-          "token_idx": 1,
-          "display_col": 11
         }
       }
     },
@@ -846,7 +782,7 @@
         {
           "text": "/api/users/",
           "type": "string_fragment",
-          "typeable": true,
+          "typeable": false,
           "start_col": 34,
           "end_col": 45,
           "seq_in_line": 7
@@ -934,14 +870,6 @@
           "seq_in_line": 4
         },
         {
-          "text": "/api/users/",
-          "type": "string_fragment",
-          "typeable": true,
-          "start_col": 34,
-          "end_col": 45,
-          "seq_in_line": 7
-        },
-        {
           "text": "${",
           "type": "${",
           "typeable": true,
@@ -958,7 +886,7 @@
           "seq_in_line": 9
         }
       ],
-      "typing_sequence": "constresponseawaitfetch/api/users/${id",
+      "typing_sequence": "constresponseawaitfetch${id",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -1054,62 +982,18 @@
         },
         "23": {
           "token_idx": 4,
-          "display_col": 34
+          "display_col": 45
         },
         "24": {
           "token_idx": 4,
-          "display_col": 34
+          "display_col": 45
         },
         "25": {
-          "token_idx": 4,
-          "display_col": 34
-        },
-        "26": {
-          "token_idx": 4,
-          "display_col": 34
-        },
-        "27": {
-          "token_idx": 4,
-          "display_col": 34
-        },
-        "28": {
-          "token_idx": 4,
-          "display_col": 34
-        },
-        "29": {
-          "token_idx": 4,
-          "display_col": 34
-        },
-        "30": {
-          "token_idx": 4,
-          "display_col": 34
-        },
-        "31": {
-          "token_idx": 4,
-          "display_col": 34
-        },
-        "32": {
-          "token_idx": 4,
-          "display_col": 34
-        },
-        "33": {
-          "token_idx": 4,
-          "display_col": 34
-        },
-        "34": {
           "token_idx": 5,
-          "display_col": 45
-        },
-        "35": {
-          "token_idx": 5,
-          "display_col": 45
-        },
-        "36": {
-          "token_idx": 6,
           "display_col": 47
         },
-        "37": {
-          "token_idx": 6,
+        "26": {
+          "token_idx": 5,
           "display_col": 47
         }
       }

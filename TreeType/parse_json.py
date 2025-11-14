@@ -32,6 +32,18 @@ def is_non_typeable(token_type, token_text):
     Default: unknown tokens are typeable (safer for exploration).
     """
     
+    # ============================================
+    # CRITICAL FIX: String content is NON-TYPEABLE
+    # ============================================
+    if 'string' in token_type.lower():
+        return True
+    
+    # ============================================
+    # CRITICAL FIX: Comments are NON-TYPEABLE
+    # ============================================
+    if 'comment' in token_type.lower():
+        return True
+    
     # Punctuation
     punctuation = {':', ';', ',', '.'}
     
@@ -44,14 +56,11 @@ def is_non_typeable(token_type, token_text):
     # JSX/TSX specific
     jsx_syntax = {'</', '/>'}
     
-    # String delimiters
+    # String delimiters (already covered by 'string' check above, but keeping for clarity)
     string_delimiters = {'string_start', 'string_end', '"', "'", '`'}
     
-    # Comments (visible but not typeable)
-    comments = {'comment', 'line_comment', 'block_comment'}
-    
     # Combine all non-typeable categories
-    non_typeable_types = punctuation | brackets | operators | string_delimiters | comments | jsx_syntax
+    non_typeable_types = punctuation | brackets | operators | string_delimiters | jsx_syntax
     
     # Check if token type or text matches
     if token_type in non_typeable_types:

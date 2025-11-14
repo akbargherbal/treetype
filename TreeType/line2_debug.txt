@@ -1,0 +1,18 @@
+{
+  "line_number": 9,
+  "indent_level": 1,
+  "actual_line": "    \"\"\"",
+  "display_tokens": [
+    {
+      "text": "\"\"\"",
+      "type": "string_end",
+      "typeable": false,
+      "start_col": 4,
+      "end_col": 7,
+      "seq_in_line": 0
+    }
+  ],
+  "typing_tokens": [],
+  "typing_sequence": "",
+  "char_map": {}
+}
