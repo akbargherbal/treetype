@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tree-Sitter Typing Game - Phase 3.5 Enhanced UX</title>
+    <title>Tree-Sitter Typing Game - Phase 5.2 Configuration UI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       /* Added for smooth scrolling on the root */
@@ -152,7 +152,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding-top: 2rem; /* Increased padding for more centering room */
+        padding-top: 2rem;
         padding-bottom: 2rem;
       }
 
@@ -280,12 +280,12 @@
         <div class="mb-8">
           <h1 class="text-3xl font-bold mb-2">Tree-Sitter Typing Game</h1>
           <p class="text-gray-400">
-            Phase 3.5: Enhanced UX - Distraction-Free Typing
+            Phase 5.2: Configuration UI - Customizable Typing Modes
           </p>
         </div>
 
         <!-- Controls -->
-        <div class="mb-6 flex gap-4 items-center">
+        <div class="mb-6 flex gap-4 items-center flex-wrap">
           <label class="text-gray-300">Language:</label>
           <select
             id="languageSelect"
@@ -297,14 +297,31 @@
             <option value="tsx">TSX/React</option>
           </select>
 
+          <!-- NEW: Typing Mode Selector -->
+          <label class="text-gray-300 ml-6">Typing Mode:</label>
+          <div class="flex gap-2">
+            <label class="flex items-center gap-2 cursor-pointer px-3 py-2 bg-gray-800 rounded hover:bg-gray-700 transition">
+              <input type="radio" name="typingMode" value="minimal" class="cursor-pointer">
+              <span class="text-sm">Minimal</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer px-3 py-2 bg-gray-800 rounded hover:bg-gray-700 transition">
+              <input type="radio" name="typingMode" value="standard" checked class="cursor-pointer">
+              <span class="text-sm">Standard</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer px-3 py-2 bg-gray-800 rounded hover:bg-gray-700 transition">
+              <input type="radio" name="typingMode" value="full" class="cursor-pointer">
+              <span class="text-sm">Full</span>
+            </label>
+          </div>
+
           <button
             id="resetBtn"
-            class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
+            class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded ml-auto"
           >
             Reset (Esc)
           </button>
 
-          <div id="testStatus" class="ml-auto text-sm">
+          <div id="testStatus" class="text-sm">
             <span class="text-gray-400">Press any key to start...</span>
           </div>
         </div>
@@ -325,7 +342,7 @@
       <!-- Instructions: Also fade during typing -->
       <div class="mt-6 p-4 bg-gray-800 rounded controls-area">
         <h3 class="font-bold mb-2">Instructions:</h3>
-        <ul class="text-sm space-y-1">
+        <ul class="text-sm space-y-1 mb-4">
           <li>
             • <span class="text-gray-400">Gray text</span> = Not yet typed
           </li>
@@ -348,16 +365,21 @@
             = Wrong key (stays until corrected)
           </li>
           <li>
-            • Type only the <strong>highlighted characters</strong> -
-            punctuation and brackets are revealed automatically
-          </li>
-          <li>
             • Press <kbd class="px-2 py-1 bg-gray-700 rounded">Esc</kbd> to
             reset
           </li>
+        </ul>
+        
+        <h3 class="font-bold mb-2 mt-4">Typing Modes:</h3>
+        <ul class="text-sm space-y-1">
           <li>
-            • <strong>Distraction-free mode:</strong> Controls fade when typing
-            (hover to show)
+            • <strong>Minimal</strong>: Type only keywords and identifiers (fastest)
+          </li>
+          <li>
+            • <strong>Standard</strong> ⭐: Type keywords, identifiers, operators, and <code>:</code> <code>;</code> (recommended)
+          </li>
+          <li>
+            • <strong>Full</strong>: Type everything except whitespace and comments (maximum practice)
           </li>
         </ul>
       </div>
@@ -365,10 +387,35 @@
 
     <script>
       // =====================================================================
+      // PRESET CONFIGURATIONS (PHASE 5.2)
+      // =====================================================================
+
+      const PRESETS = {
+        minimal: {
+          name: 'Minimal',
+          description: 'Type only keywords and identifiers',
+          exclude: ['bracket', 'operator', 'punctuation', 'string_content', 'string_delimiter', 'comment']
+        },
+        standard: {
+          name: 'Standard',
+          description: 'Balanced typing experience (recommended)',
+          exclude: ['bracket', 'string_content', 'string_delimiter', 'comment'],
+          // Special handling: include : and ; even though they're in punctuation category
+          includeSpecific: [':', ';']
+        },
+        full: {
+          name: 'Full',
+          description: 'Type everything except whitespace and comments',
+          exclude: ['comment', 'string_content']
+        }
+      };
+
+      // =====================================================================
       // STATE MANAGEMENT
       // =====================================================================
 
       let currentData = null;
+      let rawData = null; // Store original unfiltered data
       let testState = {
         active: false,
         startTime: null,
@@ -382,7 +429,68 @@
       };
 
       // =====================================================================
-      // LOAD LANGUAGE DATA
+      // APPLY EXCLUSION CONFIG (PHASE 5.2)
+      // =====================================================================
+
+      function applyExclusionConfig(lineData, preset) {
+        const config = PRESETS[preset];
+        
+        // Filter tokens based on preset
+        const filteredTokens = lineData.display_tokens.map(token => {
+          let typeable = token.base_typeable;
+          
+          // If token has no categories, it's always typeable (keywords, identifiers)
+          if (!token.categories || token.categories.length === 0) {
+            return { ...token, typeable };
+          }
+          
+          // Check if token should be specifically included (Standard mode: : and ;)
+          if (config.includeSpecific && config.includeSpecific.includes(token.text)) {
+            return { ...token, typeable: true };
+          }
+          
+          // Check if any of the token's categories are in the exclusion list
+          for (const category of token.categories) {
+            if (config.exclude.includes(category)) {
+              typeable = false;
+              break;
+            }
+          }
+          
+          return { ...token, typeable };
+        });
+        
+        // Regenerate typing_sequence from typeable tokens
+        const typingSequence = filteredTokens
+          .filter(t => t.typeable)
+          .map(t => t.text)
+          .join('');
+        
+        // Regenerate char_map
+        const charMap = {};
+        let charIdx = 0;
+        const typeableTokens = filteredTokens.filter(t => t.typeable);
+        
+        typeableTokens.forEach((token, tokenIdx) => {
+          for (let i = 0; i < token.text.length; i++) {
+            charMap[String(charIdx)] = {
+              token_idx: tokenIdx,
+              display_col: token.start_col
+            };
+            charIdx++;
+          }
+        });
+        
+        return {
+          ...lineData,
+          display_tokens: filteredTokens,
+          typing_sequence: typingSequence,
+          char_map: charMap
+        };
+      }
+
+      // =====================================================================
+      // LOAD LANGUAGE DATA (UPDATED FOR PHASE 5.2)
       // =====================================================================
 
       async function loadLanguage(language) {
@@ -393,7 +501,17 @@
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
-          currentData = await response.json();
+          rawData = await response.json();
+          
+          // Get current preset
+          const preset = document.querySelector('input[name="typingMode"]:checked').value;
+          
+          // Apply filtering to all lines
+          currentData = {
+            ...rawData,
+            lines: rawData.lines.map(line => applyExclusionConfig(line, preset))
+          };
+          
           resetTest();
         } catch (error) {
           console.error("Error loading file:", error);
@@ -430,9 +548,6 @@
         updateStats();
         updateStatus("Press any key to start...");
 
-        // CRITICAL: Use requestAnimationFrame to ensure DOM is fully rendered
-        // before calculating scroll position. This prevents the "6 lines of padding" bug
-        // when switching languages.
         requestAnimationFrame(() => {
           const firstLine = document.getElementById("line-0");
           if (firstLine) {
@@ -442,7 +557,7 @@
               firstLine.offsetHeight / 2;
             window.scrollTo({
               top: targetY,
-              behavior: "auto", // Instant scroll on reset, not smooth
+              behavior: "auto",
             });
           }
         });
@@ -532,7 +647,7 @@
             } else if (isCurrentLine) {
               const tokenStartsAfterCursor =
                 token.start_col >
-                (lineData.typing_tokens[testState.currentCharIndex]
+                (lineData.display_tokens.filter(t => t.typeable)[testState.currentCharIndex]
                   ?.start_col || 0);
               if (tokenStartsAfterCursor) {
                 tokenSpan.classList.add("char-untyped");
@@ -569,11 +684,17 @@
               100
           );
         }
+        
+        // Get current preset name
+        const preset = document.querySelector('input[name="typingMode"]:checked').value;
+        const presetName = PRESETS[preset].name;
+        
         document.getElementById("stats").innerHTML = `
-                <div class="grid grid-cols-5 gap-4 text-sm">
+                <div class="grid grid-cols-6 gap-4 text-sm">
                     <div><div class="text-gray-400">Language</div><div class="font-bold">${
                       currentData.language
                     }</div></div>
+                    <div><div class="text-gray-400">Mode</div><div class="font-bold">${presetName}</div></div>
                     <div><div class="text-gray-400">Line Progress</div><div class="font-bold">${
                       testState.currentLineIndex + 1
                     }/${currentData.total_lines}</div></div>
@@ -675,13 +796,12 @@
         } else {
           renderCode();
           updateStats();
-          // Use a timeout to ensure the DOM is updated before we calculate scroll
           setTimeout(manualSmartScroll, 0);
         }
       }
 
       // =====================================================================
-      // MANUAL SMART SCROLL LOGIC (DEFINITIVE FIX)
+      // MANUAL SMART SCROLL LOGIC
       // =====================================================================
       function manualSmartScroll() {
         const nextLineEl = document.getElementById(
@@ -692,18 +812,14 @@
         const currentScrollY = window.scrollY;
         const viewportHeight = window.innerHeight;
 
-        // Calculate the target scroll position to center the line
         const targetY =
           nextLineEl.offsetTop -
           viewportHeight / 2 +
           nextLineEl.offsetHeight / 2;
 
-        // --- THE "ALWAYS DOWN" RULE ---
-        // Only scroll if the target is below the current position.
         if (targetY > currentScrollY) {
           window.scrollTo({
             top: targetY,
-            // behavior is handled by the CSS `scroll-behavior: smooth` on the <html> element
           });
         }
       }
@@ -840,14 +956,56 @@
       }
 
       // =====================================================================
-      // EVENT LISTENERS
+      // CONFIGURATION & PERSISTENCE (PHASE 5.2)
+      // =====================================================================
+
+      const DEFAULT_CONFIG = {
+        preset: 'standard',
+        language: 'python'
+      };
+
+      function saveConfig() {
+        const config = {
+          preset: document.querySelector('input[name="typingMode"]:checked').value,
+          language: document.getElementById('languageSelect').value
+        };
+        localStorage.setItem('treetype_config', JSON.stringify(config));
+      }
+
+      function loadConfig() {
+        const saved = localStorage.getItem('treetype_config');
+        return saved ? JSON.parse(saved) : DEFAULT_CONFIG;
+      }
+
+      // =====================================================================
+      // EVENT LISTENERS (UPDATED FOR PHASE 5.2)
       // =====================================================================
 
       document
         .getElementById("languageSelect")
         .addEventListener("change", (e) => {
           loadLanguage(e.target.value);
+          saveConfig();
         });
+        
+      // NEW: Add event listener for preset changes
+      document.querySelectorAll('input[name="typingMode"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+          if (rawData) {
+            const preset = document.querySelector('input[name="typingMode"]:checked').value;
+            
+            // Reapply filtering to all lines
+            currentData = {
+              ...rawData,
+              lines: rawData.lines.map(line => applyExclusionConfig(line, preset))
+            };
+            
+            resetTest();
+            saveConfig();
+          }
+        });
+      });
+      
       document.getElementById("resetBtn").addEventListener("click", () => {
         resetTest();
       });
@@ -858,9 +1016,23 @@
         document.getElementById("codeDisplay").classList.remove("focused");
       });
       document.addEventListener("keydown", handleKeyPress);
+      
+      // NEW: Load saved config on page load
       document.addEventListener("DOMContentLoaded", () => {
-        loadLanguage("python");
-        document.getElementById("codeDisplay").focus();
+        const config = loadConfig();
+        
+        // Set preset
+        const presetRadio = document.querySelector(`input[name="typingMode"][value="${config.preset}"]`);
+        if (presetRadio) {
+          presetRadio.checked = true;
+        }
+        
+        // Set language
+        document.getElementById('languageSelect').value = config.language;
+        
+        // Load language with saved config
+        loadLanguage(config.language);
+        document.getElementById('codeDisplay').focus();
       });
     </script>
   </body>

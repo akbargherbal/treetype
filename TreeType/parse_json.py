@@ -1,6 +1,7 @@
 # ============================================================================
 # TREE-SITTER PARSER TO JSON EXPORT
-# Phase 1.1: Enhanced parsing with token classification and JSON output
+# Phase 5.1: Enhanced parsing with token categorization for configuration UI
+# BUG FIX: Added string_fragment to string_content category
 # ============================================================================
 
 import tree_sitter_python as tspython
@@ -23,63 +24,110 @@ PARSERS = {
 }
 
 # ----------------------------------------------------------------------------
-# TOKEN CLASSIFICATION
+# TOKEN CATEGORIZATION (FIXED FOR PHASE 5.1)
+# ----------------------------------------------------------------------------
+
+def categorize_token(token_type, token_text):
+    """
+    Classify tokens into categories for frontend filtering.
+    
+    This allows the configuration UI to selectively include/exclude
+    token types based on user preferences.
+    
+    Returns:
+        list: Categories this token belongs to (can be multiple)
+    
+    Categories:
+        - comment: Single-line and multi-line comments
+        - string_content: Content inside string literals
+        - string_delimiter: Quote characters (", ', `)
+        - punctuation: : ; , .
+        - bracket: ( ) [ ] { } < > and JSX syntax </ />
+        - operator: = + - * / % ! & | ^ ~ -> => ++ -- += -= *= /= ?
+    """
+    categories = []
+    
+    # Check token type first (case-insensitive)
+    type_lower = token_type.lower()
+    
+    # Comments (any type containing 'comment')
+    if 'comment' in type_lower:
+        categories.append('comment')
+    
+    # String content (content inside strings, NOT the delimiters)
+    # FIX: Added 'fragment' to catch JS template literal content
+    if 'string' in type_lower and ('content' in type_lower or 'fragment' in type_lower):
+        categories.append('string_content')
+    
+    # String delimiters (the quotes themselves)
+    if token_text in {'"', "'", '`'}:
+        categories.append('string_delimiter')
+    
+    # Also check for string_start/string_end types
+    if 'string_start' in type_lower or 'string_end' in type_lower:
+        categories.append('string_delimiter')
+    
+    # Punctuation
+    if token_text in {':', ';', ',', '.'}:
+        categories.append('punctuation')
+    
+    # Brackets (including JSX-specific syntax)
+    if token_text in {'(', ')', '[', ']', '{', '}', '<', '>', '</', '/>'}:
+        categories.append('bracket')
+    
+    # Operators
+    operators = {
+        '=', '+', '-', '*', '/', '%', '!', '&', '|', '^', '~',
+        '->', '=>', '++', '--', '+=', '-=', '*=', '/=', '%=',
+        '==', '!=', '===', '!==', '<=', '>=',
+        '&&', '||', '<<', '>>', '**', '//',
+        '?', ':', '??', '?.', '...'
+    }
+    if token_text in operators:
+        categories.append('operator')
+    
+    return categories
+
+# ----------------------------------------------------------------------------
+# TOKEN CLASSIFICATION (REFACTORED FOR PHASE 5.1)
 # ----------------------------------------------------------------------------
 
 def is_non_typeable(token_type, token_text):
     """
-    Define what users should NOT type.
-    Default: unknown tokens are typeable (safer for exploration).
+    Define what is STRUCTURALLY non-typeable (only whitespace).
+    
+    PHASE 5.1 CHANGE: This function now only marks structural whitespace
+    as non-typeable. Everything else gets base_typeable=true and the
+    frontend will decide what to actually make typeable based on config.
+    
+    Returns:
+        bool: True if token should NEVER be typeable (structural only)
     """
     
-    # ============================================
-    # CRITICAL FIX: String content is NON-TYPEABLE
-    # ============================================
-    if 'string' in token_type.lower():
+    # Only structural whitespace is truly non-typeable
+    # This includes spaces, tabs, and newlines that don't have semantic meaning
+    if token_type == 'whitespace' and token_text.strip() == '':
         return True
     
-    # ============================================
-    # CRITICAL FIX: Comments are NON-TYPEABLE
-    # ============================================
-    if 'comment' in token_type.lower():
-        return True
-    
-    # Punctuation
-    punctuation = {':', ';', ',', '.'}
-    
-    # Brackets
-    brackets = {'(', ')', '[', ']', '{', '}', '<', '>'}
-    
-    # Operators
-    operators = {'=', '+', '-', '*', '/', '%', '!', '&', '|', '^', '~', '->', '=>', '++', '--', '+=', '-=', '*=', '/=', '?'}
-    
-    # JSX/TSX specific
-    jsx_syntax = {'</', '/>'}
-    
-    # String delimiters (already covered by 'string' check above, but keeping for clarity)
-    string_delimiters = {'string_start', 'string_end', '"', "'", '`'}
-    
-    # Combine all non-typeable categories
-    non_typeable_types = punctuation | brackets | operators | string_delimiters | jsx_syntax
-    
-    # Check if token type or text matches
-    if token_type in non_typeable_types:
-        return True
-    if token_text in non_typeable_types:
-        return True
-    
+    # Everything else is potentially typeable (frontend decides via config)
     return False
 
 # ----------------------------------------------------------------------------
-# LEAF EXTRACTION (from sanity check)
+# LEAF EXTRACTION
 # ----------------------------------------------------------------------------
 
 def get_leaves(node, nodes=None):
-    """Get leaf nodes, but treat string_content and comment as atomic"""
+    """
+    Get leaf nodes, treating string_content and comment as atomic.
+    
+    This is Tree-sitter's correct behavior - multi-line nodes are
+    represented as single nodes with spans across multiple rows.
+    """
     if nodes is None:
         nodes = []
     
-    atomic_types = {'string_content', 'comment'}
+    # Atomic types: treat these as single units even if they span multiple lines
+    atomic_types = {'string_content', 'comment', 'string_fragment'}
     
     for child in node.children:
         if child.type in atomic_types:
@@ -111,36 +159,36 @@ def parse_code_to_dataframe(source_code, parser, language_name):
     df['TEXT'] = df['NODE'].apply(lambda x: x.text.decode('utf-8'))
     df['TYPE'] = df['NODE'].apply(lambda x: x.type)
     
-    # NEW: Add token classification
-    df['TYPEABLE'] = df.apply(
+    # PHASE 5.1: Add base_typeable (structural constraint only)
+    df['BASE_TYPEABLE'] = df.apply(
         lambda x: not is_non_typeable(x['TYPE'], x['TEXT']), 
         axis=1
     )
     
-    # NEW: Calculate indentation level (assuming 4-space indents)
-    df['INDENT_LEVEL'] = df['START_COL'].apply(lambda x: x // 4)
+    # PHASE 5.1: Add categories for frontend filtering
+    df['CATEGORIES'] = df.apply(
+        lambda x: categorize_token(x['TYPE'], x['TEXT']),
+        axis=1
+    )
     
-    # Add sequence number within line
-    df['SEQ_IN_LINE'] = df.groupby('START_ROW').cumcount()
+    # Calculate indentation level (assuming 4-space indents)
+    df['INDENT_LEVEL'] = df['START_COL'].apply(lambda x: x // 4)
     
     return df
 
 # ----------------------------------------------------------------------------
-# JSON EXPORT FUNCTION
+# JSON EXPORT FUNCTION (ENHANCED FOR PHASE 5.1)
 # ----------------------------------------------------------------------------
 
 def dataframe_to_json(df, source_code, language_name):
     """
     Convert DataFrame to frontend-ready JSON structure.
     
-    Output format per line:
-    {
-        "line_number": 4,
-        "indent_level": 0,
-        "display_tokens": [...],      # All tokens for rendering
-        "typing_tokens": [...],       # Only typeable tokens
-        "typing_sequence": "def...",  # Flattened typeable string
-    }
+    PHASE 5.1 CHANGES:
+    - Added 'categories' field to each token
+    - Renamed 'typeable' to 'base_typeable' (structural constraint)
+    - Removed 'typing_tokens' (frontend will generate based on config)
+    - Removed 'seq_in_line' (not needed for frontend)
     """
     
     lines_data = []
@@ -153,22 +201,21 @@ def dataframe_to_json(df, source_code, language_name):
         # Get indentation level (from first token on line)
         indent_level = line_df.iloc[0]['INDENT_LEVEL'] if len(line_df) > 0 else 0
         
-        # Build display tokens (all tokens)
+        # Build display tokens (all tokens with enhanced metadata)
         display_tokens = []
         for idx, row in line_df.iterrows():
             display_tokens.append({
                 'text': row['TEXT'],
                 'type': row['TYPE'],
-                'typeable': bool(row['TYPEABLE']),
+                'categories': row['CATEGORIES'],
+                'base_typeable': bool(row['BASE_TYPEABLE']),
                 'start_col': int(row['START_COL']),
-                'end_col': int(row['END_COL']),
-                'seq_in_line': int(row['SEQ_IN_LINE'])
+                'end_col': int(row['END_COL'])
             })
         
-        # Build typing tokens (only typeable)
-        typing_tokens = [t for t in display_tokens if t['typeable']]
-        
-        # Build typing sequence (flattened string)
+        # Build typing sequence (default: only base_typeable tokens)
+        # NOTE: Frontend will regenerate this based on user config
+        typing_tokens = [t for t in display_tokens if t['base_typeable']]
         typing_sequence = ''.join([t['text'] for t in typing_tokens])
         
         # Build character map (char index -> display position)
@@ -176,7 +223,7 @@ def dataframe_to_json(df, source_code, language_name):
         char_idx = 0
         for token_idx, token in enumerate(typing_tokens):
             for char in token['text']:
-                char_map[str(char_idx)] = {  # Convert to string for JSON
+                char_map[str(char_idx)] = {
                     'token_idx': int(token_idx),
                     'display_col': int(token['start_col'])
                 }
@@ -187,7 +234,6 @@ def dataframe_to_json(df, source_code, language_name):
             'indent_level': int(indent_level),
             'actual_line': src_lines[line_num] if line_num < len(src_lines) else '',
             'display_tokens': display_tokens,
-            'typing_tokens': typing_tokens,
             'typing_sequence': typing_sequence,
             'char_map': char_map
         })
@@ -220,18 +266,31 @@ def export_code_to_json(source_code, language_name, output_path):
     df = parse_code_to_dataframe(source_code, parser, language_name)
     
     print(f"Total tokens extracted: {len(df)}")
-    print(f"Typeable tokens: {df['TYPEABLE'].sum()}")
-    print(f"Non-typeable tokens: {(~df['TYPEABLE']).sum()}")
+    print(f"Base typeable tokens: {df['BASE_TYPEABLE'].sum()}")
+    print(f"Structural non-typeable tokens: {(~df['BASE_TYPEABLE']).sum()}")
     
-    # Show typeable ratio by type
+    # Show category distribution
+    print(f"\n{'-'*70}")
+    print("CATEGORY DISTRIBUTION:")
+    print(f"{'-'*70}")
+    
+    category_counts = {}
+    for categories in df['CATEGORIES']:
+        for cat in categories:
+            category_counts[cat] = category_counts.get(cat, 0) + 1
+    
+    for cat, count in sorted(category_counts.items(), key=lambda x: x[1], reverse=True):
+        print(f"  {cat:20s}: {count:3d} tokens")
+    
+    # Show token type breakdown
     print(f"\n{'-'*70}")
     print("TOKEN TYPE BREAKDOWN (Top 10):")
     print(f"{'-'*70}")
     type_summary = df.groupby('TYPE').agg({
-        'TYPEABLE': ['count', 'sum']
+        'BASE_TYPEABLE': ['count', 'sum']
     }).reset_index()
-    type_summary.columns = ['Type', 'Total', 'Typeable']
-    type_summary['Non-Typeable'] = type_summary['Total'] - type_summary['Typeable']
+    type_summary.columns = ['Type', 'Total', 'Base_Typeable']
+    type_summary['Non-Typeable'] = type_summary['Total'] - type_summary['Base_Typeable']
     type_summary = type_summary.sort_values('Total', ascending=False).head(10)
     print(type_summary.to_string(index=False))
     
@@ -245,15 +304,14 @@ def export_code_to_json(source_code, language_name, output_path):
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(json_data, f, indent=2, ensure_ascii=False)
     
-    print(f"\nâœ… JSON exported to: {output_file}")
+    print(f"\n✅ JSON exported to: {output_file}")
     print(f"   Total lines: {json_data['total_lines']}")
     
     return json_data
 
 
 # ============================================================================
-# UPDATED SAMPLE CODE WITH MULTI-LINE CONTENT
-# Replace the samples section in parse_json.py (around line 240)
+# SAMPLE CODE (WITH MULTI-LINE CONTENT)
 # ============================================================================
 
 # Python sample: Fibonacci function WITH DOCSTRING
@@ -327,7 +385,7 @@ async function fetchUser(id: number): Promise<User> {
 }
 '''
 
-# TSX sample: Todo component (already has multi-line JSX)
+# TSX sample: Todo component
 tsx_sample = '''import React, { useState } from 'react';
 
 const TodoList: React.FC = () => {
@@ -370,7 +428,8 @@ if __name__ == "__main__":
     output_dir.mkdir(parents=True, exist_ok=True)
     
     print("\n" + "="*70)
-    print("TREE-SITTER PARSER TO JSON - PHASE 1.1")
+    print("TREE-SITTER PARSER TO JSON - PHASE 5.1 BUG FIX")
+    print("Fixed: string_fragment now categorized as string_content")
     print("="*70)
     
     # Export all sample files
@@ -386,10 +445,10 @@ if __name__ == "__main__":
         export_code_to_json(code, lang, output_path)
     
     print("\n" + "="*70)
-    print("âœ… ALL SAMPLES EXPORTED")
+    print("✅ ALL SAMPLES EXPORTED")
     print("="*70)
     print(f"\nOutput directory: {output_dir.absolute()}")
     print("\nNext steps:")
     print("  1. Review JSON structure in output files")
-    print("  2. Test with your own code files")
-    print("  3. Proceed to Phase 1.2 (HTML renderer)")
+    print("  2. Verify 'categories' field includes 'string_content' for string_fragment")
+    print("  3. Test frontend filtering with regenerated JSON")

@@ -10,47 +10,31 @@
         {
           "text": "interface",
           "type": "interface",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 0,
-          "end_col": 9,
-          "seq_in_line": 0
+          "end_col": 9
         },
         {
           "text": "User",
           "type": "type_identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 10,
-          "end_col": 14,
-          "seq_in_line": 1
+          "end_col": 14
         },
         {
           "text": "{",
           "type": "{",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 15,
-          "end_col": 16,
-          "seq_in_line": 2
+          "end_col": 16
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "interface",
-          "type": "interface",
-          "typeable": true,
-          "start_col": 0,
-          "end_col": 9,
-          "seq_in_line": 0
-        },
-        {
-          "text": "User",
-          "type": "type_identifier",
-          "typeable": true,
-          "start_col": 10,
-          "end_col": 14,
-          "seq_in_line": 1
-        }
-      ],
-      "typing_sequence": "interfaceUser",
+      "typing_sequence": "interfaceUser{",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -103,6 +87,10 @@
         "12": {
           "token_idx": 1,
           "display_col": 10
+        },
+        "13": {
+          "token_idx": 2,
+          "display_col": 15
         }
       }
     },
@@ -114,55 +102,42 @@
         {
           "text": "id",
           "type": "property_identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 6,
-          "seq_in_line": 0
+          "end_col": 6
         },
         {
           "text": ":",
           "type": ":",
-          "typeable": false,
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 6,
-          "end_col": 7,
-          "seq_in_line": 1
+          "end_col": 7
         },
         {
           "text": "number",
           "type": "number",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 8,
-          "end_col": 14,
-          "seq_in_line": 2
+          "end_col": 14
         },
         {
           "text": ";",
           "type": ";",
-          "typeable": false,
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
           "start_col": 14,
-          "end_col": 15,
-          "seq_in_line": 3
+          "end_col": 15
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "id",
-          "type": "property_identifier",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 6,
-          "seq_in_line": 0
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "typeable": true,
-          "start_col": 8,
-          "end_col": 14,
-          "seq_in_line": 2
-        }
-      ],
-      "typing_sequence": "idnumber",
+      "typing_sequence": "id:number;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -174,27 +149,35 @@
         },
         "2": {
           "token_idx": 1,
-          "display_col": 8
+          "display_col": 6
         },
         "3": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 8
         },
         "4": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 8
         },
         "5": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 8
         },
         "6": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 8
         },
         "7": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 8
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "9": {
+          "token_idx": 3,
+          "display_col": 14
         }
       }
     },
@@ -206,47 +189,42 @@
         {
           "text": "name",
           "type": "property_identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 8,
-          "seq_in_line": 0
+          "end_col": 8
         },
         {
           "text": ":",
           "type": ":",
-          "typeable": false,
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 8,
-          "end_col": 9,
-          "seq_in_line": 1
+          "end_col": 9
         },
         {
           "text": "string",
           "type": "string",
-          "typeable": false,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 10,
-          "end_col": 16,
-          "seq_in_line": 2
+          "end_col": 16
         },
         {
           "text": ";",
           "type": ";",
-          "typeable": false,
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
           "start_col": 16,
-          "end_col": 17,
-          "seq_in_line": 3
+          "end_col": 17
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "name",
-          "type": "property_identifier",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 8,
-          "seq_in_line": 0
-        }
-      ],
-      "typing_sequence": "name",
+      "typing_sequence": "name:string;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -263,6 +241,38 @@
         "3": {
           "token_idx": 0,
           "display_col": 4
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "5": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 16
         }
       }
     },
@@ -274,47 +284,42 @@
         {
           "text": "email",
           "type": "property_identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 9,
-          "seq_in_line": 0
+          "end_col": 9
         },
         {
           "text": ":",
           "type": ":",
-          "typeable": false,
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 9,
-          "end_col": 10,
-          "seq_in_line": 1
+          "end_col": 10
         },
         {
           "text": "string",
           "type": "string",
-          "typeable": false,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 11,
-          "end_col": 17,
-          "seq_in_line": 2
+          "end_col": 17
         },
         {
           "text": ";",
           "type": ";",
-          "typeable": false,
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
           "start_col": 17,
-          "end_col": 18,
-          "seq_in_line": 3
+          "end_col": 18
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "email",
-          "type": "property_identifier",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 9,
-          "seq_in_line": 0
-        }
-      ],
-      "typing_sequence": "email",
+      "typing_sequence": "email:string;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -335,6 +340,38 @@
         "4": {
           "token_idx": 0,
           "display_col": 4
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 9
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 17
         }
       }
     },
@@ -346,15 +383,21 @@
         {
           "text": "}",
           "type": "}",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 0,
-          "end_col": 1,
-          "seq_in_line": 0
+          "end_col": 1
         }
       ],
-      "typing_tokens": [],
-      "typing_sequence": "",
-      "char_map": {}
+      "typing_sequence": "}",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
     },
     {
       "line_number": 6,
@@ -364,15 +407,465 @@
         {
           "text": "/**\n * Fetch user data from API\n * @param id - User ID to fetch\n * @returns Promise resolving to User object\n */",
           "type": "comment",
-          "typeable": false,
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
           "start_col": 0,
-          "end_col": 3,
-          "seq_in_line": 0
+          "end_col": 3
         }
       ],
-      "typing_tokens": [],
-      "typing_sequence": "",
-      "char_map": {}
+      "typing_sequence": "/**\n * Fetch user data from API\n * @param id - User ID to fetch\n * @returns Promise resolving to User object\n */",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "13": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "14": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "15": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "16": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "17": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "18": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "19": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "20": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "21": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "22": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "23": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "24": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "25": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "26": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "27": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "28": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "29": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "30": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "31": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "32": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "33": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "34": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "35": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "36": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "37": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "38": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "39": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "40": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "41": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "42": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "43": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "44": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "45": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "46": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "47": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "48": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "49": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "50": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "51": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "52": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "53": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "54": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "55": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "56": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "57": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "58": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "59": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "60": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "61": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "62": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "63": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "64": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "65": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "66": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "67": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "68": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "69": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "70": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "71": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "72": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "73": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "74": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "75": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "76": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "77": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "78": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "79": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "80": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "81": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "82": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "83": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "84": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "85": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "86": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "87": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "88": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "89": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "90": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "91": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "92": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "93": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "94": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "95": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "96": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "97": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "98": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "99": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "100": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "101": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "102": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "103": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "104": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "105": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "106": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "107": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "108": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "109": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "110": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "111": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
     },
     {
       "line_number": 11,
@@ -382,175 +875,133 @@
         {
           "text": "async",
           "type": "async",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 0,
-          "end_col": 5,
-          "seq_in_line": 0
+          "end_col": 5
         },
         {
           "text": "function",
           "type": "function",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 6,
-          "end_col": 14,
-          "seq_in_line": 1
+          "end_col": 14
         },
         {
           "text": "fetchUser",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 15,
-          "end_col": 24,
-          "seq_in_line": 2
+          "end_col": 24
         },
         {
           "text": "(",
           "type": "(",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 24,
-          "end_col": 25,
-          "seq_in_line": 3
+          "end_col": 25
         },
         {
           "text": "id",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 25,
-          "end_col": 27,
-          "seq_in_line": 4
+          "end_col": 27
         },
         {
           "text": ":",
           "type": ":",
-          "typeable": false,
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 27,
-          "end_col": 28,
-          "seq_in_line": 5
+          "end_col": 28
         },
         {
           "text": "number",
           "type": "number",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 29,
-          "end_col": 35,
-          "seq_in_line": 6
+          "end_col": 35
         },
         {
           "text": ")",
           "type": ")",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 35,
-          "end_col": 36,
-          "seq_in_line": 7
+          "end_col": 36
         },
         {
           "text": ":",
           "type": ":",
-          "typeable": false,
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 36,
-          "end_col": 37,
-          "seq_in_line": 8
+          "end_col": 37
         },
         {
           "text": "Promise",
           "type": "type_identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 38,
-          "end_col": 45,
-          "seq_in_line": 9
+          "end_col": 45
         },
         {
           "text": "<",
           "type": "<",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 45,
-          "end_col": 46,
-          "seq_in_line": 10
+          "end_col": 46
         },
         {
           "text": "User",
           "type": "type_identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 46,
-          "end_col": 50,
-          "seq_in_line": 11
+          "end_col": 50
         },
         {
           "text": ">",
           "type": ">",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 50,
-          "end_col": 51,
-          "seq_in_line": 12
+          "end_col": 51
         },
         {
           "text": "{",
           "type": "{",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 52,
-          "end_col": 53,
-          "seq_in_line": 13
+          "end_col": 53
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "async",
-          "type": "async",
-          "typeable": true,
-          "start_col": 0,
-          "end_col": 5,
-          "seq_in_line": 0
-        },
-        {
-          "text": "function",
-          "type": "function",
-          "typeable": true,
-          "start_col": 6,
-          "end_col": 14,
-          "seq_in_line": 1
-        },
-        {
-          "text": "fetchUser",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 15,
-          "end_col": 24,
-          "seq_in_line": 2
-        },
-        {
-          "text": "id",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 25,
-          "end_col": 27,
-          "seq_in_line": 4
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "typeable": true,
-          "start_col": 29,
-          "end_col": 35,
-          "seq_in_line": 6
-        },
-        {
-          "text": "Promise",
-          "type": "type_identifier",
-          "typeable": true,
-          "start_col": 38,
-          "end_col": 45,
-          "seq_in_line": 9
-        },
-        {
-          "text": "User",
-          "type": "type_identifier",
-          "typeable": true,
-          "start_col": 46,
-          "end_col": 50,
-          "seq_in_line": 11
-        }
-      ],
-      "typing_sequence": "asyncfunctionfetchUseridnumberPromiseUser",
+      "typing_sequence": "asyncfunctionfetchUser(id:number):Promise<User>{",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -642,79 +1093,107 @@
         },
         "22": {
           "token_idx": 3,
-          "display_col": 25
+          "display_col": 24
         },
         "23": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 25
         },
         "24": {
           "token_idx": 4,
-          "display_col": 29
+          "display_col": 25
         },
         "25": {
-          "token_idx": 4,
-          "display_col": 29
+          "token_idx": 5,
+          "display_col": 27
         },
         "26": {
-          "token_idx": 4,
+          "token_idx": 6,
           "display_col": 29
         },
         "27": {
-          "token_idx": 4,
+          "token_idx": 6,
           "display_col": 29
         },
         "28": {
-          "token_idx": 4,
+          "token_idx": 6,
           "display_col": 29
         },
         "29": {
-          "token_idx": 4,
+          "token_idx": 6,
           "display_col": 29
         },
         "30": {
-          "token_idx": 5,
-          "display_col": 38
+          "token_idx": 6,
+          "display_col": 29
         },
         "31": {
-          "token_idx": 5,
-          "display_col": 38
+          "token_idx": 6,
+          "display_col": 29
         },
         "32": {
-          "token_idx": 5,
-          "display_col": 38
+          "token_idx": 7,
+          "display_col": 35
         },
         "33": {
-          "token_idx": 5,
-          "display_col": 38
+          "token_idx": 8,
+          "display_col": 36
         },
         "34": {
-          "token_idx": 5,
+          "token_idx": 9,
           "display_col": 38
         },
         "35": {
-          "token_idx": 5,
+          "token_idx": 9,
           "display_col": 38
         },
         "36": {
-          "token_idx": 5,
+          "token_idx": 9,
           "display_col": 38
         },
         "37": {
-          "token_idx": 6,
-          "display_col": 46
+          "token_idx": 9,
+          "display_col": 38
         },
         "38": {
-          "token_idx": 6,
-          "display_col": 46
+          "token_idx": 9,
+          "display_col": 38
         },
         "39": {
-          "token_idx": 6,
-          "display_col": 46
+          "token_idx": 9,
+          "display_col": 38
         },
         "40": {
-          "token_idx": 6,
+          "token_idx": 9,
+          "display_col": 38
+        },
+        "41": {
+          "token_idx": 10,
+          "display_col": 45
+        },
+        "42": {
+          "token_idx": 11,
           "display_col": 46
+        },
+        "43": {
+          "token_idx": 11,
+          "display_col": 46
+        },
+        "44": {
+          "token_idx": 11,
+          "display_col": 46
+        },
+        "45": {
+          "token_idx": 11,
+          "display_col": 46
+        },
+        "46": {
+          "token_idx": 12,
+          "display_col": 50
+        },
+        "47": {
+          "token_idx": 13,
+          "display_col": 52
         }
       }
     },
@@ -726,167 +1205,133 @@
         {
           "text": "const",
           "type": "const",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 9,
-          "seq_in_line": 0
+          "end_col": 9
         },
         {
           "text": "response",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 10,
-          "end_col": 18,
-          "seq_in_line": 1
+          "end_col": 18
         },
         {
           "text": "=",
           "type": "=",
-          "typeable": false,
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 19,
-          "end_col": 20,
-          "seq_in_line": 2
+          "end_col": 20
         },
         {
           "text": "await",
           "type": "await",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 21,
-          "end_col": 26,
-          "seq_in_line": 3
+          "end_col": 26
         },
         {
           "text": "fetch",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 27,
-          "end_col": 32,
-          "seq_in_line": 4
+          "end_col": 32
         },
         {
           "text": "(",
           "type": "(",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 32,
-          "end_col": 33,
-          "seq_in_line": 5
+          "end_col": 33
         },
         {
           "text": "`",
           "type": "`",
-          "typeable": false,
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
           "start_col": 33,
-          "end_col": 34,
-          "seq_in_line": 6
+          "end_col": 34
         },
         {
           "text": "/api/users/",
           "type": "string_fragment",
-          "typeable": false,
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
           "start_col": 34,
-          "end_col": 45,
-          "seq_in_line": 7
+          "end_col": 45
         },
         {
           "text": "${",
           "type": "${",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 45,
-          "end_col": 47,
-          "seq_in_line": 8
+          "end_col": 47
         },
         {
           "text": "id",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 47,
-          "end_col": 49,
-          "seq_in_line": 9
+          "end_col": 49
         },
         {
           "text": "}",
           "type": "}",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 49,
-          "end_col": 50,
-          "seq_in_line": 10
+          "end_col": 50
         },
         {
           "text": "`",
           "type": "`",
-          "typeable": false,
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
           "start_col": 50,
-          "end_col": 51,
-          "seq_in_line": 11
+          "end_col": 51
         },
         {
           "text": ")",
           "type": ")",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 51,
-          "end_col": 52,
-          "seq_in_line": 12
+          "end_col": 52
         },
         {
           "text": ";",
           "type": ";",
-          "typeable": false,
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
           "start_col": 52,
-          "end_col": 53,
-          "seq_in_line": 13
+          "end_col": 53
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "const",
-          "type": "const",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 9,
-          "seq_in_line": 0
-        },
-        {
-          "text": "response",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 10,
-          "end_col": 18,
-          "seq_in_line": 1
-        },
-        {
-          "text": "await",
-          "type": "await",
-          "typeable": true,
-          "start_col": 21,
-          "end_col": 26,
-          "seq_in_line": 3
-        },
-        {
-          "text": "fetch",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 27,
-          "end_col": 32,
-          "seq_in_line": 4
-        },
-        {
-          "text": "${",
-          "type": "${",
-          "typeable": true,
-          "start_col": 45,
-          "end_col": 47,
-          "seq_in_line": 8
-        },
-        {
-          "text": "id",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 47,
-          "end_col": 49,
-          "seq_in_line": 9
-        }
-      ],
-      "typing_sequence": "constresponseawaitfetch${id",
+      "typing_sequence": "constresponse=awaitfetch(`/api/users/${id}`);",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -942,59 +1387,131 @@
         },
         "13": {
           "token_idx": 2,
-          "display_col": 21
+          "display_col": 19
         },
         "14": {
-          "token_idx": 2,
+          "token_idx": 3,
           "display_col": 21
         },
         "15": {
-          "token_idx": 2,
+          "token_idx": 3,
           "display_col": 21
         },
         "16": {
-          "token_idx": 2,
+          "token_idx": 3,
           "display_col": 21
         },
         "17": {
-          "token_idx": 2,
+          "token_idx": 3,
           "display_col": 21
         },
         "18": {
           "token_idx": 3,
-          "display_col": 27
+          "display_col": 21
         },
         "19": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 27
         },
         "20": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 27
         },
         "21": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 27
         },
         "22": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 27
         },
         "23": {
           "token_idx": 4,
-          "display_col": 45
+          "display_col": 27
         },
         "24": {
-          "token_idx": 4,
-          "display_col": 45
+          "token_idx": 5,
+          "display_col": 32
         },
         "25": {
-          "token_idx": 5,
-          "display_col": 47
+          "token_idx": 6,
+          "display_col": 33
         },
         "26": {
-          "token_idx": 5,
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "27": {
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "28": {
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "29": {
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "30": {
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "31": {
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "32": {
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "33": {
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "34": {
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "35": {
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "36": {
+          "token_idx": 7,
+          "display_col": 34
+        },
+        "37": {
+          "token_idx": 8,
+          "display_col": 45
+        },
+        "38": {
+          "token_idx": 8,
+          "display_col": 45
+        },
+        "39": {
+          "token_idx": 9,
           "display_col": 47
+        },
+        "40": {
+          "token_idx": 9,
+          "display_col": 47
+        },
+        "41": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "42": {
+          "token_idx": 11,
+          "display_col": 50
+        },
+        "43": {
+          "token_idx": 12,
+          "display_col": 51
+        },
+        "44": {
+          "token_idx": 13,
+          "display_col": 52
         }
       }
     },
@@ -1006,127 +1523,95 @@
         {
           "text": "const",
           "type": "const",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 9,
-          "seq_in_line": 0
+          "end_col": 9
         },
         {
           "text": "data",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 10,
-          "end_col": 14,
-          "seq_in_line": 1
+          "end_col": 14
         },
         {
           "text": "=",
           "type": "=",
-          "typeable": false,
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 15,
-          "end_col": 16,
-          "seq_in_line": 2
+          "end_col": 16
         },
         {
           "text": "await",
           "type": "await",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 17,
-          "end_col": 22,
-          "seq_in_line": 3
+          "end_col": 22
         },
         {
           "text": "response",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 23,
-          "end_col": 31,
-          "seq_in_line": 4
+          "end_col": 31
         },
         {
           "text": ".",
           "type": ".",
-          "typeable": false,
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
           "start_col": 31,
-          "end_col": 32,
-          "seq_in_line": 5
+          "end_col": 32
         },
         {
           "text": "json",
           "type": "property_identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 32,
-          "end_col": 36,
-          "seq_in_line": 6
+          "end_col": 36
         },
         {
           "text": "(",
           "type": "(",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 36,
-          "end_col": 37,
-          "seq_in_line": 7
+          "end_col": 37
         },
         {
           "text": ")",
           "type": ")",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 37,
-          "end_col": 38,
-          "seq_in_line": 8
+          "end_col": 38
         },
         {
           "text": ";",
           "type": ";",
-          "typeable": false,
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
           "start_col": 38,
-          "end_col": 39,
-          "seq_in_line": 9
+          "end_col": 39
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "const",
-          "type": "const",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 9,
-          "seq_in_line": 0
-        },
-        {
-          "text": "data",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 10,
-          "end_col": 14,
-          "seq_in_line": 1
-        },
-        {
-          "text": "await",
-          "type": "await",
-          "typeable": true,
-          "start_col": 17,
-          "end_col": 22,
-          "seq_in_line": 3
-        },
-        {
-          "text": "response",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 23,
-          "end_col": 31,
-          "seq_in_line": 4
-        },
-        {
-          "text": "json",
-          "type": "property_identifier",
-          "typeable": true,
-          "start_col": 32,
-          "end_col": 36,
-          "seq_in_line": 6
-        }
-      ],
-      "typing_sequence": "constdataawaitresponsejson",
+      "typing_sequence": "constdata=awaitresponse.json();",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -1166,71 +1651,91 @@
         },
         "9": {
           "token_idx": 2,
-          "display_col": 17
+          "display_col": 15
         },
         "10": {
-          "token_idx": 2,
+          "token_idx": 3,
           "display_col": 17
         },
         "11": {
-          "token_idx": 2,
+          "token_idx": 3,
           "display_col": 17
         },
         "12": {
-          "token_idx": 2,
+          "token_idx": 3,
           "display_col": 17
         },
         "13": {
-          "token_idx": 2,
+          "token_idx": 3,
           "display_col": 17
         },
         "14": {
           "token_idx": 3,
-          "display_col": 23
+          "display_col": 17
         },
         "15": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 23
         },
         "16": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 23
         },
         "17": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 23
         },
         "18": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 23
         },
         "19": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 23
         },
         "20": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 23
         },
         "21": {
-          "token_idx": 3,
+          "token_idx": 4,
           "display_col": 23
         },
         "22": {
           "token_idx": 4,
-          "display_col": 32
+          "display_col": 23
         },
         "23": {
-          "token_idx": 4,
-          "display_col": 32
+          "token_idx": 5,
+          "display_col": 31
         },
         "24": {
-          "token_idx": 4,
+          "token_idx": 6,
           "display_col": 32
         },
         "25": {
-          "token_idx": 4,
+          "token_idx": 6,
           "display_col": 32
+        },
+        "26": {
+          "token_idx": 6,
+          "display_col": 32
+        },
+        "27": {
+          "token_idx": 6,
+          "display_col": 32
+        },
+        "28": {
+          "token_idx": 7,
+          "display_col": 36
+        },
+        "29": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "30": {
+          "token_idx": 9,
+          "display_col": 38
         }
       }
     },
@@ -1242,79 +1747,47 @@
         {
           "text": "return",
           "type": "return",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 10,
-          "seq_in_line": 0
+          "end_col": 10
         },
         {
           "text": "data",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 11,
-          "end_col": 15,
-          "seq_in_line": 1
+          "end_col": 15
         },
         {
           "text": "as",
           "type": "as",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 16,
-          "end_col": 18,
-          "seq_in_line": 2
+          "end_col": 18
         },
         {
           "text": "User",
           "type": "type_identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 19,
-          "end_col": 23,
-          "seq_in_line": 3
+          "end_col": 23
         },
         {
           "text": ";",
           "type": ";",
-          "typeable": false,
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
           "start_col": 23,
-          "end_col": 24,
-          "seq_in_line": 4
+          "end_col": 24
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "return",
-          "type": "return",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 10,
-          "seq_in_line": 0
-        },
-        {
-          "text": "data",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 11,
-          "end_col": 15,
-          "seq_in_line": 1
-        },
-        {
-          "text": "as",
-          "type": "as",
-          "typeable": true,
-          "start_col": 16,
-          "end_col": 18,
-          "seq_in_line": 2
-        },
-        {
-          "text": "User",
-          "type": "type_identifier",
-          "typeable": true,
-          "start_col": 19,
-          "end_col": 23,
-          "seq_in_line": 3
-        }
-      ],
-      "typing_sequence": "returndataasUser",
+      "typing_sequence": "returndataasUser;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -1379,6 +1852,10 @@
         "15": {
           "token_idx": 3,
           "display_col": 19
+        },
+        "16": {
+          "token_idx": 4,
+          "display_col": 23
         }
       }
     },
@@ -1390,15 +1867,21 @@
         {
           "text": "}",
           "type": "}",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 0,
-          "end_col": 1,
-          "seq_in_line": 0
+          "end_col": 1
         }
       ],
-      "typing_tokens": [],
-      "typing_sequence": "",
-      "char_map": {}
+      "typing_sequence": "}",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
     }
   ]
 }

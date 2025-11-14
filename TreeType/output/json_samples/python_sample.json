@@ -10,127 +10,97 @@
         {
           "text": "def",
           "type": "def",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 0,
-          "end_col": 3,
-          "seq_in_line": 0
+          "end_col": 3
         },
         {
           "text": "calculate_fibonacci",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 23,
-          "seq_in_line": 1
+          "end_col": 23
         },
         {
           "text": "(",
           "type": "(",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 23,
-          "end_col": 24,
-          "seq_in_line": 2
+          "end_col": 24
         },
         {
           "text": "n",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 24,
-          "end_col": 25,
-          "seq_in_line": 3
+          "end_col": 25
         },
         {
           "text": ":",
           "type": ":",
-          "typeable": false,
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 25,
-          "end_col": 26,
-          "seq_in_line": 4
+          "end_col": 26
         },
         {
           "text": "int",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 27,
-          "end_col": 30,
-          "seq_in_line": 5
+          "end_col": 30
         },
         {
           "text": ")",
           "type": ")",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 30,
-          "end_col": 31,
-          "seq_in_line": 6
+          "end_col": 31
         },
         {
           "text": "->",
           "type": "->",
-          "typeable": false,
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 32,
-          "end_col": 34,
-          "seq_in_line": 7
+          "end_col": 34
         },
         {
           "text": "list",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 35,
-          "end_col": 39,
-          "seq_in_line": 8
+          "end_col": 39
         },
         {
           "text": ":",
           "type": ":",
-          "typeable": false,
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 39,
-          "end_col": 40,
-          "seq_in_line": 9
+          "end_col": 40
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "def",
-          "type": "def",
-          "typeable": true,
-          "start_col": 0,
-          "end_col": 3,
-          "seq_in_line": 0
-        },
-        {
-          "text": "calculate_fibonacci",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 23,
-          "seq_in_line": 1
-        },
-        {
-          "text": "n",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 24,
-          "end_col": 25,
-          "seq_in_line": 3
-        },
-        {
-          "text": "int",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 27,
-          "end_col": 30,
-          "seq_in_line": 5
-        },
-        {
-          "text": "list",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 35,
-          "end_col": 39,
-          "seq_in_line": 8
-        }
-      ],
-      "typing_sequence": "defcalculate_fibonaccinintlist",
+      "typing_sequence": "defcalculate_fibonacci(n:int)->list:",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -222,35 +192,59 @@
         },
         "22": {
           "token_idx": 2,
-          "display_col": 24
+          "display_col": 23
         },
         "23": {
           "token_idx": 3,
-          "display_col": 27
+          "display_col": 24
         },
         "24": {
-          "token_idx": 3,
-          "display_col": 27
+          "token_idx": 4,
+          "display_col": 25
         },
         "25": {
-          "token_idx": 3,
+          "token_idx": 5,
           "display_col": 27
         },
         "26": {
-          "token_idx": 4,
-          "display_col": 35
+          "token_idx": 5,
+          "display_col": 27
         },
         "27": {
-          "token_idx": 4,
-          "display_col": 35
+          "token_idx": 5,
+          "display_col": 27
         },
         "28": {
-          "token_idx": 4,
-          "display_col": 35
+          "token_idx": 6,
+          "display_col": 30
         },
         "29": {
-          "token_idx": 4,
+          "token_idx": 7,
+          "display_col": 32
+        },
+        "30": {
+          "token_idx": 7,
+          "display_col": 32
+        },
+        "31": {
+          "token_idx": 8,
           "display_col": 35
+        },
+        "32": {
+          "token_idx": 8,
+          "display_col": 35
+        },
+        "33": {
+          "token_idx": 8,
+          "display_col": 35
+        },
+        "34": {
+          "token_idx": 8,
+          "display_col": 35
+        },
+        "35": {
+          "token_idx": 9,
+          "display_col": 39
         }
       }
     },
@@ -262,23 +256,675 @@
         {
           "text": "\"\"\"",
           "type": "string_start",
-          "typeable": false,
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 7,
-          "seq_in_line": 0
+          "end_col": 7
         },
         {
           "text": "\n    Calculate Fibonacci sequence up to n terms.\n    \n    Args:\n        n: Number of terms to generate\n    \n    Returns:\n        List of Fibonacci numbers\n    ",
           "type": "string_content",
-          "typeable": false,
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
           "start_col": 7,
-          "end_col": 4,
-          "seq_in_line": 1
+          "end_col": 4
         }
       ],
-      "typing_tokens": [],
-      "typing_sequence": "",
-      "char_map": {}
+      "typing_sequence": "\"\"\"\n    Calculate Fibonacci sequence up to n terms.\n    \n    Args:\n        n: Number of terms to generate\n    \n    Returns:\n        List of Fibonacci numbers\n    ",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "15": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "16": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "17": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "18": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "19": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "20": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "21": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "22": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "23": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "24": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "25": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "26": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "27": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "28": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "29": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "30": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "31": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "32": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "33": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "34": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "35": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "36": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "37": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "38": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "39": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "40": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "41": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "42": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "43": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "44": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "45": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "46": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "47": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "48": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "49": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "50": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "51": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "52": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "53": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "54": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "55": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "56": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "57": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "58": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "59": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "60": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "61": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "62": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "63": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "64": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "65": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "66": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "67": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "68": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "69": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "70": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "71": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "72": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "73": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "74": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "75": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "76": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "77": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "78": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "79": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "80": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "81": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "82": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "83": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "84": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "85": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "86": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "87": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "88": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "89": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "90": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "91": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "92": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "93": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "94": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "95": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "96": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "97": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "98": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "99": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "100": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "101": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "102": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "103": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "104": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "105": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "106": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "107": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "108": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "109": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "110": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "111": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "112": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "113": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "114": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "115": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "116": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "117": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "118": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "119": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "120": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "121": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "122": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "123": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "124": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "125": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "126": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "127": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "128": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "129": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "130": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "131": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "132": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "133": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "134": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "135": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "136": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "137": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "138": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "139": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "140": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "141": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "142": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "143": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "144": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "145": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "146": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "147": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "148": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "149": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "150": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "151": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "152": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "153": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "154": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "155": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "156": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "157": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "158": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "159": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "160": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "161": {
+          "token_idx": 1,
+          "display_col": 7
+        }
+      }
     },
     {
       "line_number": 9,
@@ -288,15 +934,29 @@
         {
           "text": "\"\"\"",
           "type": "string_end",
-          "typeable": false,
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 7,
-          "seq_in_line": 0
+          "end_col": 7
         }
       ],
-      "typing_tokens": [],
-      "typing_sequence": "",
-      "char_map": {}
+      "typing_sequence": "\"\"\"",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        }
+      }
     },
     {
       "line_number": 10,
@@ -306,79 +966,50 @@
         {
           "text": "if",
           "type": "if",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 6,
-          "seq_in_line": 0
+          "end_col": 6
         },
         {
           "text": "n",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 7,
-          "end_col": 8,
-          "seq_in_line": 1
+          "end_col": 8
         },
         {
           "text": "<=",
           "type": "<=",
-          "typeable": true,
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 9,
-          "end_col": 11,
-          "seq_in_line": 2
+          "end_col": 11
         },
         {
           "text": "0",
           "type": "integer",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 12,
-          "end_col": 13,
-          "seq_in_line": 3
+          "end_col": 13
         },
         {
           "text": ":",
           "type": ":",
-          "typeable": false,
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 13,
-          "end_col": 14,
-          "seq_in_line": 4
+          "end_col": 14
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "if",
-          "type": "if",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 6,
-          "seq_in_line": 0
-        },
-        {
-          "text": "n",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 7,
-          "end_col": 8,
-          "seq_in_line": 1
-        },
-        {
-          "text": "<=",
-          "type": "<=",
-          "typeable": true,
-          "start_col": 9,
-          "end_col": 11,
-          "seq_in_line": 2
-        },
-        {
-          "text": "0",
-          "type": "integer",
-          "typeable": true,
-          "start_col": 12,
-          "end_col": 13,
-          "seq_in_line": 3
-        }
-      ],
-      "typing_sequence": "ifn<=0",
+      "typing_sequence": "ifn<=0:",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -403,6 +1034,10 @@
         "5": {
           "token_idx": 3,
           "display_col": 12
+        },
+        "6": {
+          "token_idx": 4,
+          "display_col": 13
         }
       }
     },
@@ -414,39 +1049,33 @@
         {
           "text": "return",
           "type": "return",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 8,
-          "end_col": 14,
-          "seq_in_line": 0
+          "end_col": 14
         },
         {
           "text": "[",
           "type": "[",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 15,
-          "end_col": 16,
-          "seq_in_line": 1
+          "end_col": 16
         },
         {
           "text": "]",
           "type": "]",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 16,
-          "end_col": 17,
-          "seq_in_line": 2
+          "end_col": 17
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "return",
-          "type": "return",
-          "typeable": true,
-          "start_col": 8,
-          "end_col": 14,
-          "seq_in_line": 0
-        }
-      ],
-      "typing_sequence": "return",
+      "typing_sequence": "return[]",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -471,6 +1100,14 @@
         "5": {
           "token_idx": 0,
           "display_col": 8
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 15
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 16
         }
       }
     },
@@ -482,79 +1119,50 @@
         {
           "text": "elif",
           "type": "elif",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 8,
-          "seq_in_line": 0
+          "end_col": 8
         },
         {
           "text": "n",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 9,
-          "end_col": 10,
-          "seq_in_line": 1
+          "end_col": 10
         },
         {
           "text": "==",
           "type": "==",
-          "typeable": true,
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 11,
-          "end_col": 13,
-          "seq_in_line": 2
+          "end_col": 13
         },
         {
           "text": "1",
           "type": "integer",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 14,
-          "end_col": 15,
-          "seq_in_line": 3
+          "end_col": 15
         },
         {
           "text": ":",
           "type": ":",
-          "typeable": false,
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 15,
-          "end_col": 16,
-          "seq_in_line": 4
+          "end_col": 16
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "elif",
-          "type": "elif",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 8,
-          "seq_in_line": 0
-        },
-        {
-          "text": "n",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 9,
-          "end_col": 10,
-          "seq_in_line": 1
-        },
-        {
-          "text": "==",
-          "type": "==",
-          "typeable": true,
-          "start_col": 11,
-          "end_col": 13,
-          "seq_in_line": 2
-        },
-        {
-          "text": "1",
-          "type": "integer",
-          "typeable": true,
-          "start_col": 14,
-          "end_col": 15,
-          "seq_in_line": 3
-        }
-      ],
-      "typing_sequence": "elifn==1",
+      "typing_sequence": "elifn==1:",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -587,6 +1195,10 @@
         "7": {
           "token_idx": 3,
           "display_col": 14
+        },
+        "8": {
+          "token_idx": 4,
+          "display_col": 15
         }
       }
     },
@@ -598,55 +1210,41 @@
         {
           "text": "return",
           "type": "return",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 8,
-          "end_col": 14,
-          "seq_in_line": 0
+          "end_col": 14
         },
         {
           "text": "[",
           "type": "[",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 15,
-          "end_col": 16,
-          "seq_in_line": 1
+          "end_col": 16
         },
         {
           "text": "0",
           "type": "integer",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 16,
-          "end_col": 17,
-          "seq_in_line": 2
+          "end_col": 17
         },
         {
           "text": "]",
           "type": "]",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 17,
-          "end_col": 18,
-          "seq_in_line": 3
+          "end_col": 18
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "return",
-          "type": "return",
-          "typeable": true,
-          "start_col": 8,
-          "end_col": 14,
-          "seq_in_line": 0
-        },
-        {
-          "text": "0",
-          "type": "integer",
-          "typeable": true,
-          "start_col": 16,
-          "end_col": 17,
-          "seq_in_line": 2
-        }
-      ],
-      "typing_sequence": "return0",
+      "typing_sequence": "return[0]",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -674,7 +1272,15 @@
         },
         "6": {
           "token_idx": 1,
+          "display_col": 15
+        },
+        "7": {
+          "token_idx": 2,
           "display_col": 16
+        },
+        "8": {
+          "token_idx": 3,
+          "display_col": 17
         }
       }
     },
@@ -686,87 +1292,69 @@
         {
           "text": "fib",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 7,
-          "seq_in_line": 0
+          "end_col": 7
         },
         {
           "text": "=",
           "type": "=",
-          "typeable": false,
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 8,
-          "end_col": 9,
-          "seq_in_line": 1
+          "end_col": 9
         },
         {
           "text": "[",
           "type": "[",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 10,
-          "end_col": 11,
-          "seq_in_line": 2
+          "end_col": 11
         },
         {
           "text": "0",
           "type": "integer",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 11,
-          "end_col": 12,
-          "seq_in_line": 3
+          "end_col": 12
         },
         {
           "text": ",",
           "type": ",",
-          "typeable": false,
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
           "start_col": 12,
-          "end_col": 13,
-          "seq_in_line": 4
+          "end_col": 13
         },
         {
           "text": "1",
           "type": "integer",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 14,
-          "end_col": 15,
-          "seq_in_line": 5
+          "end_col": 15
         },
         {
           "text": "]",
           "type": "]",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 15,
-          "end_col": 16,
-          "seq_in_line": 6
+          "end_col": 16
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "fib",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 7,
-          "seq_in_line": 0
-        },
-        {
-          "text": "0",
-          "type": "integer",
-          "typeable": true,
-          "start_col": 11,
-          "end_col": 12,
-          "seq_in_line": 3
-        },
-        {
-          "text": "1",
-          "type": "integer",
-          "typeable": true,
-          "start_col": 14,
-          "end_col": 15,
-          "seq_in_line": 5
-        }
-      ],
-      "typing_sequence": "fib01",
+      "typing_sequence": "fib=[0,1]",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -782,11 +1370,27 @@
         },
         "3": {
           "token_idx": 1,
-          "display_col": 11
+          "display_col": 8
         },
         "4": {
           "token_idx": 2,
+          "display_col": 10
+        },
+        "5": {
+          "token_idx": 3,
+          "display_col": 11
+        },
+        "6": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "7": {
+          "token_idx": 5,
           "display_col": 14
+        },
+        "8": {
+          "token_idx": 6,
+          "display_col": 15
         }
       }
     },
@@ -798,135 +1402,94 @@
         {
           "text": "for",
           "type": "for",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 7,
-          "seq_in_line": 0
+          "end_col": 7
         },
         {
           "text": "i",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 8,
-          "end_col": 9,
-          "seq_in_line": 1
+          "end_col": 9
         },
         {
           "text": "in",
           "type": "in",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 10,
-          "end_col": 12,
-          "seq_in_line": 2
+          "end_col": 12
         },
         {
           "text": "range",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 13,
-          "end_col": 18,
-          "seq_in_line": 3
+          "end_col": 18
         },
         {
           "text": "(",
           "type": "(",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 18,
-          "end_col": 19,
-          "seq_in_line": 4
+          "end_col": 19
         },
         {
           "text": "2",
           "type": "integer",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 19,
-          "end_col": 20,
-          "seq_in_line": 5
+          "end_col": 20
         },
         {
           "text": ",",
           "type": ",",
-          "typeable": false,
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
           "start_col": 20,
-          "end_col": 21,
-          "seq_in_line": 6
+          "end_col": 21
         },
         {
           "text": "n",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 22,
-          "end_col": 23,
-          "seq_in_line": 7
+          "end_col": 23
         },
         {
           "text": ")",
           "type": ")",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 23,
-          "end_col": 24,
-          "seq_in_line": 8
+          "end_col": 24
         },
         {
           "text": ":",
           "type": ":",
-          "typeable": false,
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 24,
-          "end_col": 25,
-          "seq_in_line": 9
+          "end_col": 25
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "for",
-          "type": "for",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 7,
-          "seq_in_line": 0
-        },
-        {
-          "text": "i",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 8,
-          "end_col": 9,
-          "seq_in_line": 1
-        },
-        {
-          "text": "in",
-          "type": "in",
-          "typeable": true,
-          "start_col": 10,
-          "end_col": 12,
-          "seq_in_line": 2
-        },
-        {
-          "text": "range",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 13,
-          "end_col": 18,
-          "seq_in_line": 3
-        },
-        {
-          "text": "2",
-          "type": "integer",
-          "typeable": true,
-          "start_col": 19,
-          "end_col": 20,
-          "seq_in_line": 5
-        },
-        {
-          "text": "n",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 22,
-          "end_col": 23,
-          "seq_in_line": 7
-        }
-      ],
-      "typing_sequence": "foriinrange2n",
+      "typing_sequence": "foriinrange(2,n):",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -974,11 +1537,27 @@
         },
         "11": {
           "token_idx": 4,
-          "display_col": 19
+          "display_col": 18
         },
         "12": {
           "token_idx": 5,
+          "display_col": 19
+        },
+        "13": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "14": {
+          "token_idx": 7,
           "display_col": 22
+        },
+        "15": {
+          "token_idx": 8,
+          "display_col": 23
+        },
+        "16": {
+          "token_idx": 9,
+          "display_col": 24
         }
       }
     },
@@ -990,215 +1569,169 @@
         {
           "text": "fib",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 8,
-          "end_col": 11,
-          "seq_in_line": 0
+          "end_col": 11
         },
         {
           "text": ".",
           "type": ".",
-          "typeable": false,
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
           "start_col": 11,
-          "end_col": 12,
-          "seq_in_line": 1
+          "end_col": 12
         },
         {
           "text": "append",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 12,
-          "end_col": 18,
-          "seq_in_line": 2
+          "end_col": 18
         },
         {
           "text": "(",
           "type": "(",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 18,
-          "end_col": 19,
-          "seq_in_line": 3
+          "end_col": 19
         },
         {
           "text": "fib",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 19,
-          "end_col": 22,
-          "seq_in_line": 4
+          "end_col": 22
         },
         {
           "text": "[",
           "type": "[",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 22,
-          "end_col": 23,
-          "seq_in_line": 5
+          "end_col": 23
         },
         {
           "text": "i",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 23,
-          "end_col": 24,
-          "seq_in_line": 6
+          "end_col": 24
         },
         {
           "text": "-",
           "type": "-",
-          "typeable": false,
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 24,
-          "end_col": 25,
-          "seq_in_line": 7
+          "end_col": 25
         },
         {
           "text": "1",
           "type": "integer",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 25,
-          "end_col": 26,
-          "seq_in_line": 8
+          "end_col": 26
         },
         {
           "text": "]",
           "type": "]",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 26,
-          "end_col": 27,
-          "seq_in_line": 9
+          "end_col": 27
         },
         {
           "text": "+",
           "type": "+",
-          "typeable": false,
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 28,
-          "end_col": 29,
-          "seq_in_line": 10
+          "end_col": 29
         },
         {
           "text": "fib",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 30,
-          "end_col": 33,
-          "seq_in_line": 11
+          "end_col": 33
         },
         {
           "text": "[",
           "type": "[",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 33,
-          "end_col": 34,
-          "seq_in_line": 12
+          "end_col": 34
         },
         {
           "text": "i",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 34,
-          "end_col": 35,
-          "seq_in_line": 13
+          "end_col": 35
         },
         {
           "text": "-",
           "type": "-",
-          "typeable": false,
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 35,
-          "end_col": 36,
-          "seq_in_line": 14
+          "end_col": 36
         },
         {
           "text": "2",
           "type": "integer",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 36,
-          "end_col": 37,
-          "seq_in_line": 15
+          "end_col": 37
         },
         {
           "text": "]",
           "type": "]",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 37,
-          "end_col": 38,
-          "seq_in_line": 16
+          "end_col": 38
         },
         {
           "text": ")",
           "type": ")",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 38,
-          "end_col": 39,
-          "seq_in_line": 17
+          "end_col": 39
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "fib",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 8,
-          "end_col": 11,
-          "seq_in_line": 0
-        },
-        {
-          "text": "append",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 12,
-          "end_col": 18,
-          "seq_in_line": 2
-        },
-        {
-          "text": "fib",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 19,
-          "end_col": 22,
-          "seq_in_line": 4
-        },
-        {
-          "text": "i",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 23,
-          "end_col": 24,
-          "seq_in_line": 6
-        },
-        {
-          "text": "1",
-          "type": "integer",
-          "typeable": true,
-          "start_col": 25,
-          "end_col": 26,
-          "seq_in_line": 8
-        },
-        {
-          "text": "fib",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 30,
-          "end_col": 33,
-          "seq_in_line": 11
-        },
-        {
-          "text": "i",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 34,
-          "end_col": 35,
-          "seq_in_line": 13
-        },
-        {
-          "text": "2",
-          "type": "integer",
-          "typeable": true,
-          "start_col": 36,
-          "end_col": 37,
-          "seq_in_line": 15
-        }
-      ],
-      "typing_sequence": "fibappendfibi1fibi2",
+      "typing_sequence": "fib.append(fib[i-1]+fib[i-2])",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -1214,67 +1747,107 @@
         },
         "3": {
           "token_idx": 1,
-          "display_col": 12
+          "display_col": 11
         },
         "4": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 12
         },
         "5": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 12
         },
         "6": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 12
         },
         "7": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 12
         },
         "8": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 12
         },
         "9": {
           "token_idx": 2,
-          "display_col": 19
+          "display_col": 12
         },
         "10": {
-          "token_idx": 2,
-          "display_col": 19
+          "token_idx": 3,
+          "display_col": 18
         },
         "11": {
-          "token_idx": 2,
+          "token_idx": 4,
           "display_col": 19
         },
         "12": {
-          "token_idx": 3,
-          "display_col": 23
+          "token_idx": 4,
+          "display_col": 19
         },
         "13": {
           "token_idx": 4,
-          "display_col": 25
+          "display_col": 19
         },
         "14": {
           "token_idx": 5,
-          "display_col": 30
+          "display_col": 22
         },
         "15": {
-          "token_idx": 5,
-          "display_col": 30
+          "token_idx": 6,
+          "display_col": 23
         },
         "16": {
-          "token_idx": 5,
-          "display_col": 30
+          "token_idx": 7,
+          "display_col": 24
         },
         "17": {
-          "token_idx": 6,
-          "display_col": 34
+          "token_idx": 8,
+          "display_col": 25
         },
         "18": {
-          "token_idx": 7,
+          "token_idx": 9,
+          "display_col": 26
+        },
+        "19": {
+          "token_idx": 10,
+          "display_col": 28
+        },
+        "20": {
+          "token_idx": 11,
+          "display_col": 30
+        },
+        "21": {
+          "token_idx": 11,
+          "display_col": 30
+        },
+        "22": {
+          "token_idx": 11,
+          "display_col": 30
+        },
+        "23": {
+          "token_idx": 12,
+          "display_col": 33
+        },
+        "24": {
+          "token_idx": 13,
+          "display_col": 34
+        },
+        "25": {
+          "token_idx": 14,
+          "display_col": 35
+        },
+        "26": {
+          "token_idx": 15,
           "display_col": 36
+        },
+        "27": {
+          "token_idx": 16,
+          "display_col": 37
+        },
+        "28": {
+          "token_idx": 17,
+          "display_col": 38
         }
       }
     },
@@ -1286,36 +1859,18 @@
         {
           "text": "return",
           "type": "return",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 4,
-          "end_col": 10,
-          "seq_in_line": 0
+          "end_col": 10
         },
         {
           "text": "fib",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 11,
-          "end_col": 14,
-          "seq_in_line": 1
-        }
-      ],
-      "typing_tokens": [
-        {
-          "text": "return",
-          "type": "return",
-          "typeable": true,
-          "start_col": 4,
-          "end_col": 10,
-          "seq_in_line": 0
-        },
-        {
-          "text": "fib",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 11,
-          "end_col": 14,
-          "seq_in_line": 1
+          "end_col": 14
         }
       ],
       "typing_sequence": "returnfib",
@@ -1366,79 +1921,59 @@
         {
           "text": "result",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 0,
-          "end_col": 6,
-          "seq_in_line": 0
+          "end_col": 6
         },
         {
           "text": "=",
           "type": "=",
-          "typeable": false,
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
           "start_col": 7,
-          "end_col": 8,
-          "seq_in_line": 1
+          "end_col": 8
         },
         {
           "text": "calculate_fibonacci",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 9,
-          "end_col": 28,
-          "seq_in_line": 2
+          "end_col": 28
         },
         {
           "text": "(",
           "type": "(",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 28,
-          "end_col": 29,
-          "seq_in_line": 3
+          "end_col": 29
         },
         {
           "text": "10",
           "type": "integer",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 29,
-          "end_col": 31,
-          "seq_in_line": 4
+          "end_col": 31
         },
         {
           "text": ")",
           "type": ")",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 31,
-          "end_col": 32,
-          "seq_in_line": 5
+          "end_col": 32
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "result",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 0,
-          "end_col": 6,
-          "seq_in_line": 0
-        },
-        {
-          "text": "calculate_fibonacci",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 9,
-          "end_col": 28,
-          "seq_in_line": 2
-        },
-        {
-          "text": "10",
-          "type": "integer",
-          "typeable": true,
-          "start_col": 29,
-          "end_col": 31,
-          "seq_in_line": 4
-        }
-      ],
-      "typing_sequence": "resultcalculate_fibonacci10",
+      "typing_sequence": "result=calculate_fibonacci(10)",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -1466,87 +2001,99 @@
         },
         "6": {
           "token_idx": 1,
-          "display_col": 9
+          "display_col": 7
         },
         "7": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "8": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "9": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "10": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "11": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "12": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "13": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "14": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "15": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "16": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "17": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "18": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "19": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "20": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "21": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "22": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "23": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "24": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 9
         },
         "25": {
           "token_idx": 2,
-          "display_col": 29
+          "display_col": 9
         },
         "26": {
-          "token_idx": 2,
+          "token_idx": 3,
+          "display_col": 28
+        },
+        "27": {
+          "token_idx": 4,
           "display_col": 29
+        },
+        "28": {
+          "token_idx": 4,
+          "display_col": 29
+        },
+        "29": {
+          "token_idx": 5,
+          "display_col": 31
         }
       }
     },
@@ -1558,55 +2105,41 @@
         {
           "text": "print",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 0,
-          "end_col": 5,
-          "seq_in_line": 0
+          "end_col": 5
         },
         {
           "text": "(",
           "type": "(",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 5,
-          "end_col": 6,
-          "seq_in_line": 1
+          "end_col": 6
         },
         {
           "text": "result",
           "type": "identifier",
-          "typeable": true,
+          "categories": [],
+          "base_typeable": true,
           "start_col": 6,
-          "end_col": 12,
-          "seq_in_line": 2
+          "end_col": 12
         },
         {
           "text": ")",
           "type": ")",
-          "typeable": false,
+          "categories": [
+            "bracket"
+          ],
+          "base_typeable": true,
           "start_col": 12,
-          "end_col": 13,
-          "seq_in_line": 3
+          "end_col": 13
         }
       ],
-      "typing_tokens": [
-        {
-          "text": "print",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 0,
-          "end_col": 5,
-          "seq_in_line": 0
-        },
-        {
-          "text": "result",
-          "type": "identifier",
-          "typeable": true,
-          "start_col": 6,
-          "end_col": 12,
-          "seq_in_line": 2
-        }
-      ],
-      "typing_sequence": "printresult",
+      "typing_sequence": "print(result)",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -1630,27 +2163,35 @@
         },
         "5": {
           "token_idx": 1,
-          "display_col": 6
+          "display_col": 5
         },
         "6": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 6
         },
         "7": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 6
         },
         "8": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 6
         },
         "9": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 6
         },
         "10": {
-          "token_idx": 1,
+          "token_idx": 2,
           "display_col": 6
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 12
         }
       }
     }
