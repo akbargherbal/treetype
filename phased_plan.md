@@ -1,4 +1,5 @@
 ## 🎯 Phased Implementation Plan: Tree-Sitter Typing Game
+## **UPDATED VERSION - Post Phase 3.5 Completion**
 
 ### Philosophy (Borrowed from Speedtyper Success)
 
@@ -7,444 +8,584 @@
 - **Low-risk assumptions**: Test what we think we know
 - **Rollback-friendly**: Each phase is independently functional
 - **Documentation-driven**: Context docs prevent re-explaining decisions
+- **UX-driven iteration**: Respond to user feedback and discoveries
 
 ---
 
-## Phase 1: Static Rendering Foundation (Days 1-2)
+## ✅ Phase 1: Static Rendering Foundation (COMPLETE)
 
 ### Goal
 **Prove we can render parsed code as styled HTML with proper indentation—no typing logic yet.**
 
-### What We're Testing
+### What We Tested
 - Tree-sitter parsing works for Python/JS/TS/TSX
 - We can convert tokens to display-ready JSON
 - Frontend can render tokens with Tailwind indentation
 - Syntax highlighting maps token types to colors
 
-### Tasks
+### Deliverables
+- ✅ `parse_json.py` - Parser with token classification
+- ✅ `render_code.html` - Static renderer
+- ✅ JSON samples for all 4 languages
+- ✅ Syntax highlighting system (VS Code Dark+ theme)
 
-**1.1: Finalize Parsing Pipeline** (2 hours)
-- Use your existing sanity check code (already works ✅)
-- Add token classification: `is_non_typeable()`
-- Add indentation calculation: `start_col // 4`
-- Output: JSON per line with display tokens
-
-```python
-# Expected output structure
-{
-    "line_number": 4,
-    "indent_level": 0,
-    "tokens": [
-        {"text": "def", "type": "def", "typeable": true},
-        {"text": " ", "type": "whitespace", "typeable": false},
-        {"text": "calculate", "type": "identifier", "typeable": true},
-        # ... etc
-    ]
-}
-```
-
-**1.2: Create Sample JSON Files** (1 hour)
-- Export 3 sample files:
-  - `python_sample.json` (Fibonacci function)
-  - `javascript_sample.json` (React component stub)
-  - `typescript_sample.json` (API client)
-
-**1.3: Build Static HTML Renderer** (3 hours)
-- Create simple HTML page (no React, just vanilla JS for speed)
-- Read JSON via `fetch()`
-- Render each line as `<div>` with tokens as `<span>`
-- Apply Tailwind padding: `pl-${indent_level * 4}`
-
-```html
-<!-- Example output -->
-<div class="line">
-  <span class="pl-0">
-    <span class="keyword">def</span>
-    <span class="identifier">calculate</span>
-    <span class="punctuation">(</span>
-    <!-- ... -->
-  </span>
-</div>
-```
-
-**1.4: Add Syntax Highlighting** (2 hours)
-- Map token types to Tailwind colors
-  - `def`, `function`, `class` → `text-purple-500`
-  - `identifier` → `text-blue-400`
-  - `string_content` → `text-green-400`
-  - `number` → `text-orange-400`
-  - `comment` → `text-gray-500`
-- Test with all 3 sample files
-
-**1.5: Test Multi-line Tokens** (1 hour)
-- Add docstring example to Python sample
-- Verify: Does it render correctly?
-- Decision point: Single block or split by line?
-
-### Success Criteria
+### Success Criteria Met
 - ✅ Can visually inspect rendered code
 - ✅ Indentation looks correct (matches source)
 - ✅ Syntax colors match expectations
-- ✅ Multi-line strings display (even if imperfect)
-- ✅ No typing functionality yet (that's Phase 2)
-
-### Deliverables
-- `render_code.html` - Static renderer
-- `sample_*.json` - Test data
-- Screenshot comparison: rendered vs source
-
-### Risk Assessment
-- **Low risk**: No backend, no complex state
-- **If it fails**: Parsing assumptions are wrong—fix before continuing
+- ✅ Multi-line strings display correctly
+- ✅ Comments render as atomic blocks
 
 ---
 
-## Phase 2: Typing Sequence Logic (Days 3-4)
+## ✅ Phase 2: Typing Sequence Logic (COMPLETE)
 
 ### Goal
 **Prove we can create a typeable character sequence and track cursor position—no auto-jump yet.**
 
-### What We're Testing
+### What We Tested
 - Can filter typeable vs non-typeable tokens
 - Can flatten tokens into character sequence
 - Can map typed characters to display positions
 - Can highlight current typing position
 
-### Tasks
+### Deliverables
+- ✅ Enhanced JSON with `typing_sequence` + `char_map`
+- ✅ Typing input handler with keypress validation
+- ✅ Visual feedback system (green/gray/cursor highlighting)
+- ✅ Character-by-character advancement logic
 
-**2.1: Add Typeable Filter to Parser** (1 hour)
-- Modify Phase 1 JSON output to include `typeable` flag
-- Generate second field: `typing_sequence` (flattened string)
-
-```python
-# Enhanced output
-{
-    "line_number": 4,
-    "indent_level": 0,
-    "display_tokens": [...],  # All tokens
-    "typing_sequence": "defcalculatefibonaccinintListint",  # Only typeable
-    "char_map": {
-        0: {"token_idx": 0, "display_col": 0},  # 'd' at col 0
-        3: {"token_idx": 1, "display_col": 4},  # 'c' at col 4 (after space)
-        # ...
-    }
-}
-```
-
-**2.2: Build Typing Input Handler** (3 hours)
-- Add `<input>` field to HTML renderer
-- Listen to `keypress` events
-- Compare input to `typing_sequence`
-- Track: current character index
-
-**2.3: Add Visual Feedback** (2 hours)
-- Highlight current character/token being typed
-- Show: characters typed correctly (green)
-- Show: characters not yet typed (gray)
-- Show: current cursor position (blinking underline)
-
-**2.4: Test Manual Typing** (1 hour)
-- Type through a full line manually
-- Verify: highlight moves correctly
-- Verify: wrong keys don't advance cursor
-- Verify: correct keys advance to next typeable char
-
-**2.5: Handle Spaces Manually** (1 hour)
-- User types: `d` `e` `f` `[SPACE]` `c` `a` `l` ...
-- Verify: Space advances to next token
-- Note: This is NOT auto-jump—testing baseline behavior
-
-### Success Criteria
+### Success Criteria Met
 - ✅ Can type through entire snippet character-by-character
 - ✅ Visual feedback shows progress
-- ✅ Wrong keys don't advance
+- ✅ Wrong keys don't advance cursor
 - ✅ Typing sequence matches expectations
-- ✅ Manual space bar advances cursor
-
-### Deliverables
-- Enhanced JSON with `typing_sequence` + `char_map`
-- Updated `render_code.html` with typing input
-- Video/GIF demonstrating manual typing
-
-### Risk Assessment
-- **Medium risk**: Character mapping could be complex
-- **If it fails**: Simplify—test with single line first
 
 ---
 
-## Phase 3: Auto-Jump Experimentation (Days 5-6)
+## ✅ Phase 3: Auto-Jump Experimentation (COMPLETE)
 
 ### Goal
 **Test if auto-jump feels natural—skip space bar, cursor jumps automatically.**
 
-### What We're Testing
+### What We Tested
 - User experience of auto-jump
 - Does it feel faster or jarring?
 - Do users understand what's happening?
 - Edge cases: punctuation clusters, operators
 
-### Tasks
+### Outcome
+**DECISION: Auto-jump removed from final design.**
 
-**3.1: Implement Auto-Jump Logic** (2 hours)
-- After correct character typed: check if next char is non-typeable
-- If yes: skip to next typeable character
-- Update visual cursor position
+After testing, we determined that:
+- Punctuation and brackets are better handled as **non-typeable elements**
+- Users should only type **meaningful code characters** (keywords, identifiers, values)
+- Non-typeable elements transition from gray → colored automatically as cursor passes
+- This creates a cleaner, more intuitive typing experience
 
-**3.2: Add Configuration Toggle** (1 hour)
-- Checkbox: "Enable auto-jump"
-- Allow switching between manual space and auto-jump
-- Persist preference in localStorage
+### Key Learning
+The typing experience should feel like **"revealing" or "painting"** the code into existence, not mechanically matching every character. This insight led directly to Phase 3.5.
 
-**3.3: Conduct User Testing** (3 hours)
-- Test yourself: Type 5 snippets with auto-jump ON
-- Test yourself: Type 5 snippets with auto-jump OFF
-- Record: WPM, error rate, subjective feel
-- Ask: Does auto-jump feel natural or disorienting?
+---
 
-**3.4: Test Edge Cases** (2 hours)
-- Dense punctuation: `func(x, y, z)`
-- Operators: `x += 5`
-- Strings with spaces: `"hello world"`
-- Comments: `# this is a comment`
+## ✅ Phase 3.5: Progressive Reveal & Enhanced UX (COMPLETE) ⭐
 
-**3.5: Iterate on Feedback** (2 hours)
-- If jarring: Add smooth animation for cursor jump
-- If confusing: Add visual cue (e.g., fade effect)
-- If natural: Keep it, move to Phase 4
+### Goal
+**Transform the typing experience from validation to creation—make it feel like the user is bringing code to life.**
 
-### Success Criteria
-- ✅ Auto-jump implemented and configurable
-- ✅ Subjective assessment: "This feels good/bad"
-- ✅ Edge cases documented
-- ✅ Decision made: Keep or remove auto-jump
+This phase emerged from Phase 3 learnings and represents a fundamental UX enhancement that became the core of the application's value proposition.
+
+### Key Features Implemented
+
+#### 1. **Progressive Color Reveal System**
+- **Gray text** = Not yet typed (neutral canvas)
+- **Syntax-colored text** = Already typed (code revealed)
+- **Yellow highlight** = Current character to type
+- **Red highlight** = Error state (persistent until corrected)
+
+**Design Philosophy**: Users "paint" the code into existence. Every keystroke reveals the underlying structure through syntax highlighting.
+
+#### 2. **Persistent Error Feedback**
+- Wrong keystrokes turn the current character **red**
+- Error persists until user types the correct character
+- Prevents advancement until error is resolved
+- Clear, actionable feedback without breaking flow
+
+#### 3. **Non-Typeable Element Handling**
+- Punctuation, brackets, operators, string delimiters marked as non-typeable
+- These elements automatically transition from gray → colored as cursor passes
+- Users focus only on meaningful code characters
+- Creates smooth, uninterrupted typing rhythm
+
+#### 4. **Ergonomic Scroll System**
+- **Manual smart scroll**: Calculates exact target position for line centering
+- **Always-down rule**: Prevents disorienting upward scrolling
+- **Zen mode spacers**: Invisible top/bottom spacers (40vh) push controls out of view
+- **Distraction-free typing**: Controls fade during active typing (hover to restore)
+- **Smooth transitions**: CSS `scroll-behavior: smooth` on `<html>` element
+
+#### 5. **Multi-Line Navigation** (Absorbed Phase 4 goals)
+- Automatic line advancement when typing sequence complete
+- Skip empty lines or lines with no typeable content
+- Active line indicator (green border)
+- Smooth transitions between lines
+
+#### 6. **Completion Modal & Metrics**
+- Beautiful completion modal with celebration UI
+- Real-time WPM calculation (5-char word standard)
+- Accuracy tracking (correct chars / total chars)
+- Time display (MM:SS format)
+- Retry and language-switch options
+
+#### 7. **Keyboard Controls**
+- **Esc**: Reset test at any time
+- **Any key**: Start test from ready state
+- **Continuous typing**: No special keys needed, pure flow
+
+### Technical Implementation
+
+#### JSON Schema (from parser):
+```json
+{
+  "lines": [
+    {
+      "line_number": 0,
+      "indent_level": 0,
+      "display_tokens": [
+        {"text": "def", "type": "keyword", "typeable": true, "start_col": 0},
+        {"text": " ", "type": "whitespace", "typeable": false, "start_col": 3},
+        {"text": "calculate", "type": "identifier", "typeable": true, "start_col": 4}
+      ],
+      "typing_sequence": "defcalculate",
+      "char_map": {
+        "0": {"token_idx": 0, "display_col": 0},
+        "3": {"token_idx": 2, "display_col": 4}
+      }
+    }
+  ]
+}
+```
+
+#### Core Functions:
+- `renderLineTokens()`: Applies progressive reveal states to each character
+- `handleKeyPress()`: Validates input, updates state, manages error persistence
+- `moveToNextLine()`: Advances to next typeable line, triggers scroll
+- `manualSmartScroll()`: Ergonomic centering with down-only constraint
+- `completeTest()`: Calculates metrics, displays completion modal
 
 ### Deliverables
-- Updated renderer with auto-jump toggle
-- Testing notes document
-- Decision: Keep, modify, or remove feature
+- ✅ `render_code.html` - Full application with all UX enhancements
+- ✅ Progressive reveal CSS system
+- ✅ Ergonomic scroll implementation
+- ✅ Completion modal with metrics
+- ✅ Distraction-free mode
+- ✅ Full keyboard control system
+
+### Success Criteria Met
+- ✅ Typing feels creative and engaging (not mechanical)
+- ✅ Errors are clear, persistent, and actionable
+- ✅ Scroll behavior is smooth, predictable, ergonomic
+- ✅ Non-typeable elements transition seamlessly
+- ✅ Metrics accurately reflect performance
+- ✅ Controls fade elegantly during typing
+- ✅ All 4 languages work identically
+- ✅ Reset/retry functionality flawless
+
+### Key Learnings from Phase 3.5
+
+1. **UX Discovery**: The "progressive reveal" concept wasn't in the original plan but emerged as the natural evolution of the typing experience
+2. **Scroll Complexity**: Getting scroll behavior right required multiple iterations and diagnostic-driven debugging
+3. **State Management**: Persistent error state is crucial for learning-focused typing (vs. speed-focused)
+4. **Zen Mode**: Removing distractions during typing significantly improves focus and enjoyment
+
+---
+
+## 🔜 Phase 5: Configuration UI & Dynamic Token Filtering (NEXT)
+
+### Goal
+**Allow users to customize what they type via configuration panel.**
+
+### Current Limitation
+The parser currently **hardcodes** non-typeable rules:
+- Comments: always non-typeable
+- String content: always non-typeable
+- Punctuation/brackets/operators: always non-typeable
+
+### What Needs to Change
+
+#### 5.1: Refactor Parser to Be Permissive (2-3 hours)
+**Objective**: Export all tokens with full metadata, let frontend decide what's typeable.
+
+**Changes to `parse_json.py`**:
+```python
+def is_non_typeable(token_type, token_text, exclusion_config=None):
+    """
+    Make this function accept a configuration dict.
+    Default behavior: only structural whitespace is non-typeable.
+    Everything else is marked as 'potentially_typeable' with metadata.
+    """
+    # Only structural whitespace is truly non-typeable
+    if token_type == 'whitespace' and token_text.strip() == '':
+        return True
+    
+    return False
+
+# Add token category metadata
+def categorize_token(token_type, token_text):
+    """Classify tokens into categories for frontend filtering"""
+    categories = []
+    
+    if 'comment' in token_type.lower():
+        categories.append('comment')
+    if 'string' in token_type.lower():
+        categories.append('string')
+    if token_text in {':', ';', ',', '.'}:
+        categories.append('punctuation')
+    if token_text in {'(', ')', '[', ']', '{', '}', '<', '>'}:
+        categories.append('bracket')
+    if token_text in {'=', '+', '-', '*', '/', '%', '!', '&', '|', '^'}:
+        categories.append('operator')
+    
+    return categories
+```
+
+**Enhanced JSON output**:
+```json
+{
+  "display_tokens": [
+    {
+      "text": "#",
+      "type": "comment",
+      "categories": ["comment"],
+      "base_typeable": true,
+      "start_col": 0
+    }
+  ]
+}
+```
+
+#### 5.2: Build Configuration Panel (3 hours)
+**Objective**: Add UI for exclusion preferences.
+
+**UI Design**:
+```html
+<div class="config-panel">
+  <h3>Typing Configuration</h3>
+  <div class="config-group">
+    <h4>Exclude from typing:</h4>
+    <label><input type="checkbox" id="exclude-comments"> Comments</label>
+    <label><input type="checkbox" id="exclude-strings"> String Content</label>
+    <label><input type="checkbox" id="exclude-punctuation"> Punctuation (:;,.)</label>
+    <label><input type="checkbox" id="exclude-brackets"> Brackets (()[]{}<>)</label>
+    <label><input type="checkbox" id="exclude-operators"> Operators (=+-*/%)</label>
+  </div>
+  <div class="config-group">
+    <h4>Difficulty Presets:</h4>
+    <button onclick="applyPreset('minimal')">Minimal (Code Flow Only)</button>
+    <button onclick="applyPreset('moderate')">Moderate (No Comments/Strings)</button>
+    <button onclick="applyPreset('full')">Full (Type Everything)</button>
+  </div>
+</div>
+```
+
+#### 5.3: Implement Client-Side Filtering (2 hours)
+**Objective**: Regenerate typing sequence based on config.
+
+**Core function**:
+```javascript
+function applyExclusionConfig(lineData, config) {
+  // Filter tokens based on user preferences
+  const filteredTokens = lineData.display_tokens.map(token => {
+    let typeable = token.base_typeable;
+    
+    if (config.excludeComments && token.categories.includes('comment')) {
+      typeable = false;
+    }
+    if (config.excludeStrings && token.categories.includes('string')) {
+      typeable = false;
+    }
+    // ... etc for other categories
+    
+    return { ...token, typeable };
+  });
+  
+  // Regenerate typing_sequence
+  const typingSequence = filteredTokens
+    .filter(t => t.typeable)
+    .map(t => t.text)
+    .join('');
+  
+  // Regenerate char_map
+  const charMap = buildCharMap(filteredTokens);
+  
+  return { ...lineData, display_tokens: filteredTokens, typing_sequence: typingSequence, char_map: charMap };
+}
+```
+
+#### 5.4: Persist User Preferences (1 hour)
+**Objective**: Save config to localStorage.
+
+```javascript
+function saveConfig(config) {
+  localStorage.setItem('treetype_config', JSON.stringify(config));
+}
+
+function loadConfig() {
+  const saved = localStorage.getItem('treetype_config');
+  return saved ? JSON.parse(saved) : DEFAULT_CONFIG;
+}
+```
+
+#### 5.5: Test All Configurations (2 hours)
+**Objective**: Validate that progressive reveal works with all exclusion combinations.
+
+Test matrix:
+- Minimal config (only keywords/identifiers)
+- Moderate config (no comments/strings)
+- Full config (type everything)
+- Custom combinations
+
+### Success Criteria
+- ✅ Parser exports all tokens with category metadata
+- ✅ Configuration panel functional and intuitive
+- ✅ Typing sequence regenerates correctly based on config
+- ✅ Progressive reveal works with any configuration
+- ✅ Preferences persist across sessions
+- ✅ Presets provide quick configuration options
+
+### Estimated Time: 10-12 hours
 
 ### Risk Assessment
-- **High risk**: UX might not match expectations
-- **If it fails**: Revert to manual spaces—no harm done
+- **Medium risk**: Regenerating typing sequences client-side could introduce bugs
+- **Mitigation**: Extensive testing with all 4 languages and all config combinations
+- **Rollback**: Can revert to hardcoded exclusions if client-side filtering proves unstable
 
 ---
 
-## Phase 4: Multi-Line & Navigation (Day 7)
-
-### Goal
-**Handle multi-line typing, line completion, snippet completion.**
-
-### What We're Testing
-- Advancing from line to line
-- Handling empty lines
-- Snippet completion detection
-- Result display (WPM, accuracy)
-
-### Tasks
-
-**4.1: Add Line Advancement** (2 hours)
-- When line typing sequence complete: move to next line
-- Reset cursor to start of new line
-- Highlight next line
-
-**4.2: Handle Edge Cases** (2 hours)
-- Empty lines (blank lines in code)
-- Lines with only comments (if excluded from typing)
-- Last line completion (trigger results)
-
-**4.3: Add Metrics Calculation** (2 hours)
-- Track: start time, end time
-- Calculate: WPM (standard formula)
-- Calculate: accuracy (correct chars / total chars)
-- Display: results screen
-
-**4.4: Test Full Snippets** (2 hours)
-- Type through entire Python function
-- Type through JavaScript class
-- Verify: metrics accurate
-- Verify: smooth line transitions
-
-### Success Criteria
-- ✅ Can complete full multi-line snippets
-- ✅ Line transitions smooth
-- ✅ Metrics calculate correctly
-- ✅ Results display properly
-
-### Deliverables
-- Full typing game prototype
-- Metrics display screen
-- Video of complete typing session
-
----
-
-## Phase 5: Language Support & Configuration (Day 8-9)
-
-### Goal
-**Test all 4 languages, add configuration UI.**
-
-### What We're Testing
-- Python, JS, TS, TSX parsing all work
-- Syntax highlighting correct for each
-- User can select language
-- User can configure exclusion rules
-
-### Tasks
-
-**5.1: Test All Languages** (3 hours)
-- Parse samples for each language
-- Render side-by-side comparison
-- Verify: token types consistent
-- Fix: any language-specific issues
-
-**5.2: Add Language Selector** (1 hour)
-- Dropdown: Python | JavaScript | TypeScript | TSX
-- Load appropriate sample JSON
-- Update syntax highlighting scheme
-
-**5.3: Add Configuration Panel** (3 hours)
-- Checkboxes for exclusion rules:
-  - ☐ Exclude comments
-  - ☐ Exclude punctuation (`:`, `;`, `,`)
-  - ☐ Exclude brackets (`()`, `[]`, `{}`)
-  - ☐ Exclude operators (`=`, `+`, `-`)
-  - ☐ Exclude string delimiters
-- Regenerate typing sequence on change
-
-**5.4: Test Configurations** (2 hours)
-- Minimal: All exclusions ON
-- Moderate: Comments + delimiters excluded
-- Full: Only comments excluded
-- Document: Which feels best?
-
-### Success Criteria
-- ✅ All 4 languages supported
-- ✅ Configuration UI functional
-- ✅ Can test different exclusion sets
-- ✅ Preference saved
-
----
-
-## Phase 6: File Upload & Snippet Management (Days 10-11)
+## 🔜 Phase 6: File Upload & Snippet Management (FUTURE)
 
 ### Goal
 **Allow users to practice their own code.**
 
-### What We're Testing
-- File upload flow
-- Parsing user-uploaded files
-- Snippet validation (too long/short?)
-- Error handling for bad syntax
+### Prerequisites
+- Phase 5 complete (configuration system must work with uploaded files)
 
 ### Tasks
 
-**6.1: Add File Upload UI** (2 hours)
+#### 6.1: Add File Upload UI (2 hours)
 - Drag-and-drop zone
 - File type validation (.py, .js, .ts, .tsx)
 - Read file content with FileReader API
 
-**6.2: Client-Side Parsing** (3 hours)
+#### 6.2: Client-Side Parsing (4 hours)
+**Option A: WASM Tree-Sitter**
 - Load tree-sitter WASM in browser
-- Parse uploaded file
-- Generate JSON (same structure as Phase 1)
-- Display result
+- Parse uploaded file client-side
+- Generate JSON (same structure as backend parser)
 
-**6.3: Add Validation** (2 hours)
+**Option B: Backend API**
+- Build simple Flask/FastAPI endpoint
+- Upload file, receive JSON
+- Simpler but requires server
+
+**Recommendation**: Start with Option B for reliability, migrate to WASM if needed.
+
+#### 6.3: Add Validation & Feedback (2 hours)
 - Check: snippet length (100-500 chars ideal)
 - Check: line count (5-15 lines ideal)
 - Warn: if snippet too long/short
-- Option: auto-split long files
+- Option: auto-split long files into chunks
 
-**6.4: Snippet Library** (2 hours)
-- Store snippets in localStorage
+#### 6.4: Snippet Library (3 hours)
+- Store snippets in localStorage (or backend DB if using Option B)
 - List view: uploaded snippets
 - Select snippet to practice
-- Delete option
+- Delete/edit options
+- Tag system for organization
+
+#### 6.5: Integration with Config System (1 hour)
+- Uploaded files must respect user's exclusion config
+- Apply same filtering logic as built-in samples
 
 ### Success Criteria
-- ✅ Can upload own code
-- ✅ Parses correctly
+- ✅ Can upload own code files
+- ✅ Parses correctly with user's config applied
 - ✅ Can practice uploaded code
 - ✅ Snippets persist across sessions
+- ✅ Library management is intuitive
+
+### Estimated Time: 12-15 hours
+
+### Risk Assessment
+- **High risk if WASM**: Browser compatibility, bundle size
+- **Low risk if backend**: Simple API, proven approach
+- **Mitigation**: Start with backend, WASM is optional optimization
 
 ---
 
-## Phase 7: Polish & Edge Cases (Days 12-14)
+## 🔜 Phase 7: Polish & Edge Cases (FUTURE)
 
 ### Goal
 **Refine UX, handle remaining edge cases, prepare for deployment.**
 
 ### Tasks
-- Add loading states
-- Improve error messages
-- Add keyboard shortcuts
-- Test on different screen sizes
-- Performance optimization (if needed)
-- Final documentation
-- Create demo video
+
+#### 7.1: Performance Optimization (2 hours)
+- Profile rendering performance with large snippets
+- Optimize token rendering if needed
+- Lazy load language parsers if using WASM
+
+#### 7.2: Accessibility (2 hours)
+- Keyboard navigation audit
+- Screen reader support (ARIA labels)
+- High contrast mode
+- Font size controls
+
+#### 7.3: Additional Keyboard Shortcuts (1 hour)
+- `Ctrl+R`: Retry current snippet
+- `Ctrl+L`: Change language
+- `Ctrl+,`: Open config panel
+- `?`: Show help overlay
+
+#### 7.4: Error Handling & Edge Cases (2 hours)
+- Handle network errors (if using backend)
+- Handle parsing failures gracefully
+- Empty file uploads
+- Corrupted JSON recovery
+- Browser compatibility testing
+
+#### 7.5: Help & Onboarding (2 hours)
+- First-time user tutorial overlay
+- Tooltips for config options
+- Example videos/GIFs
+- FAQ section
+
+#### 7.6: Analytics & Feedback (2 hours)
+- Track: average WPM over time
+- Track: most practiced languages
+- Track: error patterns (which chars cause most mistakes)
+- Export: practice history as CSV
+
+#### 7.7: Visual Polish (2 hours)
+- Loading states and spinners
+- Better animations (token reveal, line transitions)
+- Theme customization (dark/light mode variants)
+- Custom font options
+
+#### 7.8: Documentation (2 hours)
+- User guide
+- Developer documentation
+- API documentation (if backend)
+- Contribution guidelines
+
+### Success Criteria
+- ✅ Performance smooth even with large files
+- ✅ Accessible to all users
+- ✅ Professional, polished feel
+- ✅ Comprehensive error handling
+- ✅ Clear documentation
+- ✅ Ready for public release
+
+### Estimated Time: 15-20 hours
 
 ---
 
-## 🚨 Phase Gates (Decision Points)
+## 📊 Progress Summary
 
-After each phase, evaluate:
+| Phase | Status | Completion | Time Spent |
+|-------|--------|-----------|------------|
+| **Phase 1** | ✅ Complete | 100% | ~8 hours |
+| **Phase 2** | ✅ Complete | 100% | ~6 hours |
+| **Phase 3** | ✅ Complete | 100% | ~4 hours |
+| **Phase 3.5** | ✅ Complete | 100% | ~12 hours |
+| **Phase 4** | ✅ Absorbed by 3.5 | 100% | (included above) |
+| **Phase 5** | 🔜 Next | 0% | Est. 10-12 hours |
+| **Phase 6** | 🔜 Future | 0% | Est. 12-15 hours |
+| **Phase 7** | 🔜 Future | 0% | Est. 15-20 hours |
 
-1. **Does this work as expected?** → Continue
-2. **Does this feel good?** → Continue
-3. **Is this worse than expected?** → Pivot or simplify
-
-### Example Decision Points:
-
-**Phase 2 Gate:** If typing sequence mapping is too complex:
-- **Option A**: Simplify to word-level (not char-level)
-- **Option B**: Skip auto-jump (stay with spaces)
-
-**Phase 3 Gate:** If auto-jump feels bad:
-- **Option A**: Remove feature, document decision
-- **Option B**: Modify (add animations, visual cues)
-
-**Phase 6 Gate:** If client-side tree-sitter WASM doesn't work:
-- **Option A**: Pre-parse files, upload JSON
-- **Option B**: Build simple backend API
+**Total Completed**: ~30 hours  
+**Remaining Estimated**: ~40-50 hours  
+**Total Project**: ~70-80 hours
 
 ---
 
-## 📋 Session Handoff Template
+## 🎯 Current Product Status
+
+### ✅ **Minimum Viable Product: ACHIEVED**
+
+The application currently has:
+- ✅ Beautiful, engaging typing experience
+- ✅ 4 language support (Python, JS, TS, TSX)
+- ✅ Progressive reveal system
+- ✅ Real-time metrics (WPM, accuracy)
+- ✅ Completion tracking
+- ✅ Ergonomic scroll system
+- ✅ Distraction-free mode
+- ✅ Professional visual design
+
+### 🎯 **Value Proposition**
+
+**TreeType is already usable and valuable** for:
+- Developers learning to type code faster
+- Anyone wanting to practice syntax muscle memory
+- People who find traditional typing games boring
+- Developers who want to improve flow state while coding
+
+### 🚀 **Next Value Unlocks**
+
+**Phase 5** unlocks:
+- Customizable difficulty levels
+- Practice specific syntax patterns (e.g., only brackets, only keywords)
+- Tailored learning paths
+
+**Phase 6** unlocks:
+- Practice your own codebase
+- Learn new frameworks by typing their examples
+- Muscle memory for your team's coding style
+
+**Phase 7** unlocks:
+- Public release readiness
+- Community features
+- Long-term engagement tracking
+
+---
+
+## 📝 Session Handoff Template
 
 When starting next session:
 
 ```markdown
 ## Current Status
-- **Phase:** [1-7]
-- **Task:** [Specific task from plan]
-- **Blockers:** [Any issues]
-- **Files modified:** [List paths]
+- **Phase**: 5 (Configuration UI)
+- **Last Completed**: Phase 3.5 - Progressive Reveal System
+- **Next Task**: Refactor parser to export token categories
+- **Blockers**: None
+- **Files to modify**: `parse_json.py`, `render_code.html`
 
 ## Context Documents
-- [x] CONTEXT.md (this tree-sitter project)
-- [x] TREE_SITTERS_PYTHON_EXAMPLE_12.md (sanity check)
-- [x] speedtyper_context.md (reference project)
-- [x] speedtyper_plan.md (reference methodology)
+- [x] phased_plan.md (this file - UPDATED)
+- [x] 3.5.md (Phase 3.5 goals document)
+- [x] session_10.md (ergonomic scroll breakthrough)
+- [x] session_11.md (spacer fix, Phase 3.5 sign-off)
 
 ## Next Steps
-[What you want to work on this session]
+1. Review Phase 5 requirements
+2. Refactor `is_non_typeable()` to be config-aware
+3. Add token categorization function
+4. Export enhanced JSON with category metadata
+5. Build configuration panel UI
 ```
 
 ---
 
-## 🎯 Success Definition
+## 🎉 Celebration Points
 
-**Minimum Viable Product (End of Phase 4):**
-- ✅ Can render code with proper indentation/highlighting
-- ✅ Can type through multi-line snippets
-- ✅ Auto-jump tested (keep or remove decision made)
-- ✅ Basic metrics displayed
+Take a moment to appreciate what's been built:
 
-**Full Product (End of Phase 7):**
-- ✅ All 4 languages supported
-- ✅ Users can upload own code
-- ✅ Configurable exclusion rules
-- ✅ Polished UX
-- ✅ Ready for personal use
+1. **Session 10**: Solved a complex UX problem (scroll behavior) through systematic debugging
+2. **Session 11**: Identified and fixed language-switching bug with spacer solution
+3. **Phase 3.5**: Created a genuinely delightful typing experience that transforms code practice from a chore into creative flow
 
----
+**The foundation is rock solid. The UX is polished. The path forward is clear.**
 
+Ready for Phase 5 when you are! 🚀

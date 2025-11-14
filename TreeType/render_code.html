@@ -6,6 +6,10 @@
     <title>Tree-Sitter Typing Game - Phase 3.5 Enhanced UX</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      /* Added for smooth scrolling on the root */
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         background: #1e1e1e;
         color: #d4d4d4;
@@ -148,8 +152,8 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding-top: 20vh;
-        padding-bottom: 40vh;
+        padding-top: 2rem; /* Increased padding for more centering room */
+        padding-bottom: 2rem;
       }
 
       #codeDisplay.focused {
@@ -337,7 +341,11 @@
             (syntax revealed)
           </li>
           <li>
-            • <span class="text-red-400 bg-red-900 bg-opacity-20 px-1">Red highlight</span> = Wrong key (stays until corrected)
+            •
+            <span class="text-red-400 bg-red-900 bg-opacity-20 px-1"
+              >Red highlight</span
+            >
+            = Wrong key (stays until corrected)
           </li>
           <li>
             • Type only the <strong>highlighted characters</strong> -
@@ -348,7 +356,8 @@
             reset
           </li>
           <li>
-            • <strong>Distraction-free mode:</strong> Controls fade when typing (hover to show)
+            • <strong>Distraction-free mode:</strong> Controls fade when typing
+            (hover to show)
           </li>
         </ul>
       </div>
@@ -415,17 +424,27 @@
           errorOnCurrentChar: false,
         };
 
-        // Disable distraction-free mode
         document.body.classList.remove("test-active");
 
         renderCode();
         updateStats();
         updateStatus("Press any key to start...");
-        
-        // Scroll to top smoothly
-        document.getElementById("codeDisplay").scrollIntoView({ 
-          behavior: "smooth", 
-          block: "start" 
+
+        // CRITICAL: Use requestAnimationFrame to ensure DOM is fully rendered
+        // before calculating scroll position. This prevents the "6 lines of padding" bug
+        // when switching languages.
+        requestAnimationFrame(() => {
+          const firstLine = document.getElementById("line-0");
+          if (firstLine) {
+            const targetY =
+              firstLine.offsetTop -
+              window.innerHeight / 2 +
+              firstLine.offsetHeight / 2;
+            window.scrollTo({
+              top: targetY,
+              behavior: "auto", // Instant scroll on reset, not smooth
+            });
+          }
         });
       }
 
@@ -439,32 +458,22 @@
         const display = document.getElementById("codeLines");
         display.innerHTML = "";
 
-        // Render each line
         currentData.lines.forEach((lineData, lineIndex) => {
           const lineDiv = document.createElement("div");
           lineDiv.className = "line flex";
           lineDiv.id = `line-${lineIndex}`;
-
-          // Highlight current line
           if (lineIndex === testState.currentLineIndex) {
             lineDiv.classList.add("test-active-line");
           }
-
-          // Line number
           const lineNum = document.createElement("span");
           lineNum.className = "line-number";
           lineNum.textContent = lineData.line_number + 1;
           lineDiv.appendChild(lineNum);
-
-          // Line content container with indentation
           const contentDiv = document.createElement("div");
           contentDiv.className = "flex-1";
           contentDiv.style.paddingLeft = `${lineData.indent_level * 16}px`;
           contentDiv.id = `line-content-${lineIndex}`;
-
-          // Render tokens
           renderLineTokens(contentDiv, lineData, lineIndex);
-
           lineDiv.appendChild(contentDiv);
           display.appendChild(lineDiv);
         });
@@ -483,77 +492,54 @@
         const isFutureLine = lineIndex > testState.currentLineIndex;
 
         lineData.display_tokens.forEach((token, tokenIndex) => {
-          // Add spaces to reach token's start column
           if (token.start_col > currentCol) {
             const spaces = " ".repeat(token.start_col - currentCol);
             container.appendChild(document.createTextNode(spaces));
           }
-
-          // Get base CSS class for syntax highlighting
           const baseCssClass = getCssClass(token.type, token.text);
-
-          // For typeable tokens, render character-by-character
           if (token.typeable) {
             for (let i = 0; i < token.text.length; i++) {
               const charSpan = document.createElement("span");
               charSpan.textContent = token.text[i];
               charSpan.className = baseCssClass;
-
               if (isCompletedLine) {
-                // Completed line: all chars show syntax colors (revealed)
-                // Base class already applied, no additional changes needed
               } else if (isFutureLine) {
-                // Future lines: all gray
                 charSpan.classList.add("char-untyped");
               } else if (isCurrentLine) {
                 if (typedCharCount < testState.currentCharIndex) {
-                  // Already typed: show syntax color (revealed)
-                  // Base class already applied
                 } else if (typedCharCount === testState.currentCharIndex) {
-                  // Current character
                   if (testState.errorOnCurrentChar) {
                     charSpan.classList.add("char-error");
                   } else {
                     charSpan.classList.add("char-current");
                   }
-                  charSpan.classList.add("char-untyped"); // Still gray until typed
+                  charSpan.classList.add("char-untyped");
                   charSpan.id = "current-char";
                 } else {
-                  // Not yet typed: gray
                   charSpan.classList.add("char-untyped");
                 }
               }
-
               container.appendChild(charSpan);
               typedCharCount++;
             }
           } else {
-            // Non-typeable tokens
             const tokenSpan = document.createElement("span");
             tokenSpan.textContent = token.text;
             tokenSpan.className = baseCssClass;
-
-            // Progressive reveal logic for non-typeable tokens
             if (isCompletedLine) {
-              // Completed line: show syntax color
-              // Base class already applied
             } else if (isFutureLine) {
-              // Future lines: all gray
               tokenSpan.classList.add("char-untyped");
             } else if (isCurrentLine) {
-              // Current line: reveal when cursor passes
-              const tokenStartsAfterCursor = token.start_col > 
-                (lineData.typing_tokens[testState.currentCharIndex]?.start_col || 0);
-              
+              const tokenStartsAfterCursor =
+                token.start_col >
+                (lineData.typing_tokens[testState.currentCharIndex]
+                  ?.start_col || 0);
               if (tokenStartsAfterCursor) {
                 tokenSpan.classList.add("char-untyped");
               }
-              // else: cursor has passed, show syntax color
             }
-
             container.appendChild(tokenSpan);
           }
-
           currentCol = token.end_col;
         });
       }
@@ -564,22 +550,18 @@
 
       function updateStats() {
         if (!currentData) return;
-
         const currentLine = currentData.lines[testState.currentLineIndex];
         const progress = currentLine
           ? `${testState.currentCharIndex}/${currentLine.typing_sequence.length}`
           : "0/0";
-
         let wpm = 0;
         let accuracy = 100;
-
         if (testState.active && testState.startTime) {
           const elapsed = (Date.now() - testState.startTime) / 1000 / 60;
           if (elapsed > 0) {
             wpm = Math.round(testState.totalCharsTyped / 5 / elapsed);
           }
         }
-
         if (testState.totalCharsTyped > 0) {
           accuracy = Math.round(
             ((testState.totalCharsTyped - testState.totalErrors) /
@@ -587,35 +569,20 @@
               100
           );
         }
-
         document.getElementById("stats").innerHTML = `
                 <div class="grid grid-cols-5 gap-4 text-sm">
-                    <div>
-                        <div class="text-gray-400">Language</div>
-                        <div class="font-bold">${currentData.language}</div>
-                    </div>
-                    <div>
-                        <div class="text-gray-400">Line Progress</div>
-                        <div class="font-bold">${
-                          testState.currentLineIndex + 1
-                        }/${currentData.total_lines}</div>
-                    </div>
-                    <div>
-                        <div class="text-gray-400">Char Progress</div>
-                        <div class="font-bold">${progress}</div>
-                    </div>
-                    <div>
-                        <div class="text-gray-400">WPM</div>
-                        <div class="font-bold">${wpm}</div>
-                    </div>
-                    <div>
-                        <div class="text-gray-400">Accuracy</div>
-                        <div class="font-bold ${
-                          accuracy < 95 ? "text-yellow-400" : "text-green-400"
-                        }">${accuracy}%</div>
-                    </div>
-                </div>
-            `;
+                    <div><div class="text-gray-400">Language</div><div class="font-bold">${
+                      currentData.language
+                    }</div></div>
+                    <div><div class="text-gray-400">Line Progress</div><div class="font-bold">${
+                      testState.currentLineIndex + 1
+                    }/${currentData.total_lines}</div></div>
+                    <div><div class="text-gray-400">Char Progress</div><div class="font-bold">${progress}</div></div>
+                    <div><div class="text-gray-400">WPM</div><div class="font-bold">${wpm}</div></div>
+                    <div><div class="text-gray-400">Accuracy</div><div class="font-bold ${
+                      accuracy < 95 ? "text-yellow-400" : "text-green-400"
+                    }">${accuracy}%</div></div>
+                </div>`;
       }
 
       // =====================================================================
@@ -638,59 +605,35 @@
       // =====================================================================
 
       function handleKeyPress(event) {
-        // Allow browser shortcuts with modifiers
-        if (event.ctrlKey || event.metaKey || event.altKey) {
-          return;
-        }
-
-        // Handle Escape
+        if (event.ctrlKey || event.metaKey || event.altKey) return;
         if (event.key === "Escape") {
           event.preventDefault();
           resetTest();
           return;
         }
-
-        // Ignore special keys that aren't Escape
-        if (
-          event.key.length > 1 &&
-          event.key !== "Enter" &&
-          event.key !== " "
-        ) {
+        if (event.key.length > 1 && event.key !== "Enter" && event.key !== " ")
           return;
-        }
-
         event.preventDefault();
-
         if (!currentData) return;
 
-        // Start test on first keystroke
         if (!testState.active) {
           testState.active = true;
           testState.startTime = Date.now();
           updateStatus("Typing...", "success");
-          
-          // Enable distraction-free mode
           document.body.classList.add("test-active");
         }
 
         const currentLine = currentData.lines[testState.currentLineIndex];
         if (!currentLine) return;
-
         const expectedChar =
           currentLine.typing_sequence[testState.currentCharIndex];
         const typedKey = event.key;
 
-        // Check if key matches
         if (typedKey === expectedChar) {
-          // Correct key!
           testState.currentCharIndex++;
           testState.totalCharsTyped++;
-          testState.errorOnCurrentChar = false; // Clear error state
-
-          // ALWAYS update display first to show the character with syntax color
+          testState.errorOnCurrentChar = false;
           updateDisplay();
-
-          // THEN check if line is complete (after a small delay to let render complete)
           if (
             testState.currentCharIndex >= currentLine.typing_sequence.length
           ) {
@@ -699,10 +642,9 @@
             }, 50);
           }
         } else {
-          // Wrong key - set persistent error state
           testState.totalErrors++;
           testState.errorOnCurrentChar = true;
-          updateDisplay(); // Re-render to show red highlight
+          updateDisplay();
           updateStats();
         }
       }
@@ -712,39 +654,57 @@
       // =====================================================================
 
       function moveToNextLine() {
-        // Mark current line as completed
         testState.completedLines.add(testState.currentLineIndex);
-
-        // Move to next line
         testState.currentLineIndex++;
         testState.currentCharIndex = 0;
-        testState.errorOnCurrentChar = false; // Reset error state for new line
-
-        // Skip lines with empty typing sequences
+        testState.errorOnCurrentChar = false;
         while (testState.currentLineIndex < currentData.total_lines) {
           const nextLine = currentData.lines[testState.currentLineIndex];
-
           if (
             nextLine &&
             nextLine.typing_sequence &&
             nextLine.typing_sequence.length > 0
           ) {
-            // Found a valid line to type
             break;
           }
-
-          // This line is empty/non-typeable, mark as completed and skip
           testState.completedLines.add(testState.currentLineIndex);
           testState.currentLineIndex++;
         }
-
-        // Check if test is complete
         if (testState.currentLineIndex >= currentData.total_lines) {
           completeTest();
         } else {
-          // Re-render the entire display to update all line states
           renderCode();
           updateStats();
+          // Use a timeout to ensure the DOM is updated before we calculate scroll
+          setTimeout(manualSmartScroll, 0);
+        }
+      }
+
+      // =====================================================================
+      // MANUAL SMART SCROLL LOGIC (DEFINITIVE FIX)
+      // =====================================================================
+      function manualSmartScroll() {
+        const nextLineEl = document.getElementById(
+          `line-${testState.currentLineIndex}`
+        );
+        if (!nextLineEl) return;
+
+        const currentScrollY = window.scrollY;
+        const viewportHeight = window.innerHeight;
+
+        // Calculate the target scroll position to center the line
+        const targetY =
+          nextLineEl.offsetTop -
+          viewportHeight / 2 +
+          nextLineEl.offsetHeight / 2;
+
+        // --- THE "ALWAYS DOWN" RULE ---
+        // Only scroll if the target is below the current position.
+        if (targetY > currentScrollY) {
+          window.scrollTo({
+            top: targetY,
+            // behavior is handled by the CSS `scroll-behavior: smooth` on the <html> element
+          });
         }
       }
 
@@ -753,18 +713,14 @@
       // =====================================================================
 
       function updateDisplay() {
-        // Re-render the current line to update character states
         const currentLine = currentData.lines[testState.currentLineIndex];
         const contentDiv = document.getElementById(
           `line-content-${testState.currentLineIndex}`
         );
-
         if (contentDiv && currentLine) {
           contentDiv.innerHTML = "";
           renderLineTokens(contentDiv, currentLine, testState.currentLineIndex);
         }
-
-        // Update active line indicator
         document.querySelectorAll(".line").forEach((line, idx) => {
           if (idx === testState.currentLineIndex) {
             line.classList.add("test-active-line");
@@ -772,18 +728,7 @@
             line.classList.remove("test-active-line");
           }
         });
-
         updateStats();
-
-        // Scroll current character into view, keeping it at comfortable eye level
-        const currentChar = document.getElementById("current-char");
-        if (currentChar) {
-          currentChar.scrollIntoView({ 
-            behavior: "smooth", 
-            block: "center",  // Keep at center of viewport
-            inline: "nearest" 
-          });
-        }
       }
 
       // =====================================================================
@@ -793,22 +738,17 @@
       function completeTest() {
         testState.active = false;
         testState.endTime = Date.now();
-
-        // Disable distraction-free mode
         document.body.classList.remove("test-active");
-
         const elapsed = (testState.endTime - testState.startTime) / 1000;
         const minutes = Math.floor(elapsed / 60);
         const seconds = Math.floor(elapsed % 60);
         const timeStr = `${minutes}:${seconds.toString().padStart(2, "0")}`;
-
         const wpm = Math.round(testState.totalCharsTyped / 5 / (elapsed / 60));
         const accuracy = Math.round(
           ((testState.totalCharsTyped - testState.totalErrors) /
             testState.totalCharsTyped) *
             100
         );
-
         showCompletionModal(wpm, accuracy, timeStr);
         updateStats();
       }
@@ -821,44 +761,23 @@
         const overlay = document.createElement("div");
         overlay.className = "modal-overlay";
         overlay.id = "completionModal";
-
         overlay.innerHTML = `
           <div class="modal-content">
             <div class="modal-title">🎉 Test Complete!</div>
             <div class="modal-subtitle">Great job on completing the test</div>
-            
             <div class="modal-stats">
-              <div class="modal-stat">
-                <div class="modal-stat-label">Words Per Minute</div>
-                <div class="modal-stat-value">${wpm}</div>
-              </div>
-              <div class="modal-stat">
-                <div class="modal-stat-label">Accuracy</div>
-                <div class="modal-stat-value">${accuracy}%</div>
-              </div>
-              <div class="modal-stat">
-                <div class="modal-stat-label">Time</div>
-                <div class="modal-stat-value">${timeStr}</div>
-              </div>
+              <div class="modal-stat"><div class="modal-stat-label">Words Per Minute</div><div class="modal-stat-value">${wpm}</div></div>
+              <div class="modal-stat"><div class="modal-stat-label">Accuracy</div><div class="modal-stat-value">${accuracy}%</div></div>
+              <div class="modal-stat"><div class="modal-stat-label">Time</div><div class="modal-stat-value">${timeStr}</div></div>
             </div>
-
             <div class="modal-buttons">
-              <button class="modal-button modal-button-primary" onclick="retryTest()">
-                Retry Test
-              </button>
-              <button class="modal-button modal-button-secondary" onclick="closeModal()">
-                Change Language
-              </button>
+              <button class="modal-button modal-button-primary" onclick="retryTest()">Retry Test</button>
+              <button class="modal-button modal-button-secondary" onclick="closeModal()">Change Language</button>
             </div>
-          </div>
-        `;
-
+          </div>`;
         document.body.appendChild(overlay);
-
         overlay.addEventListener("click", (e) => {
-          if (e.target === overlay) {
-            closeModal();
-          }
+          if (e.target === overlay) closeModal();
         });
       }
 
@@ -868,9 +787,7 @@
 
       function closeModal() {
         const modal = document.getElementById("completionModal");
-        if (modal) {
-          modal.remove();
-        }
+        if (modal) modal.remove();
       }
 
       function retryTest() {
@@ -883,10 +800,8 @@
       // =====================================================================
 
       function getCssClass(type, text) {
-        if (["(", ")", "[", "]", "{", "}", "<", ">"].includes(type)) {
+        if (["(", ")", "[", "]", "{", "}", "<", ">"].includes(type))
           return "bracket";
-        }
-
         const keywords = [
           "def",
           "function",
@@ -910,36 +825,17 @@
           "export",
           "default",
         ];
-        if (keywords.includes(type)) {
-          return type;
-        }
-
-        if (type.includes("comment")) {
-          return "comment";
-        }
-
-        if (type.includes("string")) {
-          return type.replace(/_/g, "_");
-        }
-
-        if (type === "integer" || type === "number" || type === "float") {
+        if (keywords.includes(type)) return type;
+        if (type.includes("comment")) return "comment";
+        if (type.includes("string")) return type.replace(/_/g, "_");
+        if (type === "integer" || type === "number" || type === "float")
           return "number";
-        }
-
-        if (type.includes("identifier")) {
-          return type;
-        }
-
+        if (type.includes("identifier")) return type;
         if (
           ["->", "=>", "=", "+", "-", "*", "/", "%", "++", "--"].includes(type)
-        ) {
+        )
           return "operator";
-        }
-
-        if ([":", ";", ",", "."].includes(type)) {
-          return "punctuation";
-        }
-
+        if ([":", ";", ",", "."].includes(type)) return "punctuation";
         return type.replace(/[^a-zA-Z0-9_]/g, "_");
       }
 
@@ -952,23 +848,16 @@
         .addEventListener("change", (e) => {
           loadLanguage(e.target.value);
         });
-
       document.getElementById("resetBtn").addEventListener("click", () => {
         resetTest();
       });
-
       document.getElementById("codeDisplay").addEventListener("click", () => {
         document.getElementById("codeDisplay").classList.add("focused");
       });
-
       document.getElementById("codeDisplay").addEventListener("blur", () => {
         document.getElementById("codeDisplay").classList.remove("focused");
       });
-
-      // Global keydown listener
       document.addEventListener("keydown", handleKeyPress);
-
-      // Initial load
       document.addEventListener("DOMContentLoaded", () => {
         loadLanguage("python");
         document.getElementById("codeDisplay").focus();
