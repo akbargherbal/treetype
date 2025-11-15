@@ -27,7 +27,7 @@
           "text": "{",
           "type": "{",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 15,
@@ -384,7 +384,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 0,
@@ -900,7 +900,7 @@
           "text": "(",
           "type": "(",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 24,
@@ -937,7 +937,7 @@
           "text": ")",
           "type": ")",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 35,
@@ -966,7 +966,7 @@
           "text": "<",
           "type": "<",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 45,
@@ -984,7 +984,7 @@
           "text": ">",
           "type": ">",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 50,
@@ -994,7 +994,7 @@
           "text": "{",
           "type": "{",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 52,
@@ -1248,7 +1248,7 @@
           "text": "(",
           "type": "(",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 32,
@@ -1294,7 +1294,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 49,
@@ -1314,7 +1314,7 @@
           "text": ")",
           "type": ")",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 51,
@@ -1584,7 +1584,7 @@
           "text": "(",
           "type": "(",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 36,
@@ -1594,7 +1594,7 @@
           "text": ")",
           "type": ")",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 37,
@@ -1868,7 +1868,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 0,

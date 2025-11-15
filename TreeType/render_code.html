@@ -143,6 +143,11 @@
         opacity: 1;
       }
 
+      /* Prevent instructions panel from triggering hover during auto-scroll */
+      body.test-active .instructions-panel {
+        pointer-events: none;
+        opacity: 0.1;
+      }
       /* Center the typing area for better ergonomics */
       #codeDisplay {
         outline: none;
@@ -176,33 +181,39 @@
       .modal-content {
         background: #2a2a2a;
         border-radius: 12px;
-        padding: 32px;
+        padding: 24px;
         max-width: 400px;
         width: 90%;
         text-align: center;
         animation: slideUp 0.3s;
         border: 2px solid #4ade80;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
       }
 
       .modal-title {
         font-size: 2em;
-        margin-bottom: 8px;
+        margin: 0;
       }
 
       .modal-subtitle {
         color: #9ca3af;
-        margin-bottom: 24px;
+        margin: 0;
+        font-size: 0.95em;
       }
 
       .modal-stats {
         background: #1e1e1e;
         border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 24px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
 
       .modal-stat {
-        margin: 12px 0;
+        margin: 0;
       }
 
       .modal-stat-label {
@@ -220,6 +231,7 @@
         display: flex;
         gap: 12px;
         justify-content: center;
+        margin: 0;
       }
 
       .modal-button {
@@ -278,7 +290,7 @@
         <div class="mb-8">
           <h1 class="text-3xl font-bold mb-2">Tree-Sitter Typing Game</h1>
           <p class="text-gray-400">
-            Phase 5.2: Configuration UI - Customizable Typing Modes
+            Build muscle memory for programming constructs
           </p>
         </div>
 
@@ -360,7 +372,9 @@
       </div>
 
       <!-- Instructions: Also fade during typing -->
-      <div class="mt-6 p-4 bg-gray-800 rounded controls-area">
+      <div
+        class="mt-6 p-4 bg-gray-800 rounded controls-area instructions-panel"
+      >
         <h3 class="font-bold mb-2">Instructions:</h3>
         <ul class="text-sm space-y-1 mb-4">
           <li>
@@ -418,7 +432,10 @@
           name: "Minimal",
           description: "Type only keywords and identifiers",
           exclude: [
-            "bracket",
+            "parenthesis",
+            "curly_brace",
+            "square_bracket",
+            "angle_bracket",
             "operator",
             "punctuation",
             "string_content",
@@ -428,10 +445,18 @@
         },
         standard: {
           name: "Standard",
-          description: "Balanced typing experience (recommended)",
-          exclude: ["bracket", "string_content", "string_delimiter", "comment"],
-          // Special handling: include : and ; even though they're in punctuation category
-          includeSpecific: [":", ";"],
+          description: "Balanced practice without pinky strain (recommended)",
+          exclude: [
+            "curly_brace", // Excluded: Heavy pinky work
+            "square_bracket", // Excluded: Heavy pinky work
+            "angle_bracket", // Excluded: TSX/JSX specific
+            "string_content",
+            "punctuation", // ← ADD THIS LINE
+            "string_delimiter",
+            "comment",
+          ],
+          // Special handling: include essential punctuation + parentheses
+          includeSpecific: [":", ".", ",", "(", ")"],
         },
         full: {
           name: "Full",
@@ -777,6 +802,7 @@
         if (event.ctrlKey || event.metaKey || event.altKey) return;
         if (event.key === "Escape") {
           event.preventDefault();
+          closeModal(); // Close modal if open
           resetTest();
           return;
         }

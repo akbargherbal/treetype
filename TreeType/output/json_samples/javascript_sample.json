@@ -27,7 +27,7 @@
           "text": "(",
           "type": "(",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 20,
@@ -37,7 +37,7 @@
           "text": "{",
           "type": "{",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 21,
@@ -55,7 +55,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 28,
@@ -65,7 +65,7 @@
           "text": ")",
           "type": ")",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 29,
@@ -75,7 +75,7 @@
           "text": "{",
           "type": "{",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 31,
@@ -215,7 +215,7 @@
           "text": "[",
           "type": "[",
           "categories": [
-            "bracket"
+            "square_bracket"
           ],
           "base_typeable": true,
           "start_col": 10,
@@ -251,7 +251,7 @@
           "text": "]",
           "type": "]",
           "categories": [
-            "bracket"
+            "square_bracket"
           ],
           "base_typeable": true,
           "start_col": 32,
@@ -279,7 +279,7 @@
           "text": "(",
           "type": "(",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 44,
@@ -297,7 +297,7 @@
           "text": ")",
           "type": ")",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 50,
@@ -529,7 +529,7 @@
           "text": "(",
           "type": "(",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 24,
@@ -539,7 +539,7 @@
           "text": ")",
           "type": ")",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 25,
@@ -559,7 +559,7 @@
           "text": "{",
           "type": "{",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 30,
@@ -675,7 +675,7 @@
           "text": "(",
           "type": "(",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 19,
@@ -703,7 +703,7 @@
           "text": ")",
           "type": ")",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 29,
@@ -825,7 +825,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 4,
@@ -1225,7 +1225,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 25,
@@ -1468,7 +1468,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 50,
@@ -1720,7 +1720,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 27,
@@ -1868,7 +1868,7 @@
           "text": "(",
           "type": "(",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 11,
@@ -1916,7 +1916,7 @@
           "text": "<",
           "type": "<",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 8,
@@ -1982,7 +1982,7 @@
           "text": ">",
           "type": ">",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 32,
@@ -2098,7 +2098,7 @@
           "text": "<",
           "type": "<",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 12,
@@ -2116,7 +2116,7 @@
           "text": ">",
           "type": ">",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 15,
@@ -2126,7 +2126,7 @@
           "text": "{",
           "type": "{",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 16,
@@ -2162,7 +2162,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 26,
@@ -2172,7 +2172,7 @@
           "text": "</",
           "type": "</",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 27,
@@ -2190,7 +2190,7 @@
           "text": ">",
           "type": ">",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 31,
@@ -2290,7 +2290,7 @@
           "text": "<",
           "type": "<",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 12,
@@ -2326,7 +2326,7 @@
           "text": "{",
           "type": "{",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 28,
@@ -2344,7 +2344,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 40,
@@ -2354,7 +2354,7 @@
           "text": ">",
           "type": ">",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 41,
@@ -2490,7 +2490,7 @@
           "text": "{",
           "type": "{",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 16,
@@ -2589,7 +2589,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 49,
@@ -2729,7 +2729,7 @@
           "text": "</",
           "type": "</",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 12,
@@ -2747,7 +2747,7 @@
           "text": ">",
           "type": ">",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 20,
@@ -2803,7 +2803,7 @@
           "text": "</",
           "type": "</",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 8,
@@ -2821,7 +2821,7 @@
           "text": ">",
           "type": ">",
           "categories": [
-            "bracket"
+            "angle_bracket"
           ],
           "base_typeable": true,
           "start_col": 13,
@@ -2865,7 +2865,7 @@
           "text": ")",
           "type": ")",
           "categories": [
-            "bracket"
+            "parenthesis"
           ],
           "base_typeable": true,
           "start_col": 4,
@@ -2903,7 +2903,7 @@
           "text": "}",
           "type": "}",
           "categories": [
-            "bracket"
+            "curly_brace"
           ],
           "base_typeable": true,
           "start_col": 0,
