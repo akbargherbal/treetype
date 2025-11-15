@@ -137,12 +137,10 @@
 
       body.test-active .controls-area {
         opacity: 0.1;
-        pointer-events: none;
       }
 
       body.test-active .controls-area:hover {
         opacity: 1;
-        pointer-events: auto;
       }
 
       /* Center the typing area for better ergonomics */
@@ -683,15 +681,20 @@
             const tokenSpan = document.createElement("span");
             tokenSpan.textContent = token.text;
             tokenSpan.className = baseCssClass;
+
             if (isCompletedLine) {
+              // Line complete - show colored
             } else if (isFutureLine) {
               tokenSpan.classList.add("char-untyped");
             } else if (isCurrentLine) {
+              // FIX: Use char_map to find current display position
+              const currentCharInfo =
+                lineData.char_map[String(testState.currentCharIndex)];
+              const currentDisplayCol = currentCharInfo?.display_col || 0;
+
               const tokenStartsAfterCursor =
-                token.start_col >
-                (lineData.display_tokens.filter((t) => t.typeable)[
-                  testState.currentCharIndex
-                ]?.start_col || 0);
+                token.start_col > currentDisplayCol;
+
               if (tokenStartsAfterCursor) {
                 tokenSpan.classList.add("char-untyped");
               }

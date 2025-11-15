@@ -1,3 +1,2 @@
-1. There is no visual cue indicating that the typing test is finished. The test becomes stuck at the final character of the last line in the Python Fibonacci typing test—specifically the `t` in `print` within `print(result)`.
-2. The last character of each typed line has a different color from the rest of the line; for example, the entire line appears green, while the final character appears light blue. This behavior is also inconsistent. For instance, in the TypeScript test, on line 1, the `r` in `User` is displayed in green.
-3. Overall - Things are way better than the last couple of sessions.
+1) Write README.md from previous materials / chat sessions.
+2) Polish - non-typable chracter with the 4 languges in mind - how the user could build muscle memory - what are the type of characters that are redundant; for example TSX; <> are kind of everywhere; {} also .. so that makes sense to make them priority for non-typable chraacters.
