@@ -143,3 +143,6 @@ git commit -m "feat: Phase 5 - Add diagnostic tools for bug investigation
 ---
 
 Fantastic work this session! We not only completed a major migration phase ahead of schedule but also performed a textbook-perfect diagnosis of a tricky bug. We're in a great position to squash it for good in the next session.
+
+---
+PS: While I do advocate fixing the Python parser script, I also advise caution. This Python file is the entire engine that brought the app to life; without it, the app is nothing. So we need to be careful when fixing this JSX bug, making sure we don’t unintentionally introduce another twenty bugs. In other words, we don’t want to create problems where none existed.
