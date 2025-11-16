@@ -114,3 +114,6 @@ Thumbs.db
 # =====================================
 *.bak
 *.tmp
+
+# Windows / WSL artifacts
+*Zone.Identifier*

@@ -554,7 +554,7 @@
       async function loadLanguage(language) {
         try {
           const response = await fetch(
-            `output/json_samples/${language}_sample.json`
+            `snippets/${language}/${language}_sample.json`
           );
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);

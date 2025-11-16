@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "generatedAt": "2025-11-16T04:14:42.730638Z",
+  "totalSnippets": 4,
+  "languages": [
+    "javascript",
+    "python",
+    "tsx",
+    "typescript"
+  ],
+  "snippets": [
+    {
+      "id": "javascript-javascript_sample",
+      "name": "Javascript Sample",
+      "language": "javascript",
+      "path": "snippets/javascript/javascript_sample.json",
+      "lines": 20,
+      "typeable_chars": 406,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "sample"
+      ],
+      "dateAdded": "2025-11-15"
+    },
+    {
+      "id": "python-python_sample",
+      "name": "Python Sample",
+      "language": "python",
+      "path": "snippets/python/python_sample.json",
+      "lines": 13,
+      "typeable_chars": 341,
+      "difficulty": "intermediate",
+      "tags": [
+        "python",
+        "sample"
+      ],
+      "dateAdded": "2025-11-15"
+    },
+    {
+      "id": "tsx-tsx_sample",
+      "name": "Tsx Sample",
+      "language": "tsx",
+      "path": "snippets/tsx/tsx_sample.json",
+      "lines": 25,
+      "typeable_chars": 400,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "sample"
+      ],
+      "dateAdded": "2025-11-15"
+    },
+    {
+      "id": "typescript-typescript_sample",
+      "name": "Typescript Sample",
+      "language": "typescript",
+      "path": "snippets/typescript/typescript_sample.json",
+      "lines": 11,
+      "typeable_chars": 304,
+      "difficulty": "intermediate",
+      "tags": [
+        "typescript",
+        "sample"
+      ],
+      "dateAdded": "2025-11-15"
+    }
+  ]
+}
