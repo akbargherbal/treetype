@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TreeType Snippet Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        font-family: "Consolas", "Monaco", "Courier New", monospace;
+      }
+
+      .snippet-card {
+        background: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        border-radius: 8px;
+        padding: 16px;
+        transition: all 0.2s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        height: 100%;
+      }
+
+      .snippet-card:hover {
+        border-color: #4ade80;
+        box-shadow: 0 4px 12px rgba(74, 222, 128, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .language-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .lang-python {
+        background: #3776ab;
+        color: white;
+      }
+      .lang-javascript {
+        background: #f7df1e;
+        color: black;
+      }
+      .lang-typescript {
+        background: #3178c6;
+        color: white;
+      }
+      .lang-tsx {
+        background: #61dafb;
+        color: black;
+      }
+
+      .difficulty-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: bold;
+      }
+
+      .diff-beginner {
+        background: #10b981;
+        color: white;
+      }
+      .diff-intermediate {
+        background: #f59e0b;
+        color: white;
+      }
+      .diff-advanced {
+        background: #ef4444;
+        color: white;
+      }
+
+      .stats-display {
+        background: #1e1e1e;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 0.85rem;
+      }
+
+      .practice-button {
+        background: #3b82f6;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        border: none;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .practice-button:hover {
+        background: #2563eb;
+        transform: scale(1.05);
+      }
+
+      .loading-spinner {
+        border: 3px solid #3a3a3a;
+        border-top: 3px solid #4ade80;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .filter-button {
+        padding: 8px 16px;
+        border-radius: 6px;
+        border: 1px solid #3a3a3a;
+        background: #2a2a2a;
+        color: #d4d4d4;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 0.9rem;
+      }
+
+      .filter-button:hover {
+        border-color: #4ade80;
+        background: #333;
+      }
+
+      .filter-button.active {
+        background: #4ade80;
+        color: #1e1e1e;
+        border-color: #4ade80;
+        font-weight: bold;
+      }
+
+      .search-input {
+        background: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        border-radius: 6px;
+        padding: 10px 16px;
+        color: #d4d4d4;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .search-input:focus {
+        outline: none;
+        border-color: #4ade80;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: #858585;
+      }
+
+      .snippet-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body class="p-8">
+    <div class="max-w-7xl mx-auto">
+      <!-- Header -->
+      <div class="mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h1 class="text-3xl font-bold mb-2">TreeType Snippet Library</h1>
+            <p class="text-gray-400">
+              Choose a snippet to practice your typing skills
+            </p>
+          </div>
+          <a
+            href="index.html"
+            class="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded font-semibold transition"
+          >
+            Back to Game
+          </a>
+        </div>
+
+        <!-- Stats Summary -->
+        <div id="statsSummary" class="grid grid-cols-4 gap-4 mt-6">
+          <div class="bg-gray-800 p-4 rounded">
+            <div class="text-gray-400 text-sm">Total Snippets</div>
+            <div class="text-2xl font-bold" id="totalSnippets">-</div>
+          </div>
+          <div class="bg-gray-800 p-4 rounded">
+            <div class="text-gray-400 text-sm">Practiced</div>
+            <div class="text-2xl font-bold text-green-400" id="practicedCount">
+              -
+            </div>
+          </div>
+          <div class="bg-gray-800 p-4 rounded">
+            <div class="text-gray-400 text-sm">Average WPM</div>
+            <div class="text-2xl font-bold text-blue-400" id="averageWPM">
+              -
+            </div>
+          </div>
+          <div class="bg-gray-800 p-4 rounded">
+            <div class="text-gray-400 text-sm">Best WPM</div>
+            <div class="text-2xl font-bold text-yellow-400" id="bestWPM">-</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="mb-6 flex flex-wrap gap-4 items-center">
+        <div class="flex gap-2">
+          <button class="filter-button active" data-language="all">
+            All
+          </button>
+          <button class="filter-button" data-language="python">Python</button>
+          <button class="filter-button" data-language="javascript">
+            JavaScript
+          </button>
+          <button class="filter-button" data-language="typescript">
+            TypeScript
+          </button>
+          <button class="filter-button" data-language="tsx">TSX/React</button>
+        </div>
+
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search snippets by name..."
+        />
+
+        <select id="sortSelect" class="filter-button">
+          <option value="name">Sort: Name (A-Z)</option>
+          <option value="wpm">Sort: Best WPM</option>
+          <option value="practiced">Sort: Most Practiced</option>
+          <option value="lines">Sort: Shortest First</option>
+        </select>
+      </div>
+
+      <!-- Loading State -->
+      <div id="loadingState" class="flex justify-center items-center py-20">
+        <div class="loading-spinner"></div>
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="empty-state hidden">
+        <div class="text-4xl mb-4">🔍</div>
+        <h3 class="text-xl font-bold mb-2">No snippets found</h3>
+        <p>Try adjusting your filters or search query</p>
+      </div>
+
+      <!-- Snippet Grid -->
+      <div id="snippetGrid" class="snippet-grid hidden"></div>
+    </div>
+
+    <script>
+      // =====================================================================
+      // STATE MANAGEMENT
+      // =====================================================================
+
+      let allSnippets = [];
+      let currentFilter = "all";
+      let currentSearch = "";
+      let currentSort = "name";
+      let userStats = {};
+
+      // =====================================================================
+      // LOAD USER STATS FROM LOCALSTORAGE
+      // =====================================================================
+
+      function loadUserStats() {
+        const saved = localStorage.getItem("treetype_snippet_stats");
+        return saved ? JSON.parse(saved) : {};
+      }
+
+      // =====================================================================
+      // CALCULATE SUMMARY STATISTICS
+      // =====================================================================
+
+      function calculateSummaryStats() {
+        userStats = loadUserStats();
+        const statsEntries = Object.values(userStats);
+
+        document.getElementById("totalSnippets").textContent =
+          allSnippets.length;
+        document.getElementById("practicedCount").textContent =
+          statsEntries.length;
+
+        if (statsEntries.length > 0) {
+          const avgWPM =
+            statsEntries.reduce((sum, s) => sum + (s.bestWPM || 0), 0) /
+            statsEntries.length;
+          const maxWPM = Math.max(...statsEntries.map((s) => s.bestWPM || 0));
+
+          document.getElementById("averageWPM").textContent =
+            Math.round(avgWPM);
+          document.getElementById("bestWPM").textContent = maxWPM;
+        } else {
+          document.getElementById("averageWPM").textContent = "0";
+          document.getElementById("bestWPM").textContent = "0";
+        }
+      }
+
+      // =====================================================================
+      // LOAD METADATA
+      // =====================================================================
+
+      async function loadMetadata() {
+        try {
+          const response = await fetch("snippets/metadata.json");
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.json();
+          allSnippets = data.snippets;
+
+          calculateSummaryStats();
+          renderSnippets();
+
+          document.getElementById("loadingState").classList.add("hidden");
+          document.getElementById("snippetGrid").classList.remove("hidden");
+        } catch (error) {
+          console.error("Error loading metadata:", error);
+          document.getElementById("loadingState").innerHTML = `
+            <div class="text-center text-red-400">
+              <div class="text-4xl mb-4">⚠️</div>
+              <h3 class="text-xl font-bold mb-2">Failed to load snippets</h3>
+              <p>Error: ${error.message}</p>
+              <p class="mt-2 text-sm">Make sure you're running from the project root directory</p>
+            </div>
+          `;
+        }
+      }
+
+      // =====================================================================
+      // FILTER & SORT SNIPPETS
+      // =====================================================================
+
+      function filterAndSortSnippets() {
+        let filtered = allSnippets;
+
+        // Language filter
+        if (currentFilter !== "all") {
+          filtered = filtered.filter((s) => s.language === currentFilter);
+        }
+
+        // Search filter
+        if (currentSearch) {
+          const searchLower = currentSearch.toLowerCase();
+          filtered = filtered.filter((s) =>
+            s.name.toLowerCase().includes(searchLower)
+          );
+        }
+
+        // Sort
+        filtered.sort((a, b) => {
+          switch (currentSort) {
+            case "name":
+              return a.name.localeCompare(b.name);
+            case "wpm": {
+              const aStats = userStats[a.id] || {};
+              const bStats = userStats[b.id] || {};
+              return (bStats.bestWPM || 0) - (aStats.bestWPM || 0);
+            }
+            case "practiced": {
+              const aStats = userStats[a.id] || {};
+              const bStats = userStats[b.id] || {};
+              return (
+                (bStats.practiceCount || 0) - (aStats.practiceCount || 0)
+              );
+            }
+            case "lines":
+              return a.lines - b.lines;
+            default:
+              return 0;
+          }
+        });
+
+        return filtered;
+      }
+
+      // =====================================================================
+      // RENDER SNIPPETS
+      // =====================================================================
+
+      function renderSnippets() {
+        const filtered = filterAndSortSnippets();
+        const grid = document.getElementById("snippetGrid");
+        const emptyState = document.getElementById("emptyState");
+
+        if (filtered.length === 0) {
+          grid.classList.add("hidden");
+          emptyState.classList.remove("hidden");
+          return;
+        }
+
+        grid.classList.remove("hidden");
+        emptyState.classList.add("hidden");
+
+        grid.innerHTML = filtered.map((snippet) => createSnippetCard(snippet)).join("");
+      }
+
+      // =====================================================================
+      // CREATE SNIPPET CARD
+      // =====================================================================
+
+      function createSnippetCard(snippet) {
+        const stats = userStats[snippet.id] || {};
+        const practiced = stats.practiceCount > 0;
+
+        const statsHtml = practiced
+          ? `
+          <div class="stats-display">
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-gray-400">Best WPM:</span>
+              <span class="font-bold text-green-400">${stats.bestWPM || 0}</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-gray-400">Practiced:</span>
+              <span class="font-bold">${stats.practiceCount}x</span>
+            </div>
+          </div>
+        `
+          : `
+          <div class="stats-display">
+            <div class="text-xs text-gray-500 text-center">Not practiced yet</div>
+          </div>
+        `;
+
+        return `
+          <div class="snippet-card" onclick="practiceSnippet('${snippet.path}')">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="font-bold text-lg flex-1 leading-tight">${cleanName(snippet.name)}</h3>
+              <span class="language-badge lang-${snippet.language}">${snippet.language}</span>
+            </div>
+            
+            <div class="flex gap-2 items-center text-sm text-gray-400">
+              <span>📄 ${snippet.lines} lines</span>
+              <span>•</span>
+              <span>⌨️ ${snippet.typeable_chars} chars</span>
+            </div>
+
+            ${statsHtml}
+
+            <button class="practice-button mt-auto" onclick="practiceSnippet('${snippet.path}'); event.stopPropagation();">
+              ${practiced ? "Practice Again" : "Start Practice"}
+            </button>
+          </div>
+        `;
+      }
+
+      // =====================================================================
+      // CLEAN SNIPPET NAME
+      // =====================================================================
+
+      function cleanName(name) {
+        // Remove "Gm 01 ###_## " prefix
+        return name.replace(/^Gm \d+ \d+_\d+ /, "").replace(/-/g, " ");
+      }
+
+      // =====================================================================
+      // PRACTICE SNIPPET
+      // =====================================================================
+
+      function practiceSnippet(path) {
+        window.location.href = `index.html?snippet=${encodeURIComponent(path)}`;
+      }
+
+      // =====================================================================
+      // EVENT LISTENERS
+      // =====================================================================
+
+      // Language filters
+      document.querySelectorAll(".filter-button[data-language]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".filter-button[data-language]")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentFilter = btn.dataset.language;
+          renderSnippets();
+        });
+      });
+
+      // Search input
+      document.getElementById("searchInput").addEventListener("input", (e) => {
+        currentSearch = e.target.value;
+        renderSnippets();
+      });
+
+      // Sort dropdown
+      document.getElementById("sortSelect").addEventListener("change", (e) => {
+        currentSort = e.target.value;
+        renderSnippets();
+      });
+
+      // =====================================================================
+      // INITIALIZE
+      // =====================================================================
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadMetadata();
+      });
+    </script>
+  </body>
+</html>
