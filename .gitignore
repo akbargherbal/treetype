@@ -115,3 +115,8 @@ temp/
 .env
 .env.*
 *.env.localrename_references.sh
+
+
+# Logs
+*.log
+pnpm-debug.log*

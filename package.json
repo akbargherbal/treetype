@@ -1,0 +1,27 @@
+{
+  "name": "treetype",
+  "version": "1.0.0",
+  "description": "Code typing practice with real programming patterns",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "typing",
+    "code",
+    "practice",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.22.0",
+  "devDependencies": {
+    "@types/estree": "^1.0.8",
+    "@types/node": "24.10.1",
+    "typescript": "5.9.3",
+    "vite": "7.2.2"
+  }
+}
