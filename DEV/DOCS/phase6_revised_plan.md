@@ -1,9 +1,9 @@
-# Phase 6 Implementation Plan (Revised)
+# Phase 6 Implementation Plan (Revised - Post Session 24)
 ## TreeType: Custom Snippet Library
 
-**Status**: Ready to implement  
-**Estimated effort**: 10-12 hours (3-4 sessions)  
-**Prerequisites**: Phases 1-5 complete ✅
+**Status**: Session 24 Complete - Metadata Generated ✅  
+**Next**: Session 25 - Library UI  
+**Estimated remaining effort**: 8-10 hours (2-3 sessions)
 
 ---
 
@@ -12,11 +12,11 @@
 Allow users to practice their own code snippets with minimal backend complexity.
 
 **What we're building**:
-1. Offline snippet generation workflow (Python script)
-2. Static snippet hosting (GitHub Pages)
-3. Snippet library browser UI
-4. User stats tracking (localStorage)
-5. Export/Import for data backup
+1. ✅ Offline snippet generation workflow (Python script) - **COMPLETE**
+2. ✅ Static snippet hosting (GitHub Pages) - **COMPLETE**
+3. 🔄 Snippet library browser UI - **IN PROGRESS**
+4. 🔄 User stats tracking (localStorage) - **NEXT**
+5. ❌ Export/Import (deferred to Phase 7)
 
 **What we're NOT building** (future phases):
 - ❌ Backend API for parsing
@@ -24,391 +24,302 @@ Allow users to practice their own code snippets with minimal backend complexity.
 - ❌ User accounts/authentication
 - ❌ Real-time features
 - ❌ Community snippet sharing
+- ❌ Complex historical stats tracking
 
 ---
 
-## 🏗️ Architecture Overview
-
-### **Core Principle: Static-First**
+## 🗂️ File Structure (Current)
 
 ```
-Your Machine (Offline)
-├── Source code files (.py, .js, .ts, .tsx)
-├── parse_json.py (generates JSON)
-└── build_metadata.py (creates index)
-        │
-        │ git commit + push
-        ▼
-GitHub Repository
-├── index.html (typing game)
-├── library.html (snippet browser)
-└── snippets/
-    ├── metadata.json (master index)
-    ├── python/
-    │   ├── django_views.json
-    │   └── flask_routes.json
-    └── javascript/
-        └── react_hooks.json
-        │
-        │ GitHub Pages (auto-deploy)
-        ▼
-Live Website (https://yourusername.github.io/TreeType/)
-        │
-        │ User visits
-        ▼
-User's Browser
-├── Loads snippets from GitHub (static files)
-└── Saves stats to localStorage (personal data)
-```
-
-**Key insight**: Parser runs OFFLINE on your machine. GitHub Pages hosts static JSON files. No backend needed.
-
----
-
-## 📁 File Structure (Target)
-
-```
-TreeType/
-├── index.html                      # Main typing game (renamed from render_code.html)
-├── library.html                    # Snippet browser (NEW)
-│
-├── assets/                         # Static assets
-│   ├── styles.css
-│   └── app.js
+treetype/
+├── index.html                      # Main typing game
+├── library.html                    # Snippet browser (TO BUILD)
 │
 ├── snippets/                       # Static snippet library (committed to Git)
-│   ├── metadata.json               # Master index (NEW)
-│   ├── python/
-│   │   ├── django_views.json
-│   │   └── flask_routes.json
+│   ├── metadata.json               # Master index (98 snippets) ✅
+│   ├── javascript/                 # 24 snippets
+│   ├── tsx/                        # 24 snippets (React)
+│   ├── typescript/                 # 17 snippets
+│   └── python/                     # 33 snippets
+│
+├── sources/                        # Source code files (gitignored)
 │   ├── javascript/
-│   │   └── react_hooks.json
+│   ├── tsx/
 │   ├── typescript/
-│   └── tsx/
+│   └── python/
 │
-├── sources/                        # Source code files (NEW, gitignored)
-│   ├── python/
-│   ├── javascript/
-│   └── typescript/
-│
-├── build/                          # Build scripts (NEW)
-│   ├── parse_json.py               # Refactored parser
-│   ├── build_metadata.py           # Generates metadata.json
-│   └── add_snippet.sh              # Helper script
-│
-├── output/                         # (DEPRECATED - remove after Phase 6)
-│   └── json_samples/
-│
-├── .gitignore                      # Ignore sources/, keep snippets/
-└── README.md                       # Updated with snippet creation guide
+└── build/                          # Build scripts
+    ├── parse_json.py               # Refactored parser ✅
+    ├── build_metadata.py           # Generates metadata.json ✅
+    └── process_all_snippets.py     # Batch processor ✅
 ```
 
 ---
 
-## 📋 Implementation Plan
+## 📊 Metadata Workflow (Session 23-24)
 
-### **Session 19: Repository Setup & Metadata Builder** (3-4 hours)
+### ✅ Completed: Metadata Generation
 
-#### Goals
-1. Restructure repo for GitHub Pages hosting
-2. Create metadata builder script
-3. Refactor parser for batch processing
-4. Test locally with static file server
+**Workflow:**
+1. **Jupyter Notebook** exports snippet metadata (`snippets_metadata.json`)
+   - Contains: prompt_id, category, display_name, language, source_file
+   - Generated from DataFrame with all snippet info
+2. **Parser** (`parse_json.py`) processes source files → JSON
+   - Extracts tokens, typing sequences, character maps
+3. **Metadata Builder** (`build_metadata.py`) merges:
+   - Notebook metadata (categories, display names)
+   - Parsed data (line counts, difficulty, paths)
+   - Output: Final `metadata.json` for library UI
 
-#### Tasks
-
-**Task 19.1: Repository Restructure** (30 min)
-- [ ] Rename `render_code.html` → `index.html`
-- [ ] Create `snippets/` folder structure
-- [ ] Move existing JSON samples to `snippets/python/`, etc.
-- [ ] Create `sources/` folder (gitignored)
-- [ ] Create `build/` folder
-- [ ] Update `.gitignore`
-
-**Task 19.2: Metadata Builder Script** (1.5 hours)
-- [ ] Create `build/build_metadata.py`
-- [ ] Scan `snippets/` folder for all JSON files
-- [ ] Generate `metadata.json` with snippet info:
-  - id, name, language, path, lines, difficulty, tags, dateAdded
-- [ ] Validate JSON structure
-- [ ] Test with existing samples
-
-**Task 19.3: Refactor Parser** (1 hour)
-- [ ] Copy `parse_json.py` → `build/parse_json.py`
-- [ ] Add batch processing (accept folder of files)
-- [ ] Add output path configuration
-- [ ] Add validation (5-200 lines, valid extensions)
-- [ ] Test with multiple files
-
-**Task 19.4: Helper Scripts** (30 min)
-- [ ] Create `build/add_snippet.sh` helper
-- [ ] Automates: parse → build metadata → git add
-- [ ] Test end-to-end workflow
-
-**Task 19.5: Local Testing** (30 min)
-- [ ] Run local HTTP server: `python -m http.server 8000`
-- [ ] Test snippet loading from `snippets/metadata.json`
-- [ ] Verify static file paths work
-- [ ] Test with all 4 languages
-
-#### Deliverables
-- ✅ Restructured repository
-- ✅ `build/build_metadata.py` - Metadata generator
-- ✅ `build/parse_json.py` - Refactored parser
-- ✅ `build/add_snippet.sh` - Helper script
-- ✅ `snippets/metadata.json` - Sample index
-- ✅ Working local test setup
+**Key Decision:** Keep original filenames (`gm_01_001_01_array-methods.js`)
+- Preserves batch tracking (`gm_01` = Gemini Model batch 01)
+- No file renaming needed
+- Metadata maps to clean display names in UI
 
 ---
 
-### **Session 20: GitHub Pages Deployment & Library UI** (3-4 hours)
-
-#### Goals
-1. Deploy to GitHub Pages
-2. Build snippet library browser
-3. Integrate with existing typing game
-4. Test live deployment
-
-#### Tasks
-
-**Task 20.1: GitHub Pages Setup** (30 min)
-- [ ] Push restructured repo to GitHub
-- [ ] Enable GitHub Pages (Settings → Pages)
-- [ ] Configure source: `main` branch, root folder
-- [ ] Wait for deployment (~2 min)
-- [ ] Test live URL: `https://yourusername.github.io/TreeType/`
-
-**Task 20.2: Library Page Structure** (1 hour)
-- [ ] Create `library.html` with basic layout
-- [ ] Header: "Snippet Library"
-- [ ] Filter controls: Language dropdown, search box
-- [ ] Snippet grid: Cards with metadata
-- [ ] Link to main typing game
-
-**Task 20.3: Snippet Loading Logic** (1 hour)
-- [ ] Fetch `snippets/metadata.json`
-- [ ] Parse and display snippet cards
-- [ ] Show: name, language, lines, tags, difficulty
-- [ ] Implement filtering by language
-- [ ] Implement search by name/tags
-
-**Task 20.4: Integration with Typing Game** (1 hour)
-- [ ] "Practice" button on each snippet card
-- [ ] URL parameter passing: `index.html?snippet=python-django-views`
-- [ ] Load snippet JSON dynamically in `index.html`
-- [ ] Replace hardcoded sample with dynamic loading
-- [ ] Test snippet switching
-
-**Task 20.5: UI Polish** (30 min)
-- [ ] Loading spinner while fetching metadata
-- [ ] Empty state (no snippets found)
-- [ ] Error handling (network failures)
-- [ ] Responsive design (mobile-friendly)
-
-#### Deliverables
-- ✅ Live GitHub Pages deployment
-- ✅ `library.html` - Functional snippet browser
-- ✅ Dynamic snippet loading in `index.html`
-- ✅ URL-based snippet selection
-- ✅ Basic filtering/search
-
----
-
-### **Session 21: Stats Tracking & Export/Import** (3-4 hours)
-
-#### Goals
-1. Track user stats in localStorage
-2. Display stats in library
-3. Build export/import functionality
-4. Add settings panel
-
-#### Tasks
-
-**Task 21.1: localStorage Stats Schema** (1 hour)
-- [ ] Define data structure:
-  ```javascript
-  {
-    snippet_stats: {
-      "python-django-views": {
-        timesCompleted: 5,
-        bestWPM: 42,
-        averageAccuracy: 94.5,
-        lastPracticed: "2025-01-15T14:30:00Z",
-        sessions: [...]
-      }
-    },
-    user_stats: {
-      totalSessions: 25,
-      totalTimeSpent: 3600,
-      averageWPM: 40,
-      favoriteLanguage: "python"
-    },
-    preferences: {
-      theme: "dark",
-      preset: "minimal"
-    },
-    schemaVersion: "1.0"
-  }
-  ```
-- [ ] Implement save/load functions
-- [ ] Add schema versioning check
-- [ ] Test with sample data
-
-**Task 21.2: Stats Integration** (1 hour)
-- [ ] Update typing game completion handler
-- [ ] Save stats after each session
-- [ ] Update global stats (total sessions, time, etc.)
-- [ ] Display stats on snippet cards (library.html)
-- [ ] Show "Best WPM", "Times practiced" badges
-
-**Task 21.3: Export/Import Feature** (1.5 hours)
-- [ ] "Export Stats" button in settings
-- [ ] Generate JSON file with all data
-- [ ] Download as `treetype-stats-YYYY-MM-DD.json`
-- [ ] "Import Stats" button
-- [ ] File upload handler
-- [ ] Validate imported data structure
-- [ ] Merge or replace existing data (user choice)
-- [ ] Test export/import cycle
-
-**Task 21.4: Settings Panel** (30 min)
-- [ ] Create settings modal/page
-- [ ] Theme toggle (dark/light)
-- [ ] Preset selection (Minimal/Standard/Full)
-- [ ] Export/Import buttons
-- [ ] Clear all data button (with confirmation)
-- [ ] Link from main page
-
-#### Deliverables
-- ✅ localStorage stats tracking
-- ✅ Stats display in library
-- ✅ Export stats to JSON file
-- ✅ Import stats from JSON file
-- ✅ Settings panel
-
----
-
-## 📊 Data Schemas
-
-### **metadata.json** (Master Snippet Index)
-
-```json
-{
-  "version": "1.0",
-  "generatedAt": "2025-01-15T10:30:00Z",
-  "snippets": [
-    {
-      "id": "python-django-views",
-      "name": "Django Class-Based Views",
-      "language": "python",
-      "path": "snippets/python/django_views.json",
-      "lines": 15,
-      "difficulty": "intermediate",
-      "tags": ["django", "web", "views"],
-      "dateAdded": "2025-01-15"
-    },
-    {
-      "id": "js-react-hooks",
-      "name": "React useState & useEffect",
-      "language": "javascript",
-      "path": "snippets/javascript/react_hooks.json",
-      "lines": 12,
-      "difficulty": "beginner",
-      "tags": ["react", "hooks"],
-      "dateAdded": "2025-01-16"
-    }
-  ]
-}
-```
-
-### **localStorage Schema**
+## 💾 localStorage Schema (Simplified for MVP)
 
 ```javascript
 // Key: treetype_snippet_stats
 {
-  "python-django-views": {
-    "timesCompleted": 5,
-    "bestWPM": 42,
-    "averageAccuracy": 94.5,
-    "lastPracticed": "2025-01-15T14:30:00Z",
-    "sessions": [
-      {"date": "2025-01-15", "wpm": 42, "accuracy": 95, "timeSpent": 120},
-      {"date": "2025-01-14", "wpm": 38, "accuracy": 94, "timeSpent": 135}
-    ]
+  "javascript-array-methods-001-01": {
+    "bestWPM": 62,
+    "bestAccuracy": 96,
+    "practiceCount": 5,
+    "lastPracticed": "2025-11-16T14:30:00Z"
+  },
+  "python-flask-patterns-004-02-03": {
+    "bestWPM": 48,
+    "bestAccuracy": 91,
+    "practiceCount": 2,
+    "lastPracticed": "2025-11-15T10:20:00Z"
   }
 }
 
-// Key: treetype_user_stats
+// Key: treetype_preferences (already exists in index.html)
 {
-  "totalSessions": 25,
-  "totalTimeSpent": 3600,
-  "totalCharsTyped": 50000,
-  "averageWPM": 40,
-  "currentStreak": 5,
-  "favoriteLanguage": "python",
-  "joinDate": "2025-01-01"
-}
-
-// Key: treetype_preferences
-{
-  "theme": "dark",
-  "preset": "minimal",
-  "lastSnippet": "python-django-views"
+  "preset": "standard",
+  "language": "python",
+  "lastSnippet": "javascript-array-methods-001-01"
 }
 
 // Key: treetype_schema_version
 "1.0"
 ```
 
----
+**What we track (per snippet):**
+- Best WPM achieved
+- Best accuracy %
+- Total practice count
+- Last practiced date
 
-## 🔄 Snippet Creation Workflow
+**What we DON'T track:**
+- ❌ Session history (localStorage is fragile)
+- ❌ Per-session metrics
+- ❌ Time-series data
+- ❌ Cross-device sync
 
-### **Adding a New Snippet** (5 minutes)
-
-```bash
-# 1. Add source file to sources/
-cp ~/my-code/views.py sources/python/django_views.py
-
-# 2. Run helper script
-./build/add_snippet.sh sources/python/django_views.py \
-  --name "Django Class-Based Views" \
-  --difficulty intermediate \
-  --tags "django,web,views"
-
-# This script does:
-# - Runs parse_json.py on the file
-# - Moves JSON to snippets/python/
-# - Updates metadata.json
-# - git add snippets/
-
-# 3. Commit and push
-git commit -m "Add Django views snippet"
-git push
-
-# 4. Wait ~1 minute for GitHub Pages to deploy
-# 5. Snippet now appears in library!
-```
+**Rationale:** Keep it simple. Users clear localStorage frequently. Don't build complex features on fragile storage.
 
 ---
 
-## 🎯 Success Criteria
+## 📋 Implementation Progress
 
-### **Must Have**
-- ✅ Can add new snippets via offline workflow
-- ✅ Snippets appear in library browser
-- ✅ Can practice any snippet from library
-- ✅ Stats persist across sessions (localStorage)
-- ✅ Can export/import stats for backup
-- ✅ Respects global preset (Minimal/Standard/Full)
-- ✅ All 4 languages work identically
+### ✅ Session 19-20: Repository Setup & GitHub Pages (COMPLETE)
+
+**Accomplished:**
+- ✅ Restructured repository for GitHub Pages
+- ✅ Deployed to `https://akbargherbal.github.io/treetype/`
+- ✅ Created `snippets/` and `sources/` folder structure
+- ✅ Set up `.gitignore` (sources/ ignored, snippets/ committed)
+
+---
+
+### ✅ Session 21-22: Repository Rename (COMPLETE)
+
+**Accomplished:**
+- ✅ Renamed repo: TreeType → treetype (lowercase)
+- ✅ Updated all URLs and references
+- ✅ Verified GitHub Pages deployment
+
+---
+
+### ✅ Session 23: Planning & Architecture (COMPLETE)
+
+**Accomplished:**
+- ✅ Defined MVP scope (no complex stats)
+- ✅ Validated user flow (library → practice → modal → library)
+- ✅ Made 5 key architecture decisions:
+  1. Filename strategy: Keep original names
+  2. Metadata generation: Hybrid (notebook + script)
+  3. Multi-part display: Separate cards
+  4. Stats display: Best WPM + Practice Count
+  5. Category grouping: Flat list + filters
+
+---
+
+### ✅ Session 24: Metadata Generation & Snippet Processing (COMPLETE)
+
+**Accomplished:**
+- ✅ Created metadata export cell in Jupyter notebook
+- ✅ Generated `snippets_metadata.json` (98 snippets)
+- ✅ Enhanced `build_metadata.py` to merge metadata sources
+- ✅ Created `process_all_snippets.py` batch processor
+- ✅ Parsed all 98 source files to JSON
+- ✅ Generated final `metadata.json` with complete data
+
+**Deliverables:**
+- ✅ `snippets/metadata.json` (master index)
+- ✅ 98 parsed JSON files in `snippets/` folders
+- ✅ All source files in `sources/` (gitignored)
+- ✅ Build scripts tested and working
+
+---
+
+### 🔄 Session 25: Library UI (NEXT - 3-4 hours)
+
+**Goals:**
+Build the snippet library browser interface.
+
+**Tasks:**
+
+#### Task 25.1: Library Page Structure (1 hour)
+- [ ] Create `library.html` with basic layout
+- [ ] Header: "TreeType Snippet Library"
+- [ ] Filter controls:
+  - Language dropdown (All, JavaScript, TypeScript, TSX, Python)
+  - Search box (filter by category name)
+- [ ] Snippet grid: Cards with metadata
+- [ ] Link to typing game (index.html)
+
+#### Task 25.2: Snippet Loading & Display (1 hour)
+- [ ] Fetch `snippets/metadata.json` on page load
+- [ ] Parse and display snippet cards
+- [ ] Show on each card:
+  - Category name (display_name)
+  - Language badge
+  - Line count
+  - Best WPM (from localStorage, if exists)
+  - Practice count (from localStorage, if exists)
+  - "Practice" button
+- [ ] Implement filtering by language
+- [ ] Implement search by category name
+
+#### Task 25.3: localStorage Stats Integration (1 hour)
+- [ ] Read `treetype_snippet_stats` on page load
+- [ ] Display stats on snippet cards:
+  - "Best: 62 WPM" (if practiced before)
+  - "Practiced 5 times"
+  - "Never practiced" (if no stats)
+- [ ] Sort options:
+  - Default: By category name
+  - By most practiced
+  - By best WPM
+
+#### Task 25.4: UI Polish (30 min)
+- [ ] Loading spinner while fetching metadata
+- [ ] Empty state (no snippets found after filtering)
+- [ ] Error handling (network failures)
+- [ ] Responsive design (mobile-friendly grid)
+- [ ] Hover effects on cards
+
+**Deliverables:**
+- ✅ Functional `library.html`
+- ✅ Basic filtering/search working
+- ✅ Stats display integrated
+- ✅ Clean, responsive design
+
+---
+
+### 🔄 Session 26: Dynamic Loading & Stats Persistence (2-3 hours)
+
+**Goals:**
+Connect library to typing game, track stats.
+
+**Tasks:**
+
+#### Task 26.1: URL Parameter Support (1 hour)
+- [ ] Update `index.html` to accept `?snippet=<id>` parameter
+- [ ] Load snippet JSON dynamically based on ID
+- [ ] Example: `index.html?snippet=javascript-array-methods-001-01`
+- [ ] Fetch from `snippets/javascript/gm_01_001_01_array-methods.json`
+- [ ] Display error if snippet not found
+
+#### Task 26.2: Stats Persistence (1 hour)
+- [ ] Update completion handler in `index.html`
+- [ ] After snippet completion, save stats to localStorage:
+  - Update bestWPM if current > previous
+  - Update bestAccuracy if current > previous
+  - Increment practiceCount
+  - Set lastPracticed timestamp
+- [ ] Test with multiple snippets
+
+#### Task 26.3: Completion Modal Updates (30 min)
+- [ ] Add "Back to Library" button to modal
+- [ ] Add "Try Another" button → random snippet
+- [ ] Update "Retry" button to reload same snippet
+- [ ] All buttons work correctly with URL parameters
+
+#### Task 26.4: Navigation Flow (30 min)
+- [ ] Library → Practice (URL param passed)
+- [ ] Practice → Complete → Modal → Library (clean flow)
+- [ ] Test with all 4 languages
+- [ ] Verify stats update correctly
+
+**Deliverables:**
+- ✅ Complete navigation flow working
+- ✅ Stats persist across sessions
+- ✅ URL parameters functional
+- ✅ All 98 snippets testable
+
+---
+
+## 🎯 Success Criteria (MVP)
+
+### Must Have (Session 26 Completion)
+- ✅ Can browse all 98 snippets in library
+- ✅ Can filter by language
+- ✅ Can search by category name
+- ✅ Can click "Practice" → loads snippet in typing game
+- ✅ Stats persist (best WPM, practice count)
+- ✅ Can return to library after completion
 - ✅ Works on GitHub Pages (live deployment)
+- ✅ All 4 languages work identically
 
-### **Nice to Have** (if time permits)
-- ✅ Drag-and-drop file upload (future: inline parsing)
-- ✅ Loading spinners and error states
-- ✅ Snippet difficulty badges
-- ✅ Sort library by: name, date, times practiced, WPM
+### Nice to Have (If Time Permits)
+- ⭐ Sort by most practiced / best WPM
+- ⭐ "Random snippet" button
+- ⭐ Keyboard shortcuts (Esc to return to library)
+- ⭐ Progress indicator (X/98 practiced)
+
+---
+
+## 📊 Current Dataset
+
+**98 Total Snippets:**
+- JavaScript: 24 snippets (12 categories × 2 variations)
+- TSX (React): 24 snippets (12 categories × 2 variations)
+- TypeScript: 17 snippets (9 categories, 1 has single variation)
+- Python: 33 snippets (33 categories × 1 variation)
+
+**Snippet Structure:**
+```json
+{
+  "id": "javascript-array-methods-001-01",
+  "prompt_id": "001_01",
+  "display_name": "Array Methods",
+  "category": "Array Methods",
+  "language": "javascript",
+  "source_file": "gm_01_001_01_array-methods.js",
+  "path": "snippets/javascript/gm_01_001_01_array-methods.json",
+  "lines": 15,
+  "typeable_chars": 123,
+  "difficulty": "beginner",
+  "tags": ["array methods", "javascript"],
+  "dateAdded": "2025-11-16"
+}
+```
 
 ---
 
@@ -420,149 +331,63 @@ git push
 | **Snippet Storage** | Git repository | $0/month |
 | **User Data** | localStorage | $0/month |
 | **Parsing** | Offline (local machine) | $0/month |
-| **Total** | | **$0/month** |
-
-**Bandwidth**: GitHub Pages allows 100GB/month (soft limit) - enough for thousands of users.
+| **Total** | | **$0/month** ✅ |
 
 ---
 
-## 🚀 Future Migration Path (Post-Phase 6)
+## 🚀 Future Enhancements (Phase 7+)
 
-### **If You Ever Need...**
+**Deferred to Later:**
+- Export/Import stats (safety net for localStorage)
+- Historical session tracking
+- Analytics dashboard
+- Cross-device sync (Firebase)
+- User accounts
+- Public snippet sharing
+- Advanced difficulty estimation
+- Custom snippet upload (browser-based)
 
-**Cross-device sync** (practice on phone + laptop):
-- Add Firebase Authentication
-- Move stats from localStorage → Firestore
-- **Effort**: 1-2 weeks
-- **Cost**: $0-5/month
-
-**Community features** (share snippets with others):
-- Add user-uploaded snippets to Firestore
-- Add public snippet library
-- **Effort**: 2-3 weeks
-- **Cost**: $5-25/month
-
-**Backend parsing** (upload files in browser):
-- Build Flask API on Cloud Run
-- Deploy parser as microservice
-- **Effort**: 1 week
-- **Cost**: $0-10/month
-
-**For now**: None of this is needed. Static hosting is perfect.
-
----
-
-## 📝 Documentation Updates Needed
-
-### **README.md Additions**
-
-```markdown
-## Adding Custom Snippets
-
-1. Place your code file in `sources/<language>/`
-2. Run: `./build/add_snippet.sh sources/<language>/myfile.py --name "My Snippet"`
-3. Commit and push to GitHub
-4. Wait ~1 minute for deployment
-5. Snippet appears in library!
-
-## Backing Up Your Stats
-
-- Click ⚙️ Settings → Export Stats
-- Save the JSON file somewhere safe
-- To restore: Import Stats → Choose file
-
-## Local Development
-
-```bash
-# Start local server
-python -m http.server 8000
-
-# Visit: http://localhost:8000
-```
-```
-
----
-
-## ⚠️ Known Limitations
-
-### **localStorage Limitations**
-- **5-10MB storage limit** (but stats are tiny ~50KB for 100 snippets)
-- **Lost if browser cache cleared** (Export/Import mitigates this)
-- **Not synced across devices** (future: Firebase if needed)
-
-### **GitHub Pages Limitations**
-- **No server-side code** (but we don't need it!)
-- **No databases** (but Git is our "database")
-- **Public repo = public snippets** (use private repo if needed, requires GitHub Pro)
-
-### **Parsing Limitations**
-- **Manual workflow** (not browser-based upload yet)
-- **Requires Python locally** (but you already have it)
-- **No validation UI** (future enhancement)
-
----
-
-## 🎉 What You Get After Phase 6
-
-### **Capabilities**
-- ✅ Practice custom code snippets
-- ✅ Track progress per snippet
-- ✅ View aggregate stats (total sessions, avg WPM)
-- ✅ Export stats for backup
-- ✅ Browse snippet library
-- ✅ Filter by language
-- ✅ Search by name/tags
-
-### **Infrastructure**
-- ✅ Zero hosting costs
-- ✅ Zero maintenance (no backend to keep alive)
-- ✅ Fast loading (static files, CDN-backed)
-- ✅ Version controlled snippets (Git history)
-
-### **Development Velocity**
-- ✅ Add snippets in 5 minutes
-- ✅ Deploy in 1 minute (git push)
-- ✅ No complex build process
-- ✅ No backend debugging
+**Philosophy:** Build the simplest thing that works. Add complexity only when proven necessary.
 
 ---
 
 ## 📅 Timeline Summary
 
-| Session | Focus | Hours | Cumulative |
-|---------|-------|-------|------------|
-| **Session 19** | Repo setup + metadata builder | 3-4h | 3-4h |
-| **Session 20** | GitHub Pages + library UI | 3-4h | 6-8h |
-| **Session 21** | Stats tracking + export/import | 3-4h | 9-12h |
+| Session | Focus | Status | Hours |
+|---------|-------|--------|-------|
+| **19-20** | Repo setup + GitHub Pages | ✅ Complete | 3-4h |
+| **21-22** | Repo rename | ✅ Complete | 1h |
+| **23** | Planning & architecture | ✅ Complete | 1h |
+| **24** | Metadata generation | ✅ Complete | 2h |
+| **25** | Library UI | 🔄 Next | 3-4h |
+| **26** | Dynamic loading + stats | 🔄 Pending | 2-3h |
 
-**Total Phase 6**: 9-12 hours (3 sessions)
-
----
-
-## ✅ Ready to Start
-
-**Next session (Session 20) starts with**:
-1. Task 19.1: Repository restructure
-2. Review file structure decisions
-3. Build metadata generator
-
-**No blockers. Ready to code.** 🚀
+**Total Phase 6**: ~12-15 hours (6 sessions)
 
 ---
 
-## 📌 Key Decisions Locked
+## ✅ Session 24 Summary
 
-| Decision | Choice | Rationale |
-|----------|--------|-----------|
-| **Hosting** | GitHub Pages | Free, simple, fast |
-| **Parsing** | Offline (Python) | Parser already works, no backend needed |
-| **Storage** | localStorage | Appropriate for personal data, instant reads |
-| **Backup** | Export/Import | Safety net for localStorage |
-| **Snippets** | Git repository | Version control, free hosting |
-| **Future** | Migrate when needed | Don't over-engineer now |
+**What We Built:**
+1. ✅ Jupyter notebook cell for metadata export
+2. ✅ Generated `snippets_metadata.json` (98 snippets)
+3. ✅ Enhanced `build_metadata.py` script
+4. ✅ Created `process_all_snippets.py` batch processor
+5. ✅ Parsed all 98 source files to JSON
+6. ✅ Generated final `metadata.json`
 
-**Philosophy**: Build the simplest thing that works. Add complexity only when necessary.
+**Ready for Session 25:**
+- All snippets parsed and indexed
+- Metadata complete and validated
+- Build scripts tested and working
+- Ready to build library UI
 
 ---
 
-_Phase 6 will transform TreeType from a demo with sample snippets into a personalized typing trainer. The static-first architecture keeps costs at zero while maintaining flexibility for future growth._ ✨
+**Phase 6 Progress**: 4/6 sessions complete (67%) 🎯  
+**Next Session**: Build library.html with filtering and search  
+**Estimated remaining time**: 5-7 hours
+
+---
+
+_Session 24 was all about automation. We transformed 98 source files into a fully-indexed snippet library without manual work. The metadata workflow is now repeatable for future batches._ ✨
