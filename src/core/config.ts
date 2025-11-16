@@ -2,7 +2,7 @@ import { PresetsConfig, UserConfig, TypingMode } from "../types/config";
 import { Line, Token } from "../types/snippet";
 
 /**
- * Preset configurations for typing modes
+ * Preset configurations
  */
 export const PRESETS: PresetsConfig = {
   minimal: {
@@ -50,10 +50,8 @@ export const DEFAULT_CONFIG: UserConfig = {
 };
 
 /**
- * Apply exclusion config to line data based on selected preset
- * @param lineData - Line data to filter
- * @param preset - Selected typing mode preset
- * @returns Filtered line data with updated typeable flags
+ * Apply exclusion config to line data
+ * FIXED: Now properly handles whitespace in all contexts
  */
 export function applyExclusionConfig(lineData: Line, preset: TypingMode): Line {
   const config = PRESETS[preset];
@@ -61,16 +59,23 @@ export function applyExclusionConfig(lineData: Line, preset: TypingMode): Line {
   const filteredTokens: Token[] = lineData.display_tokens.map((token) => {
     let typeable = token.base_typeable;
 
+    // CRITICAL FIX #1: Whitespace is NEVER typeable, regardless of context
+    if (token.text.trim() === "") {
+      return { ...token, typeable: false };
+    }
+
+    // If token is not base_typeable, keep it that way
     if (!typeable) {
       return { ...token, typeable };
     }
 
-    if (!token.categories || token.categories.length === 0) {
+    // CRITICAL FIX #2: Check includeSpecific FIRST (highest priority)
+    if (config.includeSpecific?.includes(token.text)) {
       return { ...token, typeable: true };
     }
 
-    // Check includeSpecific first (overrides exclusions)
-    if (config.includeSpecific?.includes(token.text)) {
+    // If no categories, default to typeable (unless excluded above)
+    if (!token.categories || token.categories.length === 0) {
       return { ...token, typeable: true };
     }
 
@@ -85,24 +90,25 @@ export function applyExclusionConfig(lineData: Line, preset: TypingMode): Line {
     return { ...token, typeable };
   });
 
-  // Regenerate typing sequence from filtered tokens
+  // Regenerate typing sequence from typeable tokens only
   const typingSequence = filteredTokens
     .filter((t) => t.typeable)
     .map((t) => t.text)
     .join("");
 
-  // Regenerate char_map for filtered tokens
+  // Regenerate char_map
   const charMap: Line["char_map"] = {};
   let charIdx = 0;
-  const typeableTokens = filteredTokens.filter((t) => t.typeable);
 
-  typeableTokens.forEach((token, tokenIdx) => {
-    for (let i = 0; i < token.text.length; i++) {
-      charMap[String(charIdx)] = {
-        token_idx: tokenIdx,
-        display_col: token.start_col,
-      };
-      charIdx++;
+  filteredTokens.forEach((token, tokenIdx) => {
+    if (token.typeable) {
+      for (let i = 0; i < token.text.length; i++) {
+        charMap[String(charIdx)] = {
+          token_idx: tokenIdx,
+          display_col: token.start_col,
+        };
+        charIdx++;
+      }
     }
   });
 
@@ -116,7 +122,6 @@ export function applyExclusionConfig(lineData: Line, preset: TypingMode): Line {
 
 /**
  * Save user configuration to localStorage
- * @param config - User configuration to save
  */
 export function saveConfig(config: UserConfig): void {
   localStorage.setItem("treetype_config", JSON.stringify(config));
@@ -124,7 +129,6 @@ export function saveConfig(config: UserConfig): void {
 
 /**
  * Load user configuration from localStorage
- * @returns User configuration or default if none saved
  */
 export function loadConfig(): UserConfig {
   const saved = localStorage.getItem("treetype_config");

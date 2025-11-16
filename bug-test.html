@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bug Investigation - Auto-Jump Inconsistency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        font-family: "Consolas", "Monaco", "Courier New", monospace;
+      }
+      .test-result {
+        background: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .test-result.pass {
+        border-color: #4ade80;
+      }
+      .test-result.fail {
+        border-color: #ef4444;
+      }
+      .code-block {
+        background: #1e1e1e;
+        padding: 12px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        overflow-x: auto;
+      }
+      pre {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body class="p-8">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6">
+        🐛 Auto-Jump Bug Investigation
+      </h1>
+
+      <div class="mb-8 p-4 bg-blue-900 rounded">
+        <h2 class="text-xl font-bold mb-2">Test Objective</h2>
+        <p class="mb-2">
+          Investigate why spacebar auto-jump behaves differently between TSX and
+          other languages.
+        </p>
+        <p class="text-sm text-gray-300">
+          This page loads snippets from all 4 languages and runs diagnostics on
+          their token structures. Check the browser console for detailed output.
+        </p>
+      </div>
+
+      <div class="mb-6">
+        <button
+          id="runTestsBtn"
+          class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded font-semibold"
+        >
+          🔬 Run Diagnostic Tests
+        </button>
+        <button
+          id="exportBtn"
+          class="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded font-semibold ml-2"
+        >
+          📥 Export Results
+        </button>
+      </div>
+
+      <div id="results"></div>
+
+      <div class="mt-8 p-4 bg-gray-800 rounded">
+        <h3 class="text-lg font-bold mb-2">📋 Instructions</h3>
+        <ol class="list-decimal list-inside space-y-2 text-sm">
+          <li>Click "Run Diagnostic Tests" to start analysis</li>
+          <li>Open browser console (F12) to see detailed logs</li>
+          <li>Review test results below</li>
+          <li>Look for "TYPEABLE WHITESPACE" warnings (that's the bug!)</li>
+          <li>Compare token categorization across languages</li>
+          <li>Click "Export Results" to save diagnostic data</li>
+        </ol>
+      </div>
+    </div>
+
+    <script type="module">
+      import { SnippetData } from "./src/types/snippet.js";
+      import {
+        logTokenDiagnostics,
+        compareLanguages,
+        findProblemTokens,
+        exportDiagnostics,
+      } from "./src/utils/diagnostics.js";
+      import { applyExclusionConfig } from "./src/core/config.js";
+
+      // Test snippets - pick one from each language
+      const testSnippets = {
+        python: "snippets/python/gm_01_001_02_03_core-python-patterns-quick-refresh.json",
+        javascript: "snippets/javascript/gm_01_001_01_array-methods.json",
+        typescript: "snippets/typescript/gm_01_028_01_basic-type-annotations.json",
+        tsx: "snippets/tsx/gm_01_015_01_common-ui-patterns.json",
+      };
+
+      let loadedSnippets = {};
+
+      async function loadSnippet(language, path) {
+        try {
+          const response = await fetch(path);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.json();
+          return data;
+        } catch (error) {
+          console.error(`Failed to load ${language}:`, error);
+          return null;
+        }
+      }
+
+      async function runDiagnosticTests() {
+        const resultsDiv = document.getElementById("results");
+        resultsDiv.innerHTML = '<div class="text-center py-8">🔬 Running diagnostics...</div>';
+
+        console.clear();
+        console.log("🐛 === AUTO-JUMP BUG INVESTIGATION ===");
+        console.log("Testing snippets from all 4 languages...\n");
+
+        // Load all snippets
+        loadedSnippets = {};
+        for (const [lang, path] of Object.entries(testSnippets)) {
+          const data = await loadSnippet(lang, path);
+          if (data) {
+            loadedSnippets[lang] = data;
+          }
+        }
+
+        // Run diagnostics on each language
+        const results = [];
+        for (const [lang, data] of Object.entries(loadedSnippets)) {
+          console.log(`\n${"=".repeat(60)}`);
+          console.log(`Testing ${lang.toUpperCase()}`);
+          console.log("=".repeat(60));
+
+          // Apply standard mode config (most common)
+          const processedData = {
+            ...data,
+            lines: data.lines.map((line) =>
+              applyExclusionConfig(line, "standard")
+            ),
+          };
+
+          // Find problems
+          const problems = findProblemTokens(processedData);
+
+          // Log first 3 lines in detail
+          processedData.lines.slice(0, 3).forEach((line) => {
+            logTokenDiagnostics(line, lang, "standard");
+          });
+
+          results.push({
+            language: lang,
+            data: processedData,
+            problems,
+            passed: problems.typeableWhitespace.length === 0,
+          });
+        }
+
+        // Compare languages
+        console.log("\n" + "=".repeat(60));
+        console.log("CROSS-LANGUAGE COMPARISON");
+        console.log("=".repeat(60));
+        const comparison = compareLanguages(
+          Object.entries(loadedSnippets).map(([lang, data]) => ({
+            language: lang,
+            data: {
+              ...data,
+              lines: data.lines.map((line) =>
+                applyExclusionConfig(line, "standard")
+              ),
+            },
+          }))
+        );
+
+        // Display results on page
+        displayResults(results, comparison);
+      }
+
+      function displayResults(results, comparison) {
+        const resultsDiv = document.getElementById("results");
+
+        const html = `
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold mb-4">Test Results</h2>
+            
+            ${results
+              .map(
+                (result) => `
+              <div class="test-result ${result.passed ? "pass" : "fail"}">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold">${result.language.toUpperCase()}</h3>
+                  <span class="px-3 py-1 rounded ${
+                    result.passed
+                      ? "bg-green-600 text-white"
+                      : "bg-red-600 text-white"
+                  }">
+                    ${result.passed ? "✅ PASS" : "❌ FAIL"}
+                  </span>
+                </div>
+                
+                <div class="space-y-2 text-sm">
+                  <div class="flex justify-between">
+                    <span>Total Lines:</span>
+                    <span class="font-bold">${result.data.total_lines}</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Typeable Whitespace:</span>
+                    <span class="font-bold ${
+                      result.problems.typeableWhitespace.length > 0
+                        ? "text-red-400"
+                        : "text-green-400"
+                    }">
+                      ${result.problems.typeableWhitespace.length}
+                    </span>
+                  </div>
+                  ${
+                    result.problems.typeableWhitespace.length > 0
+                      ? `
+                    <div class="mt-3 p-3 bg-red-900 rounded">
+                      <div class="font-bold mb-2">⚠️ Problem Locations:</div>
+                      <div class="text-xs">
+                        Lines: ${result.problems.typeableWhitespace.map((p) => p.line).join(", ")}
+                      </div>
+                    </div>
+                  `
+                      : ""
+                  }
+                </div>
+              </div>
+            `
+              )
+              .join("")}
+
+            <div class="test-result">
+              <h3 class="text-xl font-bold mb-3">📊 Summary</h3>
+              <div class="code-block">
+                <pre>${JSON.stringify(
+                  comparison.map((c) => ({
+                    language: c.language,
+                    typeableWhitespace: c.typeableWhitespace,
+                  })),
+                  null,
+                  2
+                )}</pre>
+              </div>
+              <div class="mt-4 text-sm">
+                <strong>Conclusion:</strong> 
+                ${
+                  new Set(comparison.map((c) => c.typeableWhitespace)).size === 1
+                    ? '<span class="text-green-400">✅ All languages consistent</span>'
+                    : '<span class="text-red-400">❌ Inconsistency detected! Bug confirmed.</span>'
+                }
+              </div>
+            </div>
+          </div>
+        `;
+
+        resultsDiv.innerHTML = html;
+      }
+
+      function exportResults() {
+        if (Object.keys(loadedSnippets).length === 0) {
+          alert("Please run diagnostic tests first!");
+          return;
+        }
+
+        const diagnostics = exportDiagnostics(
+          Object.entries(loadedSnippets).map(([lang, data]) => ({
+            language: lang,
+            data: {
+              ...data,
+              lines: data.lines.map((line) =>
+                applyExclusionConfig(line, "standard")
+              ),
+            },
+          }))
+        );
+
+        // Download as JSON file
+        const blob = new Blob([diagnostics], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "bug-diagnostics.json";
+        a.click();
+        URL.revokeObjectURL(url);
+
+        console.log("📥 Diagnostic data exported");
+      }
+
+      // Event listeners
+      document
+        .getElementById("runTestsBtn")
+        .addEventListener("click", runDiagnosticTests);
+      document
+        .getElementById("exportBtn")
+        .addEventListener("click", exportResults);
+
+      // Auto-run on load
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("🔬 Bug investigation page loaded");
+        console.log("Click 'Run Diagnostic Tests' to begin analysis");
+      });
+    </script>
+  </body>
+</html>
