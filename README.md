@@ -1,28 +1,28 @@
-# treetype - Build Programming Muscle Memory
+# TreeType - Build Programming Muscle Memory
 
-A typing game for developers that helps you build muscle memory for programming constructs using real code snippets.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Live Demo**: [Coming in Session 21 - GitHub Pages]
+**A typing trainer that helps developers practice typing real code with progressive reveal.**
+
+TreeType uses tree-sitter parsing to intelligently extract code tokens and create a focused, distraction-free typing experience. As you type, code progressively reveals itself through syntax coloring—you're not just matching characters, you're **painting code into existence**.
 
 ---
 
-## 🎯 What is treetype?
+## 🎯 What is TreeType?
 
-treetype is a specialized typing trainer that uses **parsed code snippets** to help developers improve their typing speed and accuracy on real programming syntax. Unlike traditional typing games that use natural language, treetype focuses on the unique challenges of coding:
+TreeType is specialized typing practice for developers that focuses on:
 
-- Brackets, operators, and punctuation
-- Multi-line structures
-- Indentation patterns
-- Language-specific syntax
+- **Real code patterns** - Brackets, operators, punctuation, indentation
+- **Progressive reveal** - Code starts gray and reveals syntax colors as you type
+- **Configurable difficulty** - Three modes from minimal (keywords only) to full (everything)
+- **Four languages** - Python, JavaScript, TypeScript, TSX/React
+- **Zero setup** - Runs entirely in the browser
 
-### ✨ Key Features
+### What TreeType is NOT
 
-- **Progressive Reveal**: Type to "paint" code syntax highlighting into existence
-- **3 Difficulty Modes**: Minimal, Standard, and Full typing
-- **4 Languages**: Python, JavaScript, TypeScript, TSX/React
-- **Real-Time Metrics**: WPM, accuracy, completion time
-- **Custom Snippets**: Practice your own code (Phase 6)
-- **Zero Setup**: Runs entirely in the browser
+- **Not a code editor** - It's a focused practice tool
+- **Not a memorization tool** - You see the code as you type
+- **Not a comprehensive typing tutor** - Assumes you can type; builds code-specific speed
 
 ---
 
@@ -30,7 +30,7 @@ treetype is a specialized typing trainer that uses **parsed code snippets** to h
 
 ### Play Online
 
-Visit [GitHub Pages URL] and start typing immediately. No installation required.
+Visit the live demo at [your-github-pages-url] and start typing immediately.
 
 ### Run Locally
 
@@ -39,38 +39,130 @@ Visit [GitHub Pages URL] and start typing immediately. No installation required.
 git clone https://github.com/yourusername/treetype.git
 cd treetype
 
-# Start local server
-python -m http.server 8000
+# Install dependencies
+pnpm install
 
-# Visit http://localhost:8000
+# Start development server
+pnpm dev
+
+# Visit http://localhost:5173
 ```
+
+### First Use
+
+1. **Choose your language** - Start with Python if unsure (most readable)
+2. **Select Standard mode** ⭐ - Recommended balance of challenge and speed
+3. **Press any key to start** - Type only the highlighted yellow characters
+4. **Press Tab to pause** - Resume with Tab again
+5. **Press Esc anytime** - Reset and try again
 
 ---
 
-## 📚 Custom Snippets (Phase 6)
+## 🎮 How to Play
+
+### Controls
+
+| Key                | Action                         |
+| ------------------ | ------------------------------ |
+| **Any key**        | Start test                     |
+| **Character keys** | Type the highlighted character |
+| **Tab**            | Pause/resume test              |
+| **Esc**            | Reset test immediately         |
+
+### Visual Feedback
+
+- **Gray text** - Not yet typed (neutral canvas)
+- **Yellow highlight** - Current character to type
+- **Syntax colors** - Already typed (code revealed)
+- **Red highlight** - Wrong key (persists until corrected)
+
+### Typing Modes
+
+#### Minimal Mode ⚡
+
+**Type**: Keywords and identifiers only  
+**Skip**: All brackets, operators, punctuation, string content, comments
+
+**Best for**: Speed practice, learning new syntax patterns quickly
+
+**Example**:
+
+```python
+def calculate(n: int) -> list:
+```
+
+You type: `defcalculatenintlist`
+
+---
+
+#### Standard Mode ⭐ (Recommended)
+
+**Type**: Keywords, identifiers, operators, parentheses `()`, and essential punctuation (`:`, `.`, `,`)  
+**Skip**: Curly braces `{}`, square brackets `[]`, angle brackets `<>`, string content, comments
+
+**Best for**: Balanced practice with realistic code structure
+
+**Example**:
+
+```javascript
+setIsActive(!isActive);
+```
+
+You type: `setIsActive(!isActive)`
+
+**Why this mode?**
+
+- ✅ Practices function call patterns `()`
+- ✅ Includes operators and essential punctuation
+- ✅ Reduces pinky strain (no Shift+bracket combinations)
+- ✅ TSX/JSX friendly (angle brackets auto-reveal)
+
+---
+
+#### Full Mode 🎯
+
+**Type**: Everything except whitespace, comments, and string content  
+**Skip**: Only structural whitespace, comments, string literal content
+
+**Best for**: Maximum muscle memory building
+
+**Example**:
+
+```python
+def calculate(n: int) -> list:
+```
+
+You type: `defcalculate(n:int)->list:`
+
+---
+
+## 📚 Library System
+
+### Browsing Snippets
+
+Click **"📚 Browse Library"** to view all available code snippets:
+
+- Filter by language
+- Search by name or tags
+- Sort by various criteria
+- View snippet stats (best WPM, accuracy, practice count)
 
 ### Adding Your Own Code
 
 ```bash
-# 1. Add source file to sources/
+# 1. Add source file to sources/<language>/
 cp ~/my-project/utils.py sources/python/
 
-# 2. Run the helper script
-./build/add_snippet.sh sources/python/utils.py
+# 2. Parse the file
+python build/parse_json.py sources/python/utils.py
 
-# 3. Commit and push
-git commit -m "Add utils snippet"
-git push
+# 3. Update metadata
+python build/build_metadata.py
 
-# 4. Snippet appears in library within 1 minute
+# 4. Verify it appears
+pnpm dev
+# Visit library and search for your snippet
 ```
-
-### Supported File Types
-
-- `.py` → Python
-- `.js`, `.jsx` → JavaScript
-- `.ts` → TypeScript
-- `.tsx` → TSX/React
 
 ### Snippet Guidelines
 
@@ -89,142 +181,90 @@ git push
 
 ---
 
-## 🎮 How to Play
-
-### Controls
-
-- **Any key**: Start test
-- **Esc**: Reset test at any time
-- **Type**: Character by character (only typeable characters)
-
-### Visual Feedback
-
-- **Gray text**: Not yet typed
-- **Yellow highlight**: Current character to type
-- **Colored text**: Already typed (syntax revealed)
-- **Red highlight**: Wrong key (persists until corrected)
-
-### Typing Modes
-
-#### Minimal Mode ⚡
-
-Type only keywords and identifiers. Skip all punctuation and brackets.
-
-**Best for**: Speed practice, learning new syntax patterns
-
-#### Standard Mode ⭐ (Recommended)
-
-Type keywords, identifiers, operators, and essential punctuation (`:` `;`). Skip heavy pinky work (brackets).
-
-**Best for**: Balanced practice, real-world coding simulation
-
-#### Full Mode 🎯
-
-Type everything except whitespace and comments. Maximum challenge.
-
-**Best for**: Comprehensive practice, perfectionism
-
----
-
 ## 🏗️ Architecture
 
-treetype uses a **static-first architecture** with zero backend:
+### System Overview
 
 ```
-Your Machine          GitHub Repository          GitHub Pages
-─────────────         ─────────────────         ─────────────
-sources/              snippets/                 Live Website
-  └── your-code.py      ├── metadata.json         ├── index.html
-                        └── python/               └── library.html
-                            └── your-code.json
-         │                      │                      │
-         └──[parse]──────────>  └──[deploy]──────────>
+┌─────────────────────────────────────────────────────┐
+│  Source Code (.py, .js, .ts, .tsx)                 │
+└────────────────┬────────────────────────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────────────────────────┐
+│  Parser (Python + Tree-Sitter)                      │
+│  • Tokenizes code into AST                          │
+│  • Categorizes tokens (9 categories)                │
+│  • Marks typeability (base_typeable flag)           │
+│  • Splits JSX text from whitespace                  │
+└────────────────┬────────────────────────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────────────────────────┐
+│  JSON Snippets (snippets/<language>/*.json)         │
+│  • Static files committed to repo                   │
+│  • Contains: tokens, categories, positions          │
+│  • Pre-computed for instant loading                 │
+└────────────────┬────────────────────────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────────────────────────┐
+│  Frontend (TypeScript + Vite)                       │
+│  • Loads JSON snippets                              │
+│  • Applies mode-based filtering (config.ts)         │
+│  • Renders progressive reveal UI                    │
+│  • Handles keyboard input and state                 │
+└─────────────────────────────────────────────────────┘
 ```
 
-**Key insight**: No server needed. Parser runs offline, snippets are static files, GitHub Pages hosts everything for free.
+### Two-Stage Architecture
+
+**Stage 1: Parser (Offline)**
+
+- Runs on developer machine
+- Analyzes code using tree-sitter
+- Generates static JSON files
+- Categorizes every token for filtering
+
+**Stage 2: Frontend (Runtime)**
+
+- Loads pre-parsed JSON
+- Applies typing mode filters dynamically
+- Renders progressive reveal experience
+- Tracks metrics and state
+
+**Key Insight**: No server needed. Parser runs offline, snippets are static files, everything is pre-computed.
 
 ---
 
-## 🛠️ Development
+## 🔧 Technical Details
 
-### Prerequisites
+### Token Categorization
 
-```bash
-pip install pandas tree-sitter tree-sitter-python tree-sitter-javascript tree-sitter-typescript
-```
+Every token gets assigned to one or more of **9 categories**:
 
-### Project Structure
+| Category           | Examples                       | Purpose                  |
+| ------------------ | ------------------------------ | ------------------------ |
+| `keyword`          | `def`, `if`, `const`           | Language keywords        |
+| `identifier`       | Variable names, function names | User-defined names       |
+| `comment`          | `#`, `//`, `/* */`             | Comments and docstrings  |
+| `string_content`   | Text inside `"..."`            | String literal content   |
+| `string_delimiter` | `"`, `'`, `` ` ``              | Quote characters         |
+| `punctuation`      | `:`, `;`, `,`, `.`             | Structural punctuation   |
+| `parenthesis`      | `(`, `)`                       | Function calls, grouping |
+| `curly_brace`      | `{`, `}`                       | Blocks, objects          |
+| `square_bracket`   | `[`, `]`                       | Arrays, indexing         |
+| `angle_bracket`    | `<`, `>`, `</`, `/>`           | JSX/TSX tags             |
+| `operator`         | `=`, `+`, `->`, `=>`           | Operators                |
 
-```
-TreeType/
-├── build/                      # Build tools
-│   ├── parse_json.py          # CLI parser
-│   ├── build_metadata.py      # Metadata generator
-│   └── add_snippet.sh         # Workflow automation
-├── snippets/                   # Static library (committed)
-│   ├── metadata.json          # Master index
-│   └── <language>/            # Language-organized snippets
-├── sources/                    # Personal code (gitignored)
-│   └── <language>/            # Your source files
-├── index.html                  # Main typing game
-└── library.html                # Snippet browser (Session 21)
-```
+**Critical Implementation Detail**: `jsx_text` tokens (JSX text content like `<p>Hello</p>`) are assigned the `string_content` category because they represent displayable content that shouldn't be typed, just like string literals.
 
-### Adding New Snippets
+### Typing Mode Filtering
 
-```bash
-# Manual workflow
-python build/parse_json.py sources/python/myfile.py
-python build/build_metadata.py
-git add snippets/ && git commit && git push
+Each mode defines categories to **exclude**:
 
-# Automated workflow (recommended)
-./build/add_snippet.sh sources/python/myfile.py
-git commit -m "Add myfile snippet"
-git push
-```
-
-### Testing Locally
-
-```bash
-# Start local server
-python -m http.server 8000
-
-# Visit http://localhost:8000
-
-# Test snippet workflow
-echo 'def test(): pass' > sources/python/test.py
-./build/add_snippet.sh sources/python/test.py
-```
-
----
-
-## 📊 Technical Details
-
-### Parser (Tree-Sitter)
-
-treetype uses [Tree-Sitter](https://tree-sitter.github.io/) to parse source code into an abstract syntax tree (AST), then converts it to a token-based JSON format optimized for progressive reveal typing.
-
-**Token Categories**:
-
-- `keyword`, `identifier`, `type_identifier`
-- `comment`, `string_content`, `string_delimiter`
-- `operator`, `punctuation`
-- `parenthesis`, `curly_brace`, `square_bracket`, `angle_bracket`
-
-Each token includes:
-
-- Text content
-- Syntax type
-- Categories (for filtering)
-- Position metadata
-- Typeability flag
-
-### Typing Modes (Config System)
-
-Each mode defines which token categories to exclude:
-
-```javascript
+```typescript
+// From src/core/config.ts
 PRESETS = {
   minimal: {
     exclude: [
@@ -245,10 +285,11 @@ PRESETS = {
       "square_bracket",
       "angle_bracket",
       "string_content",
+      "punctuation",
       "string_delimiter",
       "comment",
     ],
-    includeSpecific: [":", ";", ".", ",", "(", ")"],
+    includeSpecific: [":", ".", ",", "(", ")"], // Override exclusions
   },
   full: {
     exclude: ["comment", "string_content"],
@@ -256,102 +297,230 @@ PRESETS = {
 };
 ```
 
-The frontend dynamically regenerates the typing sequence based on the selected preset.
+**Three Critical Filtering Rules** (applied in `applyExclusionConfig()`):
+
+1. **Whitespace is NEVER typeable** - Structural whitespace (spaces, tabs, newlines) is always skipped
+2. **JSX tag names follow angle bracket rules** - If `<` and `>` are excluded, tag names between them are also excluded
+3. **includeSpecific has highest priority** - Characters in this list are always typeable, overriding category exclusions
+
+### JSX Text Handling (Bug Fix from Session 37)
+
+**Problem**: JSX text content like `<p>Loading item...</p>` was incorrectly appearing in Minimal/Standard modes.
+
+**Root Cause**: `jsx_text` tokens had empty `categories: []`, so they weren't excluded by any preset.
+
+**Solution** (2 lines in `build/parse_json.py`):
+
+```python
+# JSX text content (treat like string content)
+if token_type == "jsx_text":
+    categories.append("string_content")
+```
+
+**Why this is correct**:
+
+- JSX text content IS displayable content (like strings)
+- Shouldn't be typed (just like string literals)
+- Follows same exclusion rules as `string_content`
+- Semantically accurate categorization
 
 ### Progressive Reveal System
 
-As you type, characters transition through states:
+Characters transition through states as you type:
 
-1. **Untyped** (gray): Not yet reached
-2. **Current** (yellow highlight): Next character to type
-3. **Typed** (syntax-colored): Already typed correctly
-4. **Error** (red highlight): Wrong key pressed
+1. **Untyped** (gray, class: `char-untyped`)
+2. **Current** (yellow highlight, class: `char-current`)
+3. **Typed** (syntax-colored, no special class)
+4. **Error** (red highlight, class: `char-error`, persists until corrected)
 
-Non-typeable tokens (excluded by preset) automatically transition from gray to colored as the cursor passes them.
+Non-typeable tokens automatically transition from gray → colored as the cursor passes them, creating a smooth "painting" effect.
 
 ---
 
-## 🎯 Phase Roadmap
+## 🛠️ Development
 
-### Phase 1-5 ✅ Complete
+### Prerequisites
 
-- Static rendering and syntax highlighting
-- Typing sequence logic
-- Progressive reveal UX
-- Configuration UI with 3 presets
-- Enhanced keyboard controls
+```bash
+# Python (for parser)
+pip install pandas tree-sitter tree-sitter-python tree-sitter-javascript tree-sitter-typescript
 
-### Phase 6 ⏳ In Progress (Session 20/21/22)
+# Node.js (for frontend)
+pnpm install
+```
 
-- **Session 20** ✅: Repository restructure, metadata builder
-- **Session 21** 🔜: GitHub Pages, library browser UI
-- **Session 22** ⏳: Stats tracking, export/import
+### Project Structure
 
-### Phase 7 📋 Future
+```
+treetype/
+├── build/                      # Build tools
+│   ├── parse_json.py          # Parser (Python + tree-sitter)
+│   ├── build_metadata.py      # Metadata generator
+│   └── add_snippet.sh         # Workflow automation
+├── snippets/                   # Pre-parsed JSON (committed)
+│   ├── metadata.json          # Master library index
+│   ├── python/*.json
+│   ├── javascript/*.json
+│   ├── typescript/*.json
+│   └── tsx/*.json
+├── sources/                    # Your source files (gitignored)
+│   ├── python/
+│   ├── javascript/
+│   ├── typescript/
+│   └── tsx/
+├── src/                        # Frontend TypeScript
+│   ├── app.ts                 # Main application
+│   ├── core/                  # Core logic
+│   │   ├── config.ts          # Mode filtering
+│   │   ├── timer.ts           # Metrics calculation
+│   │   └── storage.ts         # localStorage wrapper
+│   ├── ui/                    # UI components
+│   │   ├── renderer.ts        # Progressive reveal rendering
+│   │   └── keyboard.ts        # Input handling
+│   ├── types/                 # TypeScript definitions
+│   │   ├── snippet.ts         # Token/Line/Snippet types
+│   │   ├── state.ts           # Test state types
+│   │   └── config.ts          # Configuration types
+│   └── utils/
+├── tests/                      # Vitest test suite
+├── index.html                  # Main typing game
+├── library.html                # Snippet browser
+├── vite.config.ts              # Vite configuration
+└── tsconfig.json               # TypeScript configuration
+```
 
-- Performance optimization
-- Accessibility improvements
-- Additional keyboard shortcuts
-- Help/onboarding
-- Analytics
+### Adding New Snippets
+
+```bash
+# Quick workflow
+./build/add_snippet.sh sources/python/myfile.py
+
+# Manual workflow
+python build/parse_json.py sources/python/myfile.py
+python build/build_metadata.py
+
+# Verify
+pnpm dev
+# Check library for new snippet
+```
+
+### Running Tests
+
+```bash
+pnpm test           # Run tests once
+pnpm test:watch     # Watch mode
+pnpm test:ui        # Visual test UI
+```
+
+### Building for Production
+
+```bash
+pnpm build          # TypeScript compile + Vite build
+pnpm preview        # Preview production build locally
+```
+
+---
+
+## 📊 Progress & Roadmap
+
+### ✅ Completed Phases
+
+- **Phase 1-2** - Tree-sitter parsing, static rendering, typing sequence logic
+- **Phase 3-3.5** - Progressive reveal UX (the breakthrough moment)
+- **Phase 4** - Multi-language support (Python, JS, TS, TSX)
+- **Phase 5** - Configuration system (3 presets, persistence)
+- **Phase 6** - TypeScript migration, modular architecture
+- **Phase 5 (Bug Fix)** - JSX text categorization (Sessions 33-37, 5 sessions, 8 hours)
+
+### 🔄 Current Status
+
+- **Core experience**: Production-ready ✅
+- **Library system**: Fully functional ✅
+- **Testing infrastructure**: Vitest setup complete ✅
+- **Documentation**: Comprehensive (you are here!) ✅
+
+### 🎯 Future Enhancements
+
+- **Phase 7** - Expanded test coverage
+- **Phase 8** - Performance optimization
+- **Phase 9** - Analytics and progress tracking
+- **Phase 10** - Public deployment and marketing
 
 ---
 
 ## 🤝 Contributing
 
-Contributions welcome! This project is currently in active development (Phase 6).
+TreeType is in active development. Contributions welcome!
 
 ### Ways to Contribute
 
-- **Add snippets**: Share useful code snippets via PR
-- **Report bugs**: Open issues for bugs or UX problems
-- **Suggest features**: Ideas for improvements
-- **Test languages**: Help test with different codebases
+- **Add snippets** - Share useful code snippets via PR
+- **Report bugs** - Open issues for bugs or UX problems
+- **Suggest features** - Ideas for improvements
+- **Test languages** - Help test with different codebases
 
 ### Development Guidelines
 
-- Follow existing code style
+- Follow existing TypeScript style
 - Test locally before submitting PR
-- Add snippets to appropriate `snippets/<language>/` directory
-- Update metadata with `python build/build_metadata.py`
+- Add snippets to `sources/<language>/` directory
+- Run parser and metadata builder before committing
+- Update documentation if changing behavior
 
 ---
 
-## 📝 License
+## 📖 Documentation
 
-MIT License - See LICENSE file for details
+- **README.md** (this file) - Overview and user guide
+- **ARCHITECTURE.md** - Technical design and implementation details
+- **REQUIREMENTS.md** - Formal requirements specification
+- **ts_migration_plan.md** - TypeScript migration roadmap
+- **session\_\*.md** - Development session notes
 
 ---
 
 ## 🙏 Acknowledgments
 
-- [Tree-Sitter](https://tree-sitter.github.io/) - Parsing library
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [VS Code Dark+ Theme](https://code.visualstudio.com/) - Color scheme inspiration
-- Inspired by [MonkeyType](https://monkeytype.com/) and similar typing trainers
+- [Tree-Sitter](https://tree-sitter.github.io/) - The parsing library that makes intelligent code analysis possible
+- [Vite](https://vitejs.dev/) - Lightning-fast build tool
+- [TypeScript](https://www.typescriptlang.org/) - Type safety and developer experience
+- [Tailwind CSS](https://tailwindcss.com/) - Rapid UI development
+- [VS Code Dark+](https://code.visualstudio.com/) - Syntax highlighting theme inspiration
 
 ---
 
-## 📧 Contact
+## ❓ FAQ
 
-- **GitHub**: [yourusername/treetype]
-- **Issues**: [Report bugs or request features]
+### Why only 4 languages?
+
+These cover the most common web/data development scenarios. Tree-sitter supports 40+ languages—adding more is straightforward. Focus is on quality over quantity.
+
+### Can I use this offline?
+
+Yes! Once cloned and built, everything runs locally. No internet required.
+
+### What's the WPM calculation?
+
+Standard typing metric: `(characters_typed / 5) / (time_in_minutes)`. The "5" is industry standard for average word length. So 300 characters in 1 minute = 60 WPM.
+
+### Why TypeScript?
+
+Type safety prevents bugs (like the jsx_text categorization bug we spent 5 sessions fixing). TypeScript caught similar issues during migration.
+
+### Can I customize the color scheme?
+
+Not yet, but it's planned for Phase 10. Currently uses VS Code Dark+ theme.
 
 ---
 
-## 🎉 Fun Stats
+## 📄 License
 
-- **Languages supported**: 4 (Python, JS, TS, TSX)
-- **Typing modes**: 3 (Minimal, Standard, Full)
-- **Sample snippets**: 4 (more coming in Session 21)
-- **Lines of code**: ~1,500 (HTML + JS)
-- **Backend code**: 0 (static-first architecture)
-- **Hosting cost**: $0/month (GitHub Pages)
+MIT License - See [LICENSE](LICENSE) file for details
 
 ---
 
-**Built with ❤️ for developers who want to type code faster**
+**Ready to build muscle memory for code? Clone, run, and start typing!** 🚀
 
----
+_Built with ❤️ by developers, for developers_
 
-_Last updated: Session 20 - Phase 6 in progress_
+_Last updated: Session 38 - Post-Phase 6, comprehensive documentation_
