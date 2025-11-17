@@ -220,7 +220,7 @@ describe("Config: Token Filtering Logic", () => {
       // - Keywords included ✓
       // - Regular identifiers included ✓
 
-      expect(result.display_tokens[5].typeable).toBe(false); //
+      expect(result.display_tokens[5].typeable).toBe(false); // <
       expect(result.display_tokens[6].typeable).toBe(false); // p ← SHOULD BE FALSE
       expect(result.display_tokens[7].typeable).toBe(false); // >
       expect(result.display_tokens[8].typeable).toBe(true); // Loading item...
@@ -306,7 +306,7 @@ describe("Config: Token Filtering Logic", () => {
 
       const result = applyExclusionConfig(line, "standard");
 
-      expect(result.display_tokens[0].typeable).toBe(false); //
+      expect(result.display_tokens[0].typeable).toBe(false); // <
       expect(result.display_tokens[1].typeable).toBe(false); // div ← SHOULD BE FALSE
       expect(result.display_tokens[2].typeable).toBe(false); // >
       expect(result.display_tokens[3].typeable).toBe(true); // Hello
@@ -388,7 +388,7 @@ describe("Config: Token Filtering Logic", () => {
       const result = applyExclusionConfig(line, "full");
 
       // In FULL mode, everything is typeable (except comments)
-      expect(result.display_tokens[0].typeable).toBe(true); //
+      expect(result.display_tokens[0].typeable).toBe(true); // <
       expect(result.display_tokens[1].typeable).toBe(true); // span
       expect(result.display_tokens[2].typeable).toBe(true); // >
       expect(result.display_tokens[3].typeable).toBe(true); // Text
@@ -400,6 +400,8 @@ describe("Config: Token Filtering Logic", () => {
     });
 
     test("Complex JSX: multiple tags and attributes", () => {
+      console.log("\n=== COMPLEX JSX TEST START ===");
+      
       const line = createTestLine([
         {
           text: "<",
@@ -511,7 +513,19 @@ describe("Config: Token Filtering Logic", () => {
         },
       ]);
 
+      console.log("Input tokens:");
+      line.display_tokens.forEach((token, idx) => {
+        console.log(`  [${idx}] "${token.text}" | type: ${token.type} | prev: "${line.display_tokens[idx-1]?.text || 'none'}" | next: "${line.display_tokens[idx+1]?.text || 'none'}"`);
+      });
+
       const result = applyExclusionConfig(line, "minimal");
+
+      console.log("\nAfter filtering:");
+      result.display_tokens.forEach((token, idx) => {
+        console.log(`  [${idx}] "${token.text}" | typeable: ${token.typeable}`);
+      });
+      console.log(`\nTyping sequence: "${result.typing_sequence}"`);
+      console.log("=== COMPLEX JSX TEST END ===\n");
 
       // Tag names should be excluded in minimal mode
       expect(result.display_tokens[1].typeable).toBe(false); // button (opening)

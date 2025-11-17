@@ -50,11 +50,52 @@ export const DEFAULT_CONFIG: UserConfig = {
 };
 
 /**
+ * Helper function to detect if a token is a JSX tag name
+ * Handles both simple tags (<div>) and tags with attributes (<button onClick={...}>)
+ */
+function isJSXTagName(
+  token: Token,
+  idx: number,
+  tokens: Token[]
+): boolean {
+  // Must be an identifier-like token
+  if (token.type !== "identifier" && token.type !== "type_identifier") {
+    return false;
+  }
+
+  const prevToken = idx > 0 ? tokens[idx - 1] : null;
+
+  // Must follow < or </
+  if (!prevToken || (prevToken.text !== "<" && prevToken.text !== "</")) {
+    return false;
+  }
+
+  // Look ahead to find the closing > or />
+  // Skip over attributes, whitespace, etc.
+  for (let i = idx + 1; i < tokens.length; i++) {
+    const nextToken = tokens[i];
+    
+    // Found the closing bracket - this is a JSX tag name
+    if (nextToken.text === ">" || nextToken.text === "/>") {
+      return true;
+    }
+
+    // If we hit another opening bracket or a different structural element,
+    // this is probably not a JSX tag
+    if (nextToken.text === "<" || nextToken.text === "{") {
+      return false;
+    }
+  }
+
+  return false;
+}
+
+/**
  * Apply exclusion config to line data
- * 
+ *
  * CRITICAL FIXES INCLUDED:
  * 1. Whitespace is NEVER typeable
- * 2. JSX tag names follow angle_bracket exclusion rules
+ * 2. JSX tag names follow angle_bracket exclusion rules (handles attributes)
  * 3. includeSpecific has highest priority
  */
 export function applyExclusionConfig(lineData: Line, preset: TypingMode): Line {
@@ -74,25 +115,10 @@ export function applyExclusionConfig(lineData: Line, preset: TypingMode): Line {
     }
 
     // CRITICAL FIX #2: JSX tag names follow angle_bracket exclusion rules
-    if (token.type === "identifier" || token.type === "type_identifier") {
-      const prevToken = idx > 0 ? lineData.display_tokens[idx - 1] : null;
-      const nextToken =
-        idx < lineData.display_tokens.length - 1
-          ? lineData.display_tokens[idx + 1]
-          : null;
-
-      // Detect JSX tag name pattern: < tagname > or </ tagname >
-      const afterOpenBracket =
-        prevToken && (prevToken.text === "<" || prevToken.text === "</");
-
-      const beforeCloseBracket =
-        nextToken && (nextToken.text === ">" || nextToken.text === "/>");
-
-      if (afterOpenBracket && beforeCloseBracket) {
-        // This is a JSX tag name - apply angle_bracket exclusion rules
-        if (config.exclude.includes("angle_bracket")) {
-          return { ...token, typeable: false };
-        }
+    if (isJSXTagName(token, idx, lineData.display_tokens)) {
+      // This is a JSX tag name - apply angle_bracket exclusion rules
+      if (config.exclude.includes("angle_bracket")) {
+        return { ...token, typeable: false };
       }
     }
 
