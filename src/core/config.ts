@@ -80,9 +80,9 @@ function isJSXTagName(
       return true;
     }
 
-    // If we hit another opening bracket or a different structural element,
-    // this is probably not a JSX tag
-    if (nextToken.text === "<" || nextToken.text === "{") {
+    // If we hit another opening bracket, this is probably not a JSX tag
+    // THIS WAS THE BUG: We no longer check for "{" here.
+    if (nextToken.text === "<") {
       return false;
     }
   }
