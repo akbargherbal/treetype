@@ -2412,7 +2412,9 @@
         {
           "text": "Loading products...",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 29,
           "end_col": 48
@@ -2738,11 +2740,21 @@
           "end_col": 25
         },
         {
-          "text": "Error: ",
+          "text": "Error:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 25,
+          "end_col": 31
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 31,
           "end_col": 32
         },
         {
@@ -2830,7 +2842,7 @@
           "end_col": 54
         }
       ],
-      "typing_sequence": "if(error)return<div>Error: {error.message}</div>;",
+      "typing_sequence": "if(error)return<div>Error:{error.message}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -2937,12 +2949,12 @@
           "display_col": 25
         },
         "26": {
-          "token_idx": 8,
-          "display_col": 25
-        },
-        "27": {
           "token_idx": 9,
           "display_col": 32
+        },
+        "27": {
+          "token_idx": 10,
+          "display_col": 33
         },
         "28": {
           "token_idx": 10,
@@ -2961,12 +2973,12 @@
           "display_col": 33
         },
         "32": {
-          "token_idx": 10,
-          "display_col": 33
-        },
-        "33": {
           "token_idx": 11,
           "display_col": 38
+        },
+        "33": {
+          "token_idx": 12,
+          "display_col": 39
         },
         "34": {
           "token_idx": 12,
@@ -2993,20 +3005,20 @@
           "display_col": 39
         },
         "40": {
-          "token_idx": 12,
-          "display_col": 39
-        },
-        "41": {
           "token_idx": 13,
           "display_col": 46
+        },
+        "41": {
+          "token_idx": 14,
+          "display_col": 47
         },
         "42": {
           "token_idx": 14,
           "display_col": 47
         },
         "43": {
-          "token_idx": 14,
-          "display_col": 47
+          "token_idx": 15,
+          "display_col": 49
         },
         "44": {
           "token_idx": 15,
@@ -3017,14 +3029,10 @@
           "display_col": 49
         },
         "46": {
-          "token_idx": 15,
-          "display_col": 49
-        },
-        "47": {
           "token_idx": 16,
           "display_col": 52
         },
-        "48": {
+        "47": {
           "token_idx": 17,
           "display_col": 53
         }
@@ -6612,7 +6620,9 @@
         {
           "text": "Loading product...",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 29,
           "end_col": 47
@@ -6934,11 +6944,21 @@
           "end_col": 25
         },
         {
-          "text": "Error: ",
+          "text": "Error:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 25,
+          "end_col": 31
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 31,
           "end_col": 32
         },
         {
@@ -7026,7 +7046,7 @@
           "end_col": 54
         }
       ],
-      "typing_sequence": "if(error)return<div>Error: {error.message}</div>;",
+      "typing_sequence": "if(error)return<div>Error:{error.message}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -7133,12 +7153,12 @@
           "display_col": 25
         },
         "26": {
-          "token_idx": 8,
-          "display_col": 25
-        },
-        "27": {
           "token_idx": 9,
           "display_col": 32
+        },
+        "27": {
+          "token_idx": 10,
+          "display_col": 33
         },
         "28": {
           "token_idx": 10,
@@ -7157,12 +7177,12 @@
           "display_col": 33
         },
         "32": {
-          "token_idx": 10,
-          "display_col": 33
-        },
-        "33": {
           "token_idx": 11,
           "display_col": 38
+        },
+        "33": {
+          "token_idx": 12,
+          "display_col": 39
         },
         "34": {
           "token_idx": 12,
@@ -7189,20 +7209,20 @@
           "display_col": 39
         },
         "40": {
-          "token_idx": 12,
-          "display_col": 39
-        },
-        "41": {
           "token_idx": 13,
           "display_col": 46
+        },
+        "41": {
+          "token_idx": 14,
+          "display_col": 47
         },
         "42": {
           "token_idx": 14,
           "display_col": 47
         },
         "43": {
-          "token_idx": 14,
-          "display_col": 47
+          "token_idx": 15,
+          "display_col": 49
         },
         "44": {
           "token_idx": 15,
@@ -7213,14 +7233,10 @@
           "display_col": 49
         },
         "46": {
-          "token_idx": 15,
-          "display_col": 49
-        },
-        "47": {
           "token_idx": 16,
           "display_col": 52
         },
-        "48": {
+        "47": {
           "token_idx": 17,
           "display_col": 53
         }
@@ -7268,11 +7284,21 @@
           "end_col": 14
         },
         {
-          "text": "Product: ",
+          "text": "Product:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 14,
+          "end_col": 22
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 22,
           "end_col": 23
         },
         {
@@ -7360,7 +7386,7 @@
           "end_col": 41
         }
       ],
-      "typing_sequence": "return<div>Product: {data.name}</div>;",
+      "typing_sequence": "return<div>Product:{data.name}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -7439,12 +7465,12 @@
           "display_col": 14
         },
         "19": {
-          "token_idx": 4,
-          "display_col": 14
-        },
-        "20": {
           "token_idx": 5,
           "display_col": 23
+        },
+        "20": {
+          "token_idx": 6,
+          "display_col": 24
         },
         "21": {
           "token_idx": 6,
@@ -7459,12 +7485,12 @@
           "display_col": 24
         },
         "24": {
-          "token_idx": 6,
-          "display_col": 24
-        },
-        "25": {
           "token_idx": 7,
           "display_col": 28
+        },
+        "25": {
+          "token_idx": 8,
+          "display_col": 29
         },
         "26": {
           "token_idx": 8,
@@ -7479,20 +7505,20 @@
           "display_col": 29
         },
         "29": {
-          "token_idx": 8,
-          "display_col": 29
-        },
-        "30": {
           "token_idx": 9,
           "display_col": 33
+        },
+        "30": {
+          "token_idx": 10,
+          "display_col": 34
         },
         "31": {
           "token_idx": 10,
           "display_col": 34
         },
         "32": {
-          "token_idx": 10,
-          "display_col": 34
+          "token_idx": 11,
+          "display_col": 36
         },
         "33": {
           "token_idx": 11,
@@ -7503,14 +7529,10 @@
           "display_col": 36
         },
         "35": {
-          "token_idx": 11,
-          "display_col": 36
-        },
-        "36": {
           "token_idx": 12,
           "display_col": 39
         },
-        "37": {
+        "36": {
           "token_idx": 13,
           "display_col": 40
         }
@@ -16852,15 +16874,33 @@
           "end_col": 66
         },
         {
-          "text": "\n      Add Product\n    ",
-          "type": "jsx_text",
+          "text": "\n      ",
+          "type": "jsx_text_whitespace",
           "categories": [],
-          "base_typeable": true,
+          "base_typeable": false,
           "start_col": 66,
-          "end_col": 4
+          "end_col": 73
+        },
+        {
+          "text": "Add Product",
+          "type": "jsx_text",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 73,
+          "end_col": 84
+        },
+        {
+          "text": "\n    ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 84,
+          "end_col": 89
         }
       ],
-      "typing_sequence": "<buttononClick={()=>mutation.mutate({name:'New Item'})}>\n      Add Product\n    ",
+      "typing_sequence": "<buttononClick={()=>mutation.mutate({name:'New Item'})}>Add Product",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -17088,95 +17128,47 @@
         },
         "56": {
           "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         },
         "57": {
           "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         },
         "58": {
           "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         },
         "59": {
           "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         },
         "60": {
           "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         },
         "61": {
           "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         },
         "62": {
           "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         },
         "63": {
           "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         },
         "64": {
           "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         },
         "65": {
           "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         },
         "66": {
           "token_idx": 22,
-          "display_col": 66
-        },
-        "67": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "68": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "69": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "70": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "71": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "72": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "73": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "74": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "75": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "76": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "77": {
-          "token_idx": 22,
-          "display_col": 66
-        },
-        "78": {
-          "token_idx": 22,
-          "display_col": 66
+          "display_col": 73
         }
       }
     },
@@ -19704,7 +19696,9 @@
         {
           "text": "Loading users...",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 29,
           "end_col": 45
@@ -20018,11 +20012,21 @@
           "end_col": 27
         },
         {
-          "text": "An error occurred: ",
+          "text": "An error occurred:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 27,
+          "end_col": 45
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 45,
           "end_col": 46
         },
         {
@@ -20110,7 +20114,7 @@
           "end_col": 68
         }
       ],
-      "typing_sequence": "if(isError)return<div>An error occurred: {error.message}</div>;",
+      "typing_sequence": "if(isError)return<div>An error occurred:{error.message}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -20273,12 +20277,12 @@
           "display_col": 27
         },
         "40": {
-          "token_idx": 8,
-          "display_col": 27
-        },
-        "41": {
           "token_idx": 9,
           "display_col": 46
+        },
+        "41": {
+          "token_idx": 10,
+          "display_col": 47
         },
         "42": {
           "token_idx": 10,
@@ -20297,12 +20301,12 @@
           "display_col": 47
         },
         "46": {
-          "token_idx": 10,
-          "display_col": 47
-        },
-        "47": {
           "token_idx": 11,
           "display_col": 52
+        },
+        "47": {
+          "token_idx": 12,
+          "display_col": 53
         },
         "48": {
           "token_idx": 12,
@@ -20329,20 +20333,20 @@
           "display_col": 53
         },
         "54": {
-          "token_idx": 12,
-          "display_col": 53
-        },
-        "55": {
           "token_idx": 13,
           "display_col": 60
+        },
+        "55": {
+          "token_idx": 14,
+          "display_col": 61
         },
         "56": {
           "token_idx": 14,
           "display_col": 61
         },
         "57": {
-          "token_idx": 14,
-          "display_col": 61
+          "token_idx": 15,
+          "display_col": 63
         },
         "58": {
           "token_idx": 15,
@@ -20353,14 +20357,10 @@
           "display_col": 63
         },
         "60": {
-          "token_idx": 15,
-          "display_col": 63
-        },
-        "61": {
           "token_idx": 16,
           "display_col": 66
         },
-        "62": {
+        "61": {
           "token_idx": 17,
           "display_col": 67
         }
@@ -24147,7 +24147,9 @@
         {
           "text": "Select a user to view details.",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 27,
           "end_col": 57
@@ -24511,7 +24513,9 @@
         {
           "text": "Loading user profile...",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 29,
           "end_col": 52
@@ -24853,11 +24857,21 @@
           "end_col": 25
         },
         {
-          "text": "Error: ",
+          "text": "Error:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 25,
+          "end_col": 31
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 31,
           "end_col": 32
         },
         {
@@ -24945,7 +24959,7 @@
           "end_col": 54
         }
       ],
-      "typing_sequence": "if(error)return<div>Error: {error.message}</div>;",
+      "typing_sequence": "if(error)return<div>Error:{error.message}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -25052,12 +25066,12 @@
           "display_col": 25
         },
         "26": {
-          "token_idx": 8,
-          "display_col": 25
-        },
-        "27": {
           "token_idx": 9,
           "display_col": 32
+        },
+        "27": {
+          "token_idx": 10,
+          "display_col": 33
         },
         "28": {
           "token_idx": 10,
@@ -25076,12 +25090,12 @@
           "display_col": 33
         },
         "32": {
-          "token_idx": 10,
-          "display_col": 33
-        },
-        "33": {
           "token_idx": 11,
           "display_col": 38
+        },
+        "33": {
+          "token_idx": 12,
+          "display_col": 39
         },
         "34": {
           "token_idx": 12,
@@ -25108,20 +25122,20 @@
           "display_col": 39
         },
         "40": {
-          "token_idx": 12,
-          "display_col": 39
-        },
-        "41": {
           "token_idx": 13,
           "display_col": 46
+        },
+        "41": {
+          "token_idx": 14,
+          "display_col": 47
         },
         "42": {
           "token_idx": 14,
           "display_col": 47
         },
         "43": {
-          "token_idx": 14,
-          "display_col": 47
+          "token_idx": 15,
+          "display_col": 49
         },
         "44": {
           "token_idx": 15,
@@ -25132,14 +25146,10 @@
           "display_col": 49
         },
         "46": {
-          "token_idx": 15,
-          "display_col": 49
-        },
-        "47": {
           "token_idx": 16,
           "display_col": 52
         },
-        "48": {
+        "47": {
           "token_idx": 17,
           "display_col": 53
         }
@@ -25187,11 +25197,21 @@
           "end_col": 14
         },
         {
-          "text": "User: ",
+          "text": "User:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 14,
+          "end_col": 19
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 19,
           "end_col": 20
         },
         {
@@ -25241,11 +25261,21 @@
           "end_col": 31
         },
         {
-          "text": ", Email: ",
+          "text": ", Email:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 31,
+          "end_col": 39
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 39,
           "end_col": 40
         },
         {
@@ -25333,7 +25363,7 @@
           "end_col": 59
         }
       ],
-      "typing_sequence": "return<div>User: {data.name}, Email: {data.email}</div>;",
+      "typing_sequence": "return<div>User:{data.name}, Email:{data.email}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -25400,12 +25430,12 @@
           "display_col": 14
         },
         "16": {
-          "token_idx": 4,
-          "display_col": 14
-        },
-        "17": {
           "token_idx": 5,
           "display_col": 20
+        },
+        "17": {
+          "token_idx": 6,
+          "display_col": 21
         },
         "18": {
           "token_idx": 6,
@@ -25420,12 +25450,12 @@
           "display_col": 21
         },
         "21": {
-          "token_idx": 6,
-          "display_col": 21
-        },
-        "22": {
           "token_idx": 7,
           "display_col": 25
+        },
+        "22": {
+          "token_idx": 8,
+          "display_col": 26
         },
         "23": {
           "token_idx": 8,
@@ -25440,12 +25470,12 @@
           "display_col": 26
         },
         "26": {
-          "token_idx": 8,
-          "display_col": 26
-        },
-        "27": {
           "token_idx": 9,
           "display_col": 30
+        },
+        "27": {
+          "token_idx": 10,
+          "display_col": 31
         },
         "28": {
           "token_idx": 10,
@@ -25476,16 +25506,16 @@
           "display_col": 31
         },
         "35": {
-          "token_idx": 10,
-          "display_col": 31
-        },
-        "36": {
-          "token_idx": 10,
-          "display_col": 31
-        },
-        "37": {
           "token_idx": 11,
           "display_col": 40
+        },
+        "36": {
+          "token_idx": 12,
+          "display_col": 41
+        },
+        "37": {
+          "token_idx": 12,
+          "display_col": 41
         },
         "38": {
           "token_idx": 12,
@@ -25496,16 +25526,16 @@
           "display_col": 41
         },
         "40": {
-          "token_idx": 12,
-          "display_col": 41
-        },
-        "41": {
-          "token_idx": 12,
-          "display_col": 41
-        },
-        "42": {
           "token_idx": 13,
           "display_col": 45
+        },
+        "41": {
+          "token_idx": 14,
+          "display_col": 46
+        },
+        "42": {
+          "token_idx": 14,
+          "display_col": 46
         },
         "43": {
           "token_idx": 14,
@@ -25520,42 +25550,34 @@
           "display_col": 46
         },
         "46": {
-          "token_idx": 14,
-          "display_col": 46
-        },
-        "47": {
-          "token_idx": 14,
-          "display_col": 46
-        },
-        "48": {
           "token_idx": 15,
           "display_col": 51
         },
-        "49": {
+        "47": {
           "token_idx": 16,
           "display_col": 52
         },
-        "50": {
+        "48": {
           "token_idx": 16,
           "display_col": 52
+        },
+        "49": {
+          "token_idx": 17,
+          "display_col": 54
+        },
+        "50": {
+          "token_idx": 17,
+          "display_col": 54
         },
         "51": {
           "token_idx": 17,
           "display_col": 54
         },
         "52": {
-          "token_idx": 17,
-          "display_col": 54
-        },
-        "53": {
-          "token_idx": 17,
-          "display_col": 54
-        },
-        "54": {
           "token_idx": 18,
           "display_col": 57
         },
-        "55": {
+        "53": {
           "token_idx": 19,
           "display_col": 58
         }
@@ -27691,7 +27713,9 @@
         {
           "text": "Application content",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 14,
           "end_col": 33

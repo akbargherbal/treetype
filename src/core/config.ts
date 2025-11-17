@@ -2,7 +2,7 @@ import { PresetsConfig, UserConfig, TypingMode } from "../types/config";
 import { Line, Token } from "../types/snippet";
 
 /**
- * Preset configurations
+ * Preset configurations for typing modes
  */
 export const PRESETS: PresetsConfig = {
   minimal: {
@@ -51,15 +51,19 @@ export const DEFAULT_CONFIG: UserConfig = {
 
 /**
  * Apply exclusion config to line data
- * FIXED: Now properly handles whitespace in all contexts
+ * 
+ * CRITICAL FIXES INCLUDED:
+ * 1. Whitespace is NEVER typeable
+ * 2. JSX tag names follow angle_bracket exclusion rules
+ * 3. includeSpecific has highest priority
  */
 export function applyExclusionConfig(lineData: Line, preset: TypingMode): Line {
   const config = PRESETS[preset];
 
-  const filteredTokens: Token[] = lineData.display_tokens.map((token) => {
+  const filteredTokens: Token[] = lineData.display_tokens.map((token, idx) => {
     let typeable = token.base_typeable;
 
-    // CRITICAL FIX #1: Whitespace is NEVER typeable, regardless of context
+    // CRITICAL FIX #1: Whitespace is NEVER typeable
     if (token.text.trim() === "") {
       return { ...token, typeable: false };
     }
@@ -69,12 +73,35 @@ export function applyExclusionConfig(lineData: Line, preset: TypingMode): Line {
       return { ...token, typeable };
     }
 
-    // CRITICAL FIX #2: Check includeSpecific FIRST (highest priority)
+    // CRITICAL FIX #2: JSX tag names follow angle_bracket exclusion rules
+    if (token.type === "identifier" || token.type === "type_identifier") {
+      const prevToken = idx > 0 ? lineData.display_tokens[idx - 1] : null;
+      const nextToken =
+        idx < lineData.display_tokens.length - 1
+          ? lineData.display_tokens[idx + 1]
+          : null;
+
+      // Detect JSX tag name pattern: < tagname > or </ tagname >
+      const afterOpenBracket =
+        prevToken && (prevToken.text === "<" || prevToken.text === "</");
+
+      const beforeCloseBracket =
+        nextToken && (nextToken.text === ">" || nextToken.text === "/>");
+
+      if (afterOpenBracket && beforeCloseBracket) {
+        // This is a JSX tag name - apply angle_bracket exclusion rules
+        if (config.exclude.includes("angle_bracket")) {
+          return { ...token, typeable: false };
+        }
+      }
+    }
+
+    // CRITICAL FIX #3: Check includeSpecific FIRST (highest priority)
     if (config.includeSpecific?.includes(token.text)) {
       return { ...token, typeable: true };
     }
 
-    // If no categories, default to typeable (unless excluded above)
+    // If no categories, default to typeable (keywords, identifiers)
     if (!token.categories || token.categories.length === 0) {
       return { ...token, typeable: true };
     }

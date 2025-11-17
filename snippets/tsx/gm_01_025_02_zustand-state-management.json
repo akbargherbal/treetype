@@ -2987,11 +2987,21 @@
           "end_col": 9
         },
         {
-          "text": "Current Count: ",
+          "text": "Current Count:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 9,
+          "end_col": 23
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 23,
           "end_col": 24
         },
         {
@@ -3051,7 +3061,7 @@
           "end_col": 35
         }
       ],
-      "typing_sequence": "<p>Current Count: {count}</p>",
+      "typing_sequence": "<p>Current Count:{count}</p>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -3122,12 +3132,12 @@
           "display_col": 9
         },
         "17": {
-          "token_idx": 3,
-          "display_col": 9
-        },
-        "18": {
           "token_idx": 4,
           "display_col": 24
+        },
+        "18": {
+          "token_idx": 5,
+          "display_col": 25
         },
         "19": {
           "token_idx": 5,
@@ -3146,26 +3156,22 @@
           "display_col": 25
         },
         "23": {
-          "token_idx": 5,
-          "display_col": 25
-        },
-        "24": {
           "token_idx": 6,
           "display_col": 30
+        },
+        "24": {
+          "token_idx": 7,
+          "display_col": 31
         },
         "25": {
           "token_idx": 7,
           "display_col": 31
         },
         "26": {
-          "token_idx": 7,
-          "display_col": 31
-        },
-        "27": {
           "token_idx": 8,
           "display_col": 33
         },
-        "28": {
+        "27": {
           "token_idx": 9,
           "display_col": 34
         }
@@ -5051,7 +5057,9 @@
         {
           "text": "Increment",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 34,
           "end_col": 43
@@ -5351,7 +5359,9 @@
         {
           "text": "Decrement",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 34,
           "end_col": 43

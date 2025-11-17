@@ -2367,7 +2367,9 @@
         {
           "text": "Modal Content",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 14,
           "end_col": 27
@@ -2529,7 +2531,9 @@
         {
           "text": "This is your modal dialog.",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 13,
           "end_col": 39
@@ -2839,7 +2843,9 @@
         {
           "text": "Close",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 51,
           "end_col": 56
@@ -4998,15 +5004,33 @@
           "end_col": 119
         },
         {
-          "text": "\n        Section Title ",
-          "type": "jsx_text",
+          "text": "\n        ",
+          "type": "jsx_text_whitespace",
           "categories": [],
-          "base_typeable": true,
+          "base_typeable": false,
           "start_col": 119,
-          "end_col": 22
+          "end_col": 128
+        },
+        {
+          "text": "Section Title",
+          "type": "jsx_text",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 128,
+          "end_col": 141
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 141,
+          "end_col": 142
         }
       ],
-      "typing_sequence": "<buttononClick={()=>setIsExpanded(!isExpanded)}style={{width:'100%',textAlign:'left',padding:'10px'}}>\n        Section Title ",
+      "typing_sequence": "<buttononClick={()=>setIsExpanded(!isExpanded)}style={{width:'100%',textAlign:'left',padding:'10px'}}>Section Title",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -5418,95 +5442,55 @@
         },
         "102": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "103": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "104": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "105": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "106": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "107": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "108": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "109": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "110": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "111": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "112": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "113": {
           "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         },
         "114": {
           "token_idx": 38,
-          "display_col": 119
-        },
-        "115": {
-          "token_idx": 38,
-          "display_col": 119
-        },
-        "116": {
-          "token_idx": 38,
-          "display_col": 119
-        },
-        "117": {
-          "token_idx": 38,
-          "display_col": 119
-        },
-        "118": {
-          "token_idx": 38,
-          "display_col": 119
-        },
-        "119": {
-          "token_idx": 38,
-          "display_col": 119
-        },
-        "120": {
-          "token_idx": 38,
-          "display_col": 119
-        },
-        "121": {
-          "token_idx": 38,
-          "display_col": 119
-        },
-        "122": {
-          "token_idx": 38,
-          "display_col": 119
-        },
-        "123": {
-          "token_idx": 38,
-          "display_col": 119
-        },
-        "124": {
-          "token_idx": 38,
-          "display_col": 119
+          "display_col": 128
         }
       }
     },
@@ -6351,7 +6335,9 @@
         {
           "text": "Content for the collapsible section.",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 13,
           "end_col": 49
@@ -7953,7 +7939,9 @@
         {
           "text": "Tab 1",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 53,
           "end_col": 58
@@ -8377,7 +8365,9 @@
         {
           "text": "Tab 2",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 53,
           "end_col": 58
@@ -9344,7 +9334,9 @@
         {
           "text": "Content for Tab 1.",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 36,
           "end_col": 54
@@ -9684,7 +9676,9 @@
         {
           "text": "Content for Tab 2.",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 36,
           "end_col": 54
@@ -12910,11 +12904,21 @@
           "end_col": 9
         },
         {
-          "text": "Debounced: ",
+          "text": "Debounced:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 9,
+          "end_col": 19
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 19,
           "end_col": 20
         },
         {
@@ -12974,7 +12978,7 @@
           "end_col": 40
         }
       ],
-      "typing_sequence": "<p>Debounced: {debouncedValue}</p>",
+      "typing_sequence": "<p>Debounced:{debouncedValue}</p>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -13029,12 +13033,12 @@
           "display_col": 9
         },
         "13": {
-          "token_idx": 3,
-          "display_col": 9
-        },
-        "14": {
           "token_idx": 4,
           "display_col": 20
+        },
+        "14": {
+          "token_idx": 5,
+          "display_col": 21
         },
         "15": {
           "token_idx": 5,
@@ -13089,26 +13093,22 @@
           "display_col": 21
         },
         "28": {
-          "token_idx": 5,
-          "display_col": 21
-        },
-        "29": {
           "token_idx": 6,
           "display_col": 35
+        },
+        "29": {
+          "token_idx": 7,
+          "display_col": 36
         },
         "30": {
           "token_idx": 7,
           "display_col": 36
         },
         "31": {
-          "token_idx": 7,
-          "display_col": 36
-        },
-        "32": {
           "token_idx": 8,
           "display_col": 38
         },
-        "33": {
+        "32": {
           "token_idx": 9,
           "display_col": 39
         }
@@ -18839,7 +18839,9 @@
         {
           "text": "Loading...",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 77,
           "end_col": 87

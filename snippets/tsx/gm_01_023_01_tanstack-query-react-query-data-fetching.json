@@ -1916,7 +1916,9 @@
         {
           "text": "Loading todos...",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 29,
           "end_col": 45
@@ -2230,11 +2232,21 @@
           "end_col": 25
         },
         {
-          "text": "Error: ",
+          "text": "Error:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 25,
+          "end_col": 31
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 31,
           "end_col": 32
         },
         {
@@ -2322,7 +2334,7 @@
           "end_col": 54
         }
       ],
-      "typing_sequence": "if(error)return<div>Error: {error.message}</div>;",
+      "typing_sequence": "if(error)return<div>Error:{error.message}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -2429,12 +2441,12 @@
           "display_col": 25
         },
         "26": {
-          "token_idx": 8,
-          "display_col": 25
-        },
-        "27": {
           "token_idx": 9,
           "display_col": 32
+        },
+        "27": {
+          "token_idx": 10,
+          "display_col": 33
         },
         "28": {
           "token_idx": 10,
@@ -2453,12 +2465,12 @@
           "display_col": 33
         },
         "32": {
-          "token_idx": 10,
-          "display_col": 33
-        },
-        "33": {
           "token_idx": 11,
           "display_col": 38
+        },
+        "33": {
+          "token_idx": 12,
+          "display_col": 39
         },
         "34": {
           "token_idx": 12,
@@ -2485,20 +2497,20 @@
           "display_col": 39
         },
         "40": {
-          "token_idx": 12,
-          "display_col": 39
-        },
-        "41": {
           "token_idx": 13,
           "display_col": 46
+        },
+        "41": {
+          "token_idx": 14,
+          "display_col": 47
         },
         "42": {
           "token_idx": 14,
           "display_col": 47
         },
         "43": {
-          "token_idx": 14,
-          "display_col": 47
+          "token_idx": 15,
+          "display_col": 49
         },
         "44": {
           "token_idx": 15,
@@ -2509,14 +2521,10 @@
           "display_col": 49
         },
         "46": {
-          "token_idx": 15,
-          "display_col": 49
-        },
-        "47": {
           "token_idx": 16,
           "display_col": 52
         },
-        "48": {
+        "47": {
           "token_idx": 17,
           "display_col": 53
         }
@@ -5512,7 +5520,9 @@
         {
           "text": "Loading todo...",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 29,
           "end_col": 44
@@ -5822,11 +5832,21 @@
           "end_col": 25
         },
         {
-          "text": "Error: ",
+          "text": "Error:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 25,
+          "end_col": 31
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 31,
           "end_col": 32
         },
         {
@@ -5914,7 +5934,7 @@
           "end_col": 54
         }
       ],
-      "typing_sequence": "if(error)return<div>Error: {error.message}</div>;",
+      "typing_sequence": "if(error)return<div>Error:{error.message}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -6021,12 +6041,12 @@
           "display_col": 25
         },
         "26": {
-          "token_idx": 8,
-          "display_col": 25
-        },
-        "27": {
           "token_idx": 9,
           "display_col": 32
+        },
+        "27": {
+          "token_idx": 10,
+          "display_col": 33
         },
         "28": {
           "token_idx": 10,
@@ -6045,12 +6065,12 @@
           "display_col": 33
         },
         "32": {
-          "token_idx": 10,
-          "display_col": 33
-        },
-        "33": {
           "token_idx": 11,
           "display_col": 38
+        },
+        "33": {
+          "token_idx": 12,
+          "display_col": 39
         },
         "34": {
           "token_idx": 12,
@@ -6077,20 +6097,20 @@
           "display_col": 39
         },
         "40": {
-          "token_idx": 12,
-          "display_col": 39
-        },
-        "41": {
           "token_idx": 13,
           "display_col": 46
+        },
+        "41": {
+          "token_idx": 14,
+          "display_col": 47
         },
         "42": {
           "token_idx": 14,
           "display_col": 47
         },
         "43": {
-          "token_idx": 14,
-          "display_col": 47
+          "token_idx": 15,
+          "display_col": 49
         },
         "44": {
           "token_idx": 15,
@@ -6101,14 +6121,10 @@
           "display_col": 49
         },
         "46": {
-          "token_idx": 15,
-          "display_col": 49
-        },
-        "47": {
           "token_idx": 16,
           "display_col": 52
         },
-        "48": {
+        "47": {
           "token_idx": 17,
           "display_col": 53
         }
@@ -10568,11 +10584,21 @@
           "end_col": 32
         },
         {
-          "text": "Error: ",
+          "text": "Error:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 32,
+          "end_col": 38
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 38,
           "end_col": 39
         },
         {
@@ -10678,7 +10704,7 @@
           "end_col": 70
         }
       ],
-      "typing_sequence": "{mutation.isError&&<div>Error: {mutation.error.message}</div>}",
+      "typing_sequence": "{mutation.isError&&<div>Error:{mutation.error.message}</div>}",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -10801,12 +10827,12 @@
           "display_col": 32
         },
         "30": {
-          "token_idx": 8,
-          "display_col": 32
-        },
-        "31": {
           "token_idx": 9,
           "display_col": 39
+        },
+        "31": {
+          "token_idx": 10,
+          "display_col": 40
         },
         "32": {
           "token_idx": 10,
@@ -10837,12 +10863,12 @@
           "display_col": 40
         },
         "39": {
-          "token_idx": 10,
-          "display_col": 40
-        },
-        "40": {
           "token_idx": 11,
           "display_col": 48
+        },
+        "40": {
+          "token_idx": 12,
+          "display_col": 49
         },
         "41": {
           "token_idx": 12,
@@ -10861,12 +10887,12 @@
           "display_col": 49
         },
         "45": {
-          "token_idx": 12,
-          "display_col": 49
-        },
-        "46": {
           "token_idx": 13,
           "display_col": 54
+        },
+        "46": {
+          "token_idx": 14,
+          "display_col": 55
         },
         "47": {
           "token_idx": 14,
@@ -10893,20 +10919,20 @@
           "display_col": 55
         },
         "53": {
-          "token_idx": 14,
-          "display_col": 55
-        },
-        "54": {
           "token_idx": 15,
           "display_col": 62
+        },
+        "54": {
+          "token_idx": 16,
+          "display_col": 63
         },
         "55": {
           "token_idx": 16,
           "display_col": 63
         },
         "56": {
-          "token_idx": 16,
-          "display_col": 63
+          "token_idx": 17,
+          "display_col": 65
         },
         "57": {
           "token_idx": 17,
@@ -10917,14 +10943,10 @@
           "display_col": 65
         },
         "59": {
-          "token_idx": 17,
-          "display_col": 65
-        },
-        "60": {
           "token_idx": 18,
           "display_col": 68
         },
-        "61": {
+        "60": {
           "token_idx": 19,
           "display_col": 69
         }
@@ -11012,7 +11034,9 @@
         {
           "text": "Todo added!",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 34,
           "end_col": 45
@@ -14526,15 +14550,33 @@
           "end_col": 97
         },
         {
-          "text": "\n      Add Todo\n    ",
-          "type": "jsx_text",
+          "text": "\n      ",
+          "type": "jsx_text_whitespace",
           "categories": [],
-          "base_typeable": true,
+          "base_typeable": false,
           "start_col": 97,
-          "end_col": 4
+          "end_col": 104
+        },
+        {
+          "text": "Add Todo",
+          "type": "jsx_text",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 104,
+          "end_col": 112
+        },
+        {
+          "text": "\n    ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 112,
+          "end_col": 117
         }
       ],
-      "typing_sequence": "<buttononClick={()=>mutation.mutate({title:'New Item'})}disabled={mutation.isPending}>\n      Add Todo\n    ",
+      "typing_sequence": "<buttononClick={()=>mutation.mutate({title:'New Item'})}disabled={mutation.isPending}>Add Todo",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -14882,83 +14924,35 @@
         },
         "86": {
           "token_idx": 29,
-          "display_col": 97
+          "display_col": 104
         },
         "87": {
           "token_idx": 29,
-          "display_col": 97
+          "display_col": 104
         },
         "88": {
           "token_idx": 29,
-          "display_col": 97
+          "display_col": 104
         },
         "89": {
           "token_idx": 29,
-          "display_col": 97
+          "display_col": 104
         },
         "90": {
           "token_idx": 29,
-          "display_col": 97
+          "display_col": 104
         },
         "91": {
           "token_idx": 29,
-          "display_col": 97
+          "display_col": 104
         },
         "92": {
           "token_idx": 29,
-          "display_col": 97
+          "display_col": 104
         },
         "93": {
           "token_idx": 29,
-          "display_col": 97
-        },
-        "94": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "95": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "96": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "97": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "98": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "99": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "100": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "101": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "102": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "103": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "104": {
-          "token_idx": 29,
-          "display_col": 97
-        },
-        "105": {
-          "token_idx": 29,
-          "display_col": 97
+          "display_col": 104
         }
       }
     },
@@ -17138,7 +17132,9 @@
         {
           "text": "Loading users...",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 16,
           "end_col": 32
@@ -17492,11 +17488,21 @@
           "end_col": 16
         },
         {
-          "text": "An error occurred: ",
+          "text": "An error occurred:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 16,
+          "end_col": 34
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 34,
           "end_col": 35
         },
         {
@@ -17584,7 +17590,7 @@
           "end_col": 57
         }
       ],
-      "typing_sequence": "return<div>An error occurred: {error.message}</div>;",
+      "typing_sequence": "return<div>An error occurred:{error.message}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -17703,12 +17709,12 @@
           "display_col": 16
         },
         "29": {
-          "token_idx": 4,
-          "display_col": 16
-        },
-        "30": {
           "token_idx": 5,
           "display_col": 35
+        },
+        "30": {
+          "token_idx": 6,
+          "display_col": 36
         },
         "31": {
           "token_idx": 6,
@@ -17727,12 +17733,12 @@
           "display_col": 36
         },
         "35": {
-          "token_idx": 6,
-          "display_col": 36
-        },
-        "36": {
           "token_idx": 7,
           "display_col": 41
+        },
+        "36": {
+          "token_idx": 8,
+          "display_col": 42
         },
         "37": {
           "token_idx": 8,
@@ -17759,20 +17765,20 @@
           "display_col": 42
         },
         "43": {
-          "token_idx": 8,
-          "display_col": 42
-        },
-        "44": {
           "token_idx": 9,
           "display_col": 49
+        },
+        "44": {
+          "token_idx": 10,
+          "display_col": 50
         },
         "45": {
           "token_idx": 10,
           "display_col": 50
         },
         "46": {
-          "token_idx": 10,
-          "display_col": 50
+          "token_idx": 11,
+          "display_col": 52
         },
         "47": {
           "token_idx": 11,
@@ -17783,14 +17789,10 @@
           "display_col": 52
         },
         "49": {
-          "token_idx": 11,
-          "display_col": 52
-        },
-        "50": {
           "token_idx": 12,
           "display_col": 55
         },
-        "51": {
+        "50": {
           "token_idx": 13,
           "display_col": 56
         }
@@ -21137,7 +21139,9 @@
         {
           "text": "Select a user to view details.",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 27,
           "end_col": 57
@@ -21501,7 +21505,9 @@
         {
           "text": "Loading user profile...",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 29,
           "end_col": 52
@@ -21843,11 +21849,21 @@
           "end_col": 25
         },
         {
-          "text": "Error: ",
+          "text": "Error:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 25,
+          "end_col": 31
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 31,
           "end_col": 32
         },
         {
@@ -21935,7 +21951,7 @@
           "end_col": 54
         }
       ],
-      "typing_sequence": "if(error)return<div>Error: {error.message}</div>;",
+      "typing_sequence": "if(error)return<div>Error:{error.message}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -22042,12 +22058,12 @@
           "display_col": 25
         },
         "26": {
-          "token_idx": 8,
-          "display_col": 25
-        },
-        "27": {
           "token_idx": 9,
           "display_col": 32
+        },
+        "27": {
+          "token_idx": 10,
+          "display_col": 33
         },
         "28": {
           "token_idx": 10,
@@ -22066,12 +22082,12 @@
           "display_col": 33
         },
         "32": {
-          "token_idx": 10,
-          "display_col": 33
-        },
-        "33": {
           "token_idx": 11,
           "display_col": 38
+        },
+        "33": {
+          "token_idx": 12,
+          "display_col": 39
         },
         "34": {
           "token_idx": 12,
@@ -22098,20 +22114,20 @@
           "display_col": 39
         },
         "40": {
-          "token_idx": 12,
-          "display_col": 39
-        },
-        "41": {
           "token_idx": 13,
           "display_col": 46
+        },
+        "41": {
+          "token_idx": 14,
+          "display_col": 47
         },
         "42": {
           "token_idx": 14,
           "display_col": 47
         },
         "43": {
-          "token_idx": 14,
-          "display_col": 47
+          "token_idx": 15,
+          "display_col": 49
         },
         "44": {
           "token_idx": 15,
@@ -22122,14 +22138,10 @@
           "display_col": 49
         },
         "46": {
-          "token_idx": 15,
-          "display_col": 49
-        },
-        "47": {
           "token_idx": 16,
           "display_col": 52
         },
-        "48": {
+        "47": {
           "token_idx": 17,
           "display_col": 53
         }
@@ -22177,11 +22189,21 @@
           "end_col": 14
         },
         {
-          "text": "User: ",
+          "text": "User:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 14,
+          "end_col": 19
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 19,
           "end_col": 20
         },
         {
@@ -22269,7 +22291,7 @@
           "end_col": 38
         }
       ],
-      "typing_sequence": "return<div>User: {data.name}</div>;",
+      "typing_sequence": "return<div>User:{data.name}</div>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -22336,12 +22358,12 @@
           "display_col": 14
         },
         "16": {
-          "token_idx": 4,
-          "display_col": 14
-        },
-        "17": {
           "token_idx": 5,
           "display_col": 20
+        },
+        "17": {
+          "token_idx": 6,
+          "display_col": 21
         },
         "18": {
           "token_idx": 6,
@@ -22356,12 +22378,12 @@
           "display_col": 21
         },
         "21": {
-          "token_idx": 6,
-          "display_col": 21
-        },
-        "22": {
           "token_idx": 7,
           "display_col": 25
+        },
+        "22": {
+          "token_idx": 8,
+          "display_col": 26
         },
         "23": {
           "token_idx": 8,
@@ -22376,20 +22398,20 @@
           "display_col": 26
         },
         "26": {
-          "token_idx": 8,
-          "display_col": 26
-        },
-        "27": {
           "token_idx": 9,
           "display_col": 30
+        },
+        "27": {
+          "token_idx": 10,
+          "display_col": 31
         },
         "28": {
           "token_idx": 10,
           "display_col": 31
         },
         "29": {
-          "token_idx": 10,
-          "display_col": 31
+          "token_idx": 11,
+          "display_col": 33
         },
         "30": {
           "token_idx": 11,
@@ -22400,14 +22422,10 @@
           "display_col": 33
         },
         "32": {
-          "token_idx": 11,
-          "display_col": 33
-        },
-        "33": {
           "token_idx": 12,
           "display_col": 36
         },
-        "34": {
+        "33": {
           "token_idx": 13,
           "display_col": 37
         }
@@ -24109,7 +24127,9 @@
         {
           "text": "Hello TanStack Query!",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 11,
           "end_col": 32

@@ -5244,11 +5244,21 @@
           "end_col": 44
         },
         {
-          "text": "Error: ",
+          "text": "Error:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 44,
+          "end_col": 50
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 50,
           "end_col": 51
         },
         {
@@ -5318,7 +5328,7 @@
           "end_col": 63
         }
       ],
-      "typing_sequence": "{error&&<pstyle={{color:'red'}}>Error: {error}</p>}",
+      "typing_sequence": "{error&&<pstyle={{color:'red'}}>Error:{error}</p>}",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -5473,12 +5483,12 @@
           "display_col": 44
         },
         "38": {
-          "token_idx": 17,
-          "display_col": 44
-        },
-        "39": {
           "token_idx": 18,
           "display_col": 51
+        },
+        "39": {
+          "token_idx": 19,
+          "display_col": 52
         },
         "40": {
           "token_idx": 19,
@@ -5497,30 +5507,26 @@
           "display_col": 52
         },
         "44": {
-          "token_idx": 19,
-          "display_col": 52
-        },
-        "45": {
           "token_idx": 20,
           "display_col": 57
+        },
+        "45": {
+          "token_idx": 21,
+          "display_col": 58
         },
         "46": {
           "token_idx": 21,
           "display_col": 58
         },
         "47": {
-          "token_idx": 21,
-          "display_col": 58
-        },
-        "48": {
           "token_idx": 22,
           "display_col": 60
         },
-        "49": {
+        "48": {
           "token_idx": 23,
           "display_col": 61
         },
-        "50": {
+        "49": {
           "token_idx": 24,
           "display_col": 62
         }
@@ -5600,7 +5606,9 @@
         {
           "text": "Data loaded successfully (or loading).",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 20,
           "end_col": 58
@@ -8212,7 +8220,9 @@
         {
           "text": "Show Success",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 38,
           "end_col": 50
@@ -8540,7 +8550,9 @@
         {
           "text": "Show Error",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 36,
           "end_col": 46

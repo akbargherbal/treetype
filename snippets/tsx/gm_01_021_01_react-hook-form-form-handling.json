@@ -2322,7 +2322,9 @@
         {
           "text": "Submit",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 34
@@ -5415,7 +5417,9 @@
         {
           "text": "Submit",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 34
@@ -8929,7 +8933,9 @@
         {
           "text": "Register",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 36
@@ -11375,7 +11381,9 @@
         {
           "text": "Add Task",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 36
@@ -13345,11 +13353,21 @@
           "end_col": 9
         },
         {
-          "text": "Current search: ",
+          "text": "Current search:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 9,
+          "end_col": 24
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 24,
           "end_col": 25
         },
         {
@@ -13409,7 +13427,7 @@
           "end_col": 42
         }
       ],
-      "typing_sequence": "<p>Current search: {searchQuery}</p>",
+      "typing_sequence": "<p>Current search:{searchQuery}</p>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -13484,12 +13502,12 @@
           "display_col": 9
         },
         "18": {
-          "token_idx": 3,
-          "display_col": 9
-        },
-        "19": {
           "token_idx": 4,
           "display_col": 25
+        },
+        "19": {
+          "token_idx": 5,
+          "display_col": 26
         },
         "20": {
           "token_idx": 5,
@@ -13532,26 +13550,22 @@
           "display_col": 26
         },
         "30": {
-          "token_idx": 5,
-          "display_col": 26
-        },
-        "31": {
           "token_idx": 6,
           "display_col": 37
+        },
+        "31": {
+          "token_idx": 7,
+          "display_col": 38
         },
         "32": {
           "token_idx": 7,
           "display_col": 38
         },
         "33": {
-          "token_idx": 7,
-          "display_col": 38
-        },
-        "34": {
           "token_idx": 8,
           "display_col": 40
         },
-        "35": {
+        "34": {
           "token_idx": 9,
           "display_col": 41
         }
@@ -15997,7 +16011,9 @@
         {
           "text": "Add Item",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 36
@@ -16367,7 +16383,9 @@
         {
           "text": "Clear Form",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 52,
           "end_col": 62
@@ -19509,7 +19527,9 @@
         {
           "text": "Update Product",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 42

@@ -7000,11 +7000,21 @@
           "end_col": 9
         },
         {
-          "text": "Count: ",
+          "text": "Count:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 9,
+          "end_col": 15
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 15,
           "end_col": 16
         },
         {
@@ -7064,7 +7074,7 @@
           "end_col": 27
         }
       ],
-      "typing_sequence": "<p>Count: {count}</p>",
+      "typing_sequence": "<p>Count:{count}</p>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -7103,12 +7113,12 @@
           "display_col": 9
         },
         "9": {
-          "token_idx": 3,
-          "display_col": 9
-        },
-        "10": {
           "token_idx": 4,
           "display_col": 16
+        },
+        "10": {
+          "token_idx": 5,
+          "display_col": 17
         },
         "11": {
           "token_idx": 5,
@@ -7127,26 +7137,22 @@
           "display_col": 17
         },
         "15": {
-          "token_idx": 5,
-          "display_col": 17
-        },
-        "16": {
           "token_idx": 6,
           "display_col": 22
+        },
+        "16": {
+          "token_idx": 7,
+          "display_col": 23
         },
         "17": {
           "token_idx": 7,
           "display_col": 23
         },
         "18": {
-          "token_idx": 7,
-          "display_col": 23
-        },
-        "19": {
           "token_idx": 8,
           "display_col": 25
         },
-        "20": {
+        "19": {
           "token_idx": 9,
           "display_col": 26
         }
@@ -7654,7 +7660,9 @@
         {
           "text": "Toggle Parent State",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 49,
           "end_col": 68
@@ -9102,11 +9110,21 @@
           "end_col": 12
         },
         {
-          "text": "Current Value: ",
+          "text": "Current Value:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 12,
+          "end_col": 26
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 26,
           "end_col": 27
         },
         {
@@ -9176,7 +9194,7 @@
           "end_col": 39
         }
       ],
-      "typing_sequence": "return<p>Current Value: {value}</p>;",
+      "typing_sequence": "return<p>Current Value:{value}</p>;",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -9271,12 +9289,12 @@
           "display_col": 12
         },
         "23": {
-          "token_idx": 4,
-          "display_col": 12
-        },
-        "24": {
           "token_idx": 5,
           "display_col": 27
+        },
+        "24": {
+          "token_idx": 6,
+          "display_col": 28
         },
         "25": {
           "token_idx": 6,
@@ -9295,30 +9313,26 @@
           "display_col": 28
         },
         "29": {
-          "token_idx": 6,
-          "display_col": 28
-        },
-        "30": {
           "token_idx": 7,
           "display_col": 33
+        },
+        "30": {
+          "token_idx": 8,
+          "display_col": 34
         },
         "31": {
           "token_idx": 8,
           "display_col": 34
         },
         "32": {
-          "token_idx": 8,
-          "display_col": 34
-        },
-        "33": {
           "token_idx": 9,
           "display_col": 36
         },
-        "34": {
+        "33": {
           "token_idx": 10,
           "display_col": 37
         },
-        "35": {
+        "34": {
           "token_idx": 11,
           "display_col": 38
         }
@@ -10280,7 +10294,9 @@
         {
           "text": "Increment Count",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 50,
           "end_col": 65
@@ -11280,11 +11296,21 @@
           "end_col": 9
         },
         {
-          "text": "Input Text: ",
+          "text": "Input Text:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 9,
+          "end_col": 20
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 20,
           "end_col": 21
         },
         {
@@ -11344,7 +11370,7 @@
           "end_col": 31
         }
       ],
-      "typing_sequence": "<p>Input Text: {text}</p>",
+      "typing_sequence": "<p>Input Text:{text}</p>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -11403,12 +11429,12 @@
           "display_col": 9
         },
         "14": {
-          "token_idx": 3,
-          "display_col": 9
-        },
-        "15": {
           "token_idx": 4,
           "display_col": 21
+        },
+        "15": {
+          "token_idx": 5,
+          "display_col": 22
         },
         "16": {
           "token_idx": 5,
@@ -11423,26 +11449,22 @@
           "display_col": 22
         },
         "19": {
-          "token_idx": 5,
-          "display_col": 22
-        },
-        "20": {
           "token_idx": 6,
           "display_col": 26
+        },
+        "20": {
+          "token_idx": 7,
+          "display_col": 27
         },
         "21": {
           "token_idx": 7,
           "display_col": 27
         },
         "22": {
-          "token_idx": 7,
-          "display_col": 27
-        },
-        "23": {
           "token_idx": 8,
           "display_col": 29
         },
-        "24": {
+        "23": {
           "token_idx": 9,
           "display_col": 30
         }

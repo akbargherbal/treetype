@@ -2126,7 +2126,9 @@
         {
           "text": "Submit",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 34
@@ -4840,7 +4842,9 @@
         {
           "text": "Submit",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 34
@@ -8050,7 +8054,9 @@
         {
           "text": "Submit",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 34
@@ -10826,7 +10832,9 @@
         {
           "text": "Save Product",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 40
@@ -13102,11 +13110,21 @@
           "end_col": 9
         },
         {
-          "text": "You are typing: ",
+          "text": "You are typing:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 9,
+          "end_col": 24
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 24,
           "end_col": 25
         },
         {
@@ -13166,7 +13184,7 @@
           "end_col": 43
         }
       ],
-      "typing_sequence": "<p>You are typing: {watchedValue}</p>",
+      "typing_sequence": "<p>You are typing:{watchedValue}</p>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -13241,12 +13259,12 @@
           "display_col": 9
         },
         "18": {
-          "token_idx": 3,
-          "display_col": 9
-        },
-        "19": {
           "token_idx": 4,
           "display_col": 25
+        },
+        "19": {
+          "token_idx": 5,
+          "display_col": 26
         },
         "20": {
           "token_idx": 5,
@@ -13293,26 +13311,22 @@
           "display_col": 26
         },
         "31": {
-          "token_idx": 5,
-          "display_col": 26
-        },
-        "32": {
           "token_idx": 6,
           "display_col": 38
+        },
+        "32": {
+          "token_idx": 7,
+          "display_col": 39
         },
         "33": {
           "token_idx": 7,
           "display_col": 39
         },
         "34": {
-          "token_idx": 7,
-          "display_col": 39
-        },
-        "35": {
           "token_idx": 8,
           "display_col": 41
         },
-        "36": {
+        "35": {
           "token_idx": 9,
           "display_col": 42
         }
@@ -16060,7 +16074,9 @@
         {
           "text": "Add Task",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 36
@@ -19147,7 +19163,9 @@
         {
           "text": "Save",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 28,
           "end_col": 32

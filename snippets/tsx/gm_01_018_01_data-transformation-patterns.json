@@ -3646,11 +3646,29 @@
           "end_col": 32
         },
         {
-          "text": " - ",
-          "type": "jsx_text",
+          "text": " ",
+          "type": "jsx_text_whitespace",
           "categories": [],
-          "base_typeable": true,
+          "base_typeable": false,
           "start_col": 32,
+          "end_col": 33
+        },
+        {
+          "text": "-",
+          "type": "jsx_text",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 33,
+          "end_col": 34
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 34,
           "end_col": 35
         },
         {
@@ -3728,7 +3746,7 @@
           "end_col": 56
         }
       ],
-      "typing_sequence": "<likey={index}>{p.name} - {p.displayPrice}</li>",
+      "typing_sequence": "<likey={index}>{p.name}-{p.displayPrice}</li>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -3824,27 +3842,27 @@
         },
         "23": {
           "token_idx": 13,
-          "display_col": 32
+          "display_col": 33
         },
         "24": {
-          "token_idx": 13,
-          "display_col": 32
-        },
-        "25": {
-          "token_idx": 13,
-          "display_col": 32
-        },
-        "26": {
           "token_idx": 14,
           "display_col": 35
         },
-        "27": {
+        "25": {
           "token_idx": 15,
           "display_col": 36
         },
-        "28": {
+        "26": {
           "token_idx": 16,
           "display_col": 37
+        },
+        "27": {
+          "token_idx": 17,
+          "display_col": 38
+        },
+        "28": {
+          "token_idx": 17,
+          "display_col": 38
         },
         "29": {
           "token_idx": 17,
@@ -3887,34 +3905,26 @@
           "display_col": 38
         },
         "39": {
-          "token_idx": 17,
-          "display_col": 38
-        },
-        "40": {
-          "token_idx": 17,
-          "display_col": 38
-        },
-        "41": {
           "token_idx": 18,
           "display_col": 50
         },
-        "42": {
+        "40": {
           "token_idx": 19,
           "display_col": 51
+        },
+        "41": {
+          "token_idx": 19,
+          "display_col": 51
+        },
+        "42": {
+          "token_idx": 20,
+          "display_col": 53
         },
         "43": {
-          "token_idx": 19,
-          "display_col": 51
+          "token_idx": 20,
+          "display_col": 53
         },
         "44": {
-          "token_idx": 20,
-          "display_col": 53
-        },
-        "45": {
-          "token_idx": 20,
-          "display_col": 53
-        },
-        "46": {
           "token_idx": 21,
           "display_col": 55
         }
@@ -11144,11 +11154,21 @@
           "end_col": 37
         },
         {
-          "text": " (",
-          "type": "jsx_text",
+          "text": " ",
+          "type": "jsx_text_whitespace",
           "categories": [],
-          "base_typeable": true,
+          "base_typeable": false,
           "start_col": 37,
+          "end_col": 38
+        },
+        {
+          "text": "(",
+          "type": "jsx_text",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 38,
           "end_col": 39
         },
         {
@@ -11201,6 +11221,7 @@
           "text": ")",
           "type": "jsx_text",
           "categories": [
+            "string_content",
             "parenthesis"
           ],
           "base_typeable": true,
@@ -11236,7 +11257,7 @@
           "end_col": 55
         }
       ],
-      "typing_sequence": "<likey={user.id}>{user.name} ({user.age})</li>",
+      "typing_sequence": "<likey={user.id}>{user.name}({user.age})</li>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -11352,15 +11373,15 @@
         },
         "28": {
           "token_idx": 15,
-          "display_col": 37
+          "display_col": 38
         },
         "29": {
-          "token_idx": 15,
-          "display_col": 37
-        },
-        "30": {
           "token_idx": 16,
           "display_col": 39
+        },
+        "30": {
+          "token_idx": 17,
+          "display_col": 40
         },
         "31": {
           "token_idx": 17,
@@ -11375,12 +11396,12 @@
           "display_col": 40
         },
         "34": {
-          "token_idx": 17,
-          "display_col": 40
-        },
-        "35": {
           "token_idx": 18,
           "display_col": 44
+        },
+        "35": {
+          "token_idx": 19,
+          "display_col": 45
         },
         "36": {
           "token_idx": 19,
@@ -11391,34 +11412,30 @@
           "display_col": 45
         },
         "38": {
-          "token_idx": 19,
-          "display_col": 45
-        },
-        "39": {
           "token_idx": 20,
           "display_col": 48
         },
-        "40": {
+        "39": {
           "token_idx": 21,
           "display_col": 49
+        },
+        "40": {
+          "token_idx": 22,
+          "display_col": 50
         },
         "41": {
           "token_idx": 22,
           "display_col": 50
         },
         "42": {
-          "token_idx": 22,
-          "display_col": 50
+          "token_idx": 23,
+          "display_col": 52
         },
         "43": {
           "token_idx": 23,
           "display_col": 52
         },
         "44": {
-          "token_idx": 23,
-          "display_col": 52
-        },
-        "45": {
           "token_idx": 24,
           "display_col": 54
         }
@@ -13176,7 +13193,9 @@
         {
           "text": "Available Tags:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 10,
           "end_col": 25
@@ -14874,11 +14893,21 @@
           "end_col": 9
         },
         {
-          "text": "Email: ",
+          "text": "Email:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 9,
+          "end_col": 15
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 15,
           "end_col": 16
         },
         {
@@ -14938,7 +14967,7 @@
           "end_col": 27
         }
       ],
-      "typing_sequence": "<p>Email: {email}</p>",
+      "typing_sequence": "<p>Email:{email}</p>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -14977,12 +15006,12 @@
           "display_col": 9
         },
         "9": {
-          "token_idx": 3,
-          "display_col": 9
-        },
-        "10": {
           "token_idx": 4,
           "display_col": 16
+        },
+        "10": {
+          "token_idx": 5,
+          "display_col": 17
         },
         "11": {
           "token_idx": 5,
@@ -15001,26 +15030,22 @@
           "display_col": 17
         },
         "15": {
-          "token_idx": 5,
-          "display_col": 17
-        },
-        "16": {
           "token_idx": 6,
           "display_col": 22
+        },
+        "16": {
+          "token_idx": 7,
+          "display_col": 23
         },
         "17": {
           "token_idx": 7,
           "display_col": 23
         },
         "18": {
-          "token_idx": 7,
-          "display_col": 23
-        },
-        "19": {
           "token_idx": 8,
           "display_col": 25
         },
-        "20": {
+        "19": {
           "token_idx": 9,
           "display_col": 26
         }
@@ -15060,11 +15085,21 @@
           "end_col": 9
         },
         {
-          "text": "Age: ",
+          "text": "Age:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 9,
+          "end_col": 13
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 13,
           "end_col": 14
         },
         {
@@ -15124,7 +15159,7 @@
           "end_col": 23
         }
       ],
-      "typing_sequence": "<p>Age: {age}</p>",
+      "typing_sequence": "<p>Age:{age}</p>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -15155,12 +15190,12 @@
           "display_col": 9
         },
         "7": {
-          "token_idx": 3,
-          "display_col": 9
-        },
-        "8": {
           "token_idx": 4,
           "display_col": 14
+        },
+        "8": {
+          "token_idx": 5,
+          "display_col": 15
         },
         "9": {
           "token_idx": 5,
@@ -15171,26 +15206,22 @@
           "display_col": 15
         },
         "11": {
-          "token_idx": 5,
-          "display_col": 15
-        },
-        "12": {
           "token_idx": 6,
           "display_col": 18
+        },
+        "12": {
+          "token_idx": 7,
+          "display_col": 19
         },
         "13": {
           "token_idx": 7,
           "display_col": 19
         },
         "14": {
-          "token_idx": 7,
-          "display_col": 19
-        },
-        "15": {
           "token_idx": 8,
           "display_col": 21
         },
-        "16": {
+        "15": {
           "token_idx": 9,
           "display_col": 22
         }
@@ -17240,11 +17271,21 @@
           "end_col": 9
         },
         {
-          "text": "Name: ",
+          "text": "Name:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 9,
+          "end_col": 14
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 14,
           "end_col": 15
         },
         {
@@ -17322,7 +17363,7 @@
           "end_col": 30
         }
       ],
-      "typing_sequence": "<p>Name: {user.name}</p>",
+      "typing_sequence": "<p>Name:{user.name}</p>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -17357,12 +17398,12 @@
           "display_col": 9
         },
         "8": {
-          "token_idx": 3,
-          "display_col": 9
-        },
-        "9": {
           "token_idx": 4,
           "display_col": 15
+        },
+        "9": {
+          "token_idx": 5,
+          "display_col": 16
         },
         "10": {
           "token_idx": 5,
@@ -17377,12 +17418,12 @@
           "display_col": 16
         },
         "13": {
-          "token_idx": 5,
-          "display_col": 16
-        },
-        "14": {
           "token_idx": 6,
           "display_col": 20
+        },
+        "14": {
+          "token_idx": 7,
+          "display_col": 21
         },
         "15": {
           "token_idx": 7,
@@ -17397,26 +17438,22 @@
           "display_col": 21
         },
         "18": {
-          "token_idx": 7,
-          "display_col": 21
-        },
-        "19": {
           "token_idx": 8,
           "display_col": 25
+        },
+        "19": {
+          "token_idx": 9,
+          "display_col": 26
         },
         "20": {
           "token_idx": 9,
           "display_col": 26
         },
         "21": {
-          "token_idx": 9,
-          "display_col": 26
-        },
-        "22": {
           "token_idx": 10,
           "display_col": 28
         },
-        "23": {
+        "22": {
           "token_idx": 11,
           "display_col": 29
         }
@@ -17456,11 +17493,21 @@
           "end_col": 9
         },
         {
-          "text": "Age: ",
+          "text": "Age:",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 9,
+          "end_col": 13
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 13,
           "end_col": 14
         },
         {
@@ -17538,7 +17585,7 @@
           "end_col": 28
         }
       ],
-      "typing_sequence": "<p>Age: {user.age}</p>",
+      "typing_sequence": "<p>Age:{user.age}</p>",
       "char_map": {
         "0": {
           "token_idx": 0,
@@ -17569,12 +17616,12 @@
           "display_col": 9
         },
         "7": {
-          "token_idx": 3,
-          "display_col": 9
-        },
-        "8": {
           "token_idx": 4,
           "display_col": 14
+        },
+        "8": {
+          "token_idx": 5,
+          "display_col": 15
         },
         "9": {
           "token_idx": 5,
@@ -17589,12 +17636,12 @@
           "display_col": 15
         },
         "12": {
-          "token_idx": 5,
-          "display_col": 15
-        },
-        "13": {
           "token_idx": 6,
           "display_col": 19
+        },
+        "13": {
+          "token_idx": 7,
+          "display_col": 20
         },
         "14": {
           "token_idx": 7,
@@ -17605,26 +17652,22 @@
           "display_col": 20
         },
         "16": {
-          "token_idx": 7,
-          "display_col": 20
-        },
-        "17": {
           "token_idx": 8,
           "display_col": 23
+        },
+        "17": {
+          "token_idx": 9,
+          "display_col": 24
         },
         "18": {
           "token_idx": 9,
           "display_col": 24
         },
         "19": {
-          "token_idx": 9,
-          "display_col": 24
-        },
-        "20": {
           "token_idx": 10,
           "display_col": 26
         },
-        "21": {
+        "20": {
           "token_idx": 11,
           "display_col": 27
         }
@@ -17712,7 +17755,9 @@
         {
           "text": "Increase Age",
           "type": "jsx_text",
-          "categories": [],
+          "categories": [
+            "string_content"
+          ],
           "base_typeable": true,
           "start_col": 34,
           "end_col": 46
