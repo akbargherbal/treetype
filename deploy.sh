@@ -1,5 +1,5 @@
 #!/bin/bash
-# TreeType Deployment Script - Clean gh-pages Method (v4 - Fixed)
+# TreeType Deployment Script - Fixed (v5)
 
 set -e
 
@@ -42,10 +42,16 @@ if ! pnpm run build; then
     exit 1
 fi
 
-# Create temporary directory for build output
+# Create temporary directory OUTSIDE the repo
 TMP_DIR=$(mktemp -d)
-cp -r dist/* "$TMP_DIR"
+echo "   📁 Created temp directory: $TMP_DIR"
+
+# Copy ONLY dist contents to temp (while still on main branch)
+cp -r dist/* "$TMP_DIR/"
 echo "   ✅ Build artifacts saved to temporary location"
+
+# Get absolute path to repo (we'll need this)
+REPO_DIR=$(pwd)
 
 echo "🌿 Preparing gh-pages branch..."
 # Fetch latest branches
@@ -59,17 +65,25 @@ else
     git checkout --orphan gh-pages
 fi
 
-# Clean working directory
+# Clean working directory (remove everything)
 git rm -rf . 2>/dev/null || true
+rm -rf * .* 2>/dev/null || true  # Also remove hidden files
 
-# Copy build files from temporary directory
+# Copy ONLY the build files from temp
 cp -r "$TMP_DIR"/* .
-touch .nojekyll  # Tell GitHub Pages not to use Jekyll
+touch .nojekyll
+
+echo "📦 Files copied to gh-pages branch"
 
 # Clean up temporary directory
 rm -rf "$TMP_DIR"
+echo "   🧹 Cleaned up temp directory"
 
-echo "📦 Files copied to gh-pages branch"
+# Show what we're about to commit
+echo ""
+echo "📋 Files in gh-pages branch:"
+ls -lh
+echo ""
 
 # Commit and push
 git add .
