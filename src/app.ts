@@ -456,17 +456,21 @@ export class TreeTypeApp {
    * Complete the test
    */
   private completeTest(): void {
-    this.state.active = false;
     this.state.endTime = Date.now();
-    document.body.classList.remove("test-active");
 
+    // Calculate stats BEFORE setting active = false
     const elapsed = getElapsedTime(this.state);
-    const timeStr = formatTime(elapsed);
     const wpm = calculateWPM(this.state.totalCharsTyped, elapsed);
     const accuracy = calculateAccuracy(
       this.state.totalCharsTyped,
       this.state.totalErrors
     );
+
+    // NOW set inactive
+    this.state.active = false;
+    document.body.classList.remove("test-active");
+
+    const timeStr = formatTime(elapsed);
 
     // Save stats
     if (this.snippetInfo.id) {
@@ -603,7 +607,8 @@ export class TreeTypeApp {
     let wpm = 0;
     let accuracy = 100;
 
-    if (this.state.active && this.state.startTime && !this.state.paused) {
+    // Calculate WPM if test has started (regardless of pause state)
+    if (this.state.active && this.state.startTime) {
       const elapsedSeconds = getElapsedTime(this.state);
       wpm = calculateWPM(this.state.totalCharsTyped, elapsedSeconds);
     }
@@ -625,21 +630,21 @@ export class TreeTypeApp {
     const statsEl = document.getElementById("stats");
     if (statsEl) {
       statsEl.innerHTML = `
-        <div class="grid grid-cols-6 gap-4 text-sm">
-          <div><div class="text-gray-400">Language</div><div class="font-bold">${
-            this.data.language
-          }</div></div>
-          <div><div class="text-gray-400">Mode</div><div class="font-bold">${presetName}</div></div>
-          <div><div class="text-gray-400">Line Progress</div><div class="font-bold">${
-            this.state.currentLineIndex + 1
-          }/${this.data.total_lines}</div></div>
-          <div><div class="text-gray-400">Char Progress</div><div class="font-bold">${progress}</div></div>
-          <div><div class="text-gray-400">WPM</div><div class="font-bold">${wpm}</div></div>
-          <div><div class="text-gray-400">Accuracy</div><div class="font-bold ${
-            accuracy < 95 ? "text-yellow-400" : "text-green-400"
-          }">${accuracy}%</div></div>
-        </div>
-      `;
+      <div class="grid grid-cols-6 gap-4 text-sm">
+        <div><div class="text-gray-400">Language</div><div class="font-bold">${
+          this.data.language
+        }</div></div>
+        <div><div class="text-gray-400">Mode</div><div class="font-bold">${presetName}</div></div>
+        <div><div class="text-gray-400">Line Progress</div><div class="font-bold">${
+          this.state.currentLineIndex + 1
+        }/${this.data.total_lines}</div></div>
+        <div><div class="text-gray-400">Char Progress</div><div class="font-bold">${progress}</div></div>
+        <div><div class="text-gray-400">WPM</div><div class="font-bold">${wpm}</div></div>
+        <div><div class="text-gray-400">Accuracy</div><div class="font-bold ${
+          accuracy < 95 ? "text-yellow-400" : "text-green-400"
+        }">${accuracy}%</div></div>
+      </div>
+    `;
     }
   }
 
