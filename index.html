@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tree-Sitter Typing Game - Session 27 (Pause Feature)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Added for smooth scrolling on the root */
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        font-family: "Consolas", "Monaco", "Courier New", monospace;
+      }
+
+      .line {
+        line-height: 1.6;
+        padding: 2px 0;
+        transition: background 0.2s;
+      }
+
+      /* Only show hover when test is NOT active */
+      body:not(.test-active) .line:hover {
+        background: #2a2a2a;
+      }
+
+      .line-number {
+        user-select: none;
+        color: #858585;
+        text-align: right;
+        padding-right: 16px;
+        min-width: 40px;
+      }
+
+      /* Syntax highlighting colors (VS Code Dark+ theme) */
+      .keyword {
+        color: #569cd6;
+      }
+      .identifier {
+        color: #9cdcfe;
+      }
+      .type_identifier {
+        color: #4ec9b0;
+      }
+      .property_identifier {
+        color: #9cdcfe;
+      }
+      .string_content {
+        color: #ce9178;
+      }
+      .string_start,
+      .string_end {
+        color: #ce9178;
+      }
+      .number,
+      .integer {
+        color: #b5cea8;
+      }
+      .comment {
+        color: #6a9955;
+        font-style: italic;
+      }
+      .operator {
+        color: #d4d4d4;
+      }
+      .punctuation {
+        color: #d4d4d4;
+      }
+      .bracket {
+        color: #ffd700;
+      }
+
+      .def,
+      .function,
+      .class,
+      .return,
+      .if,
+      .elif,
+      .else,
+      .for,
+      .while,
+      .import,
+      .from,
+      .as,
+      .const,
+      .let,
+      .var,
+      .async,
+      .await,
+      .interface,
+      .type,
+      .export {
+        color: #c586c0;
+      }
+
+      /* PHASE 3.5: Progressive reveal styles */
+      .char-untyped {
+        color: #858585 !important;
+        opacity: 1;
+      }
+
+      .char-current {
+        background: rgba(255, 255, 0, 0.3);
+        border-bottom: 2px solid #fbbf24;
+        animation: pulse 1s infinite;
+      }
+
+      .char-error {
+        color: #ef4444 !important;
+        background: rgba(239, 68, 68, 0.4);
+        border: 2px solid #ef4444;
+        border-radius: 2px;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          border-bottom-color: #fbbf24;
+        }
+        50% {
+          border-bottom-color: #fcd34d;
+        }
+      }
+
+      /* Active test indicator */
+      .test-active-line {
+        border-left: 4px solid #10b981;
+      }
+
+      /* Distraction-free mode: fade controls during active typing */
+      .controls-area {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      body.test-active .controls-area {
+        opacity: 0.1;
+      }
+
+      body.test-active .controls-area:hover {
+        opacity: 1;
+      }
+
+      /* Prevent instructions panel from triggering hover during auto-scroll */
+      body.test-active .instructions-panel {
+        pointer-events: none;
+        opacity: 0.1;
+      }
+      /* Center the typing area for better ergonomics */
+      #codeDisplay {
+        outline: none;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      #codeDisplay.focused {
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+      }
+
+      /* ===================================================================== */
+      /* REFINED MODAL STYLES (FROM MOCKUP)                                    */
+      /* ===================================================================== */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        animation: fadeIn 0.3s;
+      }
+
+      .modal-content {
+        background: #2a2a2a;
+        border-radius: 12px;
+        border: 2px solid #4ade80;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        animation: slideUp 0.3s;
+      }
+
+      .modal-button {
+        border-radius: 8px; /* Slightly larger radius for larger buttons */
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem; /* Increased gap */
+        width: 100%;
+        font-weight: 600; /* Bolder text for clarity */
+      }
+
+      .modal-button-primary {
+        background: #3b82f6;
+        color: white;
+      }
+      .modal-button-primary:hover {
+        background: #2563eb;
+      }
+
+      .modal-button-secondary {
+        background: #374151;
+        color: white;
+      }
+      .modal-button-secondary:hover {
+        background: #4b5563;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes slideUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+
+      /* ===================================================================== */
+      /* SESSION 27: PAUSE OVERLAY */
+      /* ===================================================================== */
+
+      .pause-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.92);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        animation: fadeIn 0.3s;
+        backdrop-filter: blur(4px);
+      }
+
+      .pause-content {
+        text-align: center;
+        color: #d4d4d4;
+        padding: 40px;
+        background: #2a2a2a;
+        border-radius: 12px;
+        border: 2px solid #f59e0b;
+        max-width: 450px;
+      }
+
+      .pause-icon {
+        font-size: 4em;
+        margin-bottom: 16px;
+        animation: pausePulse 2s infinite;
+      }
+
+      @keyframes pausePulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.7;
+          transform: scale(1.05);
+        }
+      }
+
+      .pause-kbd {
+        background: #374151;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-family: "Consolas", "Monaco", monospace;
+        font-size: 0.95em;
+        border: 1px solid #4b5563;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        display: inline-block;
+        margin: 0 4px;
+      }
+
+      /* Pause button active state */
+      .paused-state {
+        background: #10b981 !important;
+      }
+
+      .paused-state:hover {
+        background: #059669 !important;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/main-nd08ngRc.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-YP0FEG5d.js">
+    <link rel="modulepreload" crossorigin href="/assets/config-wtE3mAnz.js">
+    <link rel="modulepreload" crossorigin href="/assets/timer-Bqna9vei.js">
+    <link rel="modulepreload" crossorigin href="/assets/storage-DL_W2Xu7.js">
+  </head>
+  <body class="p-8">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header & Controls: Wrapped for fade effect -->
+      <div class="controls-area">
+        <!-- Header -->
+        <div class="mb-8">
+          <h1 class="text-3xl font-bold mb-2">Tree-Sitter Typing Game</h1>
+          <p class="text-gray-400">
+            Build muscle memory for programming constructs
+          </p>
+        </div>
+
+        <!-- Controls -->
+        <div class="mb-6 flex gap-4 items-center flex-wrap">
+          <label class="text-gray-300">Language:</label>
+          <select
+            id="languageSelect"
+            class="bg-gray-800 text-white px-4 py-2 rounded border border-gray-600"
+          >
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="typescript">TypeScript</option>
+            <option value="tsx">TSX/React</option>
+          </select>
+
+          <!-- Typing Mode Selector -->
+          <label class="text-gray-300 ml-6">Typing Mode:</label>
+          <div class="flex gap-2">
+            <label
+              class="flex items-center gap-2 cursor-pointer px-3 py-2 bg-gray-800 rounded hover:bg-gray-700 transition"
+            >
+              <input
+                type="radio"
+                name="typingMode"
+                value="minimal"
+                class="cursor-pointer"
+              />
+              <span class="text-sm">Minimal</span>
+            </label>
+            <label
+              class="flex items-center gap-2 cursor-pointer px-3 py-2 bg-gray-800 rounded hover:bg-gray-700 transition"
+            >
+              <input
+                type="radio"
+                name="typingMode"
+                value="standard"
+                checked
+                class="cursor-pointer"
+              />
+              <span class="text-sm">Standard</span>
+            </label>
+            <label
+              class="flex items-center gap-2 cursor-pointer px-3 py-2 bg-gray-800 rounded hover:bg-gray-700 transition"
+            >
+              <input
+                type="radio"
+                name="typingMode"
+                value="full"
+                class="cursor-pointer"
+              />
+              <span class="text-sm">Full</span>
+            </label>
+          </div>
+
+          <!-- SESSION 27: Grouped action buttons -->
+          <div class="flex gap-2 ml-auto">
+            <button
+              id="pauseBtn"
+              class="bg-yellow-600 hover:bg-yellow-700 px-3 py-2 rounded text-sm font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed"
+              onclick="togglePause()"
+              disabled
+            >
+              ⏸️ Pause
+            </button>
+
+            <button
+              id="resetBtn"
+              class="bg-blue-600 hover:bg-blue-700 px-3 py-2 rounded text-sm font-semibold transition"
+            >
+              🔄 Reset
+            </button>
+          </div>
+
+          <a
+            href="library.html"
+            class="bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded text-sm font-semibold"
+          >
+            📚 Browse Library
+          </a>
+
+          <div id="testStatus" class="text-sm">
+            <span class="text-gray-400">Press any key to start...</span>
+          </div>
+        </div>
+
+        <!-- Stats Display -->
+        <div id="stats" class="mb-6 p-4 bg-gray-800 rounded"></div>
+      </div>
+
+      <!-- Code Display -->
+      <div
+        id="codeDisplay"
+        class="bg-gray-900 rounded-lg p-6 overflow-x-auto cursor-text"
+        tabindex="0"
+      >
+        <div id="codeLines"></div>
+      </div>
+
+      <!-- Instructions: Also fade during typing -->
+      <div
+        class="mt-6 p-4 bg-gray-800 rounded controls-area instructions-panel"
+      >
+        <h3 class="font-bold mb-2">Instructions:</h3>
+        <ul class="text-sm space-y-1 mb-4">
+          <li>
+            • <span class="text-gray-400">Gray text</span> = Not yet typed
+          </li>
+          <li>
+            •
+            <span class="bg-yellow-500 bg-opacity-30 px-1"
+              >Yellow highlight</span
+            >
+            = Current character to type
+          </li>
+          <li>
+            • <span style="color: #569cd6">Colored text</span> = Already typed
+            (syntax revealed)
+          </li>
+          <li>
+            •
+            <span class="text-red-400 bg-red-900 bg-opacity-20 px-1"
+              >Red highlight</span
+            >
+            = Wrong key (stays until corrected)
+          </li>
+          <li>
+            • Press <kbd class="px-2 py-1 bg-gray-700 rounded">Tab</kbd> to
+            pause/resume
+          </li>
+          <li>
+            • Press <kbd class="px-2 py-1 bg-gray-700 rounded">Esc</kbd> to
+            reset
+          </li>
+        </ul>
+
+        <h3 class="font-bold mb-2 mt-4">Typing Modes:</h3>
+        <ul class="text-sm space-y-1">
+          <li>
+            • <strong>Minimal</strong>: Type only keywords and identifiers
+            (fastest)
+          </li>
+          <li>
+            • <strong>Standard</strong> ⭐: Type keywords, identifiers,
+            operators, and <code>:</code> <code>;</code> (recommended)
+          </li>
+          <li>
+            • <strong>Full</strong>: Type everything except whitespace and
+            comments (maximum practice)
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>

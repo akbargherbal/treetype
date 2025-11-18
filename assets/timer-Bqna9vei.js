@@ -1,0 +1,2 @@
+function t(t){if(!t.active||!t.startTime)return 0;const r=Date.now();let a=r-t.startTime-t.totalPausedTime;if(t.paused&&t.pauseStartTime){a-=r-t.pauseStartTime}return a/1e3}function r(t,r){if(r<=0)return 0;const a=r/60;return Math.round(t/5/a)}function a(t,r){return 0===t?100:Math.round((t-r)/t*100)}function e(t){return`${Math.floor(t/60)}:${Math.floor(t%60).toString().padStart(2,"0")}`}export{a,r as c,e as f,t as g};
+//# sourceMappingURL=timer-Bqna9vei.js.map

@@ -1,0 +1,5814 @@
+{
+  "language": "javascript",
+  "total_lines": 34,
+  "lines": [
+    {
+      "line_number": 0,
+      "indent_level": 0,
+      "actual_line": "// PATTERN: JSON Operations",
+      "display_tokens": [
+        {
+          "text": "// PATTERN: JSON Operations",
+          "type": "comment",
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 27
+        }
+      ],
+      "typing_sequence": "// PATTERN: JSON Operations",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "13": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "14": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "15": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "16": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "17": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "18": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "19": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "20": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "21": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "22": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "23": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "24": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "25": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "26": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
+    },
+    {
+      "line_number": 2,
+      "indent_level": 0,
+      "actual_line": "const jsonString = '{\"productName\": \"Laptop\", \"price\": 1200, \"inStock\": true}';",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 5
+        },
+        {
+          "text": "jsonString",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 16
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 19,
+          "end_col": 20
+        },
+        {
+          "text": "{\"productName\": \"Laptop\", \"price\": 1200, \"inStock\": true}",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 20,
+          "end_col": 77
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 77,
+          "end_col": 78
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 78,
+          "end_col": 79
+        }
+      ],
+      "typing_sequence": "constjsonString='{\"productName\": \"Laptop\", \"price\": 1200, \"inStock\": true}';",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "15": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "16": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "18": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "19": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "20": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "21": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "22": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "23": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "24": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "25": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "26": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "27": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "28": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "29": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "30": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "31": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "32": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "33": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "34": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "35": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "36": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "37": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "38": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "39": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "40": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "41": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "42": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "43": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "44": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "45": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "46": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "47": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "48": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "49": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "50": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "51": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "52": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "53": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "54": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "55": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "56": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "57": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "58": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "59": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "60": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "61": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "62": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "63": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "64": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "65": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "66": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "67": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "68": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "69": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "70": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "71": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "72": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "73": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "74": {
+          "token_idx": 5,
+          "display_col": 77
+        },
+        "75": {
+          "token_idx": 6,
+          "display_col": 78
+        }
+      }
+    },
+    {
+      "line_number": 3,
+      "indent_level": 0,
+      "actual_line": "const product = JSON.parse(jsonString);",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 5
+        },
+        {
+          "text": "product",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 13
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 14,
+          "end_col": 15
+        },
+        {
+          "text": "JSON",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 16,
+          "end_col": 20
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 20,
+          "end_col": 21
+        },
+        {
+          "text": "parse",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 21,
+          "end_col": 26
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 26,
+          "end_col": 27
+        },
+        {
+          "text": "jsonString",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 27,
+          "end_col": 37
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 37,
+          "end_col": 38
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 38,
+          "end_col": 39
+        }
+      ],
+      "typing_sequence": "constproduct=JSON.parse(jsonString);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 2,
+          "display_col": 14
+        },
+        "13": {
+          "token_idx": 3,
+          "display_col": 16
+        },
+        "14": {
+          "token_idx": 3,
+          "display_col": 16
+        },
+        "15": {
+          "token_idx": 3,
+          "display_col": 16
+        },
+        "16": {
+          "token_idx": 3,
+          "display_col": 16
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "18": {
+          "token_idx": 5,
+          "display_col": 21
+        },
+        "19": {
+          "token_idx": 5,
+          "display_col": 21
+        },
+        "20": {
+          "token_idx": 5,
+          "display_col": 21
+        },
+        "21": {
+          "token_idx": 5,
+          "display_col": 21
+        },
+        "22": {
+          "token_idx": 5,
+          "display_col": 21
+        },
+        "23": {
+          "token_idx": 6,
+          "display_col": 26
+        },
+        "24": {
+          "token_idx": 7,
+          "display_col": 27
+        },
+        "25": {
+          "token_idx": 7,
+          "display_col": 27
+        },
+        "26": {
+          "token_idx": 7,
+          "display_col": 27
+        },
+        "27": {
+          "token_idx": 7,
+          "display_col": 27
+        },
+        "28": {
+          "token_idx": 7,
+          "display_col": 27
+        },
+        "29": {
+          "token_idx": 7,
+          "display_col": 27
+        },
+        "30": {
+          "token_idx": 7,
+          "display_col": 27
+        },
+        "31": {
+          "token_idx": 7,
+          "display_col": 27
+        },
+        "32": {
+          "token_idx": 7,
+          "display_col": 27
+        },
+        "33": {
+          "token_idx": 7,
+          "display_col": 27
+        },
+        "34": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "35": {
+          "token_idx": 9,
+          "display_col": 38
+        }
+      }
+    },
+    {
+      "line_number": 5,
+      "indent_level": 0,
+      "actual_line": "console.log(product.productName);",
+      "display_tokens": [
+        {
+          "text": "console",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 7
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 8
+        },
+        {
+          "text": "log",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 11
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 11,
+          "end_col": 12
+        },
+        {
+          "text": "product",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 19
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 19,
+          "end_col": 20
+        },
+        {
+          "text": "productName",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 20,
+          "end_col": 31
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 31,
+          "end_col": 32
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 32,
+          "end_col": 33
+        }
+      ],
+      "typing_sequence": "console.log(product.productName);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 11
+        },
+        "12": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "13": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "15": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "16": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "18": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "19": {
+          "token_idx": 5,
+          "display_col": 19
+        },
+        "20": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "21": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "22": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "23": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "24": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "25": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "26": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "27": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "28": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "29": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "30": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "31": {
+          "token_idx": 7,
+          "display_col": 31
+        },
+        "32": {
+          "token_idx": 8,
+          "display_col": 32
+        }
+      }
+    },
+    {
+      "line_number": 6,
+      "indent_level": 0,
+      "actual_line": "console.log(product.price);",
+      "display_tokens": [
+        {
+          "text": "console",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 7
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 8
+        },
+        {
+          "text": "log",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 11
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 11,
+          "end_col": 12
+        },
+        {
+          "text": "product",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 19
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 19,
+          "end_col": 20
+        },
+        {
+          "text": "price",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 20,
+          "end_col": 25
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 26
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 26,
+          "end_col": 27
+        }
+      ],
+      "typing_sequence": "console.log(product.price);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 11
+        },
+        "12": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "13": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "15": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "16": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "18": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "19": {
+          "token_idx": 5,
+          "display_col": 19
+        },
+        "20": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "21": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "22": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "23": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "24": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "25": {
+          "token_idx": 7,
+          "display_col": 25
+        },
+        "26": {
+          "token_idx": 8,
+          "display_col": 26
+        }
+      }
+    },
+    {
+      "line_number": 8,
+      "indent_level": 0,
+      "actual_line": "// PATTERN: JSON Operations",
+      "display_tokens": [
+        {
+          "text": "// PATTERN: JSON Operations",
+          "type": "comment",
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 27
+        }
+      ],
+      "typing_sequence": "// PATTERN: JSON Operations",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "13": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "14": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "15": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "16": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "17": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "18": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "19": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "20": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "21": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "22": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "23": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "24": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "25": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "26": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
+    },
+    {
+      "line_number": 10,
+      "indent_level": 0,
+      "actual_line": "const userData = {",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 5
+        },
+        {
+          "text": "userData",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 14
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 16
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        }
+      ],
+      "typing_sequence": "constuserData={",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "13": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "14": {
+          "token_idx": 3,
+          "display_col": 17
+        }
+      }
+    },
+    {
+      "line_number": 11,
+      "indent_level": 0,
+      "actual_line": "  id: \"user123\",",
+      "display_tokens": [
+        {
+          "text": "id",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 4
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 5
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 7
+        },
+        {
+          "text": "user123",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 14
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 14,
+          "end_col": 15
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 16
+        }
+      ],
+      "typing_sequence": "id:\"user123\",",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 2,
+          "display_col": 6
+        },
+        "4": {
+          "token_idx": 3,
+          "display_col": 7
+        },
+        "5": {
+          "token_idx": 3,
+          "display_col": 7
+        },
+        "6": {
+          "token_idx": 3,
+          "display_col": 7
+        },
+        "7": {
+          "token_idx": 3,
+          "display_col": 7
+        },
+        "8": {
+          "token_idx": 3,
+          "display_col": 7
+        },
+        "9": {
+          "token_idx": 3,
+          "display_col": 7
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 7
+        },
+        "11": {
+          "token_idx": 4,
+          "display_col": 14
+        },
+        "12": {
+          "token_idx": 5,
+          "display_col": 15
+        }
+      }
+    },
+    {
+      "line_number": 12,
+      "indent_level": 0,
+      "actual_line": "  name: \"Jane Doe\",",
+      "display_tokens": [
+        {
+          "text": "name",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 6
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 7
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 9
+        },
+        {
+          "text": "Jane Doe",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 17
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 18,
+          "end_col": 19
+        }
+      ],
+      "typing_sequence": "name:\"Jane Doe\",",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "5": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "6": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "7": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "9": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "13": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 17
+        },
+        "15": {
+          "token_idx": 5,
+          "display_col": 18
+        }
+      }
+    },
+    {
+      "line_number": 13,
+      "indent_level": 0,
+      "actual_line": "  email: \"jane.doe@example.com\"",
+      "display_tokens": [
+        {
+          "text": "email",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 7
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 8
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        },
+        {
+          "text": "jane.doe@example.com",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 10,
+          "end_col": 30
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 30,
+          "end_col": 31
+        }
+      ],
+      "typing_sequence": "email:\"jane.doe@example.com\"",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "7": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "8": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "9": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "13": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "14": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "15": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "16": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "17": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "18": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "19": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "20": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "21": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "22": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "23": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "24": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "25": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "26": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "27": {
+          "token_idx": 4,
+          "display_col": 30
+        }
+      }
+    },
+    {
+      "line_number": 14,
+      "indent_level": 0,
+      "actual_line": "};",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 1
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 1,
+          "end_col": 2
+        }
+      ],
+      "typing_sequence": "};",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 1
+        }
+      }
+    },
+    {
+      "line_number": 16,
+      "indent_level": 0,
+      "actual_line": "const jsonUserData = JSON.stringify(userData);",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 5
+        },
+        {
+          "text": "jsonUserData",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 18
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 19,
+          "end_col": 20
+        },
+        {
+          "text": "JSON",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 21,
+          "end_col": 25
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 26
+        },
+        {
+          "text": "stringify",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 26,
+          "end_col": 35
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 35,
+          "end_col": 36
+        },
+        {
+          "text": "userData",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 36,
+          "end_col": 44
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 44,
+          "end_col": 45
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 45,
+          "end_col": 46
+        }
+      ],
+      "typing_sequence": "constjsonUserData=JSON.stringify(userData);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "15": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "16": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "17": {
+          "token_idx": 2,
+          "display_col": 19
+        },
+        "18": {
+          "token_idx": 3,
+          "display_col": 21
+        },
+        "19": {
+          "token_idx": 3,
+          "display_col": 21
+        },
+        "20": {
+          "token_idx": 3,
+          "display_col": 21
+        },
+        "21": {
+          "token_idx": 3,
+          "display_col": 21
+        },
+        "22": {
+          "token_idx": 4,
+          "display_col": 25
+        },
+        "23": {
+          "token_idx": 5,
+          "display_col": 26
+        },
+        "24": {
+          "token_idx": 5,
+          "display_col": 26
+        },
+        "25": {
+          "token_idx": 5,
+          "display_col": 26
+        },
+        "26": {
+          "token_idx": 5,
+          "display_col": 26
+        },
+        "27": {
+          "token_idx": 5,
+          "display_col": 26
+        },
+        "28": {
+          "token_idx": 5,
+          "display_col": 26
+        },
+        "29": {
+          "token_idx": 5,
+          "display_col": 26
+        },
+        "30": {
+          "token_idx": 5,
+          "display_col": 26
+        },
+        "31": {
+          "token_idx": 5,
+          "display_col": 26
+        },
+        "32": {
+          "token_idx": 6,
+          "display_col": 35
+        },
+        "33": {
+          "token_idx": 7,
+          "display_col": 36
+        },
+        "34": {
+          "token_idx": 7,
+          "display_col": 36
+        },
+        "35": {
+          "token_idx": 7,
+          "display_col": 36
+        },
+        "36": {
+          "token_idx": 7,
+          "display_col": 36
+        },
+        "37": {
+          "token_idx": 7,
+          "display_col": 36
+        },
+        "38": {
+          "token_idx": 7,
+          "display_col": 36
+        },
+        "39": {
+          "token_idx": 7,
+          "display_col": 36
+        },
+        "40": {
+          "token_idx": 7,
+          "display_col": 36
+        },
+        "41": {
+          "token_idx": 8,
+          "display_col": 44
+        },
+        "42": {
+          "token_idx": 9,
+          "display_col": 45
+        }
+      }
+    },
+    {
+      "line_number": 18,
+      "indent_level": 0,
+      "actual_line": "console.log(jsonUserData);",
+      "display_tokens": [
+        {
+          "text": "console",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 7
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 8
+        },
+        {
+          "text": "log",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 11
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 11,
+          "end_col": 12
+        },
+        {
+          "text": "jsonUserData",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 24
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 24,
+          "end_col": 25
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 26
+        }
+      ],
+      "typing_sequence": "console.log(jsonUserData);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 11
+        },
+        "12": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "13": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "15": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "16": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "18": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "19": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "20": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "21": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "22": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "23": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "24": {
+          "token_idx": 5,
+          "display_col": 24
+        },
+        "25": {
+          "token_idx": 6,
+          "display_col": 25
+        }
+      }
+    },
+    {
+      "line_number": 20,
+      "indent_level": 0,
+      "actual_line": "// PATTERN: JSON Operations",
+      "display_tokens": [
+        {
+          "text": "// PATTERN: JSON Operations",
+          "type": "comment",
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 27
+        }
+      ],
+      "typing_sequence": "// PATTERN: JSON Operations",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "13": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "14": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "15": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "16": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "17": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "18": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "19": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "20": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "21": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "22": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "23": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "24": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "25": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "26": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
+    },
+    {
+      "line_number": 22,
+      "indent_level": 0,
+      "actual_line": "const config = {",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 5
+        },
+        {
+          "text": "config",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 12
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 13,
+          "end_col": 14
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 16
+        }
+      ],
+      "typing_sequence": "constconfig={",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 13
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 15
+        }
+      }
+    },
+    {
+      "line_number": 23,
+      "indent_level": 0,
+      "actual_line": "  appName: \"MyWebApp\",",
+      "display_tokens": [
+        {
+          "text": "appName",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 9
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 11,
+          "end_col": 12
+        },
+        {
+          "text": "MyWebApp",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 20
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 20,
+          "end_col": 21
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 21,
+          "end_col": 22
+        }
+      ],
+      "typing_sequence": "appName:\"MyWebApp\",",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "9": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "13": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "14": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "15": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "16": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "18": {
+          "token_idx": 5,
+          "display_col": 21
+        }
+      }
+    },
+    {
+      "line_number": 24,
+      "indent_level": 0,
+      "actual_line": "  version: \"1.0.0\",",
+      "display_tokens": [
+        {
+          "text": "version",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 9
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 11,
+          "end_col": 12
+        },
+        {
+          "text": "1.0.0",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 17
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 18,
+          "end_col": 19
+        }
+      ],
+      "typing_sequence": "version:\"1.0.0\",",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "9": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "13": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 17
+        },
+        "15": {
+          "token_idx": 5,
+          "display_col": 18
+        }
+      }
+    },
+    {
+      "line_number": 25,
+      "indent_level": 0,
+      "actual_line": "  settings: {",
+      "display_tokens": [
+        {
+          "text": "settings",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 10
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 10,
+          "end_col": 11
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 13
+        }
+      ],
+      "typing_sequence": "settings:{",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 12
+        }
+      }
+    },
+    {
+      "line_number": 26,
+      "indent_level": 1,
+      "actual_line": "    theme: \"dark\",",
+      "display_tokens": [
+        {
+          "text": "theme",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 9
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 11,
+          "end_col": 12
+        },
+        {
+          "text": "dark",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 16
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 16,
+          "end_col": 17
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        }
+      ],
+      "typing_sequence": "theme:\"dark\",",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 9
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "7": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "8": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "9": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 12
+        },
+        "11": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "12": {
+          "token_idx": 5,
+          "display_col": 17
+        }
+      }
+    },
+    {
+      "line_number": 27,
+      "indent_level": 1,
+      "actual_line": "    notifications: true",
+      "display_tokens": [
+        {
+          "text": "notifications",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 17
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        },
+        {
+          "text": "true",
+          "type": "true",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 19,
+          "end_col": 23
+        }
+      ],
+      "typing_sequence": "notifications:true",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 17
+        },
+        "14": {
+          "token_idx": 2,
+          "display_col": 19
+        },
+        "15": {
+          "token_idx": 2,
+          "display_col": 19
+        },
+        "16": {
+          "token_idx": 2,
+          "display_col": 19
+        },
+        "17": {
+          "token_idx": 2,
+          "display_col": 19
+        }
+      }
+    },
+    {
+      "line_number": 28,
+      "indent_level": 0,
+      "actual_line": "  }",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 3
+        }
+      ],
+      "typing_sequence": "}",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        }
+      }
+    },
+    {
+      "line_number": 29,
+      "indent_level": 0,
+      "actual_line": "};",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 1
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 1,
+          "end_col": 2
+        }
+      ],
+      "typing_sequence": "};",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 1
+        }
+      }
+    },
+    {
+      "line_number": 31,
+      "indent_level": 0,
+      "actual_line": "const prettyJsonConfig = JSON.stringify(config, null, 2);",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 5
+        },
+        {
+          "text": "prettyJsonConfig",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 22
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 23,
+          "end_col": 24
+        },
+        {
+          "text": "JSON",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 29
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 29,
+          "end_col": 30
+        },
+        {
+          "text": "stringify",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 30,
+          "end_col": 39
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 39,
+          "end_col": 40
+        },
+        {
+          "text": "config",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 40,
+          "end_col": 46
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 46,
+          "end_col": 47
+        },
+        {
+          "text": "null",
+          "type": "null",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 48,
+          "end_col": 52
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 52,
+          "end_col": 53
+        },
+        {
+          "text": "2",
+          "type": "number",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 54,
+          "end_col": 55
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 55,
+          "end_col": 56
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 56,
+          "end_col": 57
+        }
+      ],
+      "typing_sequence": "constprettyJsonConfig=JSON.stringify(config,null,2);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "15": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "16": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "17": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "18": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "19": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "20": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "21": {
+          "token_idx": 2,
+          "display_col": 23
+        },
+        "22": {
+          "token_idx": 3,
+          "display_col": 25
+        },
+        "23": {
+          "token_idx": 3,
+          "display_col": 25
+        },
+        "24": {
+          "token_idx": 3,
+          "display_col": 25
+        },
+        "25": {
+          "token_idx": 3,
+          "display_col": 25
+        },
+        "26": {
+          "token_idx": 4,
+          "display_col": 29
+        },
+        "27": {
+          "token_idx": 5,
+          "display_col": 30
+        },
+        "28": {
+          "token_idx": 5,
+          "display_col": 30
+        },
+        "29": {
+          "token_idx": 5,
+          "display_col": 30
+        },
+        "30": {
+          "token_idx": 5,
+          "display_col": 30
+        },
+        "31": {
+          "token_idx": 5,
+          "display_col": 30
+        },
+        "32": {
+          "token_idx": 5,
+          "display_col": 30
+        },
+        "33": {
+          "token_idx": 5,
+          "display_col": 30
+        },
+        "34": {
+          "token_idx": 5,
+          "display_col": 30
+        },
+        "35": {
+          "token_idx": 5,
+          "display_col": 30
+        },
+        "36": {
+          "token_idx": 6,
+          "display_col": 39
+        },
+        "37": {
+          "token_idx": 7,
+          "display_col": 40
+        },
+        "38": {
+          "token_idx": 7,
+          "display_col": 40
+        },
+        "39": {
+          "token_idx": 7,
+          "display_col": 40
+        },
+        "40": {
+          "token_idx": 7,
+          "display_col": 40
+        },
+        "41": {
+          "token_idx": 7,
+          "display_col": 40
+        },
+        "42": {
+          "token_idx": 7,
+          "display_col": 40
+        },
+        "43": {
+          "token_idx": 8,
+          "display_col": 46
+        },
+        "44": {
+          "token_idx": 9,
+          "display_col": 48
+        },
+        "45": {
+          "token_idx": 9,
+          "display_col": 48
+        },
+        "46": {
+          "token_idx": 9,
+          "display_col": 48
+        },
+        "47": {
+          "token_idx": 9,
+          "display_col": 48
+        },
+        "48": {
+          "token_idx": 10,
+          "display_col": 52
+        },
+        "49": {
+          "token_idx": 11,
+          "display_col": 54
+        },
+        "50": {
+          "token_idx": 12,
+          "display_col": 55
+        },
+        "51": {
+          "token_idx": 13,
+          "display_col": 56
+        }
+      }
+    },
+    {
+      "line_number": 33,
+      "indent_level": 0,
+      "actual_line": "console.log(prettyJsonConfig);",
+      "display_tokens": [
+        {
+          "text": "console",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 7
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 8
+        },
+        {
+          "text": "log",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 11
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 11,
+          "end_col": 12
+        },
+        {
+          "text": "prettyJsonConfig",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 28
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 28,
+          "end_col": 29
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 29,
+          "end_col": 30
+        }
+      ],
+      "typing_sequence": "console.log(prettyJsonConfig);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 11
+        },
+        "12": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "13": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "15": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "16": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "18": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "19": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "20": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "21": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "22": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "23": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "24": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "25": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "26": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "27": {
+          "token_idx": 4,
+          "display_col": 12
+        },
+        "28": {
+          "token_idx": 5,
+          "display_col": 28
+        },
+        "29": {
+          "token_idx": 6,
+          "display_col": 29
+        }
+      }
+    },
+    {
+      "line_number": 35,
+      "indent_level": 0,
+      "actual_line": "// PATTERN: JSON Operations",
+      "display_tokens": [
+        {
+          "text": "// PATTERN: JSON Operations",
+          "type": "comment",
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 27
+        }
+      ],
+      "typing_sequence": "// PATTERN: JSON Operations",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "13": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "14": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "15": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "16": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "17": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "18": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "19": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "20": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "21": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "22": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "23": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "24": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "25": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "26": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
+    },
+    {
+      "line_number": 37,
+      "indent_level": 0,
+      "actual_line": "const potentiallyInvalidJson = '{\"item\": \"Keyboard\", \"price\": 75.00, \"available\": true'; // Missing closing brace",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 5
+        },
+        {
+          "text": "potentiallyInvalidJson",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 28
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 29,
+          "end_col": 30
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 31,
+          "end_col": 32
+        },
+        {
+          "text": "{\"item\": \"Keyboard\", \"price\": 75.00, \"available\": true",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 32,
+          "end_col": 86
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 86,
+          "end_col": 87
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 87,
+          "end_col": 88
+        },
+        {
+          "text": "// Missing closing brace",
+          "type": "comment",
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
+          "start_col": 89,
+          "end_col": 113
+        }
+      ],
+      "typing_sequence": "constpotentiallyInvalidJson='{\"item\": \"Keyboard\", \"price\": 75.00, \"available\": true';// Missing closing brace",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "15": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "16": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "17": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "18": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "19": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "20": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "21": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "22": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "23": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "24": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "25": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "26": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "27": {
+          "token_idx": 2,
+          "display_col": 29
+        },
+        "28": {
+          "token_idx": 3,
+          "display_col": 31
+        },
+        "29": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "30": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "31": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "32": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "33": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "34": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "35": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "36": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "37": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "38": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "39": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "40": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "41": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "42": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "43": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "44": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "45": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "46": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "47": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "48": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "49": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "50": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "51": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "52": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "53": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "54": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "55": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "56": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "57": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "58": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "59": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "60": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "61": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "62": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "63": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "64": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "65": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "66": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "67": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "68": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "69": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "70": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "71": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "72": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "73": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "74": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "75": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "76": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "77": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "78": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "79": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "80": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "81": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "82": {
+          "token_idx": 4,
+          "display_col": 32
+        },
+        "83": {
+          "token_idx": 5,
+          "display_col": 86
+        },
+        "84": {
+          "token_idx": 6,
+          "display_col": 87
+        },
+        "85": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "86": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "87": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "88": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "89": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "90": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "91": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "92": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "93": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "94": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "95": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "96": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "97": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "98": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "99": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "100": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "101": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "102": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "103": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "104": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "105": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "106": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "107": {
+          "token_idx": 7,
+          "display_col": 89
+        },
+        "108": {
+          "token_idx": 7,
+          "display_col": 89
+        }
+      }
+    },
+    {
+      "line_number": 38,
+      "indent_level": 0,
+      "actual_line": "let parsedObject = null;",
+      "display_tokens": [
+        {
+          "text": "let",
+          "type": "let",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 3
+        },
+        {
+          "text": "parsedObject",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 16
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        },
+        {
+          "text": "null",
+          "type": "null",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 19,
+          "end_col": 23
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 23,
+          "end_col": 24
+        }
+      ],
+      "typing_sequence": "letparsedObject=null;",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "15": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "16": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "17": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "18": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "19": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "20": {
+          "token_idx": 4,
+          "display_col": 23
+        }
+      }
+    },
+    {
+      "line_number": 40,
+      "indent_level": 0,
+      "actual_line": "try {",
+      "display_tokens": [
+        {
+          "text": "try",
+          "type": "try",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 3
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 5
+        }
+      ],
+      "typing_sequence": "try{",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 4
+        }
+      }
+    },
+    {
+      "line_number": 41,
+      "indent_level": 0,
+      "actual_line": "  parsedObject = JSON.parse(potentiallyInvalidJson);",
+      "display_tokens": [
+        {
+          "text": "parsedObject",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 14
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 16
+        },
+        {
+          "text": "JSON",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 21
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 21,
+          "end_col": 22
+        },
+        {
+          "text": "parse",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 22,
+          "end_col": 27
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 27,
+          "end_col": 28
+        },
+        {
+          "text": "potentiallyInvalidJson",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 28,
+          "end_col": 50
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 50,
+          "end_col": 51
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 51,
+          "end_col": 52
+        }
+      ],
+      "typing_sequence": "parsedObject=JSON.parse(potentiallyInvalidJson);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 15
+        },
+        "13": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "14": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "15": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "16": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "17": {
+          "token_idx": 3,
+          "display_col": 21
+        },
+        "18": {
+          "token_idx": 4,
+          "display_col": 22
+        },
+        "19": {
+          "token_idx": 4,
+          "display_col": 22
+        },
+        "20": {
+          "token_idx": 4,
+          "display_col": 22
+        },
+        "21": {
+          "token_idx": 4,
+          "display_col": 22
+        },
+        "22": {
+          "token_idx": 4,
+          "display_col": 22
+        },
+        "23": {
+          "token_idx": 5,
+          "display_col": 27
+        },
+        "24": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "25": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "26": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "27": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "28": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "29": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "30": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "31": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "32": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "33": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "34": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "35": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "36": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "37": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "38": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "39": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "40": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "41": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "42": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "43": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "44": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "45": {
+          "token_idx": 6,
+          "display_col": 28
+        },
+        "46": {
+          "token_idx": 7,
+          "display_col": 50
+        },
+        "47": {
+          "token_idx": 8,
+          "display_col": 51
+        }
+      }
+    },
+    {
+      "line_number": 42,
+      "indent_level": 0,
+      "actual_line": "  console.log(\"Parsed object:\", parsedObject);",
+      "display_tokens": [
+        {
+          "text": "console",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 9
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        },
+        {
+          "text": "log",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 10,
+          "end_col": 13
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 13,
+          "end_col": 14
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 14,
+          "end_col": 15
+        },
+        {
+          "text": "Parsed object:",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 29
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 29,
+          "end_col": 30
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 30,
+          "end_col": 31
+        },
+        {
+          "text": "parsedObject",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 32,
+          "end_col": 44
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 44,
+          "end_col": 45
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 45,
+          "end_col": 46
+        }
+      ],
+      "typing_sequence": "console.log(\"Parsed object:\",parsedObject);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 13
+        },
+        "12": {
+          "token_idx": 4,
+          "display_col": 14
+        },
+        "13": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "14": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "15": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "16": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "17": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "18": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "19": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "20": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "21": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "22": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "23": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "24": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "25": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "26": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "27": {
+          "token_idx": 6,
+          "display_col": 29
+        },
+        "28": {
+          "token_idx": 7,
+          "display_col": 30
+        },
+        "29": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "30": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "31": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "32": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "33": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "34": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "35": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "36": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "37": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "38": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "39": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "40": {
+          "token_idx": 8,
+          "display_col": 32
+        },
+        "41": {
+          "token_idx": 9,
+          "display_col": 44
+        },
+        "42": {
+          "token_idx": 10,
+          "display_col": 45
+        }
+      }
+    },
+    {
+      "line_number": 43,
+      "indent_level": 0,
+      "actual_line": "} catch (error) {",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 1
+        },
+        {
+          "text": "catch",
+          "type": "catch",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 7
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 9
+        },
+        {
+          "text": "error",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 14
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 14,
+          "end_col": 15
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 16,
+          "end_col": 17
+        }
+      ],
+      "typing_sequence": "}catch(error){",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "7": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "9": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "12": {
+          "token_idx": 4,
+          "display_col": 14
+        },
+        "13": {
+          "token_idx": 5,
+          "display_col": 16
+        }
+      }
+    },
+    {
+      "line_number": 44,
+      "indent_level": 0,
+      "actual_line": "  console.error(\"Failed to parse JSON:\", error.message);",
+      "display_tokens": [
+        {
+          "text": "console",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 9
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        },
+        {
+          "text": "error",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 10,
+          "end_col": 15
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 16
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 16,
+          "end_col": 17
+        },
+        {
+          "text": "Failed to parse JSON:",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 38
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 38,
+          "end_col": 39
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 39,
+          "end_col": 40
+        },
+        {
+          "text": "error",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 41,
+          "end_col": 46
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 46,
+          "end_col": 47
+        },
+        {
+          "text": "message",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 47,
+          "end_col": 54
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 54,
+          "end_col": 55
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 55,
+          "end_col": 56
+        }
+      ],
+      "typing_sequence": "console.error(\"Failed to parse JSON:\",error.message);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "12": {
+          "token_idx": 2,
+          "display_col": 10
+        },
+        "13": {
+          "token_idx": 3,
+          "display_col": 15
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "15": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "16": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "17": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "18": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "19": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "20": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "21": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "22": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "23": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "24": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "25": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "26": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "27": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "28": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "29": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "30": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "31": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "32": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "33": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "34": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "35": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "36": {
+          "token_idx": 6,
+          "display_col": 38
+        },
+        "37": {
+          "token_idx": 7,
+          "display_col": 39
+        },
+        "38": {
+          "token_idx": 8,
+          "display_col": 41
+        },
+        "39": {
+          "token_idx": 8,
+          "display_col": 41
+        },
+        "40": {
+          "token_idx": 8,
+          "display_col": 41
+        },
+        "41": {
+          "token_idx": 8,
+          "display_col": 41
+        },
+        "42": {
+          "token_idx": 8,
+          "display_col": 41
+        },
+        "43": {
+          "token_idx": 9,
+          "display_col": 46
+        },
+        "44": {
+          "token_idx": 10,
+          "display_col": 47
+        },
+        "45": {
+          "token_idx": 10,
+          "display_col": 47
+        },
+        "46": {
+          "token_idx": 10,
+          "display_col": 47
+        },
+        "47": {
+          "token_idx": 10,
+          "display_col": 47
+        },
+        "48": {
+          "token_idx": 10,
+          "display_col": 47
+        },
+        "49": {
+          "token_idx": 10,
+          "display_col": 47
+        },
+        "50": {
+          "token_idx": 10,
+          "display_col": 47
+        },
+        "51": {
+          "token_idx": 11,
+          "display_col": 54
+        },
+        "52": {
+          "token_idx": 12,
+          "display_col": 55
+        }
+      }
+    },
+    {
+      "line_number": 45,
+      "indent_level": 0,
+      "actual_line": "  // Fallback or error recovery logic here",
+      "display_tokens": [
+        {
+          "text": "// Fallback or error recovery logic here",
+          "type": "comment",
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 42
+        }
+      ],
+      "typing_sequence": "// Fallback or error recovery logic here",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "13": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "14": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "15": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "16": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "17": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "18": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "19": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "20": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "21": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "22": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "23": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "24": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "25": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "26": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "27": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "28": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "29": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "30": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "31": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "32": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "33": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "34": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "35": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "36": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "37": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "38": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "39": {
+          "token_idx": 0,
+          "display_col": 2
+        }
+      }
+    },
+    {
+      "line_number": 46,
+      "indent_level": 0,
+      "actual_line": "}",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 1
+        }
+      ],
+      "typing_sequence": "}",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
+    }
+  ]
+}

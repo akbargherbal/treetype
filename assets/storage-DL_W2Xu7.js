@@ -1,0 +1,2 @@
+function t(){const t=localStorage.getItem("treetype_snippet_stats");return t?JSON.parse(t):{}}function e(e,a,c){const s=t();s[e]?(s[e].bestWPM=Math.max(s[e].bestWPM||0,a),s[e].bestAccuracy=Math.max(s[e].bestAccuracy||0,c),s[e].practiceCount=(s[e].practiceCount||0)+1,s[e].lastPracticed=(new Date).toISOString()):s[e]={bestWPM:a,bestAccuracy:c,practiceCount:1,lastPracticed:(new Date).toISOString()},localStorage.setItem("treetype_snippet_stats",JSON.stringify(s)),console.log("Stats saved:",e,s[e])}export{t as l,e as s};
+//# sourceMappingURL=storage-DL_W2Xu7.js.map

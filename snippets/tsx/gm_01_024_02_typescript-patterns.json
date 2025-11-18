@@ -1,0 +1,6725 @@
+{
+  "language": "tsx",
+  "total_lines": 43,
+  "lines": [
+    {
+      "line_number": 0,
+      "indent_level": 0,
+      "actual_line": "// PATTERN: TypeScript Patterns",
+      "display_tokens": [
+        {
+          "text": "// PATTERN: TypeScript Patterns",
+          "type": "comment",
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 31
+        }
+      ],
+      "typing_sequence": "// PATTERN: TypeScript Patterns",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "13": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "14": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "15": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "16": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "17": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "18": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "19": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "20": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "21": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "22": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "23": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "24": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "25": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "26": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "27": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "28": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "29": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "30": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
+    },
+    {
+      "line_number": 2,
+      "indent_level": 0,
+      "actual_line": "interface UserProfileProps {",
+      "display_tokens": [
+        {
+          "text": "interface",
+          "type": "interface",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 9
+        },
+        {
+          "text": "UserProfileProps",
+          "type": "type_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 10,
+          "end_col": 26
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 27,
+          "end_col": 28
+        }
+      ],
+      "typing_sequence": "interfaceUserProfileProps{",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "15": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "16": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "17": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "18": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "19": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "20": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "21": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "22": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "23": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "24": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "25": {
+          "token_idx": 2,
+          "display_col": 27
+        }
+      }
+    },
+    {
+      "line_number": 3,
+      "indent_level": 0,
+      "actual_line": "  userName: string;",
+      "display_tokens": [
+        {
+          "text": "userName",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 10
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 10,
+          "end_col": 11
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 18
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 18,
+          "end_col": 19
+        }
+      ],
+      "typing_sequence": "userName:string;",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "12": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "13": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "14": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "15": {
+          "token_idx": 3,
+          "display_col": 18
+        }
+      }
+    },
+    {
+      "line_number": 4,
+      "indent_level": 0,
+      "actual_line": "  userAge: number;",
+      "display_tokens": [
+        {
+          "text": "userAge",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 9
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 11,
+          "end_col": 17
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        }
+      ],
+      "typing_sequence": "userAge:number;",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "12": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "13": {
+          "token_idx": 2,
+          "display_col": 11
+        },
+        "14": {
+          "token_idx": 3,
+          "display_col": 17
+        }
+      }
+    },
+    {
+      "line_number": 5,
+      "indent_level": 0,
+      "actual_line": "}",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 1
+        }
+      ],
+      "typing_sequence": "}",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
+    },
+    {
+      "line_number": 7,
+      "indent_level": 0,
+      "actual_line": "const UserProfile: React.FC<UserProfileProps> = ({ userName, userAge }) => {",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 5
+        },
+        {
+          "text": "UserProfile",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 17
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        },
+        {
+          "text": "React",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 19,
+          "end_col": 24
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 24,
+          "end_col": 25
+        },
+        {
+          "text": "FC",
+          "type": "type_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 27
+        },
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 27,
+          "end_col": 28
+        },
+        {
+          "text": "UserProfileProps",
+          "type": "type_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 28,
+          "end_col": 44
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 44,
+          "end_col": 45
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 46,
+          "end_col": 47
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 48,
+          "end_col": 49
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 49,
+          "end_col": 50
+        },
+        {
+          "text": "userName",
+          "type": "shorthand_property_identifier_pattern",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 51,
+          "end_col": 59
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 59,
+          "end_col": 60
+        },
+        {
+          "text": "userAge",
+          "type": "shorthand_property_identifier_pattern",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 61,
+          "end_col": 68
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 69,
+          "end_col": 70
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 70,
+          "end_col": 71
+        },
+        {
+          "text": "=>",
+          "type": "=>",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 72,
+          "end_col": 74
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 75,
+          "end_col": 76
+        }
+      ],
+      "typing_sequence": "constUserProfile:React.FC<UserProfileProps>=({userName,userAge})=>{",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "15": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "16": {
+          "token_idx": 2,
+          "display_col": 17
+        },
+        "17": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "18": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "19": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "20": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "21": {
+          "token_idx": 3,
+          "display_col": 19
+        },
+        "22": {
+          "token_idx": 4,
+          "display_col": 24
+        },
+        "23": {
+          "token_idx": 5,
+          "display_col": 25
+        },
+        "24": {
+          "token_idx": 5,
+          "display_col": 25
+        },
+        "25": {
+          "token_idx": 6,
+          "display_col": 27
+        },
+        "26": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "27": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "28": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "29": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "30": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "31": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "32": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "33": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "34": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "35": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "36": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "37": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "38": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "39": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "40": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "41": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "42": {
+          "token_idx": 8,
+          "display_col": 44
+        },
+        "43": {
+          "token_idx": 9,
+          "display_col": 46
+        },
+        "44": {
+          "token_idx": 10,
+          "display_col": 48
+        },
+        "45": {
+          "token_idx": 11,
+          "display_col": 49
+        },
+        "46": {
+          "token_idx": 12,
+          "display_col": 51
+        },
+        "47": {
+          "token_idx": 12,
+          "display_col": 51
+        },
+        "48": {
+          "token_idx": 12,
+          "display_col": 51
+        },
+        "49": {
+          "token_idx": 12,
+          "display_col": 51
+        },
+        "50": {
+          "token_idx": 12,
+          "display_col": 51
+        },
+        "51": {
+          "token_idx": 12,
+          "display_col": 51
+        },
+        "52": {
+          "token_idx": 12,
+          "display_col": 51
+        },
+        "53": {
+          "token_idx": 12,
+          "display_col": 51
+        },
+        "54": {
+          "token_idx": 13,
+          "display_col": 59
+        },
+        "55": {
+          "token_idx": 14,
+          "display_col": 61
+        },
+        "56": {
+          "token_idx": 14,
+          "display_col": 61
+        },
+        "57": {
+          "token_idx": 14,
+          "display_col": 61
+        },
+        "58": {
+          "token_idx": 14,
+          "display_col": 61
+        },
+        "59": {
+          "token_idx": 14,
+          "display_col": 61
+        },
+        "60": {
+          "token_idx": 14,
+          "display_col": 61
+        },
+        "61": {
+          "token_idx": 14,
+          "display_col": 61
+        },
+        "62": {
+          "token_idx": 15,
+          "display_col": 69
+        },
+        "63": {
+          "token_idx": 16,
+          "display_col": 70
+        },
+        "64": {
+          "token_idx": 17,
+          "display_col": 72
+        },
+        "65": {
+          "token_idx": 17,
+          "display_col": 72
+        },
+        "66": {
+          "token_idx": 18,
+          "display_col": 75
+        }
+      }
+    },
+    {
+      "line_number": 8,
+      "indent_level": 0,
+      "actual_line": "  return (",
+      "display_tokens": [
+        {
+          "text": "return",
+          "type": "return",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 8
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        }
+      ],
+      "typing_sequence": "return(",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 9
+        }
+      }
+    },
+    {
+      "line_number": 9,
+      "indent_level": 1,
+      "actual_line": "    <div>",
+      "display_tokens": [
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 5
+        },
+        {
+          "text": "div",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 5,
+          "end_col": 8
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 9
+        }
+      ],
+      "typing_sequence": "<div>",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 5
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 5
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 5
+        },
+        "4": {
+          "token_idx": 2,
+          "display_col": 8
+        }
+      }
+    },
+    {
+      "line_number": 10,
+      "indent_level": 1,
+      "actual_line": "      <h2>{userName}</h2>",
+      "display_tokens": [
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 7
+        },
+        {
+          "text": "h2",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 9
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 10,
+          "end_col": 11
+        },
+        {
+          "text": "userName",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 11,
+          "end_col": 19
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 19,
+          "end_col": 20
+        },
+        {
+          "text": "</",
+          "type": "</",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 20,
+          "end_col": 22
+        },
+        {
+          "text": "h2",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 22,
+          "end_col": 24
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 24,
+          "end_col": 25
+        }
+      ],
+      "typing_sequence": "<h2>{userName}</h2>",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 6
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "3": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "4": {
+          "token_idx": 3,
+          "display_col": 10
+        },
+        "5": {
+          "token_idx": 4,
+          "display_col": 11
+        },
+        "6": {
+          "token_idx": 4,
+          "display_col": 11
+        },
+        "7": {
+          "token_idx": 4,
+          "display_col": 11
+        },
+        "8": {
+          "token_idx": 4,
+          "display_col": 11
+        },
+        "9": {
+          "token_idx": 4,
+          "display_col": 11
+        },
+        "10": {
+          "token_idx": 4,
+          "display_col": 11
+        },
+        "11": {
+          "token_idx": 4,
+          "display_col": 11
+        },
+        "12": {
+          "token_idx": 4,
+          "display_col": 11
+        },
+        "13": {
+          "token_idx": 5,
+          "display_col": 19
+        },
+        "14": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "15": {
+          "token_idx": 6,
+          "display_col": 20
+        },
+        "16": {
+          "token_idx": 7,
+          "display_col": 22
+        },
+        "17": {
+          "token_idx": 7,
+          "display_col": 22
+        },
+        "18": {
+          "token_idx": 8,
+          "display_col": 24
+        }
+      }
+    },
+    {
+      "line_number": 11,
+      "indent_level": 1,
+      "actual_line": "      <p>Age: {userAge}</p>",
+      "display_tokens": [
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 7
+        },
+        {
+          "text": "p",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 8
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 9
+        },
+        {
+          "text": "Age:",
+          "type": "jsx_text",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 13
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 13,
+          "end_col": 14
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 14,
+          "end_col": 15
+        },
+        {
+          "text": "userAge",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 22
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 22,
+          "end_col": 23
+        },
+        {
+          "text": "</",
+          "type": "</",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 23,
+          "end_col": 25
+        },
+        {
+          "text": "p",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 26
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 26,
+          "end_col": 27
+        }
+      ],
+      "typing_sequence": "<p>Age:{userAge}</p>",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 6
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "2": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "3": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "4": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "5": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "6": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "7": {
+          "token_idx": 4,
+          "display_col": 14
+        },
+        "8": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "9": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "10": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "11": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "12": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "13": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "14": {
+          "token_idx": 5,
+          "display_col": 15
+        },
+        "15": {
+          "token_idx": 6,
+          "display_col": 22
+        },
+        "16": {
+          "token_idx": 7,
+          "display_col": 23
+        },
+        "17": {
+          "token_idx": 7,
+          "display_col": 23
+        },
+        "18": {
+          "token_idx": 8,
+          "display_col": 25
+        },
+        "19": {
+          "token_idx": 9,
+          "display_col": 26
+        }
+      }
+    },
+    {
+      "line_number": 12,
+      "indent_level": 1,
+      "actual_line": "    </div>",
+      "display_tokens": [
+        {
+          "text": "</",
+          "type": "</",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 6
+        },
+        {
+          "text": "div",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 9
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        }
+      ],
+      "typing_sequence": "</div>",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "5": {
+          "token_idx": 2,
+          "display_col": 9
+        }
+      }
+    },
+    {
+      "line_number": 13,
+      "indent_level": 0,
+      "actual_line": "  );",
+      "display_tokens": [
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 3
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 3,
+          "end_col": 4
+        }
+      ],
+      "typing_sequence": ");",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 3
+        }
+      }
+    },
+    {
+      "line_number": 14,
+      "indent_level": 0,
+      "actual_line": "};",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 1
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 1,
+          "end_col": 2
+        }
+      ],
+      "typing_sequence": "};",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 1
+        }
+      }
+    },
+    {
+      "line_number": 16,
+      "indent_level": 0,
+      "actual_line": "// PATTERN: TypeScript Patterns",
+      "display_tokens": [
+        {
+          "text": "// PATTERN: TypeScript Patterns",
+          "type": "comment",
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 31
+        }
+      ],
+      "typing_sequence": "// PATTERN: TypeScript Patterns",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "13": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "14": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "15": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "16": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "17": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "18": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "19": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "20": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "21": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "22": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "23": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "24": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "25": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "26": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "27": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "28": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "29": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "30": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
+    },
+    {
+      "line_number": 18,
+      "indent_level": 0,
+      "actual_line": "import React, { useState } from 'react';",
+      "display_tokens": [
+        {
+          "text": "import",
+          "type": "import",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 6
+        },
+        {
+          "text": "React",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 12
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 13
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 14,
+          "end_col": 15
+        },
+        {
+          "text": "useState",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 16,
+          "end_col": 24
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 26
+        },
+        {
+          "text": "from",
+          "type": "from",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 27,
+          "end_col": 31
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 32,
+          "end_col": 33
+        },
+        {
+          "text": "react",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 33,
+          "end_col": 38
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 38,
+          "end_col": 39
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 39,
+          "end_col": 40
+        }
+      ],
+      "typing_sequence": "importReact,{useState}from'react';",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 14
+        },
+        "13": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "15": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "16": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "18": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "19": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "20": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "21": {
+          "token_idx": 5,
+          "display_col": 25
+        },
+        "22": {
+          "token_idx": 6,
+          "display_col": 27
+        },
+        "23": {
+          "token_idx": 6,
+          "display_col": 27
+        },
+        "24": {
+          "token_idx": 6,
+          "display_col": 27
+        },
+        "25": {
+          "token_idx": 6,
+          "display_col": 27
+        },
+        "26": {
+          "token_idx": 7,
+          "display_col": 32
+        },
+        "27": {
+          "token_idx": 8,
+          "display_col": 33
+        },
+        "28": {
+          "token_idx": 8,
+          "display_col": 33
+        },
+        "29": {
+          "token_idx": 8,
+          "display_col": 33
+        },
+        "30": {
+          "token_idx": 8,
+          "display_col": 33
+        },
+        "31": {
+          "token_idx": 8,
+          "display_col": 33
+        },
+        "32": {
+          "token_idx": 9,
+          "display_col": 38
+        },
+        "33": {
+          "token_idx": 10,
+          "display_col": 39
+        }
+      }
+    },
+    {
+      "line_number": 20,
+      "indent_level": 0,
+      "actual_line": "const NameInput: React.FC = () => {",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 5
+        },
+        {
+          "text": "NameInput",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 15
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 16
+        },
+        {
+          "text": "React",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 22
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 22,
+          "end_col": 23
+        },
+        {
+          "text": "FC",
+          "type": "type_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 23,
+          "end_col": 25
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 26,
+          "end_col": 27
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 28,
+          "end_col": 29
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 29,
+          "end_col": 30
+        },
+        {
+          "text": "=>",
+          "type": "=>",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 31,
+          "end_col": 33
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 34,
+          "end_col": 35
+        }
+      ],
+      "typing_sequence": "constNameInput:React.FC=()=>{",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "14": {
+          "token_idx": 2,
+          "display_col": 15
+        },
+        "15": {
+          "token_idx": 3,
+          "display_col": 17
+        },
+        "16": {
+          "token_idx": 3,
+          "display_col": 17
+        },
+        "17": {
+          "token_idx": 3,
+          "display_col": 17
+        },
+        "18": {
+          "token_idx": 3,
+          "display_col": 17
+        },
+        "19": {
+          "token_idx": 3,
+          "display_col": 17
+        },
+        "20": {
+          "token_idx": 4,
+          "display_col": 22
+        },
+        "21": {
+          "token_idx": 5,
+          "display_col": 23
+        },
+        "22": {
+          "token_idx": 5,
+          "display_col": 23
+        },
+        "23": {
+          "token_idx": 6,
+          "display_col": 26
+        },
+        "24": {
+          "token_idx": 7,
+          "display_col": 28
+        },
+        "25": {
+          "token_idx": 8,
+          "display_col": 29
+        },
+        "26": {
+          "token_idx": 9,
+          "display_col": 31
+        },
+        "27": {
+          "token_idx": 9,
+          "display_col": 31
+        },
+        "28": {
+          "token_idx": 10,
+          "display_col": 34
+        }
+      }
+    },
+    {
+      "line_number": 21,
+      "indent_level": 0,
+      "actual_line": "  const [name, setName] = useState<string>('');",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 7
+        },
+        {
+          "text": "[",
+          "type": "[",
+          "categories": [
+            "square_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 9
+        },
+        {
+          "text": "name",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 13
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 13,
+          "end_col": 14
+        },
+        {
+          "text": "setName",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 22
+        },
+        {
+          "text": "]",
+          "type": "]",
+          "categories": [
+            "square_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 22,
+          "end_col": 23
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 24,
+          "end_col": 25
+        },
+        {
+          "text": "useState",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 26,
+          "end_col": 34
+        },
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 34,
+          "end_col": 35
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 35,
+          "end_col": 41
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 41,
+          "end_col": 42
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 42,
+          "end_col": 43
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 43,
+          "end_col": 44
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 44,
+          "end_col": 45
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 45,
+          "end_col": 46
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 46,
+          "end_col": 47
+        }
+      ],
+      "typing_sequence": "const[name,setName]=useState<string>('');",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 13
+        },
+        "11": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "12": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "13": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "15": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "16": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "18": {
+          "token_idx": 5,
+          "display_col": 22
+        },
+        "19": {
+          "token_idx": 6,
+          "display_col": 24
+        },
+        "20": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "21": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "22": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "23": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "24": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "25": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "26": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "27": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "28": {
+          "token_idx": 8,
+          "display_col": 34
+        },
+        "29": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "30": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "31": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "32": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "33": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "34": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "35": {
+          "token_idx": 10,
+          "display_col": 41
+        },
+        "36": {
+          "token_idx": 11,
+          "display_col": 42
+        },
+        "37": {
+          "token_idx": 12,
+          "display_col": 43
+        },
+        "38": {
+          "token_idx": 13,
+          "display_col": 44
+        },
+        "39": {
+          "token_idx": 14,
+          "display_col": 45
+        },
+        "40": {
+          "token_idx": 15,
+          "display_col": 46
+        }
+      }
+    },
+    {
+      "line_number": 23,
+      "indent_level": 0,
+      "actual_line": "  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 7
+        },
+        {
+          "text": "handleChange",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 20
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 21,
+          "end_col": 22
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 23,
+          "end_col": 24
+        },
+        {
+          "text": "event",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 24,
+          "end_col": 29
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 29,
+          "end_col": 30
+        },
+        {
+          "text": "React",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 31,
+          "end_col": 36
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 36,
+          "end_col": 37
+        },
+        {
+          "text": "ChangeEvent",
+          "type": "type_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 37,
+          "end_col": 48
+        },
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 48,
+          "end_col": 49
+        },
+        {
+          "text": "HTMLInputElement",
+          "type": "type_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 49,
+          "end_col": 65
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 65,
+          "end_col": 66
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 66,
+          "end_col": 67
+        },
+        {
+          "text": "=>",
+          "type": "=>",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 68,
+          "end_col": 70
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 71,
+          "end_col": 72
+        }
+      ],
+      "typing_sequence": "consthandleChange=(event:React.ChangeEvent<HTMLInputElement>)=>{",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "15": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "16": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "17": {
+          "token_idx": 2,
+          "display_col": 21
+        },
+        "18": {
+          "token_idx": 3,
+          "display_col": 23
+        },
+        "19": {
+          "token_idx": 4,
+          "display_col": 24
+        },
+        "20": {
+          "token_idx": 4,
+          "display_col": 24
+        },
+        "21": {
+          "token_idx": 4,
+          "display_col": 24
+        },
+        "22": {
+          "token_idx": 4,
+          "display_col": 24
+        },
+        "23": {
+          "token_idx": 4,
+          "display_col": 24
+        },
+        "24": {
+          "token_idx": 5,
+          "display_col": 29
+        },
+        "25": {
+          "token_idx": 6,
+          "display_col": 31
+        },
+        "26": {
+          "token_idx": 6,
+          "display_col": 31
+        },
+        "27": {
+          "token_idx": 6,
+          "display_col": 31
+        },
+        "28": {
+          "token_idx": 6,
+          "display_col": 31
+        },
+        "29": {
+          "token_idx": 6,
+          "display_col": 31
+        },
+        "30": {
+          "token_idx": 7,
+          "display_col": 36
+        },
+        "31": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "32": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "33": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "34": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "35": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "36": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "37": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "38": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "39": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "40": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "41": {
+          "token_idx": 8,
+          "display_col": 37
+        },
+        "42": {
+          "token_idx": 9,
+          "display_col": 48
+        },
+        "43": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "44": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "45": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "46": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "47": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "48": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "49": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "50": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "51": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "52": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "53": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "54": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "55": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "56": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "57": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "58": {
+          "token_idx": 10,
+          "display_col": 49
+        },
+        "59": {
+          "token_idx": 11,
+          "display_col": 65
+        },
+        "60": {
+          "token_idx": 12,
+          "display_col": 66
+        },
+        "61": {
+          "token_idx": 13,
+          "display_col": 68
+        },
+        "62": {
+          "token_idx": 13,
+          "display_col": 68
+        },
+        "63": {
+          "token_idx": 14,
+          "display_col": 71
+        }
+      }
+    },
+    {
+      "line_number": 24,
+      "indent_level": 1,
+      "actual_line": "    setName(event.target.value);",
+      "display_tokens": [
+        {
+          "text": "setName",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 11
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 11,
+          "end_col": 12
+        },
+        {
+          "text": "event",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 17
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        },
+        {
+          "text": "target",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 18,
+          "end_col": 24
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 24,
+          "end_col": 25
+        },
+        {
+          "text": "value",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 30
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 30,
+          "end_col": 31
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 31,
+          "end_col": 32
+        }
+      ],
+      "typing_sequence": "setName(event.target.value);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 11
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "12": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "13": {
+          "token_idx": 3,
+          "display_col": 17
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 18
+        },
+        "15": {
+          "token_idx": 4,
+          "display_col": 18
+        },
+        "16": {
+          "token_idx": 4,
+          "display_col": 18
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 18
+        },
+        "18": {
+          "token_idx": 4,
+          "display_col": 18
+        },
+        "19": {
+          "token_idx": 4,
+          "display_col": 18
+        },
+        "20": {
+          "token_idx": 5,
+          "display_col": 24
+        },
+        "21": {
+          "token_idx": 6,
+          "display_col": 25
+        },
+        "22": {
+          "token_idx": 6,
+          "display_col": 25
+        },
+        "23": {
+          "token_idx": 6,
+          "display_col": 25
+        },
+        "24": {
+          "token_idx": 6,
+          "display_col": 25
+        },
+        "25": {
+          "token_idx": 6,
+          "display_col": 25
+        },
+        "26": {
+          "token_idx": 7,
+          "display_col": 30
+        },
+        "27": {
+          "token_idx": 8,
+          "display_col": 31
+        }
+      }
+    },
+    {
+      "line_number": 25,
+      "indent_level": 0,
+      "actual_line": "  };",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 3
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 3,
+          "end_col": 4
+        }
+      ],
+      "typing_sequence": "};",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 3
+        }
+      }
+    },
+    {
+      "line_number": 27,
+      "indent_level": 0,
+      "actual_line": "  return (",
+      "display_tokens": [
+        {
+          "text": "return",
+          "type": "return",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 8
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        }
+      ],
+      "typing_sequence": "return(",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 9
+        }
+      }
+    },
+    {
+      "line_number": 28,
+      "indent_level": 1,
+      "actual_line": "    <div>",
+      "display_tokens": [
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 5
+        },
+        {
+          "text": "div",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 5,
+          "end_col": 8
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 9
+        }
+      ],
+      "typing_sequence": "<div>",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 5
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 5
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 5
+        },
+        "4": {
+          "token_idx": 2,
+          "display_col": 8
+        }
+      }
+    },
+    {
+      "line_number": 29,
+      "indent_level": 1,
+      "actual_line": "      <input type=\"text\" value={name} onChange={handleChange} placeholder=\"Enter your name\" />",
+      "display_tokens": [
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 7
+        },
+        {
+          "text": "input",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 12
+        },
+        {
+          "text": "type",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 13,
+          "end_col": 17
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 18,
+          "end_col": 19
+        },
+        {
+          "text": "text",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 19,
+          "end_col": 23
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 23,
+          "end_col": 24
+        },
+        {
+          "text": "value",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 30
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 30,
+          "end_col": 31
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 31,
+          "end_col": 32
+        },
+        {
+          "text": "name",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 32,
+          "end_col": 36
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 36,
+          "end_col": 37
+        },
+        {
+          "text": "onChange",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 38,
+          "end_col": 46
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 46,
+          "end_col": 47
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 47,
+          "end_col": 48
+        },
+        {
+          "text": "handleChange",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 48,
+          "end_col": 60
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 60,
+          "end_col": 61
+        },
+        {
+          "text": "placeholder",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 62,
+          "end_col": 73
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 73,
+          "end_col": 74
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 74,
+          "end_col": 75
+        },
+        {
+          "text": "Enter your name",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 75,
+          "end_col": 90
+        },
+        {
+          "text": "\"",
+          "type": "\"",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 90,
+          "end_col": 91
+        },
+        {
+          "text": "/>",
+          "type": "/>",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 92,
+          "end_col": 94
+        }
+      ],
+      "typing_sequence": "<inputtype=\"text\"value={name}onChange={handleChange}placeholder=\"Enter your name\"/>",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 6
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 13
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 13
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 13
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 13
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 17
+        },
+        "11": {
+          "token_idx": 4,
+          "display_col": 18
+        },
+        "12": {
+          "token_idx": 5,
+          "display_col": 19
+        },
+        "13": {
+          "token_idx": 5,
+          "display_col": 19
+        },
+        "14": {
+          "token_idx": 5,
+          "display_col": 19
+        },
+        "15": {
+          "token_idx": 5,
+          "display_col": 19
+        },
+        "16": {
+          "token_idx": 6,
+          "display_col": 23
+        },
+        "17": {
+          "token_idx": 7,
+          "display_col": 25
+        },
+        "18": {
+          "token_idx": 7,
+          "display_col": 25
+        },
+        "19": {
+          "token_idx": 7,
+          "display_col": 25
+        },
+        "20": {
+          "token_idx": 7,
+          "display_col": 25
+        },
+        "21": {
+          "token_idx": 7,
+          "display_col": 25
+        },
+        "22": {
+          "token_idx": 8,
+          "display_col": 30
+        },
+        "23": {
+          "token_idx": 9,
+          "display_col": 31
+        },
+        "24": {
+          "token_idx": 10,
+          "display_col": 32
+        },
+        "25": {
+          "token_idx": 10,
+          "display_col": 32
+        },
+        "26": {
+          "token_idx": 10,
+          "display_col": 32
+        },
+        "27": {
+          "token_idx": 10,
+          "display_col": 32
+        },
+        "28": {
+          "token_idx": 11,
+          "display_col": 36
+        },
+        "29": {
+          "token_idx": 12,
+          "display_col": 38
+        },
+        "30": {
+          "token_idx": 12,
+          "display_col": 38
+        },
+        "31": {
+          "token_idx": 12,
+          "display_col": 38
+        },
+        "32": {
+          "token_idx": 12,
+          "display_col": 38
+        },
+        "33": {
+          "token_idx": 12,
+          "display_col": 38
+        },
+        "34": {
+          "token_idx": 12,
+          "display_col": 38
+        },
+        "35": {
+          "token_idx": 12,
+          "display_col": 38
+        },
+        "36": {
+          "token_idx": 12,
+          "display_col": 38
+        },
+        "37": {
+          "token_idx": 13,
+          "display_col": 46
+        },
+        "38": {
+          "token_idx": 14,
+          "display_col": 47
+        },
+        "39": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "40": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "41": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "42": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "43": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "44": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "45": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "46": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "47": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "48": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "49": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "50": {
+          "token_idx": 15,
+          "display_col": 48
+        },
+        "51": {
+          "token_idx": 16,
+          "display_col": 60
+        },
+        "52": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "53": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "54": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "55": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "56": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "57": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "58": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "59": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "60": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "61": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "62": {
+          "token_idx": 17,
+          "display_col": 62
+        },
+        "63": {
+          "token_idx": 18,
+          "display_col": 73
+        },
+        "64": {
+          "token_idx": 19,
+          "display_col": 74
+        },
+        "65": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "66": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "67": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "68": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "69": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "70": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "71": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "72": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "73": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "74": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "75": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "76": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "77": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "78": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "79": {
+          "token_idx": 20,
+          "display_col": 75
+        },
+        "80": {
+          "token_idx": 21,
+          "display_col": 90
+        },
+        "81": {
+          "token_idx": 22,
+          "display_col": 92
+        },
+        "82": {
+          "token_idx": 22,
+          "display_col": 92
+        }
+      }
+    },
+    {
+      "line_number": 30,
+      "indent_level": 1,
+      "actual_line": "      <p>Hello, {name || 'Guest'}!</p>",
+      "display_tokens": [
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 7
+        },
+        {
+          "text": "p",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 8
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 9
+        },
+        {
+          "text": "Hello,",
+          "type": "jsx_text",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 15
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 15,
+          "end_col": 16
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 16,
+          "end_col": 17
+        },
+        {
+          "text": "name",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 21
+        },
+        {
+          "text": "||",
+          "type": "||",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 22,
+          "end_col": 24
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 26
+        },
+        {
+          "text": "Guest",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 26,
+          "end_col": 31
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 31,
+          "end_col": 32
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 32,
+          "end_col": 33
+        },
+        {
+          "text": "!",
+          "type": "jsx_text",
+          "categories": [
+            "string_content",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 33,
+          "end_col": 34
+        },
+        {
+          "text": "</",
+          "type": "</",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 34,
+          "end_col": 36
+        },
+        {
+          "text": "p",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 36,
+          "end_col": 37
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 37,
+          "end_col": 38
+        }
+      ],
+      "typing_sequence": "<p>Hello,{name||'Guest'}!</p>",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 6
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "2": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "3": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "4": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "5": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "6": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "7": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 3,
+          "display_col": 9
+        },
+        "9": {
+          "token_idx": 4,
+          "display_col": 16
+        },
+        "10": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "11": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "12": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "13": {
+          "token_idx": 5,
+          "display_col": 17
+        },
+        "14": {
+          "token_idx": 6,
+          "display_col": 22
+        },
+        "15": {
+          "token_idx": 6,
+          "display_col": 22
+        },
+        "16": {
+          "token_idx": 7,
+          "display_col": 25
+        },
+        "17": {
+          "token_idx": 8,
+          "display_col": 26
+        },
+        "18": {
+          "token_idx": 8,
+          "display_col": 26
+        },
+        "19": {
+          "token_idx": 8,
+          "display_col": 26
+        },
+        "20": {
+          "token_idx": 8,
+          "display_col": 26
+        },
+        "21": {
+          "token_idx": 8,
+          "display_col": 26
+        },
+        "22": {
+          "token_idx": 9,
+          "display_col": 31
+        },
+        "23": {
+          "token_idx": 10,
+          "display_col": 32
+        },
+        "24": {
+          "token_idx": 11,
+          "display_col": 33
+        },
+        "25": {
+          "token_idx": 12,
+          "display_col": 34
+        },
+        "26": {
+          "token_idx": 12,
+          "display_col": 34
+        },
+        "27": {
+          "token_idx": 13,
+          "display_col": 36
+        },
+        "28": {
+          "token_idx": 14,
+          "display_col": 37
+        }
+      }
+    },
+    {
+      "line_number": 31,
+      "indent_level": 1,
+      "actual_line": "    </div>",
+      "display_tokens": [
+        {
+          "text": "</",
+          "type": "</",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 6
+        },
+        {
+          "text": "div",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 9
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        }
+      ],
+      "typing_sequence": "</div>",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "5": {
+          "token_idx": 2,
+          "display_col": 9
+        }
+      }
+    },
+    {
+      "line_number": 32,
+      "indent_level": 0,
+      "actual_line": "  );",
+      "display_tokens": [
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 3
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 3,
+          "end_col": 4
+        }
+      ],
+      "typing_sequence": ");",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 3
+        }
+      }
+    },
+    {
+      "line_number": 33,
+      "indent_level": 0,
+      "actual_line": "};",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 1
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 1,
+          "end_col": 2
+        }
+      ],
+      "typing_sequence": "};",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 1
+        }
+      }
+    },
+    {
+      "line_number": 35,
+      "indent_level": 0,
+      "actual_line": "// PATTERN: TypeScript Patterns",
+      "display_tokens": [
+        {
+          "text": "// PATTERN: TypeScript Patterns",
+          "type": "comment",
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 31
+        }
+      ],
+      "typing_sequence": "// PATTERN: TypeScript Patterns",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "13": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "14": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "15": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "16": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "17": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "18": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "19": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "20": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "21": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "22": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "23": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "24": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "25": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "26": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "27": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "28": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "29": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "30": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
+    },
+    {
+      "line_number": 37,
+      "indent_level": 0,
+      "actual_line": "import { useState } from 'react';",
+      "display_tokens": [
+        {
+          "text": "import",
+          "type": "import",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 6
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 8
+        },
+        {
+          "text": "useState",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 17
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 18,
+          "end_col": 19
+        },
+        {
+          "text": "from",
+          "type": "from",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 20,
+          "end_col": 24
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 25,
+          "end_col": 26
+        },
+        {
+          "text": "react",
+          "type": "string_fragment",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 26,
+          "end_col": 31
+        },
+        {
+          "text": "'",
+          "type": "'",
+          "categories": [
+            "string_delimiter"
+          ],
+          "base_typeable": true,
+          "start_col": 31,
+          "end_col": 32
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 32,
+          "end_col": 33
+        }
+      ],
+      "typing_sequence": "import{useState}from'react';",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "12": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "13": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "14": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "15": {
+          "token_idx": 3,
+          "display_col": 18
+        },
+        "16": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "18": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "19": {
+          "token_idx": 4,
+          "display_col": 20
+        },
+        "20": {
+          "token_idx": 5,
+          "display_col": 25
+        },
+        "21": {
+          "token_idx": 6,
+          "display_col": 26
+        },
+        "22": {
+          "token_idx": 6,
+          "display_col": 26
+        },
+        "23": {
+          "token_idx": 6,
+          "display_col": 26
+        },
+        "24": {
+          "token_idx": 6,
+          "display_col": 26
+        },
+        "25": {
+          "token_idx": 6,
+          "display_col": 26
+        },
+        "26": {
+          "token_idx": 7,
+          "display_col": 31
+        },
+        "27": {
+          "token_idx": 8,
+          "display_col": 32
+        }
+      }
+    },
+    {
+      "line_number": 39,
+      "indent_level": 0,
+      "actual_line": "interface UserProfile {",
+      "display_tokens": [
+        {
+          "text": "interface",
+          "type": "interface",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 9
+        },
+        {
+          "text": "UserProfile",
+          "type": "type_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 10,
+          "end_col": 21
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 22,
+          "end_col": 23
+        }
+      ],
+      "typing_sequence": "interfaceUserProfile{",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "15": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "16": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "17": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "18": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "19": {
+          "token_idx": 1,
+          "display_col": 10
+        },
+        "20": {
+          "token_idx": 2,
+          "display_col": 22
+        }
+      }
+    },
+    {
+      "line_number": 40,
+      "indent_level": 0,
+      "actual_line": "  id: number;",
+      "display_tokens": [
+        {
+          "text": "id",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 4
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 5
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 12
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 13
+        }
+      ],
+      "typing_sequence": "id:number;",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 4
+        },
+        "3": {
+          "token_idx": 2,
+          "display_col": 6
+        },
+        "4": {
+          "token_idx": 2,
+          "display_col": 6
+        },
+        "5": {
+          "token_idx": 2,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 3,
+          "display_col": 12
+        }
+      }
+    },
+    {
+      "line_number": 41,
+      "indent_level": 0,
+      "actual_line": "  name: string;",
+      "display_tokens": [
+        {
+          "text": "name",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 6
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 7
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 14
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 14,
+          "end_col": 15
+        }
+      ],
+      "typing_sequence": "name:string;",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "5": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 8
+        },
+        "11": {
+          "token_idx": 3,
+          "display_col": 14
+        }
+      }
+    },
+    {
+      "line_number": 42,
+      "indent_level": 0,
+      "actual_line": "  email: string;",
+      "display_tokens": [
+        {
+          "text": "email",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 7
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 8
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 15
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 16
+        }
+      ],
+      "typing_sequence": "email:string;",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "10": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "11": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "12": {
+          "token_idx": 3,
+          "display_col": 15
+        }
+      }
+    },
+    {
+      "line_number": 43,
+      "indent_level": 0,
+      "actual_line": "}",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 1
+        }
+      ],
+      "typing_sequence": "}",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        }
+      }
+    },
+    {
+      "line_number": 45,
+      "indent_level": 0,
+      "actual_line": "const UserDisplay = () => {",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 5
+        },
+        {
+          "text": "UserDisplay",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 17
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 18,
+          "end_col": 19
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 20,
+          "end_col": 21
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 21,
+          "end_col": 22
+        },
+        {
+          "text": "=>",
+          "type": "=>",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 23,
+          "end_col": 25
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 26,
+          "end_col": 27
+        }
+      ],
+      "typing_sequence": "constUserDisplay=()=>{",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "7": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "8": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "9": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "10": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "11": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "12": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "13": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "14": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "15": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "16": {
+          "token_idx": 2,
+          "display_col": 18
+        },
+        "17": {
+          "token_idx": 3,
+          "display_col": 20
+        },
+        "18": {
+          "token_idx": 4,
+          "display_col": 21
+        },
+        "19": {
+          "token_idx": 5,
+          "display_col": 23
+        },
+        "20": {
+          "token_idx": 5,
+          "display_col": 23
+        },
+        "21": {
+          "token_idx": 6,
+          "display_col": 26
+        }
+      }
+    },
+    {
+      "line_number": 46,
+      "indent_level": 0,
+      "actual_line": "  const [user, setUser] = useState<UserProfile | null>(null);",
+      "display_tokens": [
+        {
+          "text": "const",
+          "type": "const",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 7
+        },
+        {
+          "text": "[",
+          "type": "[",
+          "categories": [
+            "square_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 9
+        },
+        {
+          "text": "user",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 13
+        },
+        {
+          "text": ",",
+          "type": ",",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 13,
+          "end_col": 14
+        },
+        {
+          "text": "setUser",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 22
+        },
+        {
+          "text": "]",
+          "type": "]",
+          "categories": [
+            "square_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 22,
+          "end_col": 23
+        },
+        {
+          "text": "=",
+          "type": "=",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 24,
+          "end_col": 25
+        },
+        {
+          "text": "useState",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 26,
+          "end_col": 34
+        },
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 34,
+          "end_col": 35
+        },
+        {
+          "text": "UserProfile",
+          "type": "type_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 35,
+          "end_col": 46
+        },
+        {
+          "text": "|",
+          "type": "|",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 47,
+          "end_col": 48
+        },
+        {
+          "text": "null",
+          "type": "null",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 49,
+          "end_col": 53
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 53,
+          "end_col": 54
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 54,
+          "end_col": 55
+        },
+        {
+          "text": "null",
+          "type": "null",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 55,
+          "end_col": 59
+        },
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 59,
+          "end_col": 60
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 60,
+          "end_col": 61
+        }
+      ],
+      "typing_sequence": "const[user,setUser]=useState<UserProfile|null>(null);",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 1,
+          "display_col": 8
+        },
+        "6": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "7": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "8": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "9": {
+          "token_idx": 2,
+          "display_col": 9
+        },
+        "10": {
+          "token_idx": 3,
+          "display_col": 13
+        },
+        "11": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "12": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "13": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "14": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "15": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "16": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "17": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "18": {
+          "token_idx": 5,
+          "display_col": 22
+        },
+        "19": {
+          "token_idx": 6,
+          "display_col": 24
+        },
+        "20": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "21": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "22": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "23": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "24": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "25": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "26": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "27": {
+          "token_idx": 7,
+          "display_col": 26
+        },
+        "28": {
+          "token_idx": 8,
+          "display_col": 34
+        },
+        "29": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "30": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "31": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "32": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "33": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "34": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "35": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "36": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "37": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "38": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "39": {
+          "token_idx": 9,
+          "display_col": 35
+        },
+        "40": {
+          "token_idx": 10,
+          "display_col": 47
+        },
+        "41": {
+          "token_idx": 11,
+          "display_col": 49
+        },
+        "42": {
+          "token_idx": 11,
+          "display_col": 49
+        },
+        "43": {
+          "token_idx": 11,
+          "display_col": 49
+        },
+        "44": {
+          "token_idx": 11,
+          "display_col": 49
+        },
+        "45": {
+          "token_idx": 12,
+          "display_col": 53
+        },
+        "46": {
+          "token_idx": 13,
+          "display_col": 54
+        },
+        "47": {
+          "token_idx": 14,
+          "display_col": 55
+        },
+        "48": {
+          "token_idx": 14,
+          "display_col": 55
+        },
+        "49": {
+          "token_idx": 14,
+          "display_col": 55
+        },
+        "50": {
+          "token_idx": 14,
+          "display_col": 55
+        },
+        "51": {
+          "token_idx": 15,
+          "display_col": 59
+        },
+        "52": {
+          "token_idx": 16,
+          "display_col": 60
+        }
+      }
+    },
+    {
+      "line_number": 48,
+      "indent_level": 0,
+      "actual_line": "  // Example: setUser({ id: 1, name: 'Jane Doe', email: 'jane@example.com' });",
+      "display_tokens": [
+        {
+          "text": "// Example: setUser({ id: 1, name: 'Jane Doe', email: 'jane@example.com' });",
+          "type": "comment",
+          "categories": [
+            "comment"
+          ],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 78
+        }
+      ],
+      "typing_sequence": "// Example: setUser({ id: 1, name: 'Jane Doe', email: 'jane@example.com' });",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "7": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "8": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "9": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "10": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "11": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "12": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "13": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "14": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "15": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "16": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "17": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "18": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "19": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "20": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "21": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "22": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "23": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "24": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "25": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "26": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "27": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "28": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "29": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "30": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "31": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "32": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "33": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "34": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "35": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "36": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "37": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "38": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "39": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "40": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "41": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "42": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "43": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "44": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "45": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "46": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "47": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "48": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "49": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "50": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "51": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "52": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "53": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "54": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "55": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "56": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "57": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "58": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "59": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "60": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "61": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "62": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "63": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "64": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "65": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "66": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "67": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "68": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "69": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "70": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "71": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "72": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "73": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "74": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "75": {
+          "token_idx": 0,
+          "display_col": 2
+        }
+      }
+    },
+    {
+      "line_number": 50,
+      "indent_level": 0,
+      "actual_line": "  return (",
+      "display_tokens": [
+        {
+          "text": "return",
+          "type": "return",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 8
+        },
+        {
+          "text": "(",
+          "type": "(",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        }
+      ],
+      "typing_sequence": "return(",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "2": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "3": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "4": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "5": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "6": {
+          "token_idx": 1,
+          "display_col": 9
+        }
+      }
+    },
+    {
+      "line_number": 51,
+      "indent_level": 1,
+      "actual_line": "    <div>",
+      "display_tokens": [
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 5
+        },
+        {
+          "text": "div",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 5,
+          "end_col": 8
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 8,
+          "end_col": 9
+        }
+      ],
+      "typing_sequence": "<div>",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 5
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 5
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 5
+        },
+        "4": {
+          "token_idx": 2,
+          "display_col": 8
+        }
+      }
+    },
+    {
+      "line_number": 52,
+      "indent_level": 1,
+      "actual_line": "      {user ? <p>{user.name} ({user.email})</p> : <p>Loading user...</p>}",
+      "display_tokens": [
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 7
+        },
+        {
+          "text": "user",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 7,
+          "end_col": 11
+        },
+        {
+          "text": "?",
+          "type": "?",
+          "categories": [
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 12,
+          "end_col": 13
+        },
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 14,
+          "end_col": 15
+        },
+        {
+          "text": "p",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 15,
+          "end_col": 16
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 16,
+          "end_col": 17
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 17,
+          "end_col": 18
+        },
+        {
+          "text": "user",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 18,
+          "end_col": 22
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 22,
+          "end_col": 23
+        },
+        {
+          "text": "name",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 23,
+          "end_col": 27
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 27,
+          "end_col": 28
+        },
+        {
+          "text": " ",
+          "type": "jsx_text_whitespace",
+          "categories": [],
+          "base_typeable": false,
+          "start_col": 28,
+          "end_col": 29
+        },
+        {
+          "text": "(",
+          "type": "jsx_text",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 29,
+          "end_col": 30
+        },
+        {
+          "text": "{",
+          "type": "{",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 30,
+          "end_col": 31
+        },
+        {
+          "text": "user",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 31,
+          "end_col": 35
+        },
+        {
+          "text": ".",
+          "type": ".",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 35,
+          "end_col": 36
+        },
+        {
+          "text": "email",
+          "type": "property_identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 36,
+          "end_col": 41
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 41,
+          "end_col": 42
+        },
+        {
+          "text": ")",
+          "type": "jsx_text",
+          "categories": [
+            "string_content",
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 42,
+          "end_col": 43
+        },
+        {
+          "text": "</",
+          "type": "</",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 43,
+          "end_col": 45
+        },
+        {
+          "text": "p",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 45,
+          "end_col": 46
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 46,
+          "end_col": 47
+        },
+        {
+          "text": ":",
+          "type": ":",
+          "categories": [
+            "punctuation",
+            "operator"
+          ],
+          "base_typeable": true,
+          "start_col": 48,
+          "end_col": 49
+        },
+        {
+          "text": "<",
+          "type": "<",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 50,
+          "end_col": 51
+        },
+        {
+          "text": "p",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 51,
+          "end_col": 52
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 52,
+          "end_col": 53
+        },
+        {
+          "text": "Loading user...",
+          "type": "jsx_text",
+          "categories": [
+            "string_content"
+          ],
+          "base_typeable": true,
+          "start_col": 53,
+          "end_col": 68
+        },
+        {
+          "text": "</",
+          "type": "</",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 68,
+          "end_col": 70
+        },
+        {
+          "text": "p",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 70,
+          "end_col": 71
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 71,
+          "end_col": 72
+        },
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 72,
+          "end_col": 73
+        }
+      ],
+      "typing_sequence": "{user?<p>{user.name}({user.email})</p>:<p>Loading user...</p>}",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 6
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 7
+        },
+        "5": {
+          "token_idx": 2,
+          "display_col": 12
+        },
+        "6": {
+          "token_idx": 3,
+          "display_col": 14
+        },
+        "7": {
+          "token_idx": 4,
+          "display_col": 15
+        },
+        "8": {
+          "token_idx": 5,
+          "display_col": 16
+        },
+        "9": {
+          "token_idx": 6,
+          "display_col": 17
+        },
+        "10": {
+          "token_idx": 7,
+          "display_col": 18
+        },
+        "11": {
+          "token_idx": 7,
+          "display_col": 18
+        },
+        "12": {
+          "token_idx": 7,
+          "display_col": 18
+        },
+        "13": {
+          "token_idx": 7,
+          "display_col": 18
+        },
+        "14": {
+          "token_idx": 8,
+          "display_col": 22
+        },
+        "15": {
+          "token_idx": 9,
+          "display_col": 23
+        },
+        "16": {
+          "token_idx": 9,
+          "display_col": 23
+        },
+        "17": {
+          "token_idx": 9,
+          "display_col": 23
+        },
+        "18": {
+          "token_idx": 9,
+          "display_col": 23
+        },
+        "19": {
+          "token_idx": 10,
+          "display_col": 27
+        },
+        "20": {
+          "token_idx": 11,
+          "display_col": 29
+        },
+        "21": {
+          "token_idx": 12,
+          "display_col": 30
+        },
+        "22": {
+          "token_idx": 13,
+          "display_col": 31
+        },
+        "23": {
+          "token_idx": 13,
+          "display_col": 31
+        },
+        "24": {
+          "token_idx": 13,
+          "display_col": 31
+        },
+        "25": {
+          "token_idx": 13,
+          "display_col": 31
+        },
+        "26": {
+          "token_idx": 14,
+          "display_col": 35
+        },
+        "27": {
+          "token_idx": 15,
+          "display_col": 36
+        },
+        "28": {
+          "token_idx": 15,
+          "display_col": 36
+        },
+        "29": {
+          "token_idx": 15,
+          "display_col": 36
+        },
+        "30": {
+          "token_idx": 15,
+          "display_col": 36
+        },
+        "31": {
+          "token_idx": 15,
+          "display_col": 36
+        },
+        "32": {
+          "token_idx": 16,
+          "display_col": 41
+        },
+        "33": {
+          "token_idx": 17,
+          "display_col": 42
+        },
+        "34": {
+          "token_idx": 18,
+          "display_col": 43
+        },
+        "35": {
+          "token_idx": 18,
+          "display_col": 43
+        },
+        "36": {
+          "token_idx": 19,
+          "display_col": 45
+        },
+        "37": {
+          "token_idx": 20,
+          "display_col": 46
+        },
+        "38": {
+          "token_idx": 21,
+          "display_col": 48
+        },
+        "39": {
+          "token_idx": 22,
+          "display_col": 50
+        },
+        "40": {
+          "token_idx": 23,
+          "display_col": 51
+        },
+        "41": {
+          "token_idx": 24,
+          "display_col": 52
+        },
+        "42": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "43": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "44": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "45": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "46": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "47": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "48": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "49": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "50": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "51": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "52": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "53": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "54": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "55": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "56": {
+          "token_idx": 25,
+          "display_col": 53
+        },
+        "57": {
+          "token_idx": 26,
+          "display_col": 68
+        },
+        "58": {
+          "token_idx": 26,
+          "display_col": 68
+        },
+        "59": {
+          "token_idx": 27,
+          "display_col": 70
+        },
+        "60": {
+          "token_idx": 28,
+          "display_col": 71
+        },
+        "61": {
+          "token_idx": 29,
+          "display_col": 72
+        }
+      }
+    },
+    {
+      "line_number": 53,
+      "indent_level": 1,
+      "actual_line": "    </div>",
+      "display_tokens": [
+        {
+          "text": "</",
+          "type": "</",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 4,
+          "end_col": 6
+        },
+        {
+          "text": "div",
+          "type": "identifier",
+          "categories": [],
+          "base_typeable": true,
+          "start_col": 6,
+          "end_col": 9
+        },
+        {
+          "text": ">",
+          "type": ">",
+          "categories": [
+            "angle_bracket"
+          ],
+          "base_typeable": true,
+          "start_col": 9,
+          "end_col": 10
+        }
+      ],
+      "typing_sequence": "</div>",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "1": {
+          "token_idx": 0,
+          "display_col": 4
+        },
+        "2": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "3": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "4": {
+          "token_idx": 1,
+          "display_col": 6
+        },
+        "5": {
+          "token_idx": 2,
+          "display_col": 9
+        }
+      }
+    },
+    {
+      "line_number": 54,
+      "indent_level": 0,
+      "actual_line": "  );",
+      "display_tokens": [
+        {
+          "text": ")",
+          "type": ")",
+          "categories": [
+            "parenthesis"
+          ],
+          "base_typeable": true,
+          "start_col": 2,
+          "end_col": 3
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 3,
+          "end_col": 4
+        }
+      ],
+      "typing_sequence": ");",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 2
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 3
+        }
+      }
+    },
+    {
+      "line_number": 55,
+      "indent_level": 0,
+      "actual_line": "};",
+      "display_tokens": [
+        {
+          "text": "}",
+          "type": "}",
+          "categories": [
+            "curly_brace"
+          ],
+          "base_typeable": true,
+          "start_col": 0,
+          "end_col": 1
+        },
+        {
+          "text": ";",
+          "type": ";",
+          "categories": [
+            "punctuation"
+          ],
+          "base_typeable": true,
+          "start_col": 1,
+          "end_col": 2
+        }
+      ],
+      "typing_sequence": "};",
+      "char_map": {
+        "0": {
+          "token_idx": 0,
+          "display_col": 0
+        },
+        "1": {
+          "token_idx": 1,
+          "display_col": 1
+        }
+      }
+    }
+  ]
+}
