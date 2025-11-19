@@ -24,6 +24,20 @@ import { AuthManager } from "./core/auth";
 import { User } from "firebase/auth";
 
 /**
+ * Helper to generate initials from email
+ * e.g. march.ghurbal.2025@gmail.com -> MG
+ * e.g. admin@test.com -> AD
+ */
+function getInitials(email: string | null): string {
+  if (!email) return "??";
+  const parts = email.split("@")[0].split(".");
+  if (parts.length >= 2) {
+    return (parts[0][0] + parts[1][0]).toUpperCase();
+  }
+  return email.substring(0, 2).toUpperCase();
+}
+
+/**
  * Main application class for TreeType
  */
 export class TreeTypeApp {
@@ -85,35 +99,59 @@ export class TreeTypeApp {
     if (!authContainer) return;
 
     if (user) {
-      // Logged in state
+      // Logged in state - Avatar Menu (Standard 1)
+      const initials = getInitials(user.email);
+
       authContainer.innerHTML = `
-        <div class="flex flex-col items-end">
-          <span class="text-xs text-gray-400">Signed in as</span>
-          <span class="text-sm font-medium text-gray-200 mb-1">${user.email}</span>
+        <div class="relative group z-50">
+            <button class="flex items-center gap-2 pl-1 pr-2 py-1 rounded-full hover:bg-gray-800 transition border border-transparent hover:border-gray-700">
+                <!-- Avatar -->
+                <div class="h-9 w-9 rounded-full bg-indigo-600 flex items-center justify-center text-sm font-bold text-white shadow-sm select-none">
+                    ${initials}
+                </div>
+                <!-- Chevron -->
+                <svg class="text-gray-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            
+            <!-- Dropdown Wrapper: Uses pt-2 instead of mt-2 to create a hover bridge -->
+            <div class="absolute right-0 top-full pt-2 w-64 hidden group-hover:block">
+                <!-- Visual Dropdown Box -->
+                <div class="bg-gray-800 rounded-md shadow-xl border border-gray-700 py-1">
+                    <div class="px-4 py-3 text-xs text-gray-400 border-b border-gray-700">
+                        <div class="font-medium text-gray-200 mb-1">Signed in as</div>
+                        <div class="truncate" title="${user.email}">${user.email}</div>
+                    </div>
+                    <button id="authSignOutBtn" class="w-full text-left block px-4 py-2 text-sm text-red-400 hover:bg-gray-700 transition flex items-center gap-2 rounded-b-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                        Sign Out
+                    </button>
+                </div>
+            </div>
         </div>
-        <button id="authBtn" class="bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded text-sm font-semibold transition border border-gray-600">
-          Sign Out
-        </button>
       `;
 
       // Wire up Sign Out
-      document.getElementById("authBtn")?.addEventListener("click", () => {
-        this.authManager.logout();
-      });
+      document
+        .getElementById("authSignOutBtn")
+        ?.addEventListener("click", () => {
+          this.authManager.logout();
+        });
     } else {
       // Logged out state
       authContainer.innerHTML = `
-        <button id="authBtn" class="bg-blue-600 hover:bg-blue-700 px-3 py-2 rounded text-sm font-semibold transition shadow-lg flex items-center gap-2">
-          <span>G</span> Sign In
+        <button id="authSignInBtn" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full text-sm font-semibold transition shadow-lg flex items-center gap-2">
+          <span>G</span> <span class="hidden sm:inline">Sign In</span>
         </button>
       `;
 
       // Wire up Sign In
-      document.getElementById("authBtn")?.addEventListener("click", () => {
-        this.authManager.signInWithGoogle().catch((error) => {
-          alert("Sign in failed: " + error.message);
+      document
+        .getElementById("authSignInBtn")
+        ?.addEventListener("click", () => {
+          this.authManager.signInWithGoogle().catch((error) => {
+            alert("Sign in failed: " + error.message);
+          });
         });
-      });
     }
   }
 
