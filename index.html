@@ -220,13 +220,23 @@
       }
 
       @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
 
       @keyframes slideUp {
-        from { transform: translateY(20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
       }
 
       /* ===================================================================== */
@@ -303,11 +313,22 @@
       <!-- Header & Controls: Wrapped for fade effect -->
       <div class="controls-area">
         <!-- Header -->
-        <div class="mb-8">
-          <h1 class="text-3xl font-bold mb-2">Tree-Sitter Typing Game</h1>
-          <p class="text-gray-400">
-            Build muscle memory for programming constructs
-          </p>
+        <div class="mb-8 flex justify-between items-start">
+          <div>
+            <h1 class="text-3xl font-bold mb-2">Tree-Sitter Typing Game</h1>
+            <p class="text-gray-400">
+              Build muscle memory for programming constructs
+            </p>
+          </div>
+          <!-- Auth Container -->
+          <div id="authContainer" class="flex items-center gap-3">
+            <button
+              id="authBtn"
+              class="bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded text-sm font-semibold transition"
+            >
+              Sign In
+            </button>
+          </div>
         </div>
 
         <!-- Controls -->

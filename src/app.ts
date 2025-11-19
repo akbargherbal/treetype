@@ -4,7 +4,6 @@ import { CodeRenderer } from "./ui/renderer";
 import { KeyboardHandler } from "./ui/keyboard";
 import {
   PRESETS,
-  DEFAULT_CONFIG,
   applyExclusionConfig,
   loadConfig,
   saveConfig,
@@ -16,6 +15,8 @@ import {
   formatTime,
 } from "./core/timer";
 import { loadSnippetStats, saveSnippetStats } from "./core/storage";
+import { AuthManager } from "./core/auth";
+import { User } from "firebase/auth";
 
 /**
  * Main application class for TreeType
@@ -27,11 +28,15 @@ export class TreeTypeApp {
   private snippetInfo: SnippetInfo;
   private renderer: CodeRenderer;
   private keyboardHandler: KeyboardHandler | null = null;
+  private authManager: AuthManager;
 
   constructor() {
     this.state = this.initializeState();
     this.snippetInfo = { path: null, id: null, language: null };
     this.renderer = new CodeRenderer("codeLines");
+
+    // Initialize AuthManager with callback
+    this.authManager = new AuthManager((user) => this.handleAuthChange(user));
 
     this.setupEventListeners();
     this.loadInitialSnippet();
@@ -55,6 +60,47 @@ export class TreeTypeApp {
       completedLines: new Set(),
       errorOnCurrentChar: false,
     };
+  }
+
+  /**
+   * Handle authentication state changes
+   */
+  private handleAuthChange(user: User | null): void {
+    const authContainer = document.getElementById("authContainer");
+    
+    if (!authContainer) return;
+
+    if (user) {
+      // Logged in state
+      authContainer.innerHTML = `
+        <div class="flex flex-col items-end">
+          <span class="text-xs text-gray-400">Signed in as</span>
+          <span class="text-sm font-medium text-gray-200 mb-1">${user.email}</span>
+        </div>
+        <button id="authBtn" class="bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded text-sm font-semibold transition border border-gray-600">
+          Sign Out
+        </button>
+      `;
+      
+      // Wire up Sign Out
+      document.getElementById("authBtn")?.addEventListener("click", () => {
+        this.authManager.logout();
+      });
+    } else {
+      // Logged out state
+      authContainer.innerHTML = `
+        <button id="authBtn" class="bg-blue-600 hover:bg-blue-700 px-3 py-2 rounded text-sm font-semibold transition shadow-lg flex items-center gap-2">
+          <span>G</span> Sign In
+        </button>
+      `;
+      
+      // Wire up Sign In
+      document.getElementById("authBtn")?.addEventListener("click", () => {
+        this.authManager.signInWithGoogle().catch((error) => {
+          alert("Sign in failed: " + error.message);
+        });
+      });
+    }
   }
 
   /**
