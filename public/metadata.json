@@ -1,0 +1,1626 @@
+{
+  "version": "1.0",
+  "generatedAt": "2025-11-20T05:31:18.433229Z",
+  "totalSnippets": 98,
+  "languages": [
+    "javascript",
+    "python",
+    "tsx",
+    "typescript"
+  ],
+  "snippets": [
+    {
+      "id": "javascript-gm_01_001_01_array-methods",
+      "name": "Gm 01 001 01 Array-methods",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_001_01_array-methods.json",
+      "lines": 108,
+      "typeable_chars": 3875,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "001",
+        "array",
+        "methods"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_001_02_array-methods",
+      "name": "Gm 01 001 02 Array-methods",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_001_02_array-methods.json",
+      "lines": 108,
+      "typeable_chars": 3691,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "001",
+        "array",
+        "methods"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_002_01_async-patterns",
+      "name": "Gm 01 002 01 Async-patterns",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_002_01_async-patterns.json",
+      "lines": 147,
+      "typeable_chars": 4631,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "002",
+        "async",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_002_02_async-patterns",
+      "name": "Gm 01 002 02 Async-patterns",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_002_02_async-patterns.json",
+      "lines": 147,
+      "typeable_chars": 4631,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "002",
+        "async",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_003_01_common-utilities",
+      "name": "Gm 01 003 01 Common-utilities",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_003_01_common-utilities.json",
+      "lines": 166,
+      "typeable_chars": 6866,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "003",
+        "common",
+        "utilities"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_003_02_common-utilities",
+      "name": "Gm 01 003 02 Common-utilities",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_003_02_common-utilities.json",
+      "lines": 166,
+      "typeable_chars": 6866,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "003",
+        "common",
+        "utilities"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_005_01_dom-manipulation",
+      "name": "Gm 01 005 01 Dom-manipulation",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_005_01_dom-manipulation.json",
+      "lines": 82,
+      "typeable_chars": 3251,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "005",
+        "dom",
+        "manipulation"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_005_02_dom-manipulation",
+      "name": "Gm 01 005 02 Dom-manipulation",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_005_02_dom-manipulation.json",
+      "lines": 74,
+      "typeable_chars": 2533,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "005",
+        "dom",
+        "manipulation"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_006_01_es6-class-syntax",
+      "name": "Gm 01 006 01 Es6-class-syntax",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_006_01_es6-class-syntax.json",
+      "lines": 79,
+      "typeable_chars": 1453,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "006",
+        "es6",
+        "class",
+        "syntax"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_006_02_es6-class-syntax",
+      "name": "Gm 01 006 02 Es6-class-syntax",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_006_02_es6-class-syntax.json",
+      "lines": 80,
+      "typeable_chars": 1796,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "006",
+        "es6",
+        "class",
+        "syntax"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_007_01_error-handling",
+      "name": "Gm 01 007 01 Error-handling",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_007_01_error-handling.json",
+      "lines": 68,
+      "typeable_chars": 1670,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "007",
+        "error",
+        "handling"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_007_02_error-handling",
+      "name": "Gm 01 007 02 Error-handling",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_007_02_error-handling.json",
+      "lines": 68,
+      "typeable_chars": 1670,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "007",
+        "error",
+        "handling"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_008_01_functional-programming-patterns",
+      "name": "Gm 01 008 01 Functional-programming-patterns",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_008_01_functional-programming-patterns.json",
+      "lines": 69,
+      "typeable_chars": 2240,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "008",
+        "functional",
+        "programming",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_008_02_functional-programming-patterns",
+      "name": "Gm 01 008 02 Functional-programming-patterns",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_008_02_functional-programming-patterns.json",
+      "lines": 69,
+      "typeable_chars": 2240,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "008",
+        "functional",
+        "programming",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_009_01_json-operations",
+      "name": "Gm 01 009 01 Json-operations",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_009_01_json-operations.json",
+      "lines": 34,
+      "typeable_chars": 930,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "009",
+        "json",
+        "operations"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_009_02_json-operations",
+      "name": "Gm 01 009 02 Json-operations",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_009_02_json-operations.json",
+      "lines": 34,
+      "typeable_chars": 930,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "009",
+        "json",
+        "operations"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_010_01_modern-javascript-patterns",
+      "name": "Gm 01 010 01 Modern-javascript-patterns",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_010_01_modern-javascript-patterns.json",
+      "lines": 112,
+      "typeable_chars": 3199,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "010",
+        "modern",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_010_02_modern-javascript-patterns",
+      "name": "Gm 01 010 02 Modern-javascript-patterns",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_010_02_modern-javascript-patterns.json",
+      "lines": 112,
+      "typeable_chars": 3199,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "010",
+        "modern",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_011_01_module-patterns",
+      "name": "Gm 01 011 01 Module-patterns",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_011_01_module-patterns.json",
+      "lines": 57,
+      "typeable_chars": 988,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "011",
+        "module",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_011_02_module-patterns",
+      "name": "Gm 01 011 02 Module-patterns",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_011_02_module-patterns.json",
+      "lines": 57,
+      "typeable_chars": 988,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "011",
+        "module",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_012_01_object-manipulation",
+      "name": "Gm 01 012 01 Object-manipulation",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_012_01_object-manipulation.json",
+      "lines": 88,
+      "typeable_chars": 2274,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "012",
+        "object",
+        "manipulation"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_012_02_object-manipulation",
+      "name": "Gm 01 012 02 Object-manipulation",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_012_02_object-manipulation.json",
+      "lines": 87,
+      "typeable_chars": 1931,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "012",
+        "object",
+        "manipulation"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_013_01_string-methods",
+      "name": "Gm 01 013 01 String-methods",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_013_01_string-methods.json",
+      "lines": 88,
+      "typeable_chars": 3323,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "013",
+        "string",
+        "methods"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "javascript-gm_01_013_02_string-methods",
+      "name": "Gm 01 013 02 String-methods",
+      "language": "javascript",
+      "path": "snippets/javascript/gm_01_013_02_string-methods.json",
+      "lines": 55,
+      "typeable_chars": 2049,
+      "difficulty": "advanced",
+      "tags": [
+        "javascript",
+        "013",
+        "string",
+        "methods"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_001_03_core-python-patterns-quick-refresh",
+      "name": "Gm 01 001 03 Core-python-patterns-quick-refresh",
+      "language": "python",
+      "path": "snippets/python/gm_01_001_03_core-python-patterns-quick-refresh.json",
+      "lines": 103,
+      "typeable_chars": 3519,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "001",
+        "core",
+        "patterns",
+        "quick"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_002_03_decorators-level-up",
+      "name": "Gm 01 002 03 Decorators-level-up",
+      "language": "python",
+      "path": "snippets/python/gm_01_002_03_decorators-level-up.json",
+      "lines": 145,
+      "typeable_chars": 3491,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "002",
+        "decorators",
+        "level"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_003_03_oop-patterns-intermediate-to-advanced",
+      "name": "Gm 01 003 03 Oop-patterns-intermediate-to-advanced",
+      "language": "python",
+      "path": "snippets/python/gm_01_003_03_oop-patterns-intermediate-to-advanced.json",
+      "lines": 149,
+      "typeable_chars": 3692,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "003",
+        "oop",
+        "patterns",
+        "intermediate"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_004_03_flask-patterns-c-level-b-level",
+      "name": "Gm 01 004 03 Flask-patterns-c-level-b-level",
+      "language": "python",
+      "path": "snippets/python/gm_01_004_03_flask-patterns-c-level-b-level.json",
+      "lines": 205,
+      "typeable_chars": 6614,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "004",
+        "flask",
+        "patterns",
+        "level"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_005_03_django-patterns-d-level-c-level",
+      "name": "Gm 01 005 03 Django-patterns-d-level-c-level",
+      "language": "python",
+      "path": "snippets/python/gm_01_005_03_django-patterns-d-level-c-level.json",
+      "lines": 412,
+      "typeable_chars": 15934,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "005",
+        "django",
+        "patterns",
+        "level"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_006_03_fastapi-patterns-d-level-c-level",
+      "name": "Gm 01 006 03 Fastapi-patterns-d-level-c-level",
+      "language": "python",
+      "path": "snippets/python/gm_01_006_03_fastapi-patterns-d-level-c-level.json",
+      "lines": 153,
+      "typeable_chars": 4624,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "006",
+        "fastapi",
+        "patterns",
+        "level"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_007_03_pandas-patterns-ba-level-refinement",
+      "name": "Gm 01 007 03 Pandas-patterns-ba-level-refinement",
+      "language": "python",
+      "path": "snippets/python/gm_01_007_03_pandas-patterns-ba-level-refinement.json",
+      "lines": 262,
+      "typeable_chars": 7943,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "007",
+        "pandas",
+        "patterns",
+        "level"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_008_03_context-managers",
+      "name": "Gm 01 008 03 Context-managers",
+      "language": "python",
+      "path": "snippets/python/gm_01_008_03_context-managers.json",
+      "lines": 61,
+      "typeable_chars": 1870,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "008",
+        "context",
+        "managers"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_009_03_async-python-patterns",
+      "name": "Gm 01 009 03 Async-python-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_009_03_async-python-patterns.json",
+      "lines": 114,
+      "typeable_chars": 3782,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "009",
+        "async",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_010_03_error-handling-patterns",
+      "name": "Gm 01 010 03 Error-handling-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_010_03_error-handling-patterns.json",
+      "lines": 91,
+      "typeable_chars": 2914,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "010",
+        "error",
+        "handling",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_011_03_file-and-path-operations",
+      "name": "Gm 01 011 03 File-and-path-operations",
+      "language": "python",
+      "path": "snippets/python/gm_01_011_03_file-and-path-operations.json",
+      "lines": 130,
+      "typeable_chars": 4045,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "011",
+        "file",
+        "and",
+        "path"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_012_03_testing-patterns-pytest",
+      "name": "Gm 01 012 03 Testing-patterns-pytest",
+      "language": "python",
+      "path": "snippets/python/gm_01_012_03_testing-patterns-pytest.json",
+      "lines": 67,
+      "typeable_chars": 1841,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "012",
+        "testing",
+        "patterns",
+        "pytest"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_013_03_type-hints-modern-python",
+      "name": "Gm 01 013 03 Type-hints-modern-python",
+      "language": "python",
+      "path": "snippets/python/gm_01_013_03_type-hints-modern-python.json",
+      "lines": 91,
+      "typeable_chars": 2990,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "013",
+        "type",
+        "hints",
+        "modern"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_014_03_itertools-patterns",
+      "name": "Gm 01 014 03 Itertools-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_014_03_itertools-patterns.json",
+      "lines": 57,
+      "typeable_chars": 2478,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "014",
+        "itertools",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_015_03_functools-patterns",
+      "name": "Gm 01 015 03 Functools-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_015_03_functools-patterns.json",
+      "lines": 35,
+      "typeable_chars": 1275,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "015",
+        "functools",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_016_03_collections-module",
+      "name": "Gm 01 016 03 Collections-module",
+      "language": "python",
+      "path": "snippets/python/gm_01_016_03_collections-module.json",
+      "lines": 68,
+      "typeable_chars": 2750,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "016",
+        "collections",
+        "module"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_017_03_http-requests-requests-library",
+      "name": "Gm 01 017 03 Http-requests-requests-library",
+      "language": "python",
+      "path": "snippets/python/gm_01_017_03_http-requests-requests-library.json",
+      "lines": 72,
+      "typeable_chars": 2864,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "017",
+        "http",
+        "requests",
+        "library"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_018_03_environment-and-config",
+      "name": "Gm 01 018 03 Environment-and-config",
+      "language": "python",
+      "path": "snippets/python/gm_01_018_03_environment-and-config.json",
+      "lines": 41,
+      "typeable_chars": 1763,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "018",
+        "environment",
+        "and",
+        "config"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_019_03_logging-patterns",
+      "name": "Gm 01 019 03 Logging-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_019_03_logging-patterns.json",
+      "lines": 61,
+      "typeable_chars": 2520,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "019",
+        "logging",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_020_03_database-patterns-sqlalchemy-basics",
+      "name": "Gm 01 020 03 Database-patterns-sqlalchemy-basics",
+      "language": "python",
+      "path": "snippets/python/gm_01_020_03_database-patterns-sqlalchemy-basics.json",
+      "lines": 90,
+      "typeable_chars": 3164,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "020",
+        "database",
+        "patterns",
+        "sqlalchemy"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_021_03_string-and-regex-patterns",
+      "name": "Gm 01 021 03 String-and-regex-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_021_03_string-and-regex-patterns.json",
+      "lines": 64,
+      "typeable_chars": 2395,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "021",
+        "string",
+        "and",
+        "regex"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_022_03_date-and-time-patterns",
+      "name": "Gm 01 022 03 Date-and-time-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_022_03_date-and-time-patterns.json",
+      "lines": 71,
+      "typeable_chars": 2646,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "022",
+        "date",
+        "and",
+        "time"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_023_03_performance-patterns",
+      "name": "Gm 01 023 03 Performance-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_023_03_performance-patterns.json",
+      "lines": 78,
+      "typeable_chars": 2120,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "023",
+        "performance",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_024_03_cli-patterns-argparse",
+      "name": "Gm 01 024 03 Cli-patterns-argparse",
+      "language": "python",
+      "path": "snippets/python/gm_01_024_03_cli-patterns-argparse.json",
+      "lines": 72,
+      "typeable_chars": 2363,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "024",
+        "cli",
+        "patterns",
+        "argparse"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_025_03_data-validation-pydantic",
+      "name": "Gm 01 025 03 Data-validation-pydantic",
+      "language": "python",
+      "path": "snippets/python/gm_01_025_03_data-validation-pydantic.json",
+      "lines": 87,
+      "typeable_chars": 2671,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "025",
+        "data",
+        "validation",
+        "pydantic"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_026_03_metaclasses-and-advanced-oop",
+      "name": "Gm 01 026 03 Metaclasses-and-advanced-oop",
+      "language": "python",
+      "path": "snippets/python/gm_01_026_03_metaclasses-and-advanced-oop.json",
+      "lines": 59,
+      "typeable_chars": 1896,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "026",
+        "metaclasses",
+        "and",
+        "advanced"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_027_03_csv-and-excel-processing",
+      "name": "Gm 01 027 03 Csv-and-excel-processing",
+      "language": "python",
+      "path": "snippets/python/gm_01_027_03_csv-and-excel-processing.json",
+      "lines": 59,
+      "typeable_chars": 1683,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "027",
+        "csv",
+        "and",
+        "excel"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_028_03_web-scraping-essentials",
+      "name": "Gm 01 028 03 Web-scraping-essentials",
+      "language": "python",
+      "path": "snippets/python/gm_01_028_03_web-scraping-essentials.json",
+      "lines": 40,
+      "typeable_chars": 1401,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "028",
+        "web",
+        "scraping",
+        "essentials"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_029_03_multiprocessingthreading",
+      "name": "Gm 01 029 03 Multiprocessingthreading",
+      "language": "python",
+      "path": "snippets/python/gm_01_029_03_multiprocessingthreading.json",
+      "lines": 74,
+      "typeable_chars": 2230,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "029",
+        "multiprocessingthreading"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_030_03_gcp-specific-python-patterns",
+      "name": "Gm 01 030 03 Gcp-specific-python-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_030_03_gcp-specific-python-patterns.json",
+      "lines": 67,
+      "typeable_chars": 2323,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "030",
+        "gcp",
+        "specific",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_031_03_api-design-patterns",
+      "name": "Gm 01 031 03 Api-design-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_031_03_api-design-patterns.json",
+      "lines": 59,
+      "typeable_chars": 1532,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "031",
+        "api",
+        "design",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_032_03_common-automation-patterns",
+      "name": "Gm 01 032 03 Common-automation-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_032_03_common-automation-patterns.json",
+      "lines": 134,
+      "typeable_chars": 4655,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "032",
+        "common",
+        "automation",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "python-gm_01_033_03_python-best-practices-patterns",
+      "name": "Gm 01 033 03 Python-best-practices-patterns",
+      "language": "python",
+      "path": "snippets/python/gm_01_033_03_python-best-practices-patterns.json",
+      "lines": 37,
+      "typeable_chars": 1629,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "033",
+        "best",
+        "practices",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_014_01_async-patterns",
+      "name": "Gm 01 014 01 Async-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_014_01_async-patterns.json",
+      "lines": 52,
+      "typeable_chars": 1255,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "014",
+        "async",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_014_02_async-patterns",
+      "name": "Gm 01 014 02 Async-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_014_02_async-patterns.json",
+      "lines": 52,
+      "typeable_chars": 1255,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "014",
+        "async",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_015_01_common-ui-patterns",
+      "name": "Gm 01 015 01 Common-ui-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_015_01_common-ui-patterns.json",
+      "lines": 87,
+      "typeable_chars": 2406,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "015",
+        "common",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_015_02_common-ui-patterns",
+      "name": "Gm 01 015 02 Common-ui-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_015_02_common-ui-patterns.json",
+      "lines": 90,
+      "typeable_chars": 2590,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "015",
+        "common",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_016_01_context-api",
+      "name": "Gm 01 016 01 Context-api",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_016_01_context-api.json",
+      "lines": 33,
+      "typeable_chars": 806,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "016",
+        "context",
+        "api"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_016_02_context-api",
+      "name": "Gm 01 016 02 Context-api",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_016_02_context-api.json",
+      "lines": 33,
+      "typeable_chars": 806,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "016",
+        "context",
+        "api"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_018_01_data-transformation-patterns",
+      "name": "Gm 01 018 01 Data-transformation-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_018_01_data-transformation-patterns.json",
+      "lines": 100,
+      "typeable_chars": 2326,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "018",
+        "data",
+        "transformation",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_018_02_data-transformation-patterns",
+      "name": "Gm 01 018 02 Data-transformation-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_018_02_data-transformation-patterns.json",
+      "lines": 100,
+      "typeable_chars": 2326,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "018",
+        "data",
+        "transformation",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_019_01_integration-patterns",
+      "name": "Gm 01 019 01 Integration-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_019_01_integration-patterns.json",
+      "lines": 67,
+      "typeable_chars": 1983,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "019",
+        "integration",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_019_02_integration-patterns",
+      "name": "Gm 01 019 02 Integration-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_019_02_integration-patterns.json",
+      "lines": 66,
+      "typeable_chars": 1417,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "019",
+        "integration",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_020_01_performance-patterns",
+      "name": "Gm 01 020 01 Performance-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_020_01_performance-patterns.json",
+      "lines": 61,
+      "typeable_chars": 1689,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "020",
+        "performance",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_020_02_performance-patterns",
+      "name": "Gm 01 020 02 Performance-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_020_02_performance-patterns.json",
+      "lines": 61,
+      "typeable_chars": 1689,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "020",
+        "performance",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_021_01_react-hook-form-form-handling",
+      "name": "Gm 01 021 01 React-hook-form-form-handling",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_021_01_react-hook-form-form-handling.json",
+      "lines": 105,
+      "typeable_chars": 2859,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "021",
+        "react",
+        "hook",
+        "form"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_021_02_react-hook-form-form-handling",
+      "name": "Gm 01 021 02 React-hook-form-form-handling",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_021_02_react-hook-form-form-handling.json",
+      "lines": 110,
+      "typeable_chars": 2826,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "021",
+        "react",
+        "hook",
+        "form"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_022_01_react-router-navigation",
+      "name": "Gm 01 022 01 React-router-navigation",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_022_01_react-router-navigation.json",
+      "lines": 114,
+      "typeable_chars": 3035,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "022",
+        "react",
+        "router",
+        "navigation"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_022_02_react-router-navigation",
+      "name": "Gm 01 022 02 React-router-navigation",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_022_02_react-router-navigation.json",
+      "lines": 114,
+      "typeable_chars": 3035,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "022",
+        "react",
+        "router",
+        "navigation"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_023_01_tanstack-query-react-query-data-fetching",
+      "name": "Gm 01 023 01 Tanstack-query-react-query-data-fetching",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_023_01_tanstack-query-react-query-data-fetching.json",
+      "lines": 126,
+      "typeable_chars": 3551,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "023",
+        "tanstack",
+        "query",
+        "react"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_023_02_tanstack-query-react-query-data-fetching",
+      "name": "Gm 01 023 02 Tanstack-query-react-query-data-fetching",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_023_02_tanstack-query-react-query-data-fetching.json",
+      "lines": 146,
+      "typeable_chars": 4105,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "023",
+        "tanstack",
+        "query",
+        "react"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_024_01_typescript-patterns",
+      "name": "Gm 01 024 01 Typescript-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_024_01_typescript-patterns.json",
+      "lines": 43,
+      "typeable_chars": 931,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "024",
+        "typescript",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_024_02_typescript-patterns",
+      "name": "Gm 01 024 02 Typescript-patterns",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_024_02_typescript-patterns.json",
+      "lines": 43,
+      "typeable_chars": 931,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "024",
+        "typescript",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_025_01_zustand-state-management",
+      "name": "Gm 01 025 01 Zustand-state-management",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_025_01_zustand-state-management.json",
+      "lines": 62,
+      "typeable_chars": 1637,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "025",
+        "zustand",
+        "state",
+        "management"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "tsx-gm_01_025_02_zustand-state-management",
+      "name": "Gm 01 025 02 Zustand-state-management",
+      "language": "tsx",
+      "path": "snippets/tsx/gm_01_025_02_zustand-state-management.json",
+      "lines": 62,
+      "typeable_chars": 1637,
+      "difficulty": "advanced",
+      "tags": [
+        "tsx",
+        "025",
+        "zustand",
+        "state",
+        "management"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_026_01_apidata-patterns",
+      "name": "Gm 01 026 01 Apidata-patterns",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_026_01_apidata-patterns.json",
+      "lines": 124,
+      "typeable_chars": 3135,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "026",
+        "apidata",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_026_02_apidata-patterns",
+      "name": "Gm 01 026 02 Apidata-patterns",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_026_02_apidata-patterns.json",
+      "lines": 124,
+      "typeable_chars": 3135,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "026",
+        "apidata",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_027_02_advanced-types",
+      "name": "Gm 01 027 02 Advanced-types",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_027_02_advanced-types.json",
+      "lines": 198,
+      "typeable_chars": 5587,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "027",
+        "advanced",
+        "types"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_028_01_basic-type-annotations",
+      "name": "Gm 01 028 01 Basic-type-annotations",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_028_01_basic-type-annotations.json",
+      "lines": 76,
+      "typeable_chars": 2384,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "028",
+        "basic",
+        "type",
+        "annotations"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_028_02_basic-type-annotations",
+      "name": "Gm 01 028 02 Basic-type-annotations",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_028_02_basic-type-annotations.json",
+      "lines": 57,
+      "typeable_chars": 1773,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "028",
+        "basic",
+        "type",
+        "annotations"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_029_01_class-patterns-typescript-specific",
+      "name": "Gm 01 029 01 Class-patterns-typescript-specific",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_029_01_class-patterns-typescript-specific.json",
+      "lines": 131,
+      "typeable_chars": 2690,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "029",
+        "class",
+        "patterns",
+        "specific"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_029_02_class-patterns-typescript-specific",
+      "name": "Gm 01 029 02 Class-patterns-typescript-specific",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_029_02_class-patterns-typescript-specific.json",
+      "lines": 137,
+      "typeable_chars": 3218,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "029",
+        "class",
+        "patterns",
+        "specific"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_030_01_common-gotchas-to-practice",
+      "name": "Gm 01 030 01 Common-gotchas-to-practice",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_030_01_common-gotchas-to-practice.json",
+      "lines": 86,
+      "typeable_chars": 3500,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "030",
+        "common",
+        "gotchas",
+        "practice"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_030_02_common-gotchas-to-practice",
+      "name": "Gm 01 030 02 Common-gotchas-to-practice",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_030_02_common-gotchas-to-practice.json",
+      "lines": 91,
+      "typeable_chars": 3157,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "030",
+        "common",
+        "gotchas",
+        "practice"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_031_01_configuration-patterns",
+      "name": "Gm 01 031 01 Configuration-patterns",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_031_01_configuration-patterns.json",
+      "lines": 59,
+      "typeable_chars": 1449,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "031",
+        "configuration",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_031_02_configuration-patterns",
+      "name": "Gm 01 031 02 Configuration-patterns",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_031_02_configuration-patterns.json",
+      "lines": 49,
+      "typeable_chars": 1149,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "031",
+        "configuration",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_032_01_error-handling-with-types",
+      "name": "Gm 01 032 01 Error-handling-with-types",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_032_01_error-handling-with-types.json",
+      "lines": 102,
+      "typeable_chars": 2743,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "032",
+        "error",
+        "handling",
+        "with"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_032_02_error-handling-with-types",
+      "name": "Gm 01 032 02 Error-handling-with-types",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_032_02_error-handling-with-types.json",
+      "lines": 102,
+      "typeable_chars": 2743,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "032",
+        "error",
+        "handling",
+        "with"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_033_01_function-patterns",
+      "name": "Gm 01 033 01 Function-patterns",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_033_01_function-patterns.json",
+      "lines": 95,
+      "typeable_chars": 2753,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "033",
+        "function",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_033_02_function-patterns",
+      "name": "Gm 01 033 02 Function-patterns",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_033_02_function-patterns.json",
+      "lines": 92,
+      "typeable_chars": 2869,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "033",
+        "function",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_034_01_interface-patterns",
+      "name": "Gm 01 034 01 Interface-patterns",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_034_01_interface-patterns.json",
+      "lines": 93,
+      "typeable_chars": 1907,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "034",
+        "interface",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_034_02_interface-patterns",
+      "name": "Gm 01 034 02 Interface-patterns",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_034_02_interface-patterns.json",
+      "lines": 125,
+      "typeable_chars": 2470,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "034",
+        "interface",
+        "patterns"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_036_01_react-specific-typescript",
+      "name": "Gm 01 036 01 React-specific-typescript",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_036_01_react-specific-typescript.json",
+      "lines": 192,
+      "typeable_chars": 4749,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "036",
+        "react",
+        "specific"
+      ],
+      "dateAdded": "2025-11-20"
+    },
+    {
+      "id": "typescript-gm_01_036_02_react-specific-typescript",
+      "name": "Gm 01 036 02 React-specific-typescript",
+      "language": "typescript",
+      "path": "snippets/typescript/gm_01_036_02_react-specific-typescript.json",
+      "lines": 192,
+      "typeable_chars": 4749,
+      "difficulty": "advanced",
+      "tags": [
+        "typescript",
+        "036",
+        "react",
+        "specific"
+      ],
+      "dateAdded": "2025-11-20"
+    }
+  ]
+}
