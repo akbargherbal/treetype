@@ -112,7 +112,7 @@ export class TreeTypeApp {
                 <!-- Chevron -->
                 <svg class="text-gray-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
             </button>
-            
+
             <!-- Dropdown Wrapper: Uses pt-2 instead of mt-2 to create a hover bridge -->
             <div class="absolute right-0 top-full pt-2 w-64 hidden group-hover:block">
                 <!-- Visual Dropdown Box -->
@@ -236,14 +236,18 @@ export class TreeTypeApp {
 
     let fetchPath: string;
     if (snippetPath) {
-      fetchPath = snippetPath;
+      // [FIX] Handle legacy paths that might still have "snippets/" prefix
+      fetchPath = snippetPath.startsWith("snippets/")
+        ? snippetPath.replace("snippets/", "")
+        : snippetPath;
     } else {
+      // [FIX] Updated paths to match public folder structure (removed "snippets/" prefix)
       const defaultSnippets: Record<string, string> = {
         python:
-          "snippets/python/gm_01_001_02_03_core-python-patterns-quick-refresh.json",
-        javascript: "snippets/javascript/gm_01_001_01_array-methods.json",
-        typescript: "snippets/typescript/gm_01_026_01_apidata-patterns.json",
-        tsx: "snippets/tsx/gm_01_014_01_async-patterns.json",
+          "python/gm_01_001_03_core-python-patterns-quick-refresh.json",
+        javascript: "javascript/gm_01_001_01_array-methods.json",
+        typescript: "typescript/gm_01_026_01_apidata-patterns.json",
+        tsx: "tsx/gm_01_014_01_async-patterns.json",
       };
       fetchPath = defaultSnippets[language];
     }
@@ -675,7 +679,8 @@ export class TreeTypeApp {
    */
   private async loadRandomSnippet(): Promise<void> {
     try {
-      const response = await fetch("snippets/metadata.json");
+      // [FIX] Fetch from root "metadata.json" instead of "snippets/metadata.json"
+      const response = await fetch("metadata.json");
       if (!response.ok) throw new Error("Cannot fetch metadata");
 
       const metadata = await response.json();
@@ -684,9 +689,12 @@ export class TreeTypeApp {
       const randomSnippet =
         snippets[Math.floor(Math.random() * snippets.length)];
 
-      window.location.href = `index.html?snippet=${encodeURIComponent(
-        randomSnippet.path
-      )}`;
+      // [FIX] Ensure path is correct (strip prefix if present)
+      const path = randomSnippet.path.startsWith("snippets/")
+        ? randomSnippet.path.replace("snippets/", "")
+        : randomSnippet.path;
+
+      window.location.href = `index.html?snippet=${encodeURIComponent(path)}`;
     } catch (error) {
       console.error("Error loading random snippet:", error);
       alert("Could not load random snippet. Please try again.");

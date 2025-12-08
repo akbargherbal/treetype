@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generatedAt": "2025-11-20T05:31:18.433229Z",
-  "totalSnippets": 98,
+  "generatedAt": "2025-11-22T16:47:36.499468Z",
+  "totalSnippets": 101,
   "languages": [
     "javascript",
     "python",
@@ -412,7 +412,7 @@
         "patterns",
         "quick"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_002_03_decorators-level-up",
@@ -428,7 +428,7 @@
         "decorators",
         "level"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_003_03_oop-patterns-intermediate-to-advanced",
@@ -445,7 +445,7 @@
         "patterns",
         "intermediate"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_004_03_flask-patterns-c-level-b-level",
@@ -462,7 +462,7 @@
         "patterns",
         "level"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_005_03_django-patterns-d-level-c-level",
@@ -479,7 +479,7 @@
         "patterns",
         "level"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_006_03_fastapi-patterns-d-level-c-level",
@@ -496,7 +496,7 @@
         "patterns",
         "level"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_007_03_pandas-patterns-ba-level-refinement",
@@ -513,7 +513,7 @@
         "patterns",
         "level"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_008_03_context-managers",
@@ -529,7 +529,7 @@
         "context",
         "managers"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_009_03_async-python-patterns",
@@ -545,7 +545,7 @@
         "async",
         "patterns"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_010_03_error-handling-patterns",
@@ -562,7 +562,7 @@
         "handling",
         "patterns"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_011_03_file-and-path-operations",
@@ -579,7 +579,7 @@
         "and",
         "path"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_012_03_testing-patterns-pytest",
@@ -596,7 +596,7 @@
         "patterns",
         "pytest"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_013_03_type-hints-modern-python",
@@ -613,7 +613,7 @@
         "hints",
         "modern"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_014_03_itertools-patterns",
@@ -629,7 +629,7 @@
         "itertools",
         "patterns"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_015_03_functools-patterns",
@@ -645,7 +645,7 @@
         "functools",
         "patterns"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_016_03_collections-module",
@@ -661,7 +661,7 @@
         "collections",
         "module"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_017_03_http-requests-requests-library",
@@ -678,7 +678,7 @@
         "requests",
         "library"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_018_03_environment-and-config",
@@ -695,7 +695,7 @@
         "and",
         "config"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_019_03_logging-patterns",
@@ -711,7 +711,7 @@
         "logging",
         "patterns"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_020_03_database-patterns-sqlalchemy-basics",
@@ -728,7 +728,7 @@
         "patterns",
         "sqlalchemy"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_021_03_string-and-regex-patterns",
@@ -745,7 +745,7 @@
         "and",
         "regex"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_022_03_date-and-time-patterns",
@@ -762,7 +762,7 @@
         "and",
         "time"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_023_03_performance-patterns",
@@ -778,7 +778,7 @@
         "performance",
         "patterns"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_024_03_cli-patterns-argparse",
@@ -795,7 +795,7 @@
         "patterns",
         "argparse"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_025_03_data-validation-pydantic",
@@ -812,7 +812,7 @@
         "validation",
         "pydantic"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_026_03_metaclasses-and-advanced-oop",
@@ -829,7 +829,7 @@
         "and",
         "advanced"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_027_03_csv-and-excel-processing",
@@ -846,7 +846,7 @@
         "and",
         "excel"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_028_03_web-scraping-essentials",
@@ -863,7 +863,7 @@
         "scraping",
         "essentials"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_029_03_multiprocessingthreading",
@@ -878,7 +878,7 @@
         "029",
         "multiprocessingthreading"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_030_03_gcp-specific-python-patterns",
@@ -895,7 +895,7 @@
         "specific",
         "patterns"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_031_03_api-design-patterns",
@@ -912,7 +912,7 @@
         "design",
         "patterns"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_032_03_common-automation-patterns",
@@ -929,7 +929,7 @@
         "automation",
         "patterns"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "python-gm_01_033_03_python-best-practices-patterns",
@@ -946,7 +946,54 @@
         "practices",
         "patterns"
       ],
-      "dateAdded": "2025-11-20"
+      "dateAdded": "2025-11-22"
+    },
+    {
+      "id": "python-real_01_arch_state",
+      "name": "Real 01 Arch State",
+      "language": "python",
+      "path": "snippets/python/real_01_arch_state.json",
+      "lines": 510,
+      "typeable_chars": 17056,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "real",
+        "arch",
+        "state"
+      ],
+      "dateAdded": "2025-11-22"
+    },
+    {
+      "id": "python-real_01_parse_json",
+      "name": "Real 01 Parse Json",
+      "language": "python",
+      "path": "snippets/python/real_01_parse_json.json",
+      "lines": 404,
+      "typeable_chars": 12130,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "real",
+        "parse",
+        "json"
+      ],
+      "dateAdded": "2025-11-22"
+    },
+    {
+      "id": "python-real_01_student",
+      "name": "Real 01 Student",
+      "language": "python",
+      "path": "snippets/python/real_01_student.json",
+      "lines": 862,
+      "typeable_chars": 29225,
+      "difficulty": "advanced",
+      "tags": [
+        "python",
+        "real",
+        "student"
+      ],
+      "dateAdded": "2025-11-22"
     },
     {
       "id": "tsx-gm_01_014_01_async-patterns",

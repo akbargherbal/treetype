@@ -29,12 +29,20 @@ export class LibraryPage {
    */
   private async loadMetadata(): Promise<void> {
     try {
-      const response = await fetch("snippets/metadata.json");
+      // [FIX] Fetch from root "metadata.json" instead of "snippets/metadata.json"
+      const response = await fetch("metadata.json");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      this.allSnippets = data.snippets;
+
+      // [FIX] Strip 'snippets/' prefix from paths to match actual public folder structure
+      this.allSnippets = data.snippets.map((s: SnippetMetadata) => ({
+        ...s,
+        path: s.path.startsWith("snippets/")
+          ? s.path.replace("snippets/", "")
+          : s.path,
+      }));
 
       // Load user statistics
       this.userStats = loadSnippetStats();
@@ -54,7 +62,9 @@ export class LibraryPage {
           <div class="text-center text-red-400">
             <div class="text-4xl mb-4">⚠️</div>
             <h3 class="text-xl font-bold mb-2">Failed to load snippets</h3>
-            <p>Error: ${error instanceof Error ? error.message : String(error)}</p>
+            <p>Error: ${
+              error instanceof Error ? error.message : String(error)
+            }</p>
             <p class="mt-2 text-sm">Make sure you're running from the project root directory</p>
           </div>
         `;
@@ -177,7 +187,9 @@ export class LibraryPage {
           <div class="stats-display">
             <div class="flex justify-between text-xs mb-1">
               <span class="text-gray-400">Best WPM:</span>
-              <span class="font-bold text-green-400">${stats.bestWPM || 0}</span>
+              <span class="font-bold text-green-400">${
+                stats.bestWPM || 0
+              }</span>
             </div>
             <div class="flex justify-between text-xs">
               <span class="text-gray-400">Practiced:</span>
@@ -198,9 +210,11 @@ export class LibraryPage {
           <div class="snippet-card" onclick="window.libraryPage.practiceSnippet('${escapedPath}')">
             <div class="flex items-start justify-between gap-2">
               <h3 class="font-bold text-lg flex-1 leading-tight">${cleanedName}</h3>
-              <span class="language-badge lang-${snippet.language}">${snippet.language}</span>
+              <span class="language-badge lang-${snippet.language}">${
+      snippet.language
+    }</span>
             </div>
-            
+
             <div class="flex gap-2 items-center text-sm text-gray-400">
               <span>📄 ${snippet.lines} lines</span>
               <span>•</span>
