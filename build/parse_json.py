@@ -382,7 +382,6 @@ def validate_file(filepath):
 
 def process_file(input_path, output_path=None, quiet=False):
     """Process a single source file"""
-    # Validate
     valid, error = validate_file(input_path)
     if not valid:
         print(f"❌ Error: {error}")
@@ -391,9 +390,9 @@ def process_file(input_path, output_path=None, quiet=False):
     input_file = Path(input_path)
     language = LANGUAGE_EXTENSIONS[input_file.suffix]
 
-    # Determine output path
+    # Determine output path (redirected from legacy 'snippets' to 'public')
     if output_path is None:
-        output_path = Path("snippets") / language / f"{input_file.stem}.json"
+        output_path = Path("public") / language / f"{input_file.stem}.json"
     else:
         output_path = Path(output_path)
 

@@ -45,7 +45,7 @@ pnpm install
 # Start development server
 pnpm dev
 
-# Visit http://localhost:5173
+# Visit http://localhost:3000
 ```
 
 ### First Use
@@ -76,64 +76,6 @@ pnpm dev
 - **Syntax colors** - Already typed (code revealed)
 - **Red highlight** - Wrong key (persists until corrected)
 
-### Typing Modes
-
-#### Minimal Mode ⚡
-
-**Type**: Keywords and identifiers only  
-**Skip**: All brackets, operators, punctuation, string content, comments
-
-**Best for**: Speed practice, learning new syntax patterns quickly
-
-**Example**:
-
-```python
-def calculate(n: int) -> list:
-```
-
-You type: `defcalculatenintlist`
-
----
-
-#### Standard Mode ⭐ (Recommended)
-
-**Type**: Keywords, identifiers, operators, parentheses `()`, and essential punctuation (`:`, `.`, `,`)  
-**Skip**: Curly braces `{}`, square brackets `[]`, angle brackets `<>`, string content, comments
-
-**Best for**: Balanced practice with realistic code structure
-
-**Example**:
-
-```javascript
-setIsActive(!isActive);
-```
-
-You type: `setIsActive(!isActive)`
-
-**Why this mode?**
-
-- ✅ Practices function call patterns `()`
-- ✅ Includes operators and essential punctuation
-- ✅ Reduces pinky strain (no Shift+bracket combinations)
-- ✅ TSX/JSX friendly (angle brackets auto-reveal)
-
----
-
-#### Full Mode 🎯
-
-**Type**: Everything except whitespace, comments, and string content  
-**Skip**: Only structural whitespace, comments, string literal content
-
-**Best for**: Maximum muscle memory building
-
-**Example**:
-
-```python
-def calculate(n: int) -> list:
-```
-
-You type: `defcalculate(n:int)->list:`
-
 ---
 
 ## 📚 Library System
@@ -147,21 +89,21 @@ Click **"📚 Browse Library"** to view all available code snippets:
 - Sort by various criteria
 - View snippet stats (best WPM, accuracy, practice count)
 
-### Adding Your Own Code
+### Adding Your Own Code (Quick Workflow)
+
+Adding custom code files to practice is fully automated. Simply follow these steps:
 
 ```bash
-# 1. Add source file to sources/<language>/
+# 1. (Optional) Put your source file inside sources/
+mkdir -p sources/python/
 cp ~/my-project/utils.py sources/python/
 
-# 2. Parse the file
-python build/parse_json.py sources/python/utils.py
+# 2. Run the automated parsing and indexing workflow
+./build/add_snippet.sh sources/python/utils.py
 
-# 3. Update metadata
-python build/build_metadata.py
-
-# 4. Verify it appears
+# 3. Start development server and test it!
 pnpm dev
-# Visit library and search for your snippet
+# Visit your local browser library and search for your snippet
 ```
 
 ### Snippet Guidelines
@@ -187,7 +129,7 @@ pnpm dev
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│  Source Code (.py, .js, .ts, .tsx)                 │
+│  Source Code (.py, .js, .ts, .tsx)                  │
 └────────────────┬────────────────────────────────────┘
                  │
                  ▼
@@ -201,8 +143,8 @@ pnpm dev
                  │
                  ▼
 ┌─────────────────────────────────────────────────────┐
-│  JSON Snippets (snippets/<language>/*.json)         │
-│  • Static files committed to repo                   │
+│  JSON Snippets (public/<language>/*.json)           │
+│  • Static files served directly by Vite             │
 │  • Contains: tokens, categories, positions          │
 │  • Pre-computed for instant loading                 │
 └────────────────┬────────────────────────────────────┘
@@ -210,7 +152,7 @@ pnpm dev
                  ▼
 ┌─────────────────────────────────────────────────────┐
 │  Frontend (TypeScript + Vite)                       │
-│  • Loads JSON snippets                              │
+│  • Loads JSON snippets from public directory        │
 │  • Applies mode-based filtering (config.ts)         │
 │  • Renders progressive reveal UI                    │
 │  • Handles keyboard input and state                 │
@@ -223,17 +165,15 @@ pnpm dev
 
 - Runs on developer machine
 - Analyzes code using tree-sitter
-- Generates static JSON files
+- Generates static JSON files straight into the `public/` directory
 - Categorizes every token for filtering
 
 **Stage 2: Frontend (Runtime)**
 
-- Loads pre-parsed JSON
+- Loads pre-parsed JSON served at `/`
 - Applies typing mode filters dynamically
 - Renders progressive reveal experience
 - Tracks metrics and state
-
-**Key Insight**: No server needed. Parser runs offline, snippets are static files, everything is pre-computed.
 
 ---
 
@@ -257,84 +197,6 @@ Every token gets assigned to one or more of **9 categories**:
 | `angle_bracket`    | `<`, `>`, `</`, `/>`           | JSX/TSX tags             |
 | `operator`         | `=`, `+`, `->`, `=>`           | Operators                |
 
-**Critical Implementation Detail**: `jsx_text` tokens (JSX text content like `<p>Hello</p>`) are assigned the `string_content` category because they represent displayable content that shouldn't be typed, just like string literals.
-
-### Typing Mode Filtering
-
-Each mode defines categories to **exclude**:
-
-```typescript
-// From src/core/config.ts
-PRESETS = {
-  minimal: {
-    exclude: [
-      "parenthesis",
-      "curly_brace",
-      "square_bracket",
-      "angle_bracket",
-      "operator",
-      "punctuation",
-      "string_content",
-      "string_delimiter",
-      "comment",
-    ],
-  },
-  standard: {
-    exclude: [
-      "curly_brace",
-      "square_bracket",
-      "angle_bracket",
-      "string_content",
-      "punctuation",
-      "string_delimiter",
-      "comment",
-    ],
-    includeSpecific: [":", ".", ",", "(", ")"], // Override exclusions
-  },
-  full: {
-    exclude: ["comment", "string_content"],
-  },
-};
-```
-
-**Three Critical Filtering Rules** (applied in `applyExclusionConfig()`):
-
-1. **Whitespace is NEVER typeable** - Structural whitespace (spaces, tabs, newlines) is always skipped
-2. **JSX tag names follow angle bracket rules** - If `<` and `>` are excluded, tag names between them are also excluded
-3. **includeSpecific has highest priority** - Characters in this list are always typeable, overriding category exclusions
-
-### JSX Text Handling (Bug Fix from Session 37)
-
-**Problem**: JSX text content like `<p>Loading item...</p>` was incorrectly appearing in Minimal/Standard modes.
-
-**Root Cause**: `jsx_text` tokens had empty `categories: []`, so they weren't excluded by any preset.
-
-**Solution** (2 lines in `build/parse_json.py`):
-
-```python
-# JSX text content (treat like string content)
-if token_type == "jsx_text":
-    categories.append("string_content")
-```
-
-**Why this is correct**:
-
-- JSX text content IS displayable content (like strings)
-- Shouldn't be typed (just like string literals)
-- Follows same exclusion rules as `string_content`
-- Semantically accurate categorization
-
-### Progressive Reveal System
-
-Characters transition through states as you type:
-
-1. **Untyped** (gray, class: `char-untyped`)
-2. **Current** (yellow highlight, class: `char-current`)
-3. **Typed** (syntax-colored, no special class)
-4. **Error** (red highlight, class: `char-error`, persists until corrected)
-
-Non-typeable tokens automatically transition from gray → colored as the cursor passes them, creating a smooth "painting" effect.
-
 ---
 
 ## 🛠️ Development
@@ -357,17 +219,17 @@ treetype/
 │   ├── parse_json.py          # Parser (Python + tree-sitter)
 │   ├── build_metadata.py      # Metadata generator
 │   └── add_snippet.sh         # Workflow automation
-├── snippets/                   # Pre-parsed JSON (committed)
-│   ├── metadata.json          # Master library index
-│   ├── python/*.json
-│   ├── javascript/*.json
-│   ├── typescript/*.json
-│   └── tsx/*.json
-├── sources/                    # Your source files (gitignored)
+├── sources/                    # Your raw source files (gitignored)
 │   ├── python/
 │   ├── javascript/
 │   ├── typescript/
 │   └── tsx/
+├── public/                     # Static assets served by Vite (committed)
+│   ├── metadata.json          # Master library index (generated)
+│   ├── python/*.json          # Pre-parsed JSON files
+│   ├── javascript/*.json
+│   ├── typescript/*.json
+│   └── tsx/*.json
 ├── src/                        # Frontend TypeScript
 │   ├── app.ts                 # Main application
 │   ├── core/                  # Core logic
@@ -389,19 +251,19 @@ treetype/
 └── tsconfig.json               # TypeScript configuration
 ```
 
-### Adding New Snippets
+### Adding New Snippets (Quick Workflow)
+
+To process and add any new snippet, use the shell command:
 
 ```bash
 # Quick workflow
 ./build/add_snippet.sh sources/python/myfile.py
 
-# Manual workflow
-python build/parse_json.py sources/python/myfile.py
-python build/build_metadata.py
-
-# Verify
+# Verify locally
 pnpm dev
-# Check library for new snippet
+
+# Sync/deploy live on Firebase
+pnpm run deploy
 ```
 
 ### Running Tests
@@ -421,33 +283,6 @@ pnpm preview        # Preview production build locally
 
 ---
 
-## 📊 Progress & Roadmap
-
-### ✅ Completed Phases
-
-- **Phase 1-2** - Tree-sitter parsing, static rendering, typing sequence logic
-- **Phase 3-3.5** - Progressive reveal UX (the breakthrough moment)
-- **Phase 4** - Multi-language support (Python, JS, TS, TSX)
-- **Phase 5** - Configuration system (3 presets, persistence)
-- **Phase 6** - TypeScript migration, modular architecture
-- **Phase 5 (Bug Fix)** - JSX text categorization (Sessions 33-37, 5 sessions, 8 hours)
-
-### 🔄 Current Status
-
-- **Core experience**: Production-ready ✅
-- **Library system**: Fully functional ✅
-- **Testing infrastructure**: Vitest setup complete ✅
-- **Documentation**: Comprehensive (you are here!) ✅
-
-### 🎯 Future Enhancements
-
-- **Phase 7** - Expanded test coverage
-- **Phase 8** - Performance optimization
-- **Phase 9** - Analytics and progress tracking
-- **Phase 10** - Public deployment and marketing
-
----
-
 ## 🤝 Contributing
 
 TreeType is in active development. Contributions welcome!
@@ -458,34 +293,6 @@ TreeType is in active development. Contributions welcome!
 - **Report bugs** - Open issues for bugs or UX problems
 - **Suggest features** - Ideas for improvements
 - **Test languages** - Help test with different codebases
-
-### Development Guidelines
-
-- Follow existing TypeScript style
-- Test locally before submitting PR
-- Add snippets to `sources/<language>/` directory
-- Run parser and metadata builder before committing
-- Update documentation if changing behavior
-
----
-
-## 📖 Documentation
-
-- **README.md** (this file) - Overview and user guide
-- **ARCHITECTURE.md** - Technical design and implementation details
-- **REQUIREMENTS.md** - Formal requirements specification
-- **ts_migration_plan.md** - TypeScript migration roadmap
-- **session\_\*.md** - Development session notes
-
----
-
-## 🙏 Acknowledgments
-
-- [Tree-Sitter](https://tree-sitter.github.io/) - The parsing library that makes intelligent code analysis possible
-- [Vite](https://vitejs.dev/) - Lightning-fast build tool
-- [TypeScript](https://www.typescriptlang.org/) - Type safety and developer experience
-- [Tailwind CSS](https://tailwindcss.com/) - Rapid UI development
-- [VS Code Dark+](https://code.visualstudio.com/) - Syntax highlighting theme inspiration
 
 ---
 
@@ -503,10 +310,6 @@ Yes! Once cloned and built, everything runs locally. No internet required.
 
 Standard typing metric: `(characters_typed / 5) / (time_in_minutes)`. The "5" is industry standard for average word length. So 300 characters in 1 minute = 60 WPM.
 
-### Why TypeScript?
-
-Type safety prevents bugs (like the jsx_text categorization bug we spent 5 sessions fixing). TypeScript caught similar issues during migration.
-
 ### Can I customize the color scheme?
 
 Not yet, but it's planned for Phase 10. Currently uses VS Code Dark+ theme.
@@ -523,4 +326,4 @@ MIT License - See [LICENSE](LICENSE) file for details
 
 _Built with ❤️ by developers, for developers_
 
-_Last updated: Session 38 - Post-Phase 6, comprehensive documentation_
+_Last updated: Post-Consolidated Public Assets Migration_

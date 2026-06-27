@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 """
 treetype Metadata Builder
-Scans snippets/ directory and generates metadata.json index
+Scans public/ directory and generates metadata.json index
 """
 
 import json
 from pathlib import Path
 from datetime import datetime
-import hashlib
 
 
 def generate_snippet_id(filepath):
     """Generate stable ID from filepath"""
-    # Use relative path from snippets/ as base
-    rel_path = filepath.relative_to(Path("snippets"))
+    # Use relative path from public/ as base
+    rel_path = filepath.relative_to(Path("public"))
     # Remove .json extension and replace / with -
     id_str = str(rel_path.with_suffix("")).replace("/", "-")
     return id_str
@@ -81,11 +80,15 @@ def analyze_snippet(filepath):
         # Generate metadata
         snippet_id = generate_snippet_id(filepath)
 
+        # Compute relative path and prepend "snippets/" for backward compatibility with frontend routing
+        rel_path = filepath.relative_to(Path("public"))
+        legacy_path = f"snippets/{rel_path}"
+
         return {
             "id": snippet_id,
             "name": get_snippet_name(filepath),
             "language": data.get("language", "unknown"),
-            "path": str(filepath),
+            "path": legacy_path,
             "lines": line_count,
             "typeable_chars": total_typeable_chars,
             "difficulty": estimate_difficulty(line_count, total_typeable_chars),
@@ -98,24 +101,29 @@ def analyze_snippet(filepath):
 
 
 def build_metadata():
-    """Scan snippets/ directory and generate metadata.json"""
+    """Scan public/ directory and generate metadata.json"""
 
-    snippets_dir = Path("snippets")
+    public_dir = Path("public")
 
-    if not snippets_dir.exists():
-        print(f"❌ Error: {snippets_dir} directory not found!")
+    if not public_dir.exists():
+        print(f"❌ Error: {public_dir} directory not found!")
         print("   Make sure you're running this from the project root.")
         return False
 
     print(f"\n{'='*70}")
-    print("BUILDING METADATA INDEX")
+    print("BUILDING METADATA INDEX FROM ACTIVE PUBLIC DIRECTORY")
     print(f"{'='*70}\n")
 
-    # Find all JSON files (excluding metadata.json itself)
-    json_files = [f for f in snippets_dir.rglob("*.json") if f.name != "metadata.json"]
+    # Only scan active language subdirectories within public/
+    languages = ["python", "javascript", "typescript", "tsx"]
+    json_files = []
+    for lang in languages:
+        lang_dir = public_dir / lang
+        if lang_dir.exists():
+            json_files.extend(list(lang_dir.rglob("*.json")))
 
     if not json_files:
-        print("⚠️  No snippet JSON files found in snippets/")
+        print("⚠️  No snippet JSON files found in public/")
         print("   Add some snippets first using: ./build/add_snippet.sh")
         return False
 
@@ -124,7 +132,7 @@ def build_metadata():
     # Process each snippet
     snippets = []
     for filepath in sorted(json_files):
-        print(f"  Processing: {filepath.relative_to(snippets_dir)}")
+        print(f"  Processing: {filepath.relative_to(public_dir)}")
         metadata = analyze_snippet(filepath)
         if metadata:
             snippets.append(metadata)
@@ -145,8 +153,8 @@ def build_metadata():
         "snippets": snippets,
     }
 
-    # Write metadata.json
-    output_path = snippets_dir / "metadata.json"
+    # Write metadata.json directly into public/
+    output_path = public_dir / "metadata.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=2, ensure_ascii=False)
 
@@ -158,7 +166,7 @@ def build_metadata():
     print(f"Languages: {', '.join(metadata['languages'])}")
     print(f"\nNext steps:")
     print(f"  1. Review {output_path}")
-    print(f"  2. Test with local server: python -m http.server 8000")
+    print(f"  2. Run development server: pnpm dev")
     print(f"  3. Commit and push to deploy")
 
     return True

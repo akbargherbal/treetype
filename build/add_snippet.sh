@@ -38,7 +38,7 @@ echo ""
 
 # Step 1: Parse the file
 echo -e "${YELLOW}[1/3]${NC} Parsing source file..."
-python build/parse_json.py "$INPUT_FILE"
+python3 build/parse_json.py "$INPUT_FILE"
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}❌ Parsing failed${NC}"
@@ -49,7 +49,7 @@ echo ""
 
 # Step 2: Build metadata
 echo -e "${YELLOW}[2/3]${NC} Building metadata index..."
-python build/build_metadata.py
+python3 build/build_metadata.py
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}❌ Metadata generation failed${NC}"
@@ -62,7 +62,7 @@ echo ""
 echo -e "${YELLOW}[3/3]${NC} Staging files for git commit..."
 
 # Determine which files were created/modified
-LANGUAGE_DIR=$(python -c "
+LANGUAGE_DIR=$(python3 -c "
 import sys
 from pathlib import Path
 ext = Path('$INPUT_FILE').suffix
@@ -71,10 +71,10 @@ print(ext_map.get(ext, 'unknown'))
 ")
 
 if [ "$LANGUAGE_DIR" != "unknown" ]; then
-    # Stage the language directory and metadata
-    git add "snippets/$LANGUAGE_DIR/" 2>/dev/null || true
-    git add "snippets/metadata.json" 2>/dev/null || true
-    
+    # Stage the active public language directory and metadata
+    git add "public/$LANGUAGE_DIR/" 2>/dev/null || true
+    git add "public/metadata.json" 2>/dev/null || true
+
     echo -e "${GREEN}✅ Files staged for commit${NC}"
     echo ""
     echo "Staged files:"
@@ -88,7 +88,7 @@ if [ "$LANGUAGE_DIR" != "unknown" ]; then
     echo -e "${GREEN}✅ Snippet workflow complete!${NC}"
 else
     echo -e "${YELLOW}⚠️  Could not determine language directory${NC}"
-    echo "   Manually stage files with: git add snippets/"
+    echo "   Manually stage files with: git add public/"
 fi
 
 echo -e "${GREEN}═══════════════════════════════════════════════════════════════════${NC}"
